@@ -197,7 +197,7 @@ INSERT INTO data.a_values (id, fk_a_value, fk_language, value, fk_a_key, "order"
   (16, NULL, 1, '10km to 100km', 3, 4),
   (17, NULL, 1, 'worse than 100km', 3, 5),
   (18, NULL, 1, 'Afghanistan', 4, NULL),
-  (19, NULL, 1, 'Åland Islands', 4, NULL),
+  (19, NULL, 1, 'Ã…land Islands', 4, NULL),
   (20, NULL, 1, 'Albania', 4, NULL),
   (21, NULL, 1, 'Algeria', 4, NULL),
   (22, NULL, 1, 'American Samoa', 4, NULL),
@@ -249,10 +249,10 @@ INSERT INTO data.a_values (id, fk_a_value, fk_language, value, fk_a_key, "order"
   (70, NULL, 1, 'Comoros', 4, NULL),
   (71, NULL, 1, 'Cook Islands', 4, NULL),
   (72, NULL, 1, 'Costa Rica', 4, NULL),
-  (73, NULL, 1, 'Côte d''Ivoire', 4, NULL),
+  (73, NULL, 1, 'CÃ´te d''Ivoire', 4, NULL),
   (74, NULL, 1, 'Croatia', 4, NULL),
   (75, NULL, 1, 'Cuba', 4, NULL),
-  (76, NULL, 1, 'Curaçao', 4, NULL),
+  (76, NULL, 1, 'CuraÃ§ao', 4, NULL),
   (77, NULL, 1, 'Cyprus', 4, NULL),
   (78, NULL, 1, 'Czech Republic', 4, NULL),
   (79, NULL, 1, 'Congo, the Democratic Republic of the', 4, NULL),
@@ -376,7 +376,7 @@ INSERT INTO data.a_values (id, fk_a_value, fk_language, value, fk_a_key, "order"
   (198, NULL, 1, 'Puerto Rico', 4, NULL),
   (199, NULL, 1, 'Qatar', 4, NULL),
   (200, NULL, 1, 'Congo', 4, NULL),
-  (201, NULL, 1, 'Réunion', 4, NULL),
+  (201, NULL, 1, 'RÃ©union', 4, NULL),
   (202, NULL, 1, 'Romania', 4, NULL),
   (203, NULL, 1, 'Russian Federation', 4, NULL),
   (204, NULL, 1, 'Rwanda', 4, NULL),
@@ -385,7 +385,7 @@ INSERT INTO data.a_values (id, fk_a_value, fk_language, value, fk_a_key, "order"
   (207, NULL, 1, 'Saint Lucia', 4, NULL),
   (208, NULL, 1, 'Saint Pierre and Miquelon', 4, NULL),
   (209, NULL, 1, 'Saint Vincent and the Grenadines', 4, NULL),
-  (210, NULL, 1, 'Saint Barthélemy', 4, NULL),
+  (210, NULL, 1, 'Saint BarthÃ©lemy', 4, NULL),
   (211, NULL, 1, 'Saint Martin (French part)', 4, NULL),
   (212, NULL, 1, 'Samoa', 4, NULL),
   (213, NULL, 1, 'San Marino', 4, NULL),
@@ -658,7 +658,7 @@ SELECT setval('data.sh_keys_id_seq', 16, true);
 
 INSERT INTO data.sh_values (id, fk_sh_value, fk_language, value, fk_sh_key, "order") VALUES
   (1, NULL, 1, 'Afghanistan', 1, NULL),
-  (2, NULL, 1, 'Åland Islands', 1, NULL),
+  (2, NULL, 1, 'Ã…land Islands', 1, NULL),
   (3, NULL, 1, 'Albania', 1, NULL),
   (4, NULL, 1, 'Algeria', 1, NULL),
   (5, NULL, 1, 'American Samoa', 1, NULL),
@@ -710,10 +710,10 @@ INSERT INTO data.sh_values (id, fk_sh_value, fk_language, value, fk_sh_key, "ord
   (53, NULL, 1, 'Comoros', 1, NULL),
   (54, NULL, 1, 'Cook Islands', 1, NULL),
   (55, NULL, 1, 'Costa Rica', 1, NULL),
-  (56, NULL, 1, 'Côte d''Ivoire', 1, NULL),
+  (56, NULL, 1, 'CÃ´te d''Ivoire', 1, NULL),
   (57, NULL, 1, 'Croatia', 1, NULL),
   (58, NULL, 1, 'Cuba', 1, NULL),
-  (59, NULL, 1, 'Curaçao', 1, NULL),
+  (59, NULL, 1, 'CuraÃ§ao', 1, NULL),
   (60, NULL, 1, 'Cyprus', 1, NULL),
   (61, NULL, 1, 'Czech Republic', 1, NULL),
   (62, NULL, 1, 'Congo, the Democratic Republic of the', 1, NULL),
@@ -837,7 +837,7 @@ INSERT INTO data.sh_values (id, fk_sh_value, fk_language, value, fk_sh_key, "ord
   (181, NULL, 1, 'Puerto Rico', 1, NULL),
   (182, NULL, 1, 'Qatar', 1, NULL),
   (183, NULL, 1, 'Congo', 1, NULL),
-  (184, NULL, 1, 'Réunion', 1, NULL),
+  (184, NULL, 1, 'RÃ©union', 1, NULL),
   (185, NULL, 1, 'Romania', 1, NULL),
   (186, NULL, 1, 'Russian Federation', 1, NULL),
   (187, NULL, 1, 'Rwanda', 1, NULL),
@@ -846,7 +846,7 @@ INSERT INTO data.sh_values (id, fk_sh_value, fk_language, value, fk_sh_key, "ord
   (190, NULL, 1, 'Saint Lucia', 1, NULL),
   (191, NULL, 1, 'Saint Pierre and Miquelon', 1, NULL),
   (192, NULL, 1, 'Saint Vincent and the Grenadines', 1, NULL),
-  (193, NULL, 1, 'Saint Barthélemy', 1, NULL),
+  (193, NULL, 1, 'Saint BarthÃ©lemy', 1, NULL),
   (194, NULL, 1, 'Saint Martin (French part)', 1, NULL),
   (195, NULL, 1, 'Samoa', 1, NULL),
   (196, NULL, 1, 'San Marino', 1, NULL),
@@ -933,7 +933,7 @@ SELECT setval('data.profiles_id_seq', 5, true);
 
 INSERT INTO data.languages(id, english_name, local_name, locale) VALUES
     (2, 'Codes', 'Codes', 'code'),
-    (3, 'Spanish', 'Español', 'es')
+    (3, 'Spanish', 'EspaÃ±ol', 'es')
 ;
 SELECT setval('data.languages_id_seq', 3, true);
 
