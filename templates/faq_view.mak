@@ -35,10 +35,11 @@
                 <li><a href="#q1">${_('Why are there observatories in only five countries?')}</a></li>
                 <li><a href="#q2">${_('Who "owns" each observatory in the five pilot countries?')}</a></li>
                 <li><a href="#q3">${_('Can I comment on a land deal?')}</a></li>
-                <li><a href="#q4">${_('How do I submit information on a land deal?')}</a></li>
-                <li><a href="#q5">${_('Can I submit information on a land deal even if I am in a different country?')}</a></li>
-                <li><a href="#q6">${_('Will this application display polygons and land areas?')}</a></li>
-                <li><a href="#q7">${_('Do you protect my privacy?')}</a></li>
+                <li><a href="#q4">${_('Who can submit information on a land deal?')}</a></li>
+                <li><a href="#q5">${_('How do I submit information on a land deal?')}</a></li>
+                <li><a href="#q6">${_('Can I submit information on a land deal even if I am in a different country?')}</a></li>
+                <li><a href="#q7">${_('Will this application display polygons and land areas?')}</a></li>
+                <li><a href="#q8">${_('Do you protect my privacy?')}</a></li>
             </ul>
         <hr class="grey" />
 
@@ -54,9 +55,14 @@
         <p>${_('Anybody, even anonymous, non-logged in users can comment on a land deal. These comments will be subject to the rules of moderation, unique to each observatory.')}</p>
         <hr class="grey" />
 
-        <a name="q4"></a><p class="lead">${_('How do I submit information on a land deal?')}</p>
+        <a name="q4"></a><p class="lead">${_('Who can submit information on a land deal?')}</p>
         <p>${_('If you have information about a land deal in one of the five pilot countries, you can submit information about one or more attributes of this deal. You can also submit a new land deal if the one you are concerned with does not appear on the map.')}
             ${_('You will need to')} <a href="${request.route_url('user_self_registration')}">${_('register')}</a> ${_('(giving us your email) and')} <a href="${request.route_url('login')}">${_('log-in')}</a>.</p>
+        <hr class="grey" />
+
+        <a name="q5"></a><p class="lead">${_('How do I submit information on a land deal?')}</p>
+        <p>${_('Once you are logged in, you can fill out the form to add a new deal or edit an existing one. Do you need help filling out the form? We created some manuals to help you get started.')}</p>
+        <p><a class="btn btn-primary" href="/custom/docs/howto_addnewdeal.pdf">${_('How to add a new deal')}</a>&nbsp;<a class="btn btn-primary" href="/custom/docs/howto_editexistingdeal.pdf">${_('How to edit an existing deal')}</a></p>
         <p>${_('After you submit, moderators will review and approve your report. New deals will not be approved until all of the mandatory attributes are completed.')}</p>
         <ul class="bullets">
             % for k in desiredKeys:
@@ -66,15 +72,15 @@
         <p>${_('Once your report is reviewed and approved, it is public for the whole world to see.')}</p>
         <hr class="grey" />
 
-        <a name="q5"></a><p class="lead">${_('Can I submit information on a land deal even if I am in a different country?')}</p>
+        <a name="q6"></a><p class="lead">${_('Can I submit information on a land deal even if I am in a different country?')}</p>
         <p>${_('Yes, but it will be reviewed and approved by moderators. At the moment, we ask that your account is connected to a particular country.')}</p>
         <hr class="grey" />
 
-        <a name="q6"></a><p class="lead">${_('Will this application display polygons and land areas?')}</p>
+        <a name="q7"></a><p class="lead">${_('Will this application display polygons and land areas?')}</p>
         <p>${_('Yes, these functions are in development and should be ready soon, as well as data downloads.')}</p>
         <hr class="grey" />
         
-        <a name="q7"></a><p class="lead">${_('Do you protect my privacy?')}</p>
+        <a name="q8"></a><p class="lead">${_('Do you protect my privacy?')}</p>
         <p>${_('All defaults are set to safeguard user privacy. To comment, you need not give any personal information, although providing it may enhance your credibility. To log-in and submit data, all you need to provide is an email address. Currently, metadata about your submissions is stored on the servers of the Centre for Development and Environment - University of Bern and are only kept for reference: your personal information will not be shared with others or re-used for any purposes except for possible verification of submitted information.')}</p>
         <hr class="grey" />
 
