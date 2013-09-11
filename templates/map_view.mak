@@ -17,6 +17,10 @@
         margin-bottom: 2px !important;
         margin-top: 2px;
     }
+    .legendExplanation {
+        font-size: 0.8em;
+        margin-bottom: 5px;
+    }
     .vectorLegendSymbol {
         float: left;
         height: 20px;
@@ -30,7 +34,6 @@
         margin-bottom: 15px;
     }
     .map-legend {
-        margin-bottom: 5px;
         cursor: pointer;
     }
     .map-legend-content {
@@ -58,9 +61,9 @@ import json
 aKeys, shKeys = getOverviewKeys(request)
 extent = json.dumps(_getCurrentProfileExtent(request))
 mapSymbols = getMapSymbolKeys(request)
-mapCriteria = mapSymbols[0][1]
+mapCriteria = mapSymbols[0]
 mapSymbolValues = [v[0] for v in sorted(getFilterValuesForKey(request,
-    predefinedType='a', predefinedKey=mapCriteria),
+    predefinedType='a', predefinedKey=mapCriteria[1]),
     key=lambda value: value[1])]
 %>
     var profilePolygon = ${extent | n};
@@ -80,6 +83,7 @@ mapSymbolValues = [v[0] for v in sorted(getFilterValuesForKey(request,
     var tForMoredeals = '${_(" more deals ...")}';
     var tForNodealselected = '${_("No deal selected.")}';
     var tForSelecteddeals = '${_("Selected Deals")}';
+    var tForDealsGroupedBy = '${_("The deals are grouped by")}';
 
 </script>
 </%def>
