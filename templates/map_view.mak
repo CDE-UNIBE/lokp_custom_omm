@@ -49,18 +49,25 @@
 </style>
 <script type="text/javascript">
 <%
-
 from lmkp.views.profile import _getCurrentProfileExtent
 from lmkp.views.views import getOverviewKeys
+from lmkp.views.views import getFilterValuesForKey
+from lmkp.views.views import getMapSymbolKeys
 import json
 
 aKeys, shKeys = getOverviewKeys(request)
 extent = json.dumps(_getCurrentProfileExtent(request))
-
+mapSymbols = getMapSymbolKeys(request)
+mapCriteria = mapSymbols[0][1]
+mapSymbolValues = [v[0] for v in sorted(getFilterValuesForKey(request,
+    predefinedType='a', predefinedKey=mapCriteria),
+    key=lambda value: value[1])]
 %>
     var profilePolygon = ${extent | n};
     var aKeys = ${json.dumps(aKeys) | n};
     var shKeys = ${json.dumps(shKeys) | n};
+    var mapValues = ${json.dumps(mapSymbolValues) | n};
+    var mapCriteria = ${json.dumps(mapCriteria) | n};
 
     ## JS Translation
     var tForDeals = '${_("Deal")}';
