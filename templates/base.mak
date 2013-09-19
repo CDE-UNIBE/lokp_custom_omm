@@ -194,6 +194,11 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             .show-investors {
                 height: auto;
             }
+            .blacklink,
+            .blacklink:hover {
+                color: black;
+                text-decoration: underline;
+            }
 
         </style>
 
@@ -310,7 +315,8 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                 % else:
                                     <li>
                                         <div>
-                                            ${request.user.username} (<a href="${request.route_url('logout')}" class="logouttemp">${_('Logout')}</a>)&nbsp;&nbsp;
+                                            <a class="blacklink" href="${request.route_url('user_account')}">${request.user.username}</a>
+                                            (<a href="${request.route_url('logout')}" class="blacklink">${_('Logout')}</a>)&nbsp;&nbsp;
                                         </div>
                                     </li>
                                 % endif
