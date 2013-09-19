@@ -13,6 +13,7 @@
         3:
           maintag: true
           desired: true
+          mapsymbol: 2
         # [K] 25: Remark
         25: null
       # [TG]
@@ -69,6 +70,7 @@
           maintag: true
           desired: true
           involvementoverview: 1
+          mapsymbol: 1
           filterable: true
       # [TG]
       2:
@@ -111,6 +113,7 @@
         2:
           maintag: true
           desired: true
+          mapsymbol: 3
           filterable: true
         # [K] 48: Year
         48: null
