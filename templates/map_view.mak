@@ -91,7 +91,7 @@ mapSymbolValues = [v[0] for v in sorted(getFilterValuesForKey(request,
 ## Start of content
 
 ## Filter
-<%include file="lmkp:templates/parts/filter.mak" />
+<%include file="lmkp:customization/lo/templates/parts/filter.mak" />
 
 <!-- content -->
 <div id="googleMapFull">
