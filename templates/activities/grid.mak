@@ -32,7 +32,7 @@
 %>
 
 ## Filter
-<%include file="lmkp:templates/parts/filter.mak" />
+<%include file="lmkp:customization/lo/templates/parts/filter.mak" />
 
 <!-- content -->
 <div class="container">
