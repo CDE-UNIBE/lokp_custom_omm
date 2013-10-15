@@ -254,12 +254,17 @@
     22:
       order: 1
       # [TG]
-      involvement: "primaryinvestor"
+      involvement:
+        name: 'primaryinvestor'
+        roles: [6]
     # [C-THG] 23: Secondary Investor
     23:
       order: 2
       # [TG]
-      involvement: "secondaryinvestor"
+      involvement:
+        name: 'secondaryinvestor'
+        roles: [7]
+        repeat: true
   # [C] 5: Data Sources
   5:
     order: 5

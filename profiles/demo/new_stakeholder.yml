@@ -54,3 +54,7 @@
         8:
           maintag: true
           filterable: true
+      involvement:
+        name: 'allinvolvements'
+        roles: [6,7]
+        repeat: true

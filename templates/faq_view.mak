@@ -23,7 +23,7 @@
 <%
     from lmkp.views.form_config import getCategoryList
     cList = getCategoryList(request, 'activities')
-    desiredKeys = cList.getDesiredKeyNames()
+    desiredKeys = cList.getDesiredKeyNames(translated=True)
 %>
 
 <div class="container">
@@ -79,7 +79,7 @@
         <a name="q7"></a><p class="lead">${_('Will this application display polygons and land areas?')}</p>
         <p>${_('Yes, these functions are in development and should be ready soon, as well as data downloads.')}</p>
         <hr class="grey" />
-        
+
         <a name="q8"></a><p class="lead">${_('Do you protect my privacy?')}</p>
         <p>${_('All defaults are set to safeguard user privacy. To comment, you need not give any personal information, although providing it may enhance your credibility. To log-in and submit data, all you need to provide is an email address. Currently, metadata about your submissions is stored on the servers of the Centre for Development and Environment - University of Bern and are only kept for reference: your personal information will not be shared with others or re-used for any purposes except for possible verification of submitted information.')}</p>
         <hr class="grey" />
