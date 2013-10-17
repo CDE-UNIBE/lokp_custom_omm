@@ -13,6 +13,7 @@
           mandatory: true
           involvementoverview: 1
           filterable: true
+          gridcolumn: 1
       # [TG]
       2:
         # [K] 1: Country of origin
@@ -21,6 +22,7 @@
           mandatory: true
           involvementoverview: 2
           filterable: true
+          gridcolumn: 2
       # [TG]
       3:
         # [K] 3: Website
