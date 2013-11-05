@@ -6,7 +6,9 @@
     11:
       order: 1
       # [TG]
-      map: "map"
+      map:
+        name: 'map'
+        mode: 'singlepoint'
       # [TG]
       1:
         # [K] 3: Spatial Accuracy
