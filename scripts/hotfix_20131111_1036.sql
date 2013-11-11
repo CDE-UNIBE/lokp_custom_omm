@@ -24,7 +24,7 @@ UPDATE data.activities SET fk_status = 5, fk_user_review = 1, timestamp_review =
 UPDATE data.activities SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 684;
 UPDATE data.activities SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 685;
 UPDATE data.activities SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 686;
-UPDATE data.activities SET fk_status = 2, fk_user_review = 1, timestamp_review = NOW(), comment_review = '' WHERE id = 687;
+--UPDATE data.activities SET fk_status = 2, fk_user_review = 1, timestamp_review = NOW(), comment_review = '' WHERE id = 687;
 
 /*
 Stakeholders
@@ -37,12 +37,12 @@ UPDATE data.stakeholders SET fk_status = 5, fk_user_review = 1, timestamp_review
 UPDATE data.stakeholders SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 757;
 UPDATE data.stakeholders SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 758;
 UPDATE data.stakeholders SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 759;
-UPDATE data.stakeholders SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 762;
+--UPDATE data.stakeholders SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 762;
 UPDATE data.stakeholders SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 763;
 UPDATE data.stakeholders SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 764;
 UPDATE data.stakeholders SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 765;
 UPDATE data.stakeholders SET fk_status = 5, fk_user_review = 1, timestamp_review = NOW(), comment_review = 'Duplicate' WHERE id = 766;
-UPDATE data.stakeholders SET fk_status = 2, fk_user_review = 1, timestamp_review = NOW(), comment_review = '' WHERE id = 767;
+--UPDATE data.stakeholders SET fk_status = 2, fk_user_review = 1, timestamp_review = NOW(), comment_review = '' WHERE id = 767;
 
 /*
 Activity 868e1c87-35be-4b07-837b-44c6a7115c15
