@@ -331,8 +331,11 @@
         # [K] 36: Benefits for local communities
         36:
           maintag: true
-        # [K] 25: Remark
-        25: null
+      # [TG]
+      2:
+        # [K] 219: Remark (Benefits for local communities)
+        219:
+          maintag: true
     # [C-THG] 29: Number of People Actually Displaced
     29:
       order: 5
