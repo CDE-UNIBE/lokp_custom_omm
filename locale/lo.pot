@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LMKP_Customization 0.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2013-09-27 09:40+0200\n"
+"POT-Creation-Date: 2013-10-15 15:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -715,6 +715,49 @@ msgid ""
 "to your web browser."
 msgstr ""
 
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:27
+msgid "Remove the Investor"
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:35
+msgid "Select an Investor"
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:41
+msgid ""
+"Search the database to find an existing Investor. Start typing (at least 4 "
+"characters) to search an Investor and select it."
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:46
+msgid "Search a Stakeholder"
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:52
+msgid ""
+"Nothing found? Maybe the Investor is not yet in the database. You can create "
+"a new Investor."
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:58
+msgid "Create a new Investor"
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:72
+#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:93
+msgid "Unknown"
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:73
+#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:94
+msgid "No results found."
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:74
+#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:95
+msgid "Too many results to display. Try to enter more characters"
+msgstr ""
+
 #: lmkp/customization/lo/templates/form/form_activity.mak:7
 msgid "Deal Editor"
 msgstr ""
@@ -888,18 +931,6 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:84
 msgid "Sending ..."
-msgstr ""
-
-#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:93
-msgid "Unknown"
-msgstr ""
-
-#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:94
-msgid "No results found."
-msgstr ""
-
-#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:95
-msgid "Too many results to display. Try to enter more characters"
 msgstr ""
 
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:42

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LMKP_Customization 0.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2013-09-19 15:36+0200\n"
+"POT-Creation-Date: 2013-10-15 15:39+0200\n"
 "PO-Revision-Date: 2013-09-19 11:18+0100\n"
 "Last-Translator: Lukas Vonlanthen <lukas.vonlanthen@cde.unibe.ch>\n"
 "Language-Team: es <LL@li.org>\n"
@@ -822,6 +822,55 @@ msgstr ""
 "En orden para la aprobación de esta cuenta, por favor visitar el "
 "siguiente enlace o cópialo en tu navegador"
 
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:27
+#, fuzzy
+#| msgid "Show deals of this investor"
+msgid "Remove the Investor"
+msgstr "Mostrar los casos del Inversor"
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:35
+msgid "Select an Investor"
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:41
+msgid ""
+"Search the database to find an existing Investor. Start typing (at least "
+"4 characters) to search an Investor and select it."
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:46
+#, fuzzy
+#| msgid "Select a Stakeholder"
+msgid "Search a Stakeholder"
+msgstr "Seleccionar un Inversor"
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:52
+msgid ""
+"Nothing found? Maybe the Investor is not yet in the database. You can "
+"create a new Investor."
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:58
+#, fuzzy
+#| msgid "Create a new Stakeholder"
+msgid "Create a new Investor"
+msgstr "Crear un nuevo inversor"
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:72
+#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:93
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:73
+#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:94
+msgid "No results found."
+msgstr "No se encontraron resultados"
+
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:74
+#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:95
+msgid "Too many results to display. Try to enter more characters"
+msgstr "Demasiados resultados para mostrar. Intenta ingresar más caracteres"
+
 #: lmkp/customization/lo/templates/form/form_activity.mak:7
 msgid "Deal Editor"
 msgstr "Editor de Casos"
@@ -1011,18 +1060,6 @@ msgstr "Crear un nuevo inversor"
 #: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:84
 msgid "Sending ..."
 msgstr "Enviando"
-
-#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:93
-msgid "Unknown"
-msgstr "Desconocido"
-
-#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:94
-msgid "No results found."
-msgstr "No se encontraron resultados"
-
-#: lmkp/customization/lo/templates/stakeholders/form_embedded.mak:95
-msgid "Too many results to display. Try to enter more characters"
-msgstr "Demasiados resultados para mostrar. Intenta ingresar más caracteres"
 
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:42
 msgid "Show deals by clicking on a specific row."
