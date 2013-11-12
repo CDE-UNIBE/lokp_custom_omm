@@ -1503,7 +1503,6 @@ ul.country-selector {
 		top: 73px;
 		font-size: 0.9em;
 		left: 0;
-		width: 320px;
 		margin-left: 0;
 	}
 
@@ -1511,8 +1510,10 @@ ul.country-selector {
 		padding-bottom: 2px;
 	}
 
-	.top-menu li:first-child {
-		margin-left: 10px;
+	.top-menu li {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 0 5px 0 5px;
 	}
 
 	.user {
