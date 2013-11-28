@@ -17,7 +17,7 @@
     <div class="content no-border">
         
         ## Session messages
-        <%include file="lmkp:ctemplates/parts/sessionmessage.mak"/>
+        <%include file="lmkp:templates/parts/sessionmessage.mak"/>
         
         <h3>${_('Version History')}</h3>
         
