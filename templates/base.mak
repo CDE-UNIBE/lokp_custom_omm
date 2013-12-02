@@ -115,7 +115,8 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                             [
                                                 request.route_url('grid_view'),
                                                 request.route_url('activities_read_many', output='html'),
-                                                request.route_url('stakeholders_read_many', output='html')
+                                                request.route_url('stakeholders_read_many', output='html'),
+                                                request.route_url('stakeholders_byactivities_all', output='html')
                                             ],
                                             'icon-align-justify',
                                             _('Grid')
