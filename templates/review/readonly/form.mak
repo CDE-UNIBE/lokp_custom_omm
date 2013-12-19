@@ -1,7 +1,7 @@
 <%
     isStakeholder = 'itemType' in cstruct and cstruct['itemType'] == 'stakeholders'
-    statusId = cstruct['statusId'] if 'statusId' in cstruct else '2'
-
+    geomChanged = cstruct['geomchange'] if 'geomchange' in cstruct else False
+    
     from pyramid.security import ACLAllowed
     from pyramid.security import has_permission
     isModerator = isinstance(has_permission('moderate', request.context, request), ACLAllowed)
@@ -10,15 +10,29 @@
 % if not isStakeholder:
 ## Map container
 <div class="row-fluid accordion accordion-group">
-    <div class="accordion-heading category" id="form-map-compare-heading">
+    
+    <%
+     cls = 'accordion-heading category'
+     clsBody = 'row-fluid accordion-body collapse'
+     chevronClass = 'icon-chevron-down'
+     if geomChanged == 'change':
+        cls += ' change'
+        clsBody += ' in'
+        chevronClass = 'icon-chevron-up'
+    %>
+    
+    <div class="${cls}" id="form-map-compare-heading">
         <div class="span12">
+            % if geomChanged == 'change':
+                <i class="icon-exclamation-sign ttip pointer" data-toggle="tooltip" data-original-title="${_('There are changes in this section')}"></i>
+            % endif
             <a class="accordion-toggle" data-toggle="collapse" href="#collapse-map">
                 ${_('Map')}
-                <i class="icon-chevron-down"></i>
+                <i class="${chevronClass}"></i>
             </a>
         </div>
     </div>
-    <div id="collapse-map" class="row-fluid accordion-body collapse">
+    <div id="collapse-map" class="${clsBody}">
         <div class="span12">
             <div id="googleMapNotFull">
                 <div class="form-map-compare-controls">
