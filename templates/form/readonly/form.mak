@@ -174,6 +174,10 @@
 <a href="${request.route_url(routeName, output='history', uid=cstruct['id'])}">
     <i class="icon-time"></i>&nbsp;${_('History')}
 </a>
+&nbsp;|&nbsp;
+<a href="${request.route_url(routeName, output='statistics', uid=cstruct['id'])}">
+    <i class="icon-bar-chart"></i>&nbsp;${_("Areal statistics")}
+</a>
 % if request.user and 'id' in cstruct:
     &nbsp;|&nbsp;<a href="${request.route_url(routeName, output='form', uid=cstruct['id'], _query=(('v', cstruct['version']),))}">
         <i class="icon-pencil"></i>&nbsp;${editLinkText}
