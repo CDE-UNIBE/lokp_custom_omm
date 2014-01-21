@@ -6,7 +6,9 @@
     11:
       order: 1
       # [TG]
-      map: "map"
+      map:
+        name: 'map'
+        mode: 'singlepoint'
       # [TG]
       1:
         # [K] 3: Spatial Accuracy
@@ -39,6 +41,7 @@
           desired: true
           involvementoverview: 2
           filterable: true
+          gridcolumn: 2
         # [K] 25: Remark
         25: null
       # [TG, repeatable]
@@ -72,6 +75,7 @@
           involvementoverview: 1
           mapsymbol: 1
           filterable: true
+          gridcolumn: 3
       # [TG]
       2:
         # [K] 46: Scope of agriculture
@@ -115,6 +119,7 @@
           desired: true
           mapsymbol: 3
           filterable: true
+          gridcolumn: 1
         # [K] 48: Year
         48: null
       # [TG]
@@ -254,12 +259,17 @@
     22:
       order: 1
       # [TG]
-      involvement: "primaryinvestor"
+      involvement:
+        name: 'primaryinvestor'
+        roles: [6]
     # [C-THG] 23: Secondary Investor
     23:
       order: 2
       # [TG]
-      involvement: "secondaryinvestor"
+      involvement:
+        name: 'secondaryinvestor'
+        roles: [7]
+        repeat: true
   # [C] 5: Data Sources
   5:
     order: 5
@@ -322,8 +332,11 @@
         # [K] 36: Benefits for local communities
         36:
           maintag: true
-        # [K] 25: Remark
-        25: null
+      # [TG]
+      2:
+        # [K] 219: Remark (Benefits for local communities)
+        219:
+          maintag: true
     # [C-THG] 29: Number of People Actually Displaced
     29:
       order: 5

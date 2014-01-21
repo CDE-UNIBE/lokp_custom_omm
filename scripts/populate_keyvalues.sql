@@ -174,9 +174,11 @@ INSERT INTO data.a_keys(id, fk_a_key, fk_language, key, type, helptext, descript
   (110, 54, 1, 'Remark', NULL, NULL, NULL, NULL),
   (111, 55, 1, 'Remark', NULL, NULL, NULL, NULL),
   (112, 56, 1, 'Contract Number', NULL, NULL, NULL, NULL),
-  (113, 57, 1, 'Remark', NULL, NULL, NULL, NULL)
+  (113, 57, 1, 'Remark', NULL, NULL, NULL, NULL),
+  (219, NULL, NULL, 'Remark (Benefits for local communities)', 'Text', NULL, NULL, NULL),
+  (220, 219, 1, 'Remark', NULL, NULL, NULL, NULL)
 ;
-SELECT setval('data.a_keys_id_seq', 113, true);
+SELECT setval('data.a_keys_id_seq', 220, true);
 
 INSERT INTO data.a_values (id, fk_a_value, fk_language, value, fk_a_key, "order") VALUES
   (1, NULL, 1, 'Media report', 1, NULL),

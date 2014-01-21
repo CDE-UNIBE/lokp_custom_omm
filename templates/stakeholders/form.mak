@@ -1,6 +1,6 @@
 <%inherit file="lmkp:customization/lo/templates/base.mak" />
 
-<%def name="title()">Stakeholder Editor</%def>
+<%def name="title()">${_('Investor Editor')}</%def>
 
 <%def name="head_tags()">
 
@@ -20,12 +20,18 @@
 
 <div class="container deal-edit-content">
     <div class="content no-border">
+        
+        ## Session messages
+        <%include file="lmkp:templates/parts/sessionmessage.mak"/>
+        
         ${form | n}
     </div>
 </div>
 
 <%def name="bottom_tags()">
     <script type="text/javascript">
-       deform.load();
+        if (deform) {
+            deform.load();
+        }
     </script>
 </%def>
