@@ -70,5 +70,9 @@ application:
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
-
-
+  spatial_accuracy:
+    better than 100m: 100
+    100m to 1km: 500
+    1km to 10km: 5000
+    10km to 100km: 50000
+    worse than 100km: 500000
