@@ -4,46 +4,85 @@ application:
     coordinates: [[[100.081,13.9099],[107.635,13.9099],[107.635,22.509],[100.081,22.509],[100.081,13.9099]]]
   name: ສາທາລະນະລັດປະຊາທິປະໄຕ ປະຊາຊົນລາວ
   layers:
-  - name: "Incidence of Poverty (Lao DECIDE Info)"
-    url: "http://www.decide.la/geoserver/wms"
+  - name: "Incidence of poverty"
+    url: "http://cdetux2.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "decide:village-polygon"
-    - transparent: true
-    - styles: "vrppoac26"
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
-    - maxExtent: [11063487.59, 1543945.80, 12059351.76, 2593727.60]
-    - opacity: 0.7
-  - name: "Accessibility"
-    url: "http://cdetux2.unibe.ch/geoserver/lo/wms"
-    wms_options:
-    - epsg: 900913
-    - format: "image/jpeg"
-    - layers: "accessability"
+    - layers: "poverty_incidence"
     - transparent: true
     ol_options:
     - visibility: false
     - isBaseLayer: false
     - sphericalMercator: true
-    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    - maxExtent: [10018755, 181, 12801601, 3482189]
     - opacity: 0.7
-  - name: "Population density (Lao DECIDE Info)"
-    url: "http://www.decide.la/geoserver/wms"
+  - name: "Accessibility to province capital"
+    url: "http://cdetux2.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "decide:village-polygon"
+    - layers: "t_to_prov_capital_mean_min"
     - transparent: true
-    - styles: "vrpdeaa40"
     ol_options:
     - visibility: false
     - isBaseLayer: false
     - sphericalMercator: true
-    - maxExtent: [11063487.59, 1543945.80, 12059351.76, 2593727.60]
+    - maxExtent: [10018755, 181, 12801601, 3482189]
+    - opacity: 0.7
+  - name: "Seasonal road accessibility"
+    url: "http://cdetux2.unibe.ch/geoserver/gwc/service/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/png8"
+    - layers: "w_road_access"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [10018755, 181, 12801601, 3482189]
+    - opacity: 0.7
+  - name: "Population density"
+    url: "http://cdetux2.unibe.ch/geoserver/gwc/service/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/png8"
+    - layers: "pop_density"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [10018755, 181, 12801601, 3482189]
+    - opacity: 0.7
+  # Share of households being farm household
+  - name: Share of households being farm household
+    url: "http://cdetux2.unibe.ch/geoserver/gwc/service/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/png8"
+    - layers: "w_pct_farmhh"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [10018755, 181, 12801601, 3482189]
+    - opacity: 0.7
+  # Percentage of economically active population
+  - name: Percentage of economically active population
+    url: "http://cdetux2.unibe.ch/geoserver/gwc/service/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/png8"
+    - layers: "pop_econ_active_pct"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [10018755, 181, 12801601, 3482189]
     - opacity: 0.7
   - name: "Global Land Cover 2009"
     url: "http://cdetux2.unibe.ch/geoserver/lo/wms"
@@ -71,16 +110,16 @@ application:
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
-  - name: "Global Pasture Land"
-    url: "http://cdetux2.unibe.ch/geoserver/lo/wms"
-    wms_options:
-    - epsg: 900913
-    - format: "image/jpeg"
-    - layers: "gl_pasture"
-    - transparent: true
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
-    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
-    - opacity: 0.6    
+#  - name: "Global Pasture Land"
+#    url: "http://cdetux2.unibe.ch/geoserver/lo/wms"
+#    wms_options:
+#    - epsg: 900913
+#    - format: "image/jpeg"
+#    - layers: "gl_pasture"
+#    - transparent: true
+#    ol_options:
+#    - visibility: false
+#    - isBaseLayer: false
+#    - sphericalMercator: true
+#    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+#    - opacity: 0.6
