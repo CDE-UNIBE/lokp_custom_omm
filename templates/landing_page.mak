@@ -36,6 +36,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <link rel="stylesheet" href="/custom/css/font-awesome/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="/custom/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="/custom/css/bootstrap-lightbox.min.css">
         <link rel="stylesheet" href="/custom/css/main.css">
 
         <link rel="stylesheet" href="/custom/css/custom.css">
@@ -342,7 +343,9 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                             </div>
                             <div class="row-fluid">
                                 <div class="span6 offset3">
-                                    <img src="http://www.ceat.or.th/2010/images/stories/member-proj/team/28.jpg" alt="Layout of Ban Na Chan resettlemnt"></img>
+                                    <a href="#demoLightbox" data-toggle="lightbox">
+                                        <img src="http://www.ceat.or.th/2010/images/stories/member-proj/team/28.jpg" alt="Layout of Ban Na Chan resettlemnt"></img>
+                                    </a>
                                 </div>
                             </div>
                             <div class="row-fluid">
@@ -419,7 +422,9 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                             </div>
                             <div class="row-fluid hidden blog-content">
                                 <div class="span6 offset3">
-                                    <img src="http://www.landobservatory.org/files/view/9e13b3d4-f166-44e2-8002-5fd7eb3b17f3" alt="deal"></img>
+                                    <a data-toggle="lightbox" href="#longthanh-golf-course">
+                                        <img src="http://www.landobservatory.org/files/view/9e13b3d4-f166-44e2-8002-5fd7eb3b17f3" alt="Animated development of Longthanh golf course"></img>
+                                    </a>
                                 </div>
                             </div>
                             <div class="row-fluid hidden blog-content">
@@ -435,6 +440,28 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div id="demoLightbox" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="lightbox-header">
+                        <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true"><i class="icon-remove-sign">&nbsp;</i></button>
+                        <h4 class="lightbox-title">Modal title</h4>
+                    </div>
+                    <div class='lightbox-content'>
+                        <img src="http://www.ceat.or.th/2010/images/stories/member-proj/team/28.jpg" alt="Layout of Ban Na Chan resettlemnt"></img>
+                        <div class="lightbox-caption"><p>Layout of Ban Na Chan resettlement village</p></div>
+                    </div>
+                </div>
+
+                <div id="longthanh-golf-course" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="lightbox-header">
+                        <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true"><i class="icon-remove-sign">&nbsp;</i></button>
+                        <h4 class="lightbox-title">Modal title</h4>
+                    </div>
+                    <div class='lightbox-content'>
+                        <img src="http://www.landobservatory.org/files/view/9e13b3d4-f166-44e2-8002-5fd7eb3b17f3" alt="Animated development Longthanh golf course"></img>
+                        <div class="lightbox-caption"><p>Development of Longthanh Golf Course</p></div>
                     </div>
                 </div>
 
@@ -478,6 +505,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <script>window.jQuery || document.write('<script src="/custom/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
         <script src="/custom/js/vendor/bootstrap.min.js"></script>
+        <script src="/custom/js/vendor/bootstrap-lightbox.min.js"></script>
 
         <script src="/custom/js/main.js"></script>
 
