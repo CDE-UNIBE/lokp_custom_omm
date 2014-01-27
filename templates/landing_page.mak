@@ -77,6 +77,9 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             .btn-country-selector, .btn-start {
                 text-transform: uppercase;
             }
+            .blog-header {
+                margin-top: 15px;
+            }
         </style>
 
         <script type="text/javascript">
@@ -237,16 +240,16 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                             </div>
                             % endif
 
-                            <div class="row-fluid not-action">
+                            <!--div class="row-fluid not-action">
                                 <div class="span offset1">
                                     ${_('Or take a short tour:')}
                                 </div>
-                            </div>
+                            </div-->
 
-                            <div class="row-fluid">
+                            <!--div class="row-fluid">
                                 <div class="span10 offset1">
 
-                                    <!-- slider -->
+                                    <!-- slider -- >
                                     <div id="myCarousel" class="carousel slide">
                                         <ol class="carousel-indicators">
                                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -258,14 +261,14 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                             <li data-target="#myCarousel" data-slide-to="6"></li>
                                         </ol>
 
-                                        <!-- Carousel items -->
+                                        <!-- Carousel items -- >
                                         <div class="carousel-inner">
 
 
                                             <div class="item active">
 <!--                                                <div class="not-action2">
                                                     Or take a short tour.
-                                                </div>-->
+                                                </div>-- >
                                                 <img class="slide" src="/custom/img/slides/slider-image_02.png" alt="">
                                                 <div class="carousel-caption">
                                                     <p>${_('Users in select pilot countries gather, explore and analyze spatial data on large-scale land acquisitions. Data is managed and reviewed locally by partners.')}</p>
@@ -316,7 +319,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
 
                                         </div>
 
-                                        <!-- Carousel nav -->
+                                        <!-- Carousel nav -- >
                                         <div class="carousel-controls">
                                                 <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
                                                 <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
@@ -325,6 +328,111 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                     </div>
                                 </div>
 
+                            </div-->
+                            <div class="row-fluid blog-header">
+                                <div class="span10 offset1">
+                                    <h5>Follow the case in country xy</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Donec a <a href="#">diam lectus</a>. Sed sit amet ipsum mauris.
+                                    Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.
+                                    Donec et mollis dolor. Praesent et diam eget libero
+                                    egestas mattis sit amet vitae augue. Nam tincidunt congue enim,
+                                    ut porta lorem lacinia consectetur.
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span6 offset3">
+                                    <img src="http://www.ceat.or.th/2010/images/stories/member-proj/team/28.jpg" alt="Layout of Ban Na Chan resettlemnt"></img>
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span10 offset1">
+                                    <a href="#" data-toggle="tooltip" title="read more" class="read-more">Read more&nbsp;<i class="icon-double-angle-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="row-fluid blog-content hidden">
+                                <div class="span10 offset1">
+                                    Donec ut libero sed arcu
+                                    vehicula ultricies a non tortor. Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis,
+                                    pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi
+                                    id magna consequat sagittis. Curabitur dapibus enim
+                                    sit amet elit pharetra tincidunt feugiat nisl imperdiet.
+                                    Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
+                                    Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus.
+                                    Cum sociis natoque penatibus et magnis dis parturient montes,
+                                    nascetur ridiculus mus. In rutrum accumsan ultricies.
+                                    Mauris vitae nisi at sem facilisis semper ac in est.
+                                </div>
+                            </div>
+                            <div class="row-fluid hidden blog-content">
+                                <div class="span10 offset1">
+                                    Vivamus fermentum semper porta. Nunc diam velit,
+                                    adipiscing ut tristique vitae, sagittis vel odio.
+                                    Maecenas convallis ullamcorper ultricies.
+                                </div>
+                            </div>
+                            <div class="row-fluid hidden blog-content">
+                                <div class="span10 offset1">
+                                    Curabitur ornare, ligula semper consectetur sagittis,
+                                    nisi diam iaculis velit, id fringilla sem nunc vel mi.
+                                    Nam dictum, odio nec pretium volutpat, arcu ante placerat erat,
+                                    non tristique elit urna et turpis. Quisque mi metus, ornare
+                                    sit amet fermentum et, tincidunt et orci. Fusce eget orci
+                                    a orci congue vestibulum. Ut dolor diam, elementum et vestibulum
+                                    eu, porttitor vel elit. Curabitur venenatis pulvinar tellus
+                                    gravida ornare. Sed et erat faucibus nunc euismod ultricies ut
+                                    id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec.
+                                    Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum.
+                                    Quisque bibendum purus convallis nulla ultrices ultricies.
+                                    Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor,
+                                    viverra pretium nisi quam vitae mi. Fusce vel volutpat elit.
+                                    Nam sagittis nisi dui.
+                                </div>
+                            </div>
+                            <div class="row-fluid blog-header">
+                                <div class="span10 offset1">
+                                    <h5>Another case in another country</h5>
+                                    Suspendisse lectus leo, consectetur in tempor sit amet,
+                                    placerat quis neque. <a href="#">Etiam luctus</a> porttitor lorem,
+                                    sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper.
+                                    Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis
+                                    tincidunt. Phasellus eget dolor sit amet ipsum dapibus condimentum vitae
+                                    quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus,
+                                    vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non,
+                                    adipiscing vitae orci. Mauris ut placerat justo. Mauris in ultricies enim.
+                                    Quisque nec est eleifend nulla ultrices egestas quis ut quam.
+                                    Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus.
+                                    Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span10 offset1">
+                                    <a href="#" data-toggle="tooltip" title="read more" class="read-more">Read more&nbsp;<i class="icon-double-angle-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="row-fluid hidden blog-content">
+                                <div class="span10 offset1">
+                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                                    per inceptos himenaeos. In euismod ultrices facilisis.
+                                </div>
+                            </div>
+                            <div class="row-fluid hidden blog-content">
+                                <div class="span6 offset3">
+                                    <img src="http://www.landobservatory.org/files/view/9e13b3d4-f166-44e2-8002-5fd7eb3b17f3" alt="deal"></img>
+                                </div>
+                            </div>
+                            <div class="row-fluid hidden blog-content">
+                                <div class="span10 offset1">
+                                    Vestibulum porta sapien adipiscing augue congue id pretium lectus molestie.
+                                    Proin quis dictum nisl. Morbi id quam sapien, sed vestibulum sem.
+                                    Duis elementum rutrum mauris sed convallis. Proin vestibulum magna mi.
+                                    Aenean tristique hendrerit magna, ac facilisis nulla hendrerit ut.
+                                    Sed non tortor sodales quam auctor elementum. Donec hendrerit nunc eget
+                                    elit pharetra pulvinar. Suspendisse id tempus tortor. Aenean luctus,
+                                    elit commodo laoreet commodo, justo nisi consequat massa, sed vulputate
+                                    quam urna quis eros. Donec vel.
+                                </div>
                             </div>
                         </div>
                     </div>
