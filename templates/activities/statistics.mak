@@ -2,6 +2,14 @@
 
 <%def name="title()">${_('Areal Statistics')} ${shortuid}</%def>
 
+<%def name="format_radius(r)">
+<%
+    if r > 1000:
+        return "%skm" % int(r/1000)
+    return "%sm" % int(r)
+%>
+</%def>
+
 <%def name="head_tags()">
 
 <style type="text/css">
@@ -29,6 +37,9 @@
             <div class="span9">
                 <p class="id">${uid}</p>
             </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span9">${_(u"Statistics are based on a sample radius of")} ${format_radius(r=layers[0]['bufferradius'])}.</div>
         </div>
         % for layer in layers:
         % if layer['layername'].lower() == "Population Density".lower():
