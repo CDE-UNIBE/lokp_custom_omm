@@ -62,7 +62,7 @@
                     </div>
                     <div class="span2 inactive"></div>
                     <div class="span4">
-                        <p class="deal-detail">${stats['value']} pers / km<sup>2</sup></p>
+                        <p class="deal-detail">${'%.2f' % round(stats['value'], 2)} pers / km<sup>2</sup></p>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                         <h5 class="green">Minimum population density</h5>
                     </div>
                     <div class="span2 inactive"></div>
-                    <div class="span4">${stats['value']} pers / km<sup>2</sup></div>
+                    <div class="span4">${int(stats['value'])} pers / km<sup>2</sup></div>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
                     <h5 class="green">Maximum population density</h5>
                 </div>
                 <div class="span2 inactive"></div>
-                <div class="span4">${stats['value']} pers / km<sup>2</sup></div>
+                <div class="span4">${int(stats['value'])} pers / km<sup>2</sup></div>
             </div>
         </div>
         % endif
