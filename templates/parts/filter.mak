@@ -48,11 +48,13 @@
                     <ul class="dropdown-menu pull-right" role="menu">
                         <li class="disabled filterCategory">${_('Deals')}</li>
                         % for k in aFilterKeys:
-                            <li><a href="#" onClick="javascript:selectKey('${k[0]}', '${k[1]}', '${k[2]}', 'a')">${k[0]}</a></li>
+                        <% escaped_k = k[0].replace("'", "\\'") %>
+                            <li><a href="#" onClick="javascript:selectKey('${escaped_k}', '${k[1]}', '${k[2]}', 'a')">${k[0]}</a></li>
                         % endfor
                         <li class="disabled filterCategory">${_('Investors')}</li>
                         % for k in shFilterKeys:
-                            <li><a href="#" onClick="javascript:selectKey('${k[0]}', '${k[1]}', '${k[2]}', 'sh')">${k[0]}</a></li>
+                        <% escaped_k = k[0].replace("'", "\\'") %>
+                            <li><a href="#" onClick="javascript:selectKey('${escaped_k}', '${k[1]}', '${k[2]}', 'sh')">${k[0]}</a></li>
                         % endfor
                     </ul>
                 </div>
