@@ -142,6 +142,10 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
+#: lmkp/customization/lo/templates/base.mak:209
+msgid "Home"
+msgstr ""
+
 #: lmkp/customization/lo/templates/base.mak:212
 msgid "Select Profile"
 msgstr ""
