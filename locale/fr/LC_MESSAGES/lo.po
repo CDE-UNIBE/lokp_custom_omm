@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: LMKP_Customization 0.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2013-12-23 12:54+0100\n"
-"PO-Revision-Date: 2014-03-10 15:36+0100\n"
+"PO-Revision-Date: 2014-03-10 15:44+0100\n"
 "Last-Translator: Adrian Weber <adrian.weber@cde.unibe.ch>\n"
 "Language-Team: fr <LL@li.org>\n"
 "Language: \n"
@@ -126,7 +126,7 @@ msgstr "Déconnecter"
 
 #: lmkp/customization/lo/templates/base.mak:209
 msgid "Home"
-msgstr "Acceuil"
+msgstr "Accueil"
 
 #: lmkp/customization/lo/templates/base.mak:212
 msgid "Select Profile"
