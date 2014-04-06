@@ -1,5 +1,10 @@
 <%inherit file="lmkp:customization/lo/templates/base.mak" />
 
+<%
+from lmkp.views.profile import get_current_locale
+from lmkp.views.profile import get_current_profile
+%>
+
 <%def name="title()">${_('Version History')}</%def>
 
 <div class="container">
@@ -10,7 +15,7 @@
 
         <div class="row-fluid">
             <div class="span9 text-right">
-                <a href="${request.route_url('activities_read_one_history', output='rss', uid=versions[0]['identifier'])}">
+                <a href="${request.route_url('activities_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
                     <i class="icon-rss"></i> Subscribe
                 </a>
             </div>
@@ -84,7 +89,7 @@
         </div>
         <div class="row-fluid">
             <div class="span9 text-right">
-                <a href="#">
+                <a href="${request.route_url('activities_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
                     <i class="icon-rss"></i> Subscribe
                 </a>
             </div>
