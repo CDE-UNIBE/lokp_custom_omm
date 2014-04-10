@@ -7,17 +7,21 @@ from lmkp.views.profile import get_current_profile
 
 <%def name="title()">${_('Latest Changesets')}</%def>
 
+<%def name="inlinemenu()">
+<div class="row-fluid">
+    <div class="span9 text-right">
+        <a href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
+            <i class="icon-rss"></i> Subscribe
+        </a>
+    </div>
+</div>
+</%def>
+
 <div class="container">
     <div class="content no-border">
 
         ## Header menu bar
-        <div class="row-fluid">
-            <div class="span9 text-right">
-                <a href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
-                    <i class="icon-rss"></i> Subscribe
-                </a>
-            </div>
-        </div>
+        ${inlinemenu()}
 
         <div class="row-fluid">
             <div class="span9">
@@ -52,14 +56,19 @@ from lmkp.views.profile import get_current_profile
             </div>
         </div>
 
-        ## Footer menu bar
+        ## Pagination
+        % if len(items) > 0:
         <div class="row-fluid">
-            <div class="span9 text-right">
-                <a href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
-                    <i class="icon-rss"></i> Subscribe
-                </a>
+            <div class="span9">
+                <%include file="lmkp:templates/parts/pagination.mak"
+                args="totalitems=totalitems, currentpage=currentpage, pagesize=pagesize, itemsname=_('Changesets')"
+                />
             </div>
         </div>
+        % endif
+
+        ## Footer menu bar
+        ${inlinemenu()}
 
     </div>
 </div>
