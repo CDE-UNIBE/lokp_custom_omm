@@ -76,7 +76,9 @@ from lmkp.views.profile import get_current_profile
                                 ${v['timestamp']}
                             </td>
                             <td>
+                                <a href="${request.route_url('changesets_read_byuser', username=v['username'], output='html')}">
                                 ${v['username']}
+                                </a>
                             </td>
                             <td>
                                 ${v['version']}

@@ -49,9 +49,9 @@
     <div class="span12">
         <h3 class="form-below-toolbar">
         % if isStakeholder:
-            ${_('Stakeholder Details')}
+            ${_('Investor Details')}
         % else:
-            ${_('Activity Details')}
+            ${_('Deal Details')}
         % endif
         </h3>
     </div>

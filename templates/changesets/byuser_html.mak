@@ -5,13 +5,13 @@ from lmkp.views.profile import get_current_locale
 from lmkp.views.profile import get_current_profile
 %>
 
-<%def name="title()">${_('Latest Changesets by %s' % username)}</%def>
+<%def name="title()">${_('Changesets by %s' % username)}</%def>
 
 <%def name="inlinemenu()">
 <div class="row-fluid">
     <div class="span9 text-right">
-        <a href="${request.route_url('changesets_read_byuser', username=username, output='rss', _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
-            <i class="icon-rss"></i> Subscribe
+        <a href="${request.route_url('changesets_read_byuser', username=username, output='rss', _query=(('_LOCALE_', get_current_locale(request)),))}">
+            <i class="icon-rss"></i> ${_(u'Subscribe')}
         </a>
         &nbsp;|&nbsp
         % if pagesize != 10:
@@ -19,7 +19,7 @@ from lmkp.views.profile import get_current_profile
         % else:
         <a href="${request.route_url('changesets_read_latest', output='html')}">
         % endif
-            <i class="icon-list-ul"></i> All Changesets
+            <i class="icon-list-ul"></i> ${_(u'All Changesets')}
         </a>
     </div>
 </div>
@@ -33,15 +33,15 @@ from lmkp.views.profile import get_current_profile
 
         <div class="row-fluid">
             <div class="span9">
-                <h3 class="form-below-toolbar">${_('Latest Changesets by %s' % username)}</h3>
+                <h3 class="form-below-toolbar">${_('Changesets by %s' % username)}</h3>
             </div>
         </div>
 
-        <div class="row-fluid">
-            <div class="span9">
-                <span>${_('The latest changes edited on the Land Observatory by %s' % username)}</span>
-            </div>
-        </div>
+        ##<div class="row-fluid">
+            ##    <div class="span9">
+                ##        <span>${_('The latest changes edited on the Land Observatory by %s' % username)}</span>
+                ##    </div>
+            ##</div>
 
         <div class="row-fluid">
             <div class="span9">
@@ -55,8 +55,23 @@ from lmkp.views.profile import get_current_profile
                     <tbody>
                         % for item in items:
                         <tr>
-                            <td>${item['pubDate']}</td>
-                            <td>${item['description'] | n}</td>
+                            <td>${item['timestamp'].strftime("%a, %d %b %Y %H:%m:%S %Z")}</td>
+                            <%
+                            date = item['timestamp'].strftime("%a, %d %b %Y %H:%m:%S %Z")
+                            %>
+                            % if item['type'] == "activity":
+                            <td>Update of deal
+                                <a href="${request.route_url('activities_read_one', output='html', uid=item['identifier'], _query=(('v', item['version']),))}">
+                                    #${item['identifier'].split("-")[0].upper()}
+                                </a> on ${date} to version&nbsp;${item['version']}
+                            </td>
+                            % elif item['type'] == "stakeholder":
+                            <td>Update of investor
+                                <a href="${request.route_url('stakeholders_read_one', output='html', uid=item['identifier'], _query=(('v', item['version']),))}">
+                                    #${item['identifier'].split("-")[0].upper()}
+                                </a>
+                                on ${date} to version&nbsp;${item['version']}</td>
+                            % endif
                         </tr>
                         % endfor
                     </tbody>

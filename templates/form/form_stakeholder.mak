@@ -6,10 +6,10 @@
     _ = request.translate
 %>
 
-<h3>${_('Stakeholder Editor')}</h3>
+<h3>${_('Investor Editor')}</h3>
 
 % if new_form is True:
-    <p class="id">${_('New Stakeholder')}</p>
+    <p class="id">${_('New Investor')}</p>
 % else:
     <p class="id">${cstruct['id']}</p>
 % endif

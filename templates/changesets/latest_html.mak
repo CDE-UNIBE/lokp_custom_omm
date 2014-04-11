@@ -29,11 +29,11 @@ from lmkp.views.profile import get_current_profile
             </div>
         </div>
 
-        <div class="row-fluid">
-            <div class="span9">
-                <span>${_('The latest changes edited on the Land Observatory')}</span>
-            </div>
-        </div>
+        ##<div class="row-fluid">
+        ##    <div class="span9">
+        ##        <span>${_('The latest changes edited on the Land Observatory')}</span>
+        ##    </div>
+        ##</div>
 
         <div class="row-fluid">
             <div class="span9">

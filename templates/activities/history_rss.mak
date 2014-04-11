@@ -4,7 +4,7 @@ from datetime import datetime
 %>
 <rss version="2.0">
     <channel>
-        <title>${_('Version history of deal #%s' % versions[0]['identifier'].split('-')[0])}</title>
+        <title>${_('Version history of deal #%s' % versions[0]['identifier'].split('-')[0].upper())}</title>
         <link></link>
         ## <description>description</description>
         <language>en-US</language>
