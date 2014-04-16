@@ -26,7 +26,6 @@ from lmkp.views.profile import get_current_profile
                 <h3 class="form-below-toolbar">${_('Version History')}</h3>
             </div>
         </div>
-
         <div class="row-fluid">
             <div class="span9">
                 <table class="table">
@@ -76,7 +75,9 @@ from lmkp.views.profile import get_current_profile
                                 ${v['timestamp']}
                             </td>
                             <td>
+                                <a href="${request.route_url('changesets_read_byuser', username=v['username'], output='html')}">
                                 ${v['username']}
+                                </a>
                             </td>
                             <td>
                                 ${v['version']}
@@ -87,7 +88,6 @@ from lmkp.views.profile import get_current_profile
                 </table>
             </div>
         </div>
-
         <div class="row-fluid">
             <div class="span9 text-right">
                 <a href="${request.route_url('stakeholders_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">

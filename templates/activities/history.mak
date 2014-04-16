@@ -28,7 +28,6 @@ from lmkp.views.profile import get_current_profile
         </div>
         <div class="row-fluid">
             <div class="span9">
-
                 <table class="table">
                     <thead>
                         <tr>

@@ -2,6 +2,7 @@
 from lmkp.views.views import getQueryString
 from lmkp.views.translation import get_languages
 from lmkp.views.translation import get_profiles
+from urllib import quote_plus
 languages = get_languages()
 selectedlanguage = languages[0]
 for l in languages:
@@ -258,7 +259,27 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
 
         <div class="navbar footer">
             <ul class="nav pull-right">
-
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=${quote_plus(request.url)}"
+                       onclick="javascript:window.open(this.href, '',
+                           'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;">
+                        <i class="icon-facebook" style="line-height: 0.5em;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/intent/tweet?text=${quote_plus(request.url)}&via=LandObservatory"
+                       onclick="javascript:window.open(this.href, '',
+                           'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;">
+                        <i class="icon-twitter" style="line-height: 0.5em;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/share?url=${quote_plus(request.url)}"
+                       onclick="javascript:window.open(this.href, '',
+                           'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;">
+                        <i class="icon-google-plus" style="line-height: 0.5em;"></i>
+                    </a>
+                </li>
                 <%
                 # The entries of the footer as arrays with
                 # - url
