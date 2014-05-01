@@ -70,6 +70,20 @@ application:
     - sphericalMercator: true
     - maxExtent: [10018755, 181, 12801601, 3482189]
     - opacity: 0.7
+  # Protected areas in Laos
+  - name: Protected areas
+    url: "http://cdetux2.unibe.ch/geoserver/gwc/service/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/png8"
+    - layers: "lo:laos_protected_area"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [10018755, 181, 12801601, 3482189]
+    - opacity: 0.7
   # Percentage of economically active population
   - name: Percentage of economically active population
     url: "http://cdetux2.unibe.ch/geoserver/gwc/service/wms"
