@@ -1,6 +1,6 @@
 <%inherit file="lmkp:customization/lo/templates/base.mak" />
 
-<%def name="title()">${_('Stakeholder Details')} ${shortuid}</%def>
+<%def name="title()">${_('Investor Details')} ${shortuid}</%def>
 
 <%def name="head_tags()">
 <style type="text/css" >
