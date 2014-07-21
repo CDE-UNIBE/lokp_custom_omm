@@ -1,15 +1,15 @@
 # Translations template for LMKP_Customization.
-# Copyright (C) 2013 ORGANIZATION
+# Copyright (C) 2014 ORGANIZATION
 # This file is distributed under the same license as the LMKP_Customization
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: LMKP_Customization 0.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2013-12-23 12:54+0100\n"
+"POT-Creation-Date: 2014-07-14 13:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Generated-By: Babel 0.9.6\n"
 
 #: lmkp/customization/lo/templates/about_view.mak:3
-#: lmkp/customization/lo/templates/base.mak:257
+#: lmkp/customization/lo/templates/base.mak:289
 #: lmkp/customization/lo/templates/landing_page.mak:346
 msgid "About"
 msgstr ""
@@ -91,73 +91,71 @@ msgstr ""
 msgid "Click here if the embedded video is not working"
 msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:39
-#: lmkp/customization/lo/templates/base.mak:41
-#: lmkp/customization/lo/templates/base.mak:95
-#: lmkp/customization/lo/templates/base.mak:97
+#: lmkp/customization/lo/templates/base.mak:40
+#: lmkp/customization/lo/templates/base.mak:42
+#: lmkp/customization/lo/templates/base.mak:96
+#: lmkp/customization/lo/templates/base.mak:98
 #: lmkp/customization/lo/templates/landing_page.mak:31
 #: lmkp/customization/lo/templates/landing_page.mak:115
 #: lmkp/customization/lo/templates/landing_page.mak:117
 #: lmkp/customization/lo/templates/landing_page.mak:196
 #: lmkp/customization/lo/templates/login_form.mak:61
+#: lmkp/customization/lo/templates/activities/history_rss.mak:15
+#: lmkp/customization/lo/templates/changesets/byuser_rss.mak:6
+#: lmkp/customization/lo/templates/changesets/latest_rss.mak:6
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:15
 #: lmkp/customization/lo/templates/users/approval_successful.mak:33
-#: lmkp/customization/lo/templates/users/reset_password_form.mak:5
 msgid "Land Observatory"
 msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:113
+#: lmkp/customization/lo/templates/base.mak:114
 #: lmkp/customization/lo/templates/activities/grid.mak:131
 #: lmkp/customization/lo/templates/review/readonly/form.mak:30
 msgid "Map"
 msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:122
+#: lmkp/customization/lo/templates/base.mak:123
 msgid "Grid"
 msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:129
+#: lmkp/customization/lo/templates/base.mak:130
 msgid "Charts"
 msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:155
+#: lmkp/customization/lo/templates/base.mak:156
 #: lmkp/customization/lo/templates/form/form_activity.mak:12
 #: lmkp/customization/lo/templates/parts/messages/unsaved_data_different_form.mak:7
 msgid "New Deal"
 msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:167
+#: lmkp/customization/lo/templates/base.mak:168
 #: lmkp/customization/lo/templates/login_form.mak:3
 #: lmkp/customization/lo/templates/login_form.mak:24
 #: lmkp/customization/lo/templates/login_form.mak:38
-#: lmkp/customization/lo/templates/users/reset_password_form.mak:5
 msgid "Login"
 msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:176
+#: lmkp/customization/lo/templates/base.mak:177
 #: lmkp/customization/lo/templates/users/registration_form.mak:19
 msgid "Register"
 msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:185
+#: lmkp/customization/lo/templates/base.mak:186
 msgid "Logout"
 msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:209
+#: lmkp/customization/lo/templates/base.mak:210
 msgid "Home"
 msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:212
-msgid "Select Profile"
-msgstr ""
-
-#: lmkp/customization/lo/templates/base.mak:256
+#: lmkp/customization/lo/templates/base.mak:288
 #: lmkp/customization/lo/templates/faq_view.mak:3
 #: lmkp/customization/lo/templates/faq_view.mak:14
 #: lmkp/customization/lo/templates/landing_page.mak:345
 msgid "FAQ"
 msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:258
+#: lmkp/customization/lo/templates/base.mak:290
 #: lmkp/customization/lo/templates/landing_page.mak:347
 #: lmkp/customization/lo/templates/partners_view.mak:3
 #: lmkp/customization/lo/templates/partners_view.mak:8
@@ -411,9 +409,10 @@ msgstr ""
 #: lmkp/customization/lo/templates/login_form.mak:33
 #: lmkp/customization/lo/templates/login_form.mak:66
 #: lmkp/customization/lo/templates/login_form.mak:72
-#: lmkp/customization/lo/templates/activities/history.mak:19
+#: lmkp/customization/lo/templates/activities/history.mak:37
 #: lmkp/customization/lo/templates/emails/account_approval_request.mak:3
-#: lmkp/customization/lo/templates/stakeholders/history.mak:19
+#: lmkp/customization/lo/templates/stakeholders/history.mak:37
+#: lmkp/customization/lo/templates/users/reset_password_form.mak:93
 msgid "Username"
 msgstr ""
 
@@ -492,7 +491,7 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/map_view.mak:36
 #: lmkp/customization/lo/templates/activities/grid.mak:96
-#: lmkp/customization/lo/templates/parts/filter.mak:53
+#: lmkp/customization/lo/templates/parts/filter.mak:54
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:3
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:97
 msgid "Investors"
@@ -508,7 +507,7 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/map_view.mak:39
 #: lmkp/customization/lo/templates/map_view.mak:91
-#: lmkp/customization/lo/templates/form/readonly/form.mak:106
+#: lmkp/customization/lo/templates/form/readonly/form.mak:108
 #: lmkp/customization/lo/templates/review/readonly/form.mak:81
 msgid "Loading ..."
 msgstr ""
@@ -544,31 +543,31 @@ msgid "Deals"
 msgstr ""
 
 #: lmkp/customization/lo/templates/map_view.mak:108
-#: lmkp/customization/lo/templates/form/readonly/form.mak:124
+#: lmkp/customization/lo/templates/form/readonly/form.mak:126
 #: lmkp/customization/lo/templates/review/readonly/form.mak:99
 msgid "Base layers"
 msgstr ""
 
 #: lmkp/customization/lo/templates/map_view.mak:113
-#: lmkp/customization/lo/templates/form/readonly/form.mak:130
+#: lmkp/customization/lo/templates/form/readonly/form.mak:132
 #: lmkp/customization/lo/templates/review/readonly/form.mak:105
 msgid "Street Map"
 msgstr ""
 
 #: lmkp/customization/lo/templates/map_view.mak:116
-#: lmkp/customization/lo/templates/form/readonly/form.mak:133
+#: lmkp/customization/lo/templates/form/readonly/form.mak:135
 #: lmkp/customization/lo/templates/review/readonly/form.mak:108
 msgid "Satellite Imagery"
 msgstr ""
 
 #: lmkp/customization/lo/templates/map_view.mak:119
-#: lmkp/customization/lo/templates/form/readonly/form.mak:136
+#: lmkp/customization/lo/templates/form/readonly/form.mak:138
 #: lmkp/customization/lo/templates/review/readonly/form.mak:111
 msgid "Terrain Map"
 msgstr ""
 
 #: lmkp/customization/lo/templates/map_view.mak:129
-#: lmkp/customization/lo/templates/form/readonly/form.mak:146
+#: lmkp/customization/lo/templates/form/readonly/form.mak:148
 #: lmkp/customization/lo/templates/review/readonly/form.mak:122
 msgid "Context layers"
 msgstr ""
@@ -597,14 +596,14 @@ msgstr ""
 #: lmkp/customization/lo/templates/activities/compare.mak:115
 #: lmkp/customization/lo/templates/activities/compare.mak:159
 #: lmkp/customization/lo/templates/activities/compare.mak:163
-#: lmkp/customization/lo/templates/activities/history.mak:20
+#: lmkp/customization/lo/templates/activities/history.mak:38
 #: lmkp/customization/lo/templates/activities/review.mak:28
 #: lmkp/customization/lo/templates/activities/review.mak:85
 #: lmkp/customization/lo/templates/activities/review.mak:104
 #: lmkp/customization/lo/templates/activities/review.mak:157
 #: lmkp/customization/lo/templates/stakeholders/compare.mak:56
 #: lmkp/customization/lo/templates/stakeholders/compare.mak:115
-#: lmkp/customization/lo/templates/stakeholders/history.mak:20
+#: lmkp/customization/lo/templates/stakeholders/history.mak:38
 #: lmkp/customization/lo/templates/stakeholders/review.mak:28
 #: lmkp/customization/lo/templates/stakeholders/review.mak:85
 #: lmkp/customization/lo/templates/stakeholders/review.mak:104
@@ -616,6 +615,8 @@ msgstr ""
 #: lmkp/customization/lo/templates/activities/compare.mak:124
 #: lmkp/customization/lo/templates/activities/review.mak:37
 #: lmkp/customization/lo/templates/activities/review.mak:113
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:51
+#: lmkp/customization/lo/templates/changesets/latest_html.mak:43
 #: lmkp/customization/lo/templates/stakeholders/compare.mak:65
 #: lmkp/customization/lo/templates/stakeholders/compare.mak:124
 #: lmkp/customization/lo/templates/stakeholders/review.mak:37
@@ -643,7 +644,7 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/activities/compare.mak:106
 #: lmkp/customization/lo/templates/activities/review.mak:95
-#: lmkp/customization/lo/templates/form/readonly/form.mak:175
+#: lmkp/customization/lo/templates/form/readonly/form.mak:177
 #: lmkp/customization/lo/templates/parts/messages/comparison_not_valid.mak:4
 #: lmkp/customization/lo/templates/parts/messages/item_requested_not_valid.mak:4
 #: lmkp/customization/lo/templates/stakeholders/compare.mak:106
@@ -652,6 +653,7 @@ msgid "History"
 msgstr ""
 
 #: lmkp/customization/lo/templates/activities/details.mak:3
+#: lmkp/customization/lo/templates/form/readonly/form.mak:54
 msgid "Deal Details"
 msgstr ""
 
@@ -764,45 +766,68 @@ msgid "Deal ID"
 msgstr ""
 
 #: lmkp/customization/lo/templates/activities/grid.mak:151
-#: lmkp/customization/lo/templates/activities/history.mak:18
+#: lmkp/customization/lo/templates/activities/history.mak:36
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:151
-#: lmkp/customization/lo/templates/stakeholders/history.mak:18
+#: lmkp/customization/lo/templates/stakeholders/history.mak:36
 msgid "Last Change"
 msgstr ""
 
 #: lmkp/customization/lo/templates/activities/grid.mak:198
 #: lmkp/customization/lo/templates/activities/grid.mak:200
-#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:72
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:73
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:198
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:200
 msgid "Unknown"
 msgstr ""
 
-#: lmkp/customization/lo/templates/activities/history.mak:3
-#: lmkp/customization/lo/templates/activities/history.mak:11
-#: lmkp/customization/lo/templates/stakeholders/history.mak:3
-#: lmkp/customization/lo/templates/stakeholders/history.mak:11
+#: lmkp/customization/lo/templates/activities/history.mak:8
+#: lmkp/customization/lo/templates/activities/history.mak:26
+#: lmkp/customization/lo/templates/stakeholders/history.mak:8
+#: lmkp/customization/lo/templates/stakeholders/history.mak:26
 msgid "Version History"
-msgstr ""
-
-#: lmkp/customization/lo/templates/activities/history.mak:17
-#: lmkp/customization/lo/templates/stakeholders/history.mak:17
-msgid "Status"
 msgstr ""
 
 #: lmkp/customization/lo/templates/activities/history.mak:35
 #: lmkp/customization/lo/templates/stakeholders/history.mak:35
+msgid "Status"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/history.mak:53
+#: lmkp/customization/lo/templates/activities/history_rss.mak:28
+#: lmkp/customization/lo/templates/stakeholders/history.mak:53
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:28
 msgid "Review this version"
 msgstr ""
 
-#: lmkp/customization/lo/templates/activities/history.mak:45
-#: lmkp/customization/lo/templates/stakeholders/history.mak:45
+#: lmkp/customization/lo/templates/activities/history.mak:63
+#: lmkp/customization/lo/templates/activities/history_rss.mak:35
+#: lmkp/customization/lo/templates/stakeholders/history.mak:63
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:35
 msgid "Compare this version with the active version"
 msgstr ""
 
-#: lmkp/customization/lo/templates/activities/history.mak:50
-#: lmkp/customization/lo/templates/stakeholders/history.mak:50
+#: lmkp/customization/lo/templates/activities/history.mak:68
+#: lmkp/customization/lo/templates/activities/history_rss.mak:42
+#: lmkp/customization/lo/templates/stakeholders/history.mak:68
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:42
 msgid "View this version"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/history_rss.mak:7
+#, python-format
+msgid "Version history of deal #%sidentifier"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/history_rss.mak:21
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:21
+#, python-format
+msgid "Version %s: %s"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/history_rss.mak:24
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:24
+#, python-format
+msgid "Last change on %s by user %s"
 msgstr ""
 
 #: lmkp/customization/lo/templates/activities/review.mak:3
@@ -865,6 +890,91 @@ msgstr ""
 #: lmkp/customization/lo/templates/activities/review.mak:191
 #: lmkp/customization/lo/templates/stakeholders/review.mak:192
 msgid "Additional comments"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:3
+#: lmkp/customization/lo/templates/activities/statistics.mak:33
+msgid "Areal Statistics"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:42
+msgid "Statistics are based on a sample radius of"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:49
+msgid "Population Density"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:53
+msgid ""
+"Landscan population density layer 2011 from the <a "
+"href=\"http://web.ornl.gov/sci/landscan/\">Oak Ridge National Laboratory</a>."
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:61
+msgid "Average population density"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:102
+msgid "Accessibility"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:106
+msgid ""
+"Travel time to major cities: A global map of accessibility from the <a "
+"href=\"http://bioval.jrc.ec.europa.eu/products/gam/index.htm\">Joint Research"
+" Centre of the European Commission</a>."
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:126
+msgid "Land Cover"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:131
+msgid ""
+"Global Land Cover Map 2009 from the <a "
+"href=\"http://due.esrin.esa.int/globcover/\">European Space Agency</a>."
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:8
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:36
+#: lmkp/customization/lo/templates/changesets/byuser_rss.mak:6
+#: lmkp/customization/lo/templates/changesets/byuser_rss.mak:8
+#, python-format
+msgid "Changesets by %s"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:14
+msgid "Subscribe"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:22
+msgid "All Changesets"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:52
+#: lmkp/customization/lo/templates/changesets/latest_html.mak:44
+msgid "Changeset description"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_rss.mak:24
+#, python-format
+msgid "Deal #%s updated to version %s"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_rss.mak:28
+#, python-format
+msgid "Investor #%s updated to version %s"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/latest_html.mak:8
+#: lmkp/customization/lo/templates/changesets/latest_html.mak:28
+#: lmkp/customization/lo/templates/changesets/latest_rss.mak:6
+msgid "Latest Changesets"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/latest_rss.mak:8
+msgid "The latest changes edited on the Land Observatory"
 msgstr ""
 
 #: lmkp/customization/lo/templates/emails/account_activation.mak:1
@@ -948,85 +1058,99 @@ msgstr ""
 msgid "Create a new Investor"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:73
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:74
 msgid "No results found."
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:74
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:75
 msgid "Too many results to display. Try to enter more characters"
 msgstr ""
 
 #: lmkp/customization/lo/templates/form/form_stakeholder.mak:9
-msgid "Stakeholder Editor"
+#: lmkp/customization/lo/templates/stakeholders/form.mak:3
+msgid "Investor Editor"
 msgstr ""
 
 #: lmkp/customization/lo/templates/form/form_stakeholder.mak:12
-msgid "New Stakeholder"
+#: lmkp/customization/lo/templates/parts/messages/unsaved_data_different_form.mak:14
+msgid "New Investor"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:11
+#: lmkp/customization/lo/templates/form/readonly/customInvolvementMappingActivity.mak:5
+msgid "Involvement as"
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/readonly/customInvolvementMappingActivity.mak:14
+msgid "View Deal"
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/readonly/customInvolvementMappingStakeholder.mak:14
+msgid "View Stakeholder"
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/readonly/form.mak:12
 msgid "Edit this Investor"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:14
+#: lmkp/customization/lo/templates/form/readonly/form.mak:16
 msgid "Edit this Deal"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:23
+#: lmkp/customization/lo/templates/form/readonly/form.mak:25
 msgid "Pending Version"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:24
+#: lmkp/customization/lo/templates/form/readonly/form.mak:26
 msgid ""
 "You are seeing a pending version which needs to be reviewed before it is "
 "publicly visible."
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:27
+#: lmkp/customization/lo/templates/form/readonly/form.mak:29
 msgid "Inactive Version"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:28
+#: lmkp/customization/lo/templates/form/readonly/form.mak:30
 msgid "You are seeing an inactive version which is not active anymore."
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:32
+#: lmkp/customization/lo/templates/form/readonly/form.mak:34
 msgid "Not an active Version"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:33
+#: lmkp/customization/lo/templates/form/readonly/form.mak:35
 msgid "You are seeing a version which is not active."
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:50
-#: lmkp/customization/lo/templates/stakeholders/details.mak:3
-msgid "Stakeholder Details"
-msgstr ""
-
 #: lmkp/customization/lo/templates/form/readonly/form.mak:52
-msgid "Activity Details"
+#: lmkp/customization/lo/templates/stakeholders/details.mak:3
+msgid "Investor Details"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:72
+#: lmkp/customization/lo/templates/form/readonly/form.mak:74
 #: lmkp/customization/lo/templates/review/readonly/form.mak:62
 msgid "Turn layers on and off"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:80
+#: lmkp/customization/lo/templates/form/readonly/form.mak:82
 msgid "This Deal"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:95
+#: lmkp/customization/lo/templates/form/readonly/form.mak:97
 #: lmkp/customization/lo/templates/review/readonly/form.mak:70
 msgid "All Deals"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:183
+#: lmkp/customization/lo/templates/form/readonly/form.mak:182
+msgid "Areal statistics"
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/readonly/form.mak:191
 msgid "Review"
 msgstr ""
 
 #: lmkp/customization/lo/templates/parts/filter.mak:15
-#: lmkp/customization/lo/templates/parts/filter.mak:73
+#: lmkp/customization/lo/templates/parts/filter.mak:75
 msgid "Value"
 msgstr ""
 
@@ -1042,16 +1166,20 @@ msgstr ""
 msgid "Key"
 msgstr ""
 
-#: lmkp/customization/lo/templates/parts/filter.mak:101
+#: lmkp/customization/lo/templates/parts/filter.mak:103
 msgid "filter is active, click here to edit"
 msgstr ""
 
-#: lmkp/customization/lo/templates/parts/filter.mak:103
+#: lmkp/customization/lo/templates/parts/filter.mak:105
 msgid "filters are active, click here to edit"
 msgstr ""
 
-#: lmkp/customization/lo/templates/parts/filter.mak:105
+#: lmkp/customization/lo/templates/parts/filter.mak:107
 msgid "Click here to add a filter"
+msgstr ""
+
+#: lmkp/customization/lo/templates/parts/items/stakeholder_role.mak:1
+msgid "Stakeholder Role"
 msgstr ""
 
 #: lmkp/customization/lo/templates/parts/messages/activity_created_success.mak:1
@@ -1087,6 +1215,18 @@ msgid ""
 "The version you requested cannot be displayed. It is not valid according to "
 "the configuration of the application, which can be the case for older "
 "versions. Please select a newer version from the history page."
+msgstr ""
+
+#: lmkp/customization/lo/templates/parts/messages/one_of_involved_activities_cannot_be_reviewed.mak:1
+msgid ""
+"At least one of the involved Deals cannot be reviewed. Click on the icon next"
+" to the involvement for further details."
+msgstr ""
+
+#: lmkp/customization/lo/templates/parts/messages/one_of_involved_stakeholders_cannot_be_reviewed.mak:1
+msgid ""
+"At least one of the involved Investors cannot be reviewed. Click on the icon "
+"next to the involvement for further details."
 msgstr ""
 
 #: lmkp/customization/lo/templates/parts/messages/stakeholder_created_success.mak:2
@@ -1131,10 +1271,6 @@ msgstr ""
 msgid "It contains:"
 msgstr ""
 
-#: lmkp/customization/lo/templates/parts/messages/unsaved_data_different_form.mak:14
-msgid "New Investor"
-msgstr ""
-
 #: lmkp/customization/lo/templates/parts/messages/unsaved_data_different_form.mak:19
 msgid "These changes will be lost if you continue to edit this form."
 msgstr ""
@@ -1155,10 +1291,6 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/review/readonly/form.mak:27
 msgid "There are changes in this section"
-msgstr ""
-
-#: lmkp/customization/lo/templates/stakeholders/form.mak:3
-msgid "Investor Editor"
 msgstr ""
 
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:27
@@ -1203,17 +1335,22 @@ msgstr ""
 msgid "Investor ID"
 msgstr ""
 
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:7
+#, python-format
+msgid "Version history of investor #%sidentifier"
+msgstr ""
+
 #: lmkp/customization/lo/templates/stakeholders/review.mak:3
 #: lmkp/customization/lo/templates/stakeholders/review.mak:6
 msgid "Investor Moderation"
 msgstr ""
 
 #: lmkp/customization/lo/templates/users/account_form.mak:3
-#: lmkp/customization/lo/templates/users/account_form.mak:18
+#: lmkp/customization/lo/templates/users/account_form.mak:34
 msgid "User Account"
 msgstr ""
 
-#: lmkp/customization/lo/templates/users/account_form.mak:19
+#: lmkp/customization/lo/templates/users/account_form.mak:39
 msgid "Update user settings"
 msgstr ""
 
@@ -1260,11 +1397,27 @@ msgid ""
 "account will be approved after activation."
 msgstr ""
 
-#: lmkp/customization/lo/templates/users/reset_password_form.mak:50
-msgid "Reset password"
+#: lmkp/customization/lo/templates/users/reset_password_form.mak:69
+#: lmkp/customization/lo/templates/users/reset_password_form.mak:75
+msgid "Password Reset"
 msgstr ""
 
-#: lmkp/customization/lo/templates/users/reset_password_form.mak:55
-msgid "Email Address"
+#: lmkp/customization/lo/templates/users/reset_password_form.mak:96
+msgid "Reset"
+msgstr ""
+
+#: lmkp/customization/lo/templates/users/reset_password_success.mak:3
+#: lmkp/customization/lo/templates/users/reset_password_success.mak:9
+msgid "Password Reset Successful"
+msgstr ""
+
+#: lmkp/customization/lo/templates/users/reset_password_success.mak:15
+msgid ""
+"Password reset was successful. An email containing the new password has been "
+"sent to your email address."
+msgstr ""
+
+#: lmkp/customization/lo/templates/users/reset_password_success.mak:21
+msgid "Proceed to the login page"
 msgstr ""
 

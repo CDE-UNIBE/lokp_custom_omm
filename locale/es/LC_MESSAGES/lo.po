@@ -8,48 +8,49 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LMKP_Customization 0.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2013-12-23 12:54+0100\n"
-"PO-Revision-Date: 2013-09-19 11:18+0100\n"
+"POT-Creation-Date: 2014-07-14 13:30+0200\n"
+"PO-Revision-Date: 2014-07-14 13:44+0100\n"
 "Last-Translator: Lukas Vonlanthen <lukas.vonlanthen@cde.unibe.ch>\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: es\n"
 
 #: lmkp/customization/lo/templates/about_view.mak:3
-#: lmkp/customization/lo/templates/base.mak:257
+#: lmkp/customization/lo/templates/base.mak:289
 #: lmkp/customization/lo/templates/landing_page.mak:346
 msgid "About"
 msgstr "Acerca de"
 
 #: lmkp/customization/lo/templates/about_view.mak:34
 msgid ""
-"The Land Observatory is a pilot project of some of the partners of the "
-"Land Matrix initiative, to support observatories designed to crowdsource "
-"data about land deals, allowing for greater transparency and improved "
-"decision-making."
+"The Land Observatory is a pilot project of some of the partners of the Land "
+"Matrix initiative, to support observatories designed to crowdsource data "
+"about land deals, allowing for greater transparency and improved decision-"
+"making."
 msgstr ""
-"El Observatorio de Adquisiciones de Tierra es un proyecto piloto de uno "
-"de los miembros del Observatorio Global de Adquisiciones, con el fin de "
-"apoyar a los observatorios diseñados para obtener información de los "
-"casos a través de crowdsourcing. Esto permitirá una mayor transparencia y"
-" mejor toma de decisiones."
+"El Observatorio de Adquisiciones de Tierra es un proyecto piloto de uno de "
+"los miembros del Observatorio Global de Adquisiciones, con el fin de apoyar "
+"a los observatorios diseñados para obtener información de los casos a través "
+"de crowdsourcing. Esto permitirá una mayor transparencia y mejor toma de "
+"decisiones."
 
 #: lmkp/customization/lo/templates/about_view.mak:37
 msgid ""
-"We are co-creating software with partner organizations in pilot countries"
-" that will allow for them to"
+"We are co-creating software with partner organizations in pilot countries "
+"that will allow for them to"
 msgstr ""
-"Estamos co-creando un software con el apoyo de organizaciones miembros de"
-" la red en países piloto que les permitirá "
+"Estamos co-creando un software con el apoyo de organizaciones miembros de la "
+"red en países piloto que les permitirá "
 
 #: lmkp/customization/lo/templates/about_view.mak:40
 msgid "generate greater spatial context for land deals"
 msgstr ""
-"generar un mayor contexto espacial de los casos de adquisiciones de "
-"tierra."
+"generar un mayor contexto espacial de los casos de adquisiciones de tierra."
 
 #: lmkp/customization/lo/templates/about_view.mak:42
 msgid "make possible deeper investigation of the actors involved"
@@ -67,48 +68,48 @@ msgstr "gestionar localmente la data sobre adquisiciones de tierra"
 
 #: lmkp/customization/lo/templates/about_view.mak:52
 msgid ""
-"We are piloting this project in five countries - Cambodia, Laos, "
-"Madagascar, Peru and Tanzania, with civil society partners and "
-"governments who will work to open government data, crowdsource and help "
-"customize local observatories using our software."
+"We are piloting this project in five countries - Cambodia, Laos, Madagascar, "
+"Peru and Tanzania, with civil society partners and governments who will work "
+"to open government data, crowdsource and help customize local observatories "
+"using our software."
 msgstr ""
 "Contamos con este proyecto piloto en cinco países - Cambodia, Laos, "
-"Madagascar, Perú y Tanzania, con miembros de la sociedad civil y "
-"gobiernos quienes trabajarán para el libre acceso a la data Oficial, "
-"\"crowdsourcing\" y la adecuación a la realidad local de los "
-"observatorios usando nuestro software."
+"Madagascar, Perú y Tanzania, con miembros de la sociedad civil y gobiernos "
+"quienes trabajarán para el libre acceso a la data Oficial, \"crowdsourcing\" "
+"y la adecuación a la realidad local de los observatorios usando nuestro "
+"software."
 
 #: lmkp/customization/lo/templates/about_view.mak:55
 msgid ""
-"The project is not merely technical, we are accompanying partners as they"
-" test different crowdsourcing strategies. Partners and their extended "
-"networks play a crucial role in bringing the online information to the "
-"real world, and back again."
+"The project is not merely technical, we are accompanying partners as they "
+"test different crowdsourcing strategies. Partners and their extended "
+"networks play a crucial role in bringing the online information to the real "
+"world, and back again."
 msgstr ""
-"El proyecto no es únicamente para propósitos técnicos, llevamos adelante "
-"el acompañamiento de los miembros dedicados a las diferentes estrategias "
-"de crowdsourcing. Los miembros así como su amplia red de influencia "
-"juegan un rol crucial en llevar la información disponible en la web al "
-"mundo real y viceversa."
+"El proyecto no es únicamente para propósitos técnicos, llevamos adelante el "
+"acompañamiento de los miembros dedicados a las diferentes estrategias de "
+"crowdsourcing. Los miembros así como su amplia red de influencia juegan un "
+"rol crucial en llevar la información disponible en la web al mundo real y "
+"viceversa."
 
 #: lmkp/customization/lo/templates/about_view.mak:58
 msgid ""
-"Updated information on land will benefit citizens, but also governments "
-"and companies interested in sustainability."
+"Updated information on land will benefit citizens, but also governments and "
+"companies interested in sustainability."
 msgstr ""
 "Información actualziada sobre adquisiciones de tierra beneficiará a la "
-"ciudadanía, pero también también a los gobiernos y compañías interesados "
-"en sostenibilidad"
+"ciudadanía, pero también también a los gobiernos y compañías interesados en "
+"sostenibilidad"
 
 #: lmkp/customization/lo/templates/about_view.mak:61
 msgid ""
-"If you are experiencing any technical difficulties, have questions or "
-"would like to send us feedback about how to improve user experience, "
-"please email us:"
+"If you are experiencing any technical difficulties, have questions or would "
+"like to send us feedback about how to improve user experience, please email "
+"us:"
 msgstr ""
-"Si has detectado alguna dificultad técnica, tienes consultas o te "
-"gustaría enviarnos algún comentario relacionado a cómo mejorar la "
-"experiencia de usuario, por favor envíanos un e-mail a:"
+"Si has detectado alguna dificultad técnica, tienes consultas o te gustaría "
+"enviarnos algún comentario relacionado a cómo mejorar la experiencia de "
+"usuario, por favor envíanos un e-mail a:"
 
 #: lmkp/customization/lo/templates/about_view.mak:67
 msgid "View our brief video introduction"
@@ -118,69 +119,71 @@ msgstr "Vea nuestro video introductorio"
 msgid "Click here if the embedded video is not working"
 msgstr "Haz click aquí si no puedes visualizar el video"
 
-#: lmkp/customization/lo/templates/base.mak:39
-#: lmkp/customization/lo/templates/base.mak:41
-#: lmkp/customization/lo/templates/base.mak:95
-#: lmkp/customization/lo/templates/base.mak:97
+#: lmkp/customization/lo/templates/base.mak:40
+#: lmkp/customization/lo/templates/base.mak:42
+#: lmkp/customization/lo/templates/base.mak:96
+#: lmkp/customization/lo/templates/base.mak:98
 #: lmkp/customization/lo/templates/landing_page.mak:31
 #: lmkp/customization/lo/templates/landing_page.mak:115
 #: lmkp/customization/lo/templates/landing_page.mak:117
 #: lmkp/customization/lo/templates/landing_page.mak:196
 #: lmkp/customization/lo/templates/login_form.mak:61
+#: lmkp/customization/lo/templates/activities/history_rss.mak:15
+#: lmkp/customization/lo/templates/changesets/byuser_rss.mak:6
+#: lmkp/customization/lo/templates/changesets/latest_rss.mak:6
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:15
 #: lmkp/customization/lo/templates/users/approval_successful.mak:33
-#: lmkp/customization/lo/templates/users/reset_password_form.mak:5
 msgid "Land Observatory"
 msgstr "Observatorio de Adquisiciones de Tierras"
 
-#: lmkp/customization/lo/templates/base.mak:113
+#: lmkp/customization/lo/templates/base.mak:114
 #: lmkp/customization/lo/templates/activities/grid.mak:131
 #: lmkp/customization/lo/templates/review/readonly/form.mak:30
 msgid "Map"
 msgstr "Mapa"
 
-#: lmkp/customization/lo/templates/base.mak:122
+#: lmkp/customization/lo/templates/base.mak:123
 msgid "Grid"
 msgstr "Cuadrícula"
 
-#: lmkp/customization/lo/templates/base.mak:129
+#: lmkp/customization/lo/templates/base.mak:130
 msgid "Charts"
 msgstr "Diagramas"
 
-#: lmkp/customization/lo/templates/base.mak:155
+#: lmkp/customization/lo/templates/base.mak:156
 #: lmkp/customization/lo/templates/form/form_activity.mak:12
 #: lmkp/customization/lo/templates/parts/messages/unsaved_data_different_form.mak:7
 msgid "New Deal"
 msgstr "Caso nuevo"
 
-#: lmkp/customization/lo/templates/base.mak:167
+#: lmkp/customization/lo/templates/base.mak:168
 #: lmkp/customization/lo/templates/login_form.mak:3
 #: lmkp/customization/lo/templates/login_form.mak:24
 #: lmkp/customization/lo/templates/login_form.mak:38
-#: lmkp/customization/lo/templates/users/reset_password_form.mak:5
 msgid "Login"
 msgstr "Iniciar sesión"
 
-#: lmkp/customization/lo/templates/base.mak:176
+#: lmkp/customization/lo/templates/base.mak:177
 #: lmkp/customization/lo/templates/users/registration_form.mak:19
 msgid "Register"
 msgstr "Registro"
 
-#: lmkp/customization/lo/templates/base.mak:185
+#: lmkp/customization/lo/templates/base.mak:186
 msgid "Logout"
 msgstr "Cerrar sesión"
 
-#: lmkp/customization/lo/templates/base.mak:212
-msgid "Select Profile"
-msgstr "Elige un perfil"
+#: lmkp/customization/lo/templates/base.mak:210
+msgid "Home"
+msgstr ""
 
-#: lmkp/customization/lo/templates/base.mak:256
+#: lmkp/customization/lo/templates/base.mak:288
 #: lmkp/customization/lo/templates/faq_view.mak:3
 #: lmkp/customization/lo/templates/faq_view.mak:14
 #: lmkp/customization/lo/templates/landing_page.mak:345
 msgid "FAQ"
 msgstr "FAQ"
 
-#: lmkp/customization/lo/templates/base.mak:258
+#: lmkp/customization/lo/templates/base.mak:290
 #: lmkp/customization/lo/templates/landing_page.mak:347
 #: lmkp/customization/lo/templates/partners_view.mak:3
 #: lmkp/customization/lo/templates/partners_view.mak:8
@@ -217,8 +220,7 @@ msgstr "¿Cómo puedo remitir información de un caso de adquisición de tierra?
 #: lmkp/customization/lo/templates/faq_view.mak:22
 #: lmkp/customization/lo/templates/faq_view.mak:57
 msgid ""
-"Can I submit information on a land deal even if I am in a different "
-"country?"
+"Can I submit information on a land deal even if I am in a different country?"
 msgstr ""
 "¿Puedo presentar información sobre un caso de adquisición de tierra, "
 "inclusive si soy de un país diferente al del caso?"
@@ -237,54 +239,51 @@ msgstr "¿Será protegida mi identidad?"
 msgid ""
 "We are piloting this project in five countries. More than just testing "
 "software, this requires partners to design crowdsourcing campaigns and "
-"organise multi-stakeholder platforms to manage the observatories. These "
-"are all very intensive processes and need time. We plan to scale, and "
-"seed observatories in other countries in the near future."
+"organise multi-stakeholder platforms to manage the observatories. These are "
+"all very intensive processes and need time. We plan to scale, and seed "
+"observatories in other countries in the near future."
 msgstr ""
 "Estamos piloteando este proyecto en cinco países. Más que sólo probar un "
-"software, esto requiere el apoyo de los miembros para diseñar campañas de"
-" crowdsourcing y organizar plataformas multi-inversor para administrar "
-"los observatorios. Todo ello son procesos intensivos y requieren tiempo. "
-"Tenemos la intención de ampliar e iniciar otros observatorios en el "
-"futuro próximo."
+"software, esto requiere el apoyo de los miembros para diseñar campañas de "
+"crowdsourcing y organizar plataformas multi-inversor para administrar los "
+"observatorios. Todo ello son procesos intensivos y requieren tiempo. Tenemos "
+"la intención de ampliar e iniciar otros observatorios en el futuro próximo."
 
 #: lmkp/customization/lo/templates/faq_view.mak:33
 msgid ""
 "We have co-developed this software with partners in country, and we are "
-"still firming up formal arrangements with partner organisations, and "
-"where possible with governments. Generally speaking, each observatory "
-"will have its own governance structure and moderation team and "
-"procedures. More information will be made available soon about each "
-"country."
+"still firming up formal arrangements with partner organisations, and where "
+"possible with governments. Generally speaking, each observatory will have "
+"its own governance structure and moderation team and procedures. More "
+"information will be made available soon about each country."
 msgstr ""
-"Hemos co-desarrollado este software con miembros en el país en cuestión, "
-"y estamos concretando acuerdos formales con organizaciones aliadas y de "
-"ser posible con los mismos gobiernos. De modo transversal, cada "
-"observatorio tendrá su propia estructura de manejo, un equipo de "
-"moderación y procedimientos. Mayor información acerca de cada país estará"
-" disponible muy pronto."
+"Hemos co-desarrollado este software con miembros en el país en cuestión, y "
+"estamos concretando acuerdos formales con organizaciones aliadas y de ser "
+"posible con los mismos gobiernos. De modo transversal, cada observatorio "
+"tendrá su propia estructura de manejo, un equipo de moderación y "
+"procedimientos. Mayor información acerca de cada país estará disponible muy "
+"pronto."
 
 #: lmkp/customization/lo/templates/faq_view.mak:37
 msgid ""
 "Anybody, even anonymous, non-logged in users can comment on a land deal. "
-"These comments will be subject to the rules of moderation, unique to each"
-" observatory."
+"These comments will be subject to the rules of moderation, unique to each "
+"observatory."
 msgstr ""
 "Alguien, inclusive personas anónimas, o usuarios no registrados pueden "
-"comentar un caso de adquisición de tierra. Estos comentarios serán "
-"sujetos de las reglas de moderación, únicas para cada observatorio."
+"comentar un caso de adquisición de tierra. Estos comentarios serán sujetos "
+"de las reglas de moderación, únicas para cada observatorio."
 
 #: lmkp/customization/lo/templates/faq_view.mak:41
 msgid ""
 "If you have information about a land deal in one of the five pilot "
-"countries, you can submit information about one or more attributes of "
-"this deal. You can also submit a new land deal if the one you are "
-"concerned with does not appear on the map."
+"countries, you can submit information about one or more attributes of this "
+"deal. You can also submit a new land deal if the one you are concerned with "
+"does not appear on the map."
 msgstr ""
-"Si tienes información acerca de un caso de adquisición de tierras en uno "
-"de los cinco países piloto, puedes remitirla con uno o más atributos del "
-"mismo. También puedes remitir un nuevo caso de no aparecer éste en el "
-"mapa."
+"Si tienes información acerca de un caso de adquisición de tierras en uno de "
+"los cinco países piloto, puedes remitirla con uno o más atributos del mismo. "
+"También puedes remitir un nuevo caso de no aparecer éste en el mapa."
 
 #: lmkp/customization/lo/templates/faq_view.mak:42
 msgid "You will need to"
@@ -304,9 +303,9 @@ msgstr "Iniciar sesión"
 
 #: lmkp/customization/lo/templates/faq_view.mak:46
 msgid ""
-"Once you are logged in, you can fill out the form to add a new deal or "
-"edit an existing one. Do you need help filling out the form? We created "
-"some manuals to help you get started."
+"Once you are logged in, you can fill out the form to add a new deal or edit "
+"an existing one. Do you need help filling out the form? We created some "
+"manuals to help you get started."
 msgstr ""
 
 #: lmkp/customization/lo/templates/faq_view.mak:47
@@ -319,58 +318,57 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/faq_view.mak:48
 msgid ""
-"After you submit, moderators will review and approve your report. New "
-"deals will not be approved until all of the mandatory attributes are "
-"completed."
+"After you submit, moderators will review and approve your report. New deals "
+"will not be approved until all of the mandatory attributes are completed."
 msgstr ""
-"Luego la remisión de la información, los moderadores revisarán y "
-"aprobarán el reporte. Los casos nuevos no serán aprobados a menos que los"
-" campos obligatorios estén completos."
+"Luego la remisión de la información, los moderadores revisarán y aprobarán "
+"el reporte. Los casos nuevos no serán aprobados a menos que los campos "
+"obligatorios estén completos."
 
 #: lmkp/customization/lo/templates/faq_view.mak:54
 msgid ""
-"Once your report is reviewed and approved, it is public for the whole "
-"world to see."
+"Once your report is reviewed and approved, it is public for the whole world "
+"to see."
 msgstr ""
-"Una vez que tu reporte es revisado y aprobado, este es publicado en la "
-"web para ser visto por todo el mundo."
+"Una vez que tu reporte es revisado y aprobado, este es publicado en la web "
+"para ser visto por todo el mundo."
 
 #: lmkp/customization/lo/templates/faq_view.mak:58
 msgid ""
-"Yes, but it will be reviewed and approved by moderators. At the moment, "
-"we ask that your account is connected to a particular country."
+"Yes, but it will be reviewed and approved by moderators. At the moment, we "
+"ask that your account is connected to a particular country."
 msgstr ""
-"Sí, pero será revisada y aprobada por los moderadores. Por el momento, te"
-" comunicamos que tu cuenta está vinculada a un país específico."
+"Sí, pero será revisada y aprobada por los moderadores. Por el momento, te "
+"comunicamos que tu cuenta está vinculada a un país específico."
 
 #: lmkp/customization/lo/templates/faq_view.mak:62
 msgid ""
-"Yes, these functions are in development and should be ready soon, as well"
-" as data downloads."
+"Yes, these functions are in development and should be ready soon, as well as "
+"data downloads."
 msgstr ""
-"Sí, estas funciones se encuentran en desarrollo y estarán listas pronto, "
-"así como la descarga de datos."
+"Sí, estas funciones se encuentran en desarrollo y estarán listas pronto, así "
+"como la descarga de datos."
 
 #: lmkp/customization/lo/templates/faq_view.mak:66
 msgid ""
 "All defaults are set to safeguard user privacy. To comment, you need not "
 "give any personal information, although providing it may enhance your "
-"credibility. To log-in and submit data, all you need to provide is an "
-"email address. Currently, metadata about your submissions is stored on "
-"the servers of the Centre for Development and Environment - University of"
-" Bern and are only kept for reference: your personal information will not"
-" be shared with others or re-used for any purposes except for possible "
-"verification of submitted information."
+"credibility. To log-in and submit data, all you need to provide is an email "
+"address. Currently, metadata about your submissions is stored on the servers "
+"of the Centre for Development and Environment - University of Bern and are "
+"only kept for reference: your personal information will not be shared with "
+"others or re-used for any purposes except for possible verification of "
+"submitted information."
 msgstr ""
 "Por defecto, todos los datos consignados mantenienen la privacidad del "
-"usuario. Para hacer comentarios, no necesitas brindar ninguna información"
-" personal, aunque de hacerlo mejora tu credibilidad. Para accesar y "
-"remitir data, todo lo que necesitas es una dirección de correo "
-"electrónico. Por el momento, la metadata que remitas es mantenida en los "
-"servidores del Centro para el Desarrollo y el Ambiente (CDE) de la "
-"Universidad de Berna y será mantenida sólo como referencia: tu "
-"información personal no será compartida con otros o re-usada por ningún "
-"otro propósito excepto para la verificación de la información ingresada."
+"usuario. Para hacer comentarios, no necesitas brindar ninguna información "
+"personal, aunque de hacerlo mejora tu credibilidad. Para accesar y remitir "
+"data, todo lo que necesitas es una dirección de correo electrónico. Por el "
+"momento, la metadata que remitas es mantenida en los servidores del Centro "
+"para el Desarrollo y el Ambiente (CDE) de la Universidad de Berna y será "
+"mantenida sólo como referencia: tu información personal no será compartida "
+"con otros o re-usada por ningún otro propósito excepto para la verificación "
+"de la información ingresada."
 
 #: lmkp/customization/lo/templates/landing_page.mak:123
 #: lmkp/customization/lo/templates/landing_page.mak:154
@@ -393,11 +391,11 @@ msgstr "Observatorio Global de Adquisiciones de Tierras"
 #: lmkp/customization/lo/templates/landing_page.mak:123
 #: lmkp/customization/lo/templates/landing_page.mak:154
 msgid ""
-"designed to provide greater context and deeper insight on land deals, "
-"from a more local perspective."
+"designed to provide greater context and deeper insight on land deals, from a "
+"more local perspective."
 msgstr ""
-"diseñado para brindar mayor contexto y una visión más profunda de los "
-"casos de adquisiciones de tierra, desde una perspectiva más local."
+"diseñado para brindar mayor contexto y una visión más profunda de los casos "
+"de adquisiciones de tierra, desde una perspectiva más local."
 
 #: lmkp/customization/lo/templates/landing_page.mak:196
 msgid "Welcome to the"
@@ -418,8 +416,8 @@ msgid ""
 "time users can get a feel for the Observatory and its functions."
 msgstr ""
 "Esta versión Demo es para fines de aprendizaje y experimentación, de tal "
-"forma que aquellos que lo utilizan por primera vez comprendan el sentido "
-"del Observatorio y sus funciones."
+"forma que aquellos que lo utilizan por primera vez comprendan el sentido del "
+"Observatorio y sus funciones."
 
 #: lmkp/customization/lo/templates/landing_page.mak:199
 msgid "Enter"
@@ -440,50 +438,50 @@ msgstr "O toma un vistazo rápido:"
 
 #: lmkp/customization/lo/templates/landing_page.mak:271
 msgid ""
-"Users in select pilot countries gather, explore and analyze spatial data "
-"on large-scale land acquisitions. Data is managed and reviewed locally by"
-" partners."
+"Users in select pilot countries gather, explore and analyze spatial data on "
+"large-scale land acquisitions. Data is managed and reviewed locally by "
+"partners."
 msgstr ""
-"Usuarios en los países pilotos seleccionados, reunen, exploran y analizan"
-" datos espaciales de las adquisiciones de tierra a gran escala. La data "
-"es administrada y revisada localmente por los miembros."
+"Usuarios en los países pilotos seleccionados, reunen, exploran y analizan "
+"datos espaciales de las adquisiciones de tierra a gran escala. La data es "
+"administrada y revisada localmente por los miembros."
 
 #: lmkp/customization/lo/templates/landing_page.mak:278
 msgid ""
-"Users can see deals in full geographical context, learn more about "
-"investors and the kinds of investments in question."
+"Users can see deals in full geographical context, learn more about investors "
+"and the kinds of investments in question."
 msgstr ""
-"Usuarios pueden ver los casos en un completo contexto geográfico, "
-"aprender más sobre los inversores y los tipos de inversión en cuestión"
+"Usuarios pueden ver los casos en un completo contexto geográfico, aprender "
+"más sobre los inversores y los tipos de inversión en cuestión"
 
 #: lmkp/customization/lo/templates/landing_page.mak:285
 msgid ""
-"You can also select a specific land deal to see more: \"who\" (investors "
-"and other stakeholders) and \"what\" the land will be used for."
+"You can also select a specific land deal to see more: \"who\" (investors and "
+"other stakeholders) and \"what\" the land will be used for."
 msgstr ""
-"Puedes también seleccionar un caso específico para ver más: \"quién\" "
-"(inversores y otras organizaciones) y \"qué\" la tierra será usada para."
+"Puedes también seleccionar un caso específico para ver más: \"quién"
+"\" (inversores y otras organizaciones) y \"qué\" la tierra será usada para."
 
 #: lmkp/customization/lo/templates/landing_page.mak:292
 msgid ""
 "You can go further and learn more about an investor, seeing the same "
 "investors other land deals."
 msgstr ""
-"Puedes ir más lejos y aprender más acerca de un inversor, viendo al mismo"
-" inversor en otros casos de adquisición de tierras."
+"Puedes ir más lejos y aprender más acerca de un inversor, viendo al mismo "
+"inversor en otros casos de adquisición de tierras."
 
 #: lmkp/customization/lo/templates/landing_page.mak:299
 msgid ""
-"Logged in users can also help contribute and update data, and anybody can"
-" freely comment on it."
+"Logged in users can also help contribute and update data, and anybody can "
+"freely comment on it."
 msgstr ""
-"Los usuarios registrados también pueden ayudar contribuyendo y "
-"actualizando data, y cualquiera siéntase libre de dejar su comentario."
+"Los usuarios registrados también pueden ayudar contribuyendo y actualizando "
+"data, y cualquiera siéntase libre de dejar su comentario."
 
 #: lmkp/customization/lo/templates/landing_page.mak:306
 msgid ""
-"You can filter the land deals by various attributes - like size, or crop."
-" Or make a spatial selection of land deals."
+"You can filter the land deals by various attributes - like size, or crop. Or "
+"make a spatial selection of land deals."
 msgstr ""
 "Puedes filtrar los casos de adquisiciones de tierra de acuerdo a varios "
 "aributos - tales como tamaño, tipo de cultivo. O hacer una selección "
@@ -500,9 +498,10 @@ msgstr ""
 #: lmkp/customization/lo/templates/login_form.mak:33
 #: lmkp/customization/lo/templates/login_form.mak:66
 #: lmkp/customization/lo/templates/login_form.mak:72
-#: lmkp/customization/lo/templates/activities/history.mak:19
+#: lmkp/customization/lo/templates/activities/history.mak:37
 #: lmkp/customization/lo/templates/emails/account_approval_request.mak:3
-#: lmkp/customization/lo/templates/stakeholders/history.mak:19
+#: lmkp/customization/lo/templates/stakeholders/history.mak:37
+#: lmkp/customization/lo/templates/users/reset_password_form.mak:93
 msgid "Username"
 msgstr "Usuario"
 
@@ -557,13 +556,14 @@ msgid ""
 "New data added by users to the demo has not been verified in any way. It "
 "will be visible to the public, but the database will be reset regularly."
 msgstr ""
-"Nueva data agregada por usuarios para el Demo no ha sido verificada. Esta"
-" será visible públicamente, pero la base de datos será formateada "
+"Nueva data agregada por usuarios para el Demo no ha sido verificada. Esta "
+"será visible públicamente, pero la base de datos será formateada "
 "regularmente."
 
 #: lmkp/customization/lo/templates/login_form.mak:83
 msgid "Please send your questions and feedback on the Observatory to: "
-msgstr "Por favor, envíanos tus preguntas y comentarios sobre el Obervatorio a:"
+msgstr ""
+"Por favor, envíanos tus preguntas y comentarios sobre el Obervatorio a:"
 
 #: lmkp/customization/lo/templates/map_view.mak:3
 msgid "Map View"
@@ -584,7 +584,7 @@ msgstr "Inversor"
 
 #: lmkp/customization/lo/templates/map_view.mak:36
 #: lmkp/customization/lo/templates/activities/grid.mak:96
-#: lmkp/customization/lo/templates/parts/filter.mak:53
+#: lmkp/customization/lo/templates/parts/filter.mak:54
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:3
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:97
 msgid "Investors"
@@ -600,7 +600,7 @@ msgstr "Leyenda de capa de contexto"
 
 #: lmkp/customization/lo/templates/map_view.mak:39
 #: lmkp/customization/lo/templates/map_view.mak:91
-#: lmkp/customization/lo/templates/form/readonly/form.mak:106
+#: lmkp/customization/lo/templates/form/readonly/form.mak:108
 #: lmkp/customization/lo/templates/review/readonly/form.mak:81
 msgid "Loading ..."
 msgstr "Cargando ..."
@@ -636,31 +636,31 @@ msgid "Deals"
 msgstr "Casos de adquisiciones de tierras"
 
 #: lmkp/customization/lo/templates/map_view.mak:108
-#: lmkp/customization/lo/templates/form/readonly/form.mak:124
+#: lmkp/customization/lo/templates/form/readonly/form.mak:126
 #: lmkp/customization/lo/templates/review/readonly/form.mak:99
 msgid "Base layers"
 msgstr "Capas de base"
 
 #: lmkp/customization/lo/templates/map_view.mak:113
-#: lmkp/customization/lo/templates/form/readonly/form.mak:130
+#: lmkp/customization/lo/templates/form/readonly/form.mak:132
 #: lmkp/customization/lo/templates/review/readonly/form.mak:105
 msgid "Street Map"
 msgstr "Mapa de calles"
 
 #: lmkp/customization/lo/templates/map_view.mak:116
-#: lmkp/customization/lo/templates/form/readonly/form.mak:133
+#: lmkp/customization/lo/templates/form/readonly/form.mak:135
 #: lmkp/customization/lo/templates/review/readonly/form.mak:108
 msgid "Satellite Imagery"
 msgstr "Vista satelital"
 
 #: lmkp/customization/lo/templates/map_view.mak:119
-#: lmkp/customization/lo/templates/form/readonly/form.mak:136
+#: lmkp/customization/lo/templates/form/readonly/form.mak:138
 #: lmkp/customization/lo/templates/review/readonly/form.mak:111
 msgid "Terrain Map"
 msgstr "Mapa del terreno"
 
 #: lmkp/customization/lo/templates/map_view.mak:129
-#: lmkp/customization/lo/templates/form/readonly/form.mak:146
+#: lmkp/customization/lo/templates/form/readonly/form.mak:148
 #: lmkp/customization/lo/templates/review/readonly/form.mak:122
 msgid "Context layers"
 msgstr "Capas de contexto"
@@ -672,16 +672,16 @@ msgstr "Cerrar"
 
 #: lmkp/customization/lo/templates/partners_view.mak:11
 msgid ""
-"The pilot project is coordinated by the International Land Coalition and "
-"the Centre for Development and Environment at the University of Bern, "
-"Switzerland. It is funded by the Swiss Agency for Development "
-"Cooperation, with co-funding from other ILC and CDE programs."
+"The pilot project is coordinated by the International Land Coalition and the "
+"Centre for Development and Environment at the University of Bern, "
+"Switzerland. It is funded by the Swiss Agency for Development Cooperation, "
+"with co-funding from other ILC and CDE programs."
 msgstr ""
 "El proyecto piloto es coordinado por la Coalición Internacional para el "
 "Acceso a la Tierra y el Centro para el Desarrollo y el Ambiente de la "
 "Universidad de Berna, Suiza. Es financiado por la Agencia Suiza para el "
-"Desarrollo y la Cooperación, con el cofinanciamiento de otros programas "
-"de ILC y de CDE"
+"Desarrollo y la Cooperación, con el cofinanciamiento de otros programas de "
+"ILC y de CDE"
 
 #: lmkp/customization/lo/templates/activities/compare.mak:7
 #: lmkp/customization/lo/templates/activities/compare.mak:33
@@ -694,27 +694,27 @@ msgstr ""
 #: lmkp/customization/lo/templates/activities/compare.mak:115
 #: lmkp/customization/lo/templates/activities/compare.mak:159
 #: lmkp/customization/lo/templates/activities/compare.mak:163
-#: lmkp/customization/lo/templates/activities/history.mak:20
+#: lmkp/customization/lo/templates/activities/history.mak:38
 #: lmkp/customization/lo/templates/activities/review.mak:28
 #: lmkp/customization/lo/templates/activities/review.mak:85
 #: lmkp/customization/lo/templates/activities/review.mak:104
 #: lmkp/customization/lo/templates/activities/review.mak:157
 #: lmkp/customization/lo/templates/stakeholders/compare.mak:56
 #: lmkp/customization/lo/templates/stakeholders/compare.mak:115
-#: lmkp/customization/lo/templates/stakeholders/history.mak:20
+#: lmkp/customization/lo/templates/stakeholders/history.mak:38
 #: lmkp/customization/lo/templates/stakeholders/review.mak:28
 #: lmkp/customization/lo/templates/stakeholders/review.mak:85
 #: lmkp/customization/lo/templates/stakeholders/review.mak:104
 #: lmkp/customization/lo/templates/stakeholders/review.mak:157
-#, fuzzy
-#| msgid "Demo Version"
 msgid "Version"
-msgstr "Versión Demo"
+msgstr "Versión"
 
 #: lmkp/customization/lo/templates/activities/compare.mak:65
 #: lmkp/customization/lo/templates/activities/compare.mak:124
 #: lmkp/customization/lo/templates/activities/review.mak:37
 #: lmkp/customization/lo/templates/activities/review.mak:113
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:51
+#: lmkp/customization/lo/templates/changesets/latest_html.mak:43
 #: lmkp/customization/lo/templates/stakeholders/compare.mak:65
 #: lmkp/customization/lo/templates/stakeholders/compare.mak:124
 #: lmkp/customization/lo/templates/stakeholders/review.mak:37
@@ -742,24 +742,21 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/activities/compare.mak:106
 #: lmkp/customization/lo/templates/activities/review.mak:95
-#: lmkp/customization/lo/templates/form/readonly/form.mak:175
+#: lmkp/customization/lo/templates/form/readonly/form.mak:177
 #: lmkp/customization/lo/templates/parts/messages/comparison_not_valid.mak:4
 #: lmkp/customization/lo/templates/parts/messages/item_requested_not_valid.mak:4
 #: lmkp/customization/lo/templates/stakeholders/compare.mak:106
 #: lmkp/customization/lo/templates/stakeholders/review.mak:95
-#, fuzzy
-#| msgid "Editor"
 msgid "History"
-msgstr "Editor"
+msgstr ""
 
 #: lmkp/customization/lo/templates/activities/details.mak:3
+#: lmkp/customization/lo/templates/form/readonly/form.mak:54
 msgid "Deal Details"
 msgstr "Detalles del caso"
 
 #: lmkp/customization/lo/templates/activities/details.mak:36
 #: lmkp/customization/lo/templates/stakeholders/details.mak:33
-#, fuzzy
-#| msgid "Loading ..."
 msgid "Loading comments ..."
 msgstr "Cargando ..."
 
@@ -793,7 +790,8 @@ msgstr "Extensión del mapa"
 
 #: lmkp/customization/lo/templates/activities/grid.mak:40
 msgid "You are currently only seeing Deals which are visible on the map."
-msgstr "En este momento estás viendo únicamente Casos que son visibles en el mapa"
+msgstr ""
+"En este momento estás viendo únicamente Casos que son visibles en el mapa"
 
 #: lmkp/customization/lo/templates/activities/grid.mak:41
 msgid "Show all Deals of the profile."
@@ -831,10 +829,8 @@ msgid "Status Filter"
 msgstr ""
 
 #: lmkp/customization/lo/templates/activities/grid.mak:77
-#, fuzzy
-#| msgid "You are currently only seeing Deals where Investor"
 msgid "You are only seeing Deals with the following status:"
-msgstr "En este momento estás viendo sólo Casos donde el Inversor"
+msgstr ""
 
 #: lmkp/customization/lo/templates/activities/grid.mak:112
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:113
@@ -869,52 +865,69 @@ msgid "Deal ID"
 msgstr "Código del Caso (ID)"
 
 #: lmkp/customization/lo/templates/activities/grid.mak:151
-#: lmkp/customization/lo/templates/activities/history.mak:18
+#: lmkp/customization/lo/templates/activities/history.mak:36
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:151
-#: lmkp/customization/lo/templates/stakeholders/history.mak:18
-#, fuzzy
-#| msgid "Last name"
+#: lmkp/customization/lo/templates/stakeholders/history.mak:36
 msgid "Last Change"
-msgstr "Apellido"
+msgstr ""
 
 #: lmkp/customization/lo/templates/activities/grid.mak:198
 #: lmkp/customization/lo/templates/activities/grid.mak:200
-#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:72
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:73
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:198
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:200
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: lmkp/customization/lo/templates/activities/history.mak:3
-#: lmkp/customization/lo/templates/activities/history.mak:11
-#: lmkp/customization/lo/templates/stakeholders/history.mak:3
-#: lmkp/customization/lo/templates/stakeholders/history.mak:11
+#: lmkp/customization/lo/templates/activities/history.mak:8
+#: lmkp/customization/lo/templates/activities/history.mak:26
+#: lmkp/customization/lo/templates/stakeholders/history.mak:8
+#: lmkp/customization/lo/templates/stakeholders/history.mak:26
 msgid "Version History"
-msgstr ""
-
-#: lmkp/customization/lo/templates/activities/history.mak:17
-#: lmkp/customization/lo/templates/stakeholders/history.mak:17
-msgid "Status"
 msgstr ""
 
 #: lmkp/customization/lo/templates/activities/history.mak:35
 #: lmkp/customization/lo/templates/stakeholders/history.mak:35
+msgid "Status"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/history.mak:53
+#: lmkp/customization/lo/templates/activities/history_rss.mak:28
+#: lmkp/customization/lo/templates/stakeholders/history.mak:53
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:28
 msgid "Review this version"
 msgstr "Revisar esta versión"
 
-#: lmkp/customization/lo/templates/activities/history.mak:45
-#: lmkp/customization/lo/templates/stakeholders/history.mak:45
-#, fuzzy
-#| msgid "You are seeing a version which is not active."
+#: lmkp/customization/lo/templates/activities/history.mak:63
+#: lmkp/customization/lo/templates/activities/history_rss.mak:35
+#: lmkp/customization/lo/templates/stakeholders/history.mak:63
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:35
 msgid "Compare this version with the active version"
-msgstr "Estás viendo una versión que no se encuentra activa"
+msgstr "Es"
 
-#: lmkp/customization/lo/templates/activities/history.mak:50
-#: lmkp/customization/lo/templates/stakeholders/history.mak:50
-#, fuzzy
-#| msgid "Review this version"
+#: lmkp/customization/lo/templates/activities/history.mak:68
+#: lmkp/customization/lo/templates/activities/history_rss.mak:42
+#: lmkp/customization/lo/templates/stakeholders/history.mak:68
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:42
 msgid "View this version"
-msgstr "Revisar esta versión"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/history_rss.mak:7
+#, python-format
+msgid "Version history of deal #%sidentifier"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/history_rss.mak:21
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:21
+#, python-format
+msgid "Version %s: %s"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/history_rss.mak:24
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:24
+#, python-format
+msgid "Last change on %s by user %s"
+msgstr ""
 
 #: lmkp/customization/lo/templates/activities/review.mak:3
 #: lmkp/customization/lo/templates/activities/review.mak:6
@@ -925,10 +938,8 @@ msgstr ""
 #: lmkp/customization/lo/templates/activities/review.mak:146
 #: lmkp/customization/lo/templates/stakeholders/review.mak:142
 #: lmkp/customization/lo/templates/stakeholders/review.mak:146
-#, fuzzy
-#| msgid "User approval"
 msgid "Approve"
-msgstr "Aprobación de usuario"
+msgstr "Aprobación"
 
 #: lmkp/customization/lo/templates/activities/review.mak:152
 #: lmkp/customization/lo/templates/stakeholders/review.mak:152
@@ -937,10 +948,8 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/activities/review.mak:157
 #: lmkp/customization/lo/templates/stakeholders/review.mak:157
-#, fuzzy
-#| msgid "Editor"
 msgid "Edit"
-msgstr "Editor"
+msgstr "Editar"
 
 #: lmkp/customization/lo/templates/activities/review.mak:165
 #: lmkp/customization/lo/templates/activities/review.mak:177
@@ -952,9 +961,8 @@ msgstr ""
 #: lmkp/customization/lo/templates/activities/review.mak:166
 #: lmkp/customization/lo/templates/stakeholders/review.mak:167
 msgid ""
-"There are some mandatory keys missing. The item cannot be approved "
-"without these keys. Please click the \"edit\" button to add the missing "
-"keys."
+"There are some mandatory keys missing. The item cannot be approved without "
+"these keys. Please click the \"edit\" button to add the missing keys."
 msgstr ""
 
 #: lmkp/customization/lo/templates/activities/review.mak:167
@@ -973,14 +981,99 @@ msgstr "Aviso"
 #: lmkp/customization/lo/templates/activities/review.mak:184
 #: lmkp/customization/lo/templates/stakeholders/review.mak:185
 msgid ""
-"The two versions are not based directly on each other. The new version is"
-" calculated to display only the changes made to this version. Approving "
-"it will create a new version."
+"The two versions are not based directly on each other. The new version is "
+"calculated to display only the changes made to this version. Approving it "
+"will create a new version."
 msgstr ""
 
 #: lmkp/customization/lo/templates/activities/review.mak:191
 #: lmkp/customization/lo/templates/stakeholders/review.mak:192
 msgid "Additional comments"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:3
+#: lmkp/customization/lo/templates/activities/statistics.mak:33
+msgid "Areal Statistics"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:42
+msgid "Statistics are based on a sample radius of"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:49
+msgid "Population Density"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:53
+msgid ""
+"Landscan population density layer 2011 from the <a href=\"http://web.ornl."
+"gov/sci/landscan/\">Oak Ridge National Laboratory</a>."
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:61
+msgid "Average population density"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:102
+msgid "Accessibility"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:106
+msgid ""
+"Travel time to major cities: A global map of accessibility from the <a href="
+"\"http://bioval.jrc.ec.europa.eu/products/gam/index.htm\">Joint Research "
+"Centre of the European Commission</a>."
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:126
+msgid "Land Cover"
+msgstr ""
+
+#: lmkp/customization/lo/templates/activities/statistics.mak:131
+msgid ""
+"Global Land Cover Map 2009 from the <a href=\"http://due.esrin.esa.int/"
+"globcover/\">European Space Agency</a>."
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:8
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:36
+#: lmkp/customization/lo/templates/changesets/byuser_rss.mak:6
+#: lmkp/customization/lo/templates/changesets/byuser_rss.mak:8
+#, python-format
+msgid "Changesets by %s"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:14
+msgid "Subscribe"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:22
+msgid "All Changesets"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_html.mak:52
+#: lmkp/customization/lo/templates/changesets/latest_html.mak:44
+msgid "Changeset description"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_rss.mak:24
+#, python-format
+msgid "Deal #%s updated to version %s"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/byuser_rss.mak:28
+#, python-format
+msgid "Investor #%s updated to version %s"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/latest_html.mak:8
+#: lmkp/customization/lo/templates/changesets/latest_html.mak:28
+#: lmkp/customization/lo/templates/changesets/latest_rss.mak:6
+msgid "Latest Changesets"
+msgstr ""
+
+#: lmkp/customization/lo/templates/changesets/latest_rss.mak:8
+msgid "The latest changes edited on the Land Observatory"
 msgstr ""
 
 #: lmkp/customization/lo/templates/emails/account_activation.mak:1
@@ -994,11 +1087,11 @@ msgstr "Gracias por registrarte en el portal landobservatory.org!"
 
 #: lmkp/customization/lo/templates/emails/account_activation.mak:5
 msgid ""
-"In order to activate your account please visit the following link or copy"
-" it to your web browser. The activation link expires in 48 hours."
+"In order to activate your account please visit the following link or copy it "
+"to your web browser. The activation link expires in 48 hours."
 msgstr ""
-"De acuerdo al orden para activar tu cuenta, por favor visita el siguiente"
-" enlace o cópialo en tu navegador. Este enlace expirará en 48 horas"
+"De acuerdo al orden para activar tu cuenta, por favor visita el siguiente "
+"enlace o cópialo en tu navegador. Este enlace expirará en 48 horas"
 
 #: lmkp/customization/lo/templates/emails/account_activation.mak:8
 msgid "Your account will be approved after activation."
@@ -1013,7 +1106,8 @@ msgid "Please proceed to:"
 msgstr "Por favor proceder a:"
 
 #: lmkp/customization/lo/templates/emails/account_approval_request.mak:1
-msgid "The following user requests approval for the landobservatory.org platform:"
+msgid ""
+"The following user requests approval for the landobservatory.org platform:"
 msgstr ""
 "El siguiente usuario solicita la aprobación de la plataforma "
 "\"\"landobservatory.org"
@@ -1036,16 +1130,15 @@ msgstr "Perfiles"
 
 #: lmkp/customization/lo/templates/emails/account_approval_request.mak:9
 msgid ""
-"In order to approve this account, please visit the following link or copy"
-" it to your web browser."
+"In order to approve this account, please visit the following link or copy it "
+"to your web browser."
 msgstr ""
-"En orden para la aprobación de esta cuenta, por favor visitar el "
-"siguiente enlace o cópialo en tu navegador"
+"En orden para la aprobación de esta cuenta, por favor visitar el siguiente "
+"enlace o cópialo en tu navegador"
 
 #: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:27
-#, fuzzy
 msgid "Remove the Investor"
-msgstr "Mostrar los casos del Inversor"
+msgstr ""
 
 #: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:35
 msgid "Select an Investor"
@@ -1053,113 +1146,119 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:41
 msgid ""
-"Search the database to find an existing Investor. Start typing (at least "
-"4 characters) to search an Investor and select it."
+"Search the database to find an existing Investor. Start typing (at least 4 "
+"characters) to search an Investor and select it."
 msgstr ""
 
 #: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:46
-#, fuzzy
 msgid "Search a Stakeholder"
-msgstr "Seleccionar un Inversor"
+msgstr ""
 
 #: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:52
 msgid ""
-"Nothing found? Maybe the Investor is not yet in the database. You can "
-"create a new Investor."
+"Nothing found? Maybe the Investor is not yet in the database. You can create "
+"a new Investor."
 msgstr ""
 
 #: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:58
-#, fuzzy
 msgid "Create a new Investor"
 msgstr "Crear un nuevo inversor"
 
-#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:73
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:74
 msgid "No results found."
 msgstr "No se encontraron resultados"
 
-#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:74
+#: lmkp/customization/lo/templates/form/customInvolvementMapping.mak:75
 msgid "Too many results to display. Try to enter more characters"
 msgstr "Demasiados resultados para mostrar. Intenta ingresar más caracteres"
 
 #: lmkp/customization/lo/templates/form/form_stakeholder.mak:9
-msgid "Stakeholder Editor"
-msgstr "Editor de Inversor"
+#: lmkp/customization/lo/templates/stakeholders/form.mak:3
+msgid "Investor Editor"
+msgstr ""
 
 #: lmkp/customization/lo/templates/form/form_stakeholder.mak:12
-#, fuzzy
-#| msgid "View the Stakeholder"
-msgid "New Stakeholder"
-msgstr "Ver el inversor"
+#: lmkp/customization/lo/templates/parts/messages/unsaved_data_different_form.mak:14
+msgid "New Investor"
+msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:11
-#, fuzzy
-#| msgid "Show deals of this investor"
+#: lmkp/customization/lo/templates/form/readonly/customInvolvementMappingActivity.mak:5
+msgid "Involvement as"
+msgstr "Participar como"
+
+#: lmkp/customization/lo/templates/form/readonly/customInvolvementMappingActivity.mak:14
+msgid "View Deal"
+msgstr "Ver Caso"
+
+#: lmkp/customization/lo/templates/form/readonly/customInvolvementMappingStakeholder.mak:14
+msgid "View Stakeholder"
+msgstr "Ver Inversor"
+
+#: lmkp/customization/lo/templates/form/readonly/form.mak:12
 msgid "Edit this Investor"
-msgstr "Mostrar los casos del Inversor"
+msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:14
-#, fuzzy
-#| msgid "Edit this"
+#: lmkp/customization/lo/templates/form/readonly/form.mak:16
 msgid "Edit this Deal"
-msgstr "Editar esto"
+msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:23
+#: lmkp/customization/lo/templates/form/readonly/form.mak:25
 msgid "Pending Version"
 msgstr "Versión pendiente"
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:24
+#: lmkp/customization/lo/templates/form/readonly/form.mak:26
 msgid ""
 "You are seeing a pending version which needs to be reviewed before it is "
 "publicly visible."
 msgstr ""
-"Estás viendo una versión pendiente que necesita ser revisada antes de ser"
-" públicamente visible."
+"Estás viendo una versión pendiente que necesita ser revisada antes de ser "
+"públicamente visible."
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:27
+#: lmkp/customization/lo/templates/form/readonly/form.mak:29
 msgid "Inactive Version"
 msgstr "Versión Inactiva"
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:28
+#: lmkp/customization/lo/templates/form/readonly/form.mak:30
 msgid "You are seeing an inactive version which is not active anymore."
 msgstr "Estás viendo una versión inactiva la cual no volverá a estar activa."
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:32
+#: lmkp/customization/lo/templates/form/readonly/form.mak:34
 msgid "Not an active Version"
 msgstr "No es una Versión activa"
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:33
+#: lmkp/customization/lo/templates/form/readonly/form.mak:35
 msgid "You are seeing a version which is not active."
 msgstr "Estás viendo una versión que no se encuentra activa"
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:50
-#: lmkp/customization/lo/templates/stakeholders/details.mak:3
-msgid "Stakeholder Details"
-msgstr "Detalles del Inversor"
-
 #: lmkp/customization/lo/templates/form/readonly/form.mak:52
-msgid "Activity Details"
+#: lmkp/customization/lo/templates/stakeholders/details.mak:3
+msgid "Investor Details"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:72
+#: lmkp/customization/lo/templates/form/readonly/form.mak:74
 #: lmkp/customization/lo/templates/review/readonly/form.mak:62
 msgid "Turn layers on and off"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:80
+#: lmkp/customization/lo/templates/form/readonly/form.mak:82
 msgid "This Deal"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:95
+#: lmkp/customization/lo/templates/form/readonly/form.mak:97
 #: lmkp/customization/lo/templates/review/readonly/form.mak:70
 msgid "All Deals"
 msgstr ""
 
-#: lmkp/customization/lo/templates/form/readonly/form.mak:183
+#: lmkp/customization/lo/templates/form/readonly/form.mak:182
+msgid "Areal statistics"
+msgstr ""
+
+#: lmkp/customization/lo/templates/form/readonly/form.mak:191
 msgid "Review"
 msgstr ""
 
 #: lmkp/customization/lo/templates/parts/filter.mak:15
-#: lmkp/customization/lo/templates/parts/filter.mak:73
+#: lmkp/customization/lo/templates/parts/filter.mak:75
 msgid "Value"
 msgstr "Valor"
 
@@ -1175,17 +1274,22 @@ msgstr "Nuevo filtro"
 msgid "Key"
 msgstr "Campo Clave"
 
-#: lmkp/customization/lo/templates/parts/filter.mak:101
+#: lmkp/customization/lo/templates/parts/filter.mak:103
 msgid "filter is active, click here to edit"
 msgstr "filtro está activo, dar click aquí para editar"
 
-#: lmkp/customization/lo/templates/parts/filter.mak:103
+#: lmkp/customization/lo/templates/parts/filter.mak:105
 msgid "filters are active, click here to edit"
 msgstr "filtros activos, dar click aquí para editar"
 
-#: lmkp/customization/lo/templates/parts/filter.mak:105
+#: lmkp/customization/lo/templates/parts/filter.mak:107
 msgid "Click here to add a filter"
 msgstr "Dar click aquí para agregar un filtro"
+
+#: lmkp/customization/lo/templates/parts/items/stakeholder_role.mak:1
+#| msgid "View Stakeholder"
+msgid "Stakeholder Role"
+msgstr ""
 
 #: lmkp/customization/lo/templates/parts/messages/activity_created_success.mak:1
 #: lmkp/customization/lo/templates/parts/messages/stakeholder_created_success.mak:1
@@ -1195,12 +1299,11 @@ msgstr "Correcto"
 
 #: lmkp/customization/lo/templates/parts/messages/activity_created_success.mak:2
 msgid ""
-"The Deal was successfully created or updated. It is now pending and needs"
-" to be reviewed by a moderator before it is publicly visible."
+"The Deal was successfully created or updated. It is now pending and needs to "
+"be reviewed by a moderator before it is publicly visible."
 msgstr ""
 "El caso fue creado o actualizado correctamente. Ahora está pendiente y "
-"necesita ser revisado por un moderador antes de que sea públicamente "
-"visible."
+"necesita ser revisado por un moderador antes de que sea públicamente visible."
 
 #: lmkp/customization/lo/templates/parts/messages/activity_created_success.mak:3
 msgid "View the Deal."
@@ -1213,27 +1316,42 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/parts/messages/comparison_not_valid.mak:2
 msgid ""
-"The selected versions cannot be compared. At least one of them is not "
-"valid according to the configuration of the application, which can be the"
-" case for older versions. Please select other versions from the history "
-"to compare."
+"The selected versions cannot be compared. At least one of them is not valid "
+"according to the configuration of the application, which can be the case for "
+"older versions. Please select other versions from the history to compare."
 msgstr ""
 
 #: lmkp/customization/lo/templates/parts/messages/item_requested_not_valid.mak:2
 msgid ""
-"The version you requested cannot be displayed. It is not valid according "
-"to the configuration of the application, which can be the case for older "
+"The version you requested cannot be displayed. It is not valid according to "
+"the configuration of the application, which can be the case for older "
 "versions. Please select a newer version from the history page."
 msgstr ""
 
+#: lmkp/customization/lo/templates/parts/messages/one_of_involved_activities_cannot_be_reviewed.mak:1
+msgid ""
+"At least one of the involved Deals cannot be reviewed. Click on the icon "
+"next to the involvement for further details."
+msgstr ""
+"Al menos una de las actividades relacionadas no puede ser revisada. Dar "
+"click en el ìcono Siguiente de la participaciòn para màs detalles"
+
+#: lmkp/customization/lo/templates/parts/messages/one_of_involved_stakeholders_cannot_be_reviewed.mak:1
+msgid ""
+"At least one of the involved Investors cannot be reviewed. Click on the icon "
+"next to the involvement for further details."
+msgstr ""
+"Al menos uno de los Inversores involucrados no puede ser revisado. Dar click "
+"en el ìcono Siguiente de la participaciòn por màs detalles"
+
 #: lmkp/customization/lo/templates/parts/messages/stakeholder_created_success.mak:2
 msgid ""
-"The Stakeholder was successfully created or updated. It is not pending "
-"and needs to be reviewed by a moderator before it is publicly visible."
+"The Stakeholder was successfully created or updated. It is not pending and "
+"needs to be reviewed by a moderator before it is publicly visible."
 msgstr ""
 "El Inversor fue creado o actualizado correctamente. No se encuentra "
-"pendiente y necesita ser revisado por un moderador antes de ser "
-"públicamente visible"
+"pendiente y necesita ser revisado por un moderador antes de ser públicamente "
+"visible"
 
 #: lmkp/customization/lo/templates/parts/messages/stakeholder_created_success.mak:3
 msgid "View the Stakeholder"
@@ -1245,20 +1363,19 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/parts/messages/stakeholder_form_through_involvement.mak:2
 msgid ""
-"You are entering a new Investor for a Deal. After submitting this form "
-"you will be redirected to the form of the Deal."
+"You are entering a new Investor for a Deal. After submitting this form you "
+"will be redirected to the form of the Deal."
 msgstr ""
 
 #: lmkp/customization/lo/templates/parts/messages/stakeholder_form_through_involvement.mak:4
 msgid ""
-"Click here to return to the form of the Deal without saving the new "
-"Investor."
+"Click here to return to the form of the Deal without saving the new Investor."
 msgstr ""
 
 #: lmkp/customization/lo/templates/parts/messages/stakeholder_reviewed_through_involvement.mak:1
 msgid ""
-"You had to review this Investor in order to approve a pending version of "
-"a Deal."
+"You had to review this Investor in order to approve a pending version of a "
+"Deal."
 msgstr ""
 
 #: lmkp/customization/lo/templates/parts/messages/stakeholder_reviewed_through_involvement.mak:2
@@ -1273,10 +1390,6 @@ msgstr "Data no guardada desde otro formulario fue encontrada en la sesión."
 msgid "It contains:"
 msgstr ""
 
-#: lmkp/customization/lo/templates/parts/messages/unsaved_data_different_form.mak:14
-msgid "New Investor"
-msgstr ""
-
 #: lmkp/customization/lo/templates/parts/messages/unsaved_data_different_form.mak:19
 msgid "These changes will be lost if you continue to edit this form."
 msgstr ""
@@ -1287,8 +1400,8 @@ msgstr "Mira los cambios no guardados de este Caso y remítelos."
 
 #: lmkp/customization/lo/templates/parts/messages/unsaved_data_same_form.mak:2
 msgid ""
-"Unsaved data of this item was found in the session. You may continue to "
-"edit this form."
+"Unsaved data of this item was found in the session. You may continue to edit "
+"this form."
 msgstr ""
 "La data no guardada de este item fue encontrada en esta sesión. Puedes "
 "continuar editando este formulario."
@@ -1300,12 +1413,6 @@ msgstr "Dele Click aquí para borrar data del formulario"
 #: lmkp/customization/lo/templates/review/readonly/form.mak:27
 msgid "There are changes in this section"
 msgstr ""
-
-#: lmkp/customization/lo/templates/stakeholders/form.mak:3
-#, fuzzy
-#| msgid "Investor Filter"
-msgid "Investor Editor"
-msgstr "Filtrar Inversor"
 
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:27
 msgid "Show deals by clicking on a specific row."
@@ -1319,8 +1426,8 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:40
 msgid ""
-"You are currently only seeing Investors involved in Deals which are "
-"visible on the map."
+"You are currently only seeing Investors involved in Deals which are visible "
+"on the map."
 msgstr ""
 
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:41
@@ -1340,10 +1447,8 @@ msgid "Remove this filter and show all Investors"
 msgstr "Remover el filtro y mostrar todos los Inversores"
 
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:77
-#, fuzzy
-#| msgid "You are currently only seeing Investors which are involved in Deal"
 msgid "You are only seeing Investors with the following status:"
-msgstr "Estás viendo únicamente Inversores involucrados en un caso"
+msgstr ""
 
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:139
 msgid "Show deals of this investor"
@@ -1353,17 +1458,22 @@ msgstr "Mostrar los casos del Inversor"
 msgid "Investor ID"
 msgstr "Código (ID) del Inversor"
 
+#: lmkp/customization/lo/templates/stakeholders/history_rss.mak:7
+#, python-format
+msgid "Version history of investor #%sidentifier"
+msgstr ""
+
 #: lmkp/customization/lo/templates/stakeholders/review.mak:3
 #: lmkp/customization/lo/templates/stakeholders/review.mak:6
 msgid "Investor Moderation"
 msgstr ""
 
 #: lmkp/customization/lo/templates/users/account_form.mak:3
-#: lmkp/customization/lo/templates/users/account_form.mak:18
+#: lmkp/customization/lo/templates/users/account_form.mak:34
 msgid "User Account"
 msgstr "Cuenta de Usuario"
 
-#: lmkp/customization/lo/templates/users/account_form.mak:19
+#: lmkp/customization/lo/templates/users/account_form.mak:39
 msgid "Update user settings"
 msgstr "Actualizar la configuración del usuario"
 
@@ -1376,7 +1486,8 @@ msgid "User activation was successful:"
 msgstr "Activación del Usuario correcta"
 
 #: lmkp/customization/lo/templates/users/activation_successful.mak:10
-msgid "Your account has been activated. It will be approved during the next days."
+msgid ""
+"Your account has been activated. It will be approved during the next days."
 msgstr "Tu cuenta ha sido activada. Se aprobará en los siguientes días."
 
 #: lmkp/customization/lo/templates/users/approval_successful.mak:6
@@ -1406,56 +1517,33 @@ msgstr "Gracias por tu registro"
 
 #: lmkp/customization/lo/templates/users/registration_success.mak:8
 msgid ""
-"A message with an activation link has been sent to your email address. "
-"Your account will be approved after activation."
+"A message with an activation link has been sent to your email address. Your "
+"account will be approved after activation."
 msgstr ""
 "Un mensaje con un enlace de activación de cuenta ha sido enviado a tu "
 "dirección de correo electrónico. Tu cuenta será aprobada después de la "
 "activación."
 
-#: lmkp/customization/lo/templates/users/reset_password_form.mak:50
-msgid "Reset password"
-msgstr "Cambiar clave de acceso"
+#: lmkp/customization/lo/templates/users/reset_password_form.mak:69
+#: lmkp/customization/lo/templates/users/reset_password_form.mak:75
+msgid "Password Reset"
+msgstr ""
 
-#: lmkp/customization/lo/templates/users/reset_password_form.mak:55
-msgid "Email Address"
-msgstr "Dirección de e-mail"
+#: lmkp/customization/lo/templates/users/reset_password_form.mak:96
+msgid "Reset"
+msgstr ""
 
-#~ msgid "The deals are grouped by"
-#~ msgstr ""
+#: lmkp/customization/lo/templates/users/reset_password_success.mak:3
+#: lmkp/customization/lo/templates/users/reset_password_success.mak:9
+msgid "Password Reset Successful"
+msgstr ""
 
-#~ msgid "Map Legend"
-#~ msgstr "Leyenda del Mapa"
+#: lmkp/customization/lo/templates/users/reset_password_success.mak:15
+msgid ""
+"Password reset was successful. An email containing the new password has been "
+"sent to your email address."
+msgstr ""
 
-#~ msgid "The Stakeholder was successfully created. It will be reviewed shortly."
-#~ msgstr ""
-#~ "El Inversor fue creado o actualizado "
-#~ "correctamente. No se encuentra pendiente "
-#~ "y necesita ser revisado por un "
-#~ "moderador antes de ser públicamente "
-#~ "visible"
-
-#~ msgid "Select a Stakeholder"
-#~ msgstr "Seleccionar un Inversor"
-
-#~ msgid "Select an existing Stakeholder."
-#~ msgstr "Seleccionar un Inversor existente"
-
-#~ msgid "Start typing (at least 4 characters) to search a Stakeholder by name."
-#~ msgstr ""
-#~ "Empieza tipeando (mínimo 4 caracteres) "
-#~ "para buscar un Inversor por su "
-#~ "nombre"
-
-#~ msgid "Search ..."
-#~ msgstr "Buscar..."
-
-#~ msgid "Stakeholder not found?"
-#~ msgstr "¿Inversor no encontrado?"
-
-#~ msgid "Create a new Stakeholder"
-#~ msgstr "Crear un nuevo inversor"
-
-#~ msgid "Sending ..."
-#~ msgstr "Enviando"
-
+#: lmkp/customization/lo/templates/users/reset_password_success.mak:21
+msgid "Proceed to the login page"
+msgstr ""
