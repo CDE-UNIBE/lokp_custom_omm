@@ -8,3 +8,5 @@ instance of the Land Observatory Knowledge Platform
 (https://github.com/CDE-UNIBE/lokp).
 
 Don't forget to adapt the settings in the application's .ini file.
+
+Current version: v0.8.4, corresponding to LOKP v0.8.5
