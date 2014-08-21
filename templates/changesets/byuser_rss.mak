@@ -3,15 +3,15 @@
 <rss version="2.0">
 
   <channel>
-    <title>${_('Changesets by %s' % username)} - ${_('Land Observatory')}</title>
+    <title>${_('Approved changesets by %s' % username)} - ${_('Land Observatory')}</title>
     <link>${request.route_url("changesets_read_latest", output="rss")}</link>
-    <description>${_('Changesets by %s' % username)}</description>
+    <description>${_('Approved changesets by %s' % username)}</description>
     <language>en-US</language>
-    <copyright>username</copyright>
+    <copyright>${username}</copyright>
     <pubDate>Thu, 3 Apr 2014 16:54:19</pubDate>
     <image>
       <url>/custom/img/logo.png</url>
-      <title>www.lanbobservatory.org</title>
+      <title>www.landobservatory.org</title>
       <link>${request.route_url('index')}</link>
     </image>
 

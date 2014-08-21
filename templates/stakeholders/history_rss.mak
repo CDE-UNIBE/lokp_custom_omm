@@ -47,7 +47,7 @@ from datetime import datetime
             <link>${request.route_url('stakeholders_read_one', output='html', uid=v['identifier'], _query=(('v', v['version']),))}</link>
             <author>${v['username']}</author>
             <guid>${"%s?v=%s" % (v['identifier'], v['version'])}</guid>
-            <pubDate>${datetime.strptime(v['timestamp'], '%Y-%m-%d %H:%M:%S').strftime("%a, %d %b %Y %H:%m:%S %Z")}</pubDate>
+            <pubDate>${datetime.strptime(v['timestamp'], '%Y-%m-%d %H:%M:%S').strftime("%a, %d %b %Y %H:%M:%S %Z")}</pubDate>
         </item>
         % endfor
     </channel>
