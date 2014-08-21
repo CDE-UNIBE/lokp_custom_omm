@@ -5,7 +5,7 @@ from lmkp.views.profile import get_current_locale
 from lmkp.views.profile import get_current_profile
 %>
 
-<%def name="title()">${_('Changesets by %s' % username)}</%def>
+<%def name="title()">${_('Approved changesets by %s' % username)}</%def>
 
 <%def name="inlinemenu()">
 <div class="row-fluid">
@@ -31,9 +31,13 @@ from lmkp.views.profile import get_current_profile
         ## Header menu bar
         ${inlinemenu()}
 
+        <div class="alert alert-info">
+            ${_('Please note that only approved changes are visible in the changesets.')}
+        </div>
+
         <div class="row-fluid">
             <div class="span9">
-                <h3 class="form-below-toolbar">${_('Changesets by %s' % username)}</h3>
+                <h3 class="form-below-toolbar">${_('Approved changesets by %s' % username)}</h3>
             </div>
         </div>
 
@@ -55,9 +59,9 @@ from lmkp.views.profile import get_current_profile
                     <tbody>
                         % for item in items:
                         <tr>
-                            <td>${item['timestamp'].strftime("%a, %d %b %Y %H:%m:%S %Z")}</td>
+                            <td>${item['timestamp'].strftime("%a, %d %b %Y %H:%M:%S %Z")}</td>
                             <%
-                            date = item['timestamp'].strftime("%a, %d %b %Y %H:%m:%S %Z")
+                            date = item['timestamp'].strftime("%a, %d %b %Y %H:%M:%S %Z")
                             %>
                             % if item['type'] == "activity":
                             <td>Update of deal

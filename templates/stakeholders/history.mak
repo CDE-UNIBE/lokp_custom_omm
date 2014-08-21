@@ -16,7 +16,7 @@ from lmkp.views.profile import get_current_profile
         <div class="row-fluid">
             <div class="span9 text-right">
                 <a href="${request.route_url('stakeholders_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
-                    <i class="icon-rss"></i> Subscribe
+                    <i class="icon-rss"></i> ${_("Subscribe")}
                 </a>
             </div>
         </div>
@@ -91,11 +91,11 @@ from lmkp.views.profile import get_current_profile
         <div class="row-fluid">
             <div class="span9 text-right">
                 <a href="${request.route_url('stakeholders_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
-                    <i class="icon-rss"></i> Subscribe
+                    <i class="icon-rss"></i> ${_("Subscribe")}
                 </a>
             </div>
         </div>
-        
+
     </div>
 </div>
 

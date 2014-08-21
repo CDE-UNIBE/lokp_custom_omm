@@ -3,9 +3,9 @@
 <rss version="2.0">
 
   <channel>
-    <title>${_('Latest Changesets')} - ${_('Land Observatory')}</title>
+    <title>${_('Latest approved Changesets')} - ${_('Land Observatory')}</title>
     <link>${link}</link>
-    <description>${_('The latest changes edited on the Land Observatory')}</description>
+    <description>${_('The latest approved changes edited on the Land Observatory')}</description>
     <language>en-US</language>
     <copyright>Autor des Feeds</copyright>
     <pubDate>Thu, 3 Apr 2014 16:54:19</pubDate>
