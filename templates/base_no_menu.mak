@@ -251,5 +251,13 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         </script>
         <!-- End Piwik Code -->
         % endif
+
+        ## Include the bottom tags of the child template if available.
+        <%
+            try:
+                self.bottom_tags()
+            except AttributeError:
+                pass
+        %>
     </body>
 </html>

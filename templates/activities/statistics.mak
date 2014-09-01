@@ -25,7 +25,7 @@
 
         <div class="row-fluid">
             <div class="span9 text-right">
-                <a href="${request.route_url('activities_read_one', output='html', uid=uid)}"><i class="icon-chevron-sign-left"></i>&nbsp;Go back</a>
+                <a href="${request.route_url('activities_read_one', output='html', uid=uid)}"><i class="icon-chevron-sign-left"></i>&nbsp;${_("Back")}</a>
             </div>
         </div>
         <div class="row-fluid">
@@ -50,7 +50,12 @@
             </div>
         </div>
         <div class="row-fluid">
-            <div class="span9">${_(u"Landscan population density layer 2011 from the <a href=\"http://web.ornl.gov/sci/landscan/\">Oak Ridge National Laboratory</a>.") | n}</div>
+            <div class="span9">
+                <%
+                    link = '<a href="http://web.ornl.gov/sci/landscan/">%s</a>' % _("Oak Ridge National Laboratory")
+                %>
+                ${_(u"Landscan population density layer 2011 from %s.") % link|n}
+            </div>
         </div>
         % for stats in layer['statistics']:
         % if stats['name'].lower() == "Mean".lower():
@@ -73,7 +78,7 @@
             <div class="span9 grid-area">
                 <div class="row-fluid">
                     <div class="span5">
-                        <h5 class="green">Minimum population density</h5>
+                        <h5 class="green">${_("Minimum population density")}</h5>
                     </div>
                     <div class="span2 inactive"></div>
                     <div class="span4">${int(stats['value'])} pers / km<sup>2</sup></div>
@@ -85,11 +90,12 @@
         <div class="row-fluid">
             <div class="span9 grid-area">
                 <div class="row-fluid">
-                <div class="span5">
-                    <h5 class="green">Maximum population density</h5>
+                    <div class="span5">
+                        <h5 class="green">${_("Maximum population density")}</h5>
+                    </div>
+                    <div class="span2 inactive"></div>
+                    <div class="span4">${int(stats['value'])} pers / km<sup>2</sup></div>
                 </div>
-                <div class="span2 inactive"></div>
-                <div class="span4">${int(stats['value'])} pers / km<sup>2</sup></div>
             </div>
         </div>
         % endif
@@ -103,7 +109,12 @@
             </div>
         </div>
         <div class="row-fluid">
-            <div class="span9">${_(u"Travel time to major cities: A global map of accessibility from the <a href=\"http://bioval.jrc.ec.europa.eu/products/gam/index.htm\">Joint Research Centre of the European Commission</a>.") | n}</div>
+            <div class="span9">
+                <%
+                    link = '<a href="http://bioval.jrc.ec.europa.eu/products/gam/index.htm">%s</a>' % _("Joint Research Centre of the European Commission")
+                %>
+                ${_(u"Travel time to major cities: A global map of accessibility from %s.") % link|n}
+            </div>
         </div>
         % for cls in layer['classes']:
         <div class="row-fluid">
@@ -128,7 +139,10 @@
         </div>
         <div class="row-fluid">
             <div class="span9">
-                ${_(u"Global Land Cover Map 2009 from the <a href=\"http://due.esrin.esa.int/globcover/\">European Space Agency</a>.") | n}
+                <%
+                    link = '<a href="http://due.esrin.esa.int/globcover/">%s</a>' % _("European Space Agency")
+                %>
+                ${_(u"Global Land Cover Map 2009 from %s.") % link|n}
             </div>
         </div>
         % for cls in sorted(layer['classes'], key= lambda cls: cls['areashare'], reverse=True):
@@ -148,7 +162,7 @@
         % endfor
         <div class="row-fluid">
             <div class="span9 text-right deal-bottom-toolbar">
-                <a href="${request.route_url('activities_read_one', output='html', uid=uid)}"><i class="icon-chevron-sign-left"></i>&nbsp;Go back</a>
+                <a href="${request.route_url('activities_read_one', output='html', uid=uid)}"><i class="icon-chevron-sign-left"></i>&nbsp;${_("Back")}</a>
             </div>
         </div>
     </div>
