@@ -51,7 +51,6 @@ application:
     ol_options:
     - visibility: false
     - isBaseLayer: false
-    - maxScale: 100000
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
   - name: "Accessability"
