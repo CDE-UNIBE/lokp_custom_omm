@@ -5,8 +5,56 @@ application:
     coordinates: [[[43.24, -11.95],[50.50, -11.95],[50.50, -25.59],[43.24, -25.59],[43.24, -11.95]]]
   name: "Madagascar"
   layers:
+  - name: "Regions"
+    url: "http://esapp.unibe.ch/geoserver/spm/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/jpeg"
+    - layers: "regions"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+  - name: "Districts"
+    url: "http://esapp.unibe.ch/geoserver/spm/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/jpeg"
+    - layers: "Districts"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]    
+  - name: "Communes"
+    url: "http://esapp.unibe.ch/geoserver/spm/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/jpeg"
+    - layers: "communes"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+  - name: "Fokontany"
+    url: "http://esapp.unibe.ch/geoserver/spm/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/jpeg"
+    - layers: "Fokontany"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
   - name: "Accessability"
-    url: "http://cdetux2.unibe.ch/geoserver/lo/wms"
+    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -19,7 +67,7 @@ application:
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.7
   - name: "Population Density 2008"
-    url: "http://cdetux2.unibe.ch/geoserver/lo/wms"
+    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -32,7 +80,7 @@ application:
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
   - name: "Global Land Cover 2009"
-    url: "http://cdetux2.unibe.ch/geoserver/lo/wms"
+    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -45,7 +93,7 @@ application:
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
   - name: "Global Cropland"
-    url: "http://cdetux2.unibe.ch/geoserver/lo/wms"
+    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -58,7 +106,7 @@ application:
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
   - name: "Global Pasture Land"
-    url: "http://cdetux2.unibe.ch/geoserver/lo/wms"
+    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
