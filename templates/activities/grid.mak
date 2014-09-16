@@ -7,9 +7,11 @@
 <%
     import urllib
     import datetime
-    from lmkp.views.views import getQueryString
-    from lmkp.views.profile import get_current_locale
-    from lmkp.views.profile import get_current_profile
+    from lmkp.views.views import (
+        getQueryString,
+        get_current_locale,
+        get_current_profile,
+    )
 
     # Get the keys and their translation
     from lmkp.views.config import getGridColumnKeys
@@ -37,7 +39,7 @@
             spatialFilterExplanation = _('You are seeing all the Deals within the current profile.')
             spatialFilterLink = None
 
-            if spatialfilter == 'mapextentparam' or spatialfilter == 'mapextentcookie':
+            if spatialfilter == 'map':
                 spatialFilterBasedOn = _('Map Extent')
                 spatialFilterExplanation = _('You are currently only seeing Deals which are visible on the map.')
                 spatialFilterLink = _('Show all Deals of the profile.')
