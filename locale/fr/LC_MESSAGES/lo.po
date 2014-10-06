@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: LMKP_Customization 0.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2014-08-26 17:03+0200\n"
-"PO-Revision-Date: 2014-08-26 17:04+0100\n"
+"PO-Revision-Date: 2014-10-06 08:31+0100\n"
 "Last-Translator: Lukas Vonlanthen <lukas.vonlanthen@cde.unibe.ch>\n"
 "Language-Team: fr <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -261,11 +261,12 @@ msgstr ""
 #: lmkp/customization/lo/templates/faq_view.mak:62
 msgid "What about polygons and land areas?"
 msgstr ""
+"Quelles informations à propos des polygones et des superficies foncières? "
 
 #: lmkp/customization/lo/templates/faq_view.mak:24
 #: lmkp/customization/lo/templates/faq_view.mak:66
 msgid "How can I download data?"
-msgstr ""
+msgstr "Comment puis je télécharger les données? "
 
 #: lmkp/customization/lo/templates/faq_view.mak:25
 #: lmkp/customization/lo/templates/faq_view.mak:70
@@ -391,17 +392,25 @@ msgid ""
 "appropriate layers in the map legend. To add new polygons or edit the shape "
 "of existing areas, we wrote a plugin for QGIS which you can use."
 msgstr ""
+"Vous pouvez voir les polygones et les superficieds foncières sur la carte en "
+"activant les couches thématiques appropriées à partir de la légende. Pour "
+"ajouter de nouveaux polygones ou éditer la forme des superficies existantes, "
+"nous avons écrit un plugin QGIS que vous pouvez utiliser. "
 
 #: lmkp/customization/lo/templates/faq_view.mak:63
 msgid ""
 "Please refer to the documentation of the QGIS plugin for more information."
 msgstr ""
+"Veuillz s'il vous plaît vous référer à la documentation sur le plugin QGIS "
+"pour plus d'information. "
 
 #: lmkp/customization/lo/templates/faq_view.mak:67
 msgid ""
 "The download functionality is currently under development and should be "
 "ready soon."
 msgstr ""
+"La fonctionnalité téléchargée est en cours de développement and devrait être "
+"disponible rapidement. "
 
 #: lmkp/customization/lo/templates/faq_view.mak:71
 msgid ""
@@ -531,10 +540,11 @@ msgstr ""
 #: lmkp/customization/lo/templates/landing_page.mak:161
 msgid "Are you interested in concrete use cases of the Land Observatory?"
 msgstr ""
+"Etes vous intéressés par des cas concrets d'utilisation de l'Observatoire ? "
 
 #: lmkp/customization/lo/templates/landing_page.mak:162
 msgid "Check out the showcases!"
-msgstr ""
+msgstr "Consulter les démonstrations ! "
 
 #: lmkp/customization/lo/templates/login_form.mak:33
 #: lmkp/customization/lo/templates/login_form.mak:66
@@ -729,42 +739,50 @@ msgstr ""
 
 #: lmkp/customization/lo/templates/showcases_view.mak:4
 msgid "Show cases"
-msgstr ""
+msgstr "Démonstrations"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:29
 #: lmkp/customization/lo/templates/activities/statistics.mak:28
 #: lmkp/customization/lo/templates/activities/statistics.mak:165
 msgid "Back"
-msgstr ""
+msgstr "Retour"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:34
 msgid ""
 "Context matters: linking land deals to socioeconomic and environmental "
 "characteristics of places"
 msgstr ""
+"Importance du contexte : lier les transactions foncières aux "
+"caractéristiques socio-économiques et environnementales des lieux"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:53
 msgid "Accessibility in Phin district"
-msgstr ""
+msgstr "Accessibilité dans le district de Phin"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:55
 msgid "Analyze the accessibility of deals to the province capital"
 msgstr ""
+"Analyser l'accessibilité du lieu concerné par l'investissement à partir de "
+"la capitale de la province"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:60
 #: lmkp/customization/lo/templates/showcases_view.mak:62
 msgid "See the land cover where current deals are located"
 msgstr ""
+"Regarder la couche thématique \"couverture végétale\" sur laquelle les "
+"investissements sont localisés"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:67
 #: lmkp/customization/lo/templates/showcases_view.mak:69
 msgid "Compare deals with population density"
-msgstr ""
+msgstr "Situer les transactions en regardant les densités de population"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:74
 #: lmkp/customization/lo/templates/showcases_view.mak:76
 msgid "See the incidence of poverty where current land deals are located"
 msgstr ""
+"Regarder le taux de pauvreté dans les zones où sont localisés les "
+"investissements "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:94
 msgid ""
@@ -774,16 +792,22 @@ msgid ""
 "socioeconomic and environmental conditions of places and the characteristics "
 "of the affected population."
 msgstr ""
+"A la différence de bases de données tabulaires traditionnelles, "
+"l'Observatoire du foncier peut être utilisé pour réaliser des analyses "
+"approfondiers des contextes dans lesquels les investissements sont "
+"développés, et pour fournir par conséquent une meilleure vision des "
+"conditions socio-économiques et environnementales des lieux concernés et des "
+"caractéristiques des populations touchées. "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:100
 #: lmkp/customization/lo/templates/showcases_view.mak:198
 #: lmkp/customization/lo/templates/showcases_view.mak:231
 msgid "Read more"
-msgstr ""
+msgstr "En savoir plus"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:106
 msgid "Accessing background information"
-msgstr ""
+msgstr "Obtenir des précisions"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:114
 #, python-format
@@ -799,14 +823,26 @@ msgid ""
 "threatened to cut down the trees, and sent delegations to Vientiane to get "
 "back their lands."
 msgstr ""
+"En regardant tous les documents et les commentaires postés par les "
+"utilisateurs sur le disctrict de Paksong dans la platteforme de "
+"l'Observatoire, nous avonsn appros qu'en 2009, le Gouvernement Lao a alloué "
+"une concession foncière de 30 ans à Outspan, une filiale de l'entreprise "
+"internationale d'agribusiness %s. Les rapports indiquent qu'au total, 4 "
+"villages et 275 ménages ont été affectés par l'expansion des plantations de "
+"café. Du à l'absence de consultation préalable, de faibles compensations "
+"financières proposées, et de la défriche de terre bien au-delà des limites "
+"de la superficie accordée, un mouvement de contestation local a émergé parmi "
+"les villageois. Ces derniers ont saisi les camions de l'entreprise, menacé "
+"de couper les arbres et envoyé des délégations à Ventiane pour récupérer "
+"leurs terres. "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:119
 msgid "Going further: looking at social and environmental context"
-msgstr ""
+msgstr "ALler plus loin: regarder le contexte environnemental et social "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:125
 msgid "Paksong case"
-msgstr ""
+msgstr "Le cas de Paksong"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:127
 #, python-format
@@ -824,6 +860,21 @@ msgid ""
 "their level of vulnerability to the loss of productive land is high if no "
 "appropriate coping mechanism is set-up."
 msgstr ""
+"Grâce à ses puissantes capacités de cartographie, l'Observatoire des "
+"Transactions Foncières permet bien plus que la simple consultation de "
+"documents et d'information de contexte. Pour le cas de %s, par exemple, la "
+"couche thématique permettant de voir les densités de population permet de "
+"constater que la concession a été accordée dans des villages très divers en "
+"termes de population, certains ayant une basse densité de population tandis "
+"que d'autres étant au contraire très densément peuplés. Tandis que cela "
+"donne une indication sur l'importance de la population potentiellement "
+"concernée, d'autres points encore plus intéressants sur les caractéristiques "
+"socio-économiques peuvent être consultés. En effet, une autre couche "
+"thématique disponible sur la carte est la proportion de ménages impliqués "
+"dans des activités agricoles et celle-ci dépasse les 90%%. Cela signifie que "
+"la population dépend fortement des ressources associées au foncier et que "
+"son niveau de vulnérabilité dû à la perte de terres productives risque "
+"d'être élevé s'il n'est pas contrebalancé par des mécanismes appropriés. "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:132
 msgid ""
@@ -837,6 +888,17 @@ msgid ""
 "crosschecked with satellite images, shows that most of the area was "
 "initially covered by forests and small-scale croplands."
 msgstr ""
+"Pour mieux comprendre les transactions foncières et leurs impacts sur la "
+"population locale, il est aussi primordial de regarder comment elles "
+"interagissent avec des initiatives, usages fonciers ou des unités "
+"géographiques présentes dans les mêmes zones, tels que des aires protégées, "
+"des bassins versants ou des forêts en regénération. A Paksong, réaliser ce "
+"type d'analyse permet de voir que la superficie allouée par l'Etat n'empiète "
+"pas sur les aires protégées mais qu'elle est entourée par de nombreuses "
+"autres concessions de grande échelle dédiée au café. De plus, la couche "
+"thématique sur l'usage du sol, recoupée avec les images satellites, montre "
+"que la plupart de la superficie allouée était initialement recouverte de "
+"forêts et petites parcelles de cultures. "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:137
 msgid ""
@@ -847,10 +909,17 @@ msgid ""
 "local population, may the investors and the government fail to offer "
 "appropriate compensations and job opportunities."
 msgstr ""
+"Les impacts potentiels qui peuvent être attendus de ces élements incluent un "
+"accès réduit aux produits forestiers non ligneux, sources de revenus "
+"complémentaires; une augmentation généralisée de la pression sur les "
+"ressources foncières ; et, surtout, une menace significative sur la "
+"résilience sociale et économique des populations locales, si le gouvernement "
+"et les investisseurs ne parviennent pas à offrir des compensations "
+"appropriées et des opportunités d'emploi. "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:142
 msgid "Beyond the specific cases"
-msgstr ""
+msgstr "Au-delà des cas spécifiques"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:147
 msgid ""
@@ -867,26 +936,42 @@ msgid ""
 "and government agencies with a powerful tool for bottom-up monitoring and "
 "enhanced transparency in large-scale land acquisitions."
 msgstr ""
+"Au-delà des cas spécifiques, l'Observatoire permet aussi d'obtenir une "
+"vision globale des acquisitions à grande échelle au niveau national. On peut "
+"regarder toutes les transactions qui recoupent certains critères (secteur, "
+"pays d'origine, etc.) et analyser les tendances et impacts en superposant "
+"sur la carte des couches thématiques.On peut par exemple consulter les "
+"investissements chinois et voir s'ils tendent à être localisés dans les "
+"zones pauvres et éloignées. Egalement, on peut voir sur quels types de terre "
+"les concessions agricoles sont allouées. Les utilisateurs peuvent développer "
+"sans fin leurs propres analyses pour répondre à leurs intérêts et besoins. "
+"En liant les acteurs avec les lieux dans lesquels ils interviennent, et les "
+"informations sur le contexte, l'Observatoire fournit au public, aux "
+"chercheurs et aux agences du gouvernement un outil puissant pour suivre les "
+"acquisitions à grande échelle et promouvoir la transparence.    "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:153
 msgid "Bottom-up monitoring of rubber plantations in Phine District"
 msgstr ""
+"Suivi bottom-up des plantations de caoutchouc dans le District de Phine. "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:168
 msgid "Granted concession area to Quasa Gueruco"
-msgstr ""
+msgstr "Concession accordée à Quasa Guereco"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:170
 msgid "Concession area granted to Quasa Gueruco for rubber plantations"
-msgstr ""
+msgstr "Concession accordée à Quasa Guereco pour les plantations de caoutchouc"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:174
 msgid "Current used area by Quasa Gueruco"
-msgstr ""
+msgstr "Les superficies utilisées actuellement par Quasa Gueruco"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:176
 msgid "Currently used area compared to the granted area"
 msgstr ""
+"Les superficies actuellement utilisées comparées aux superficies "
+"initialement attribuées  "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:193
 #, python-format
@@ -898,10 +983,18 @@ msgid ""
 "NGO, the villagers used satellite images overlaid to the districts land "
 "allocation maps to demonstrate the illegal expansion of the concession."
 msgstr ""
+"Dans le Disctrict de Phine, Province de Savannakhet, l'entreprise publique "
+"vietnamienne %s a obtenu une concession de 10 000 hectares pour des "
+"plantations de caoutchouc. Dans le village de Nakanong, les villageois et "
+"les officiels ont commencé à se plaindre dès lors qu'ils ont vu que la "
+"compagnie défrichait les terres au-delà des limites de la concession. "
+"Appuyés par une ONG internationale, les villageois ont utilisé les images "
+"satellites et les cartes du District précisant les limites de la superficie "
+"attribuée pour démontrer l'extension illégale de  la concession. "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:204
 msgid "Phine district case"
-msgstr ""
+msgstr "Le cas du district de Phine"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:206
 #, python-format
@@ -919,18 +1012,31 @@ msgid ""
 "through international platforms such as the land matrix or other similar "
 "networks and mechanisms."
 msgstr ""
+"Ces informations ont été apportés par les utilisateurs de l'Observatoire du "
+"Foncier, et une d'entre elles a permis d'accéder à de nouvelles images "
+"satellite disponible sur le web, montrant que malgré les complaintes des "
+"communautés sur le terrain, l'expansion des superficies défrichées n'avait "
+"pas été stoppé. Dans le cas de %s, l'Observatoire fournit des informations "
+"précieuses pour les chercheurs, les parties prenantes locales et les "
+"décideurs publics. Les acteurs les moins forts gagnent ainsi en capacité "
+"grâce à l'accès à des informations critiques, à la possibilité de contribuer "
+"à la création d'information et à la dissémination de leurs positions et "
+"revendications. Ils peuvent par ce biais être entendu et renforcé leurs "
+"liens avec la société civile globale au travers de plateformes "
+"internationales telles que la Land Matrix ou autres réseaux et mécanismes "
+"similaires. "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:211
 msgid "Golden Triangle turns into gambling paradise"
-msgstr ""
+msgstr "Le Triange d'or tourne en un paradis "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:217
 msgid "The Golden Triangle SEZ on satellite images"
-msgstr ""
+msgstr "Le triangle d'Or SEZ sur les images satellites"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:224
 msgid "Golden Triangle Special Economic Zone"
-msgstr ""
+msgstr "la ZOne Economique Spéciale du Triangle d'Or"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:226
 #, python-format
@@ -941,10 +1047,16 @@ msgid ""
 "data, they showed a level creativity that would probably not have happened "
 "as part a government-led data collection campaign."
 msgstr ""
+"Dans le cas de la fameuse concession de %s accordée pour 99 ans à la "
+"compagnie chinoise Kings Roman, de nombreux utilisateurs de l'Observatoire "
+"sont venus pour entrer, comparer et recouper des informations. Face à la "
+"difficulté d'accédér à certaines données, ils ont fait preuve d'un niveau de "
+"créativité qui ne n'aurait pas eu lieu dans le cadre d'une campagne de "
+"collecte de données pilotée par le gouvernement. "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:237
 msgid "constructions"
-msgstr ""
+msgstr "constructions"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:239
 #, python-format
@@ -965,18 +1077,34 @@ msgid ""
 "sources and in a diversity of formats including reports, press articles, "
 "documentaries and promotional videos."
 msgstr ""
+"Comme les utilisateurs ne pouvaient pas trouvé une carte de la superficie "
+"allouée, ils ont commencé une discussion dans la section commentaire. Au "
+"début de la discussion, les dernières images satellites Google et Bing "
+"disponibles étaient de 2008 et ni l'immense casinon ni les infrastructures "
+"environnantes n'étaient visibles. A ce point, la meilleure chose qui pouvait "
+"être faite était de poser approximativement un point dans la zone. Lorsque "
+"que des cartes Google mises à jour datant de 2012 furent publiées, le %s est "
+"devenu clairement visible, donnant une bonne indication de la localisation "
+"et de l'étendue de la concession. Lorsqu'un contributeur a posté un "
+"commentaire pour informer que les images de 2012 étaient disponibles sur "
+"Google maps, un autre utilisateur avec des compétences en SIG a directement "
+"saisi l'opportunité pour numériser la localisation de la concession et la "
+"partager sur l'Obsevatoire. Au même moment,  d'autres utilisateurs avaient "
+"ajoutés des documents additionnels sur le contexte de ce cas provenant de "
+"sources variées et sous des formes diverses incluant des rapports, des "
+"articles de presse, des documentaires et des vidéos promotionnelles.  "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:245
 msgid "Collected details and data sources about the Golden Triangle SEZ"
-msgstr ""
+msgstr "Détails collectés et sources des données sur la ZES du Triangle d'Or"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:252
 msgid "villagers"
-msgstr ""
+msgstr "villageois"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:255
 msgid "Youtube video documentary"
-msgstr ""
+msgstr "Documentaire vidéo Youtube"
 
 #: lmkp/customization/lo/templates/showcases_view.mak:257
 #, python-format
@@ -996,6 +1124,22 @@ msgid ""
 "airport was identified based on a 3D map showed by a representative of the "
 "company to a journalist in a %s unveiled by LO user."
 msgstr ""
+"Fin 2013, les médias nationaux et internationaux ont rapporté que %s s'était "
+"violemment opposé à des forces de police assistant une équipe en change de "
+"la délimitation de la terre pour la construction d'un aéroport international "
+"dans la zone. Le manque de consulation préalable et la menace d'être privé "
+"de terres supplémentaires a poussé les villageois à prendre le risque de "
+"protester contre une décision du gouvernement. Les utilisateurs de "
+"l'Observatoire qui suivaient ce cas ont tenté de localiser le futur "
+"aéroport. Une fois de plus face à un manque d'information, un premier "
+"contributeur utilisa %s (un autre site web en open access d'applications "
+"cartographiques au Laos qui permet d'avoir des centaines de couches "
+"géographiques) pour localiser les villages qui furent mentionner dans les "
+"médias. En même temps, le débat en cours a été disséminé dans %s, une "
+"discussion thématique sur les enjeux fonciers au Laos qui connectent plus "
+"3000 inscrits. Finalement, la localisation de l'aéroport a été identifié "
+"grâce à une carte 3D exhibée par un représentant de la compagnie à un "
+"journaliste dans un %s dévoilé par un utilisateur de l'Observatoire. "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:262
 msgid ""
@@ -1004,16 +1148,23 @@ msgid ""
 "articles, reports and videos, and has significantly gained in spatial and "
 "thematic accuracy, despite the probably intentional retention of information."
 msgstr ""
+"Grâce à tous ces débats, sources et idées, cette transaction spécifique a "
+"été beaucoup mieux documentée, inclut plus de 15 différentes sources tels "
+"que des articles de presse, des rapports et des vidéos, et a "
+"significativement gagné en précisions relativement à sa localisation "
+"spatiale malgré la probable intention de rétention d'information. "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:271
 #: lmkp/customization/lo/templates/showcases_view.mak:272
 msgid "The Golden Triangle SEZ on publicly accessible satellite images"
 msgstr ""
+"Le Triangle d'Or ZES sur des images satellites publiquement accessibles  "
 
 #: lmkp/customization/lo/templates/showcases_view.mak:282
 #: lmkp/customization/lo/templates/showcases_view.mak:283
 msgid "Crowd-sourced details and data sources about the Golden Triangle SEZ"
 msgstr ""
+"Sources des données et précisions recoupées à propos du Triangle d'Or ZES"
 
 #: lmkp/customization/lo/templates/activities/compare.mak:7
 #: lmkp/customization/lo/templates/activities/compare.mak:33
@@ -1161,7 +1312,7 @@ msgstr "Retirer ce filtre et consulter toutes les transactions"
 #: lmkp/customization/lo/templates/activities/grid.mak:79
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:79
 msgid "Status Filter"
-msgstr ""
+msgstr "Filtre sur les statuts"
 
 #: lmkp/customization/lo/templates/activities/grid.mak:79
 msgid "You are only seeing Deals with the following status:"
@@ -1229,12 +1380,12 @@ msgstr "Historique des différentes versions"
 #: lmkp/customization/lo/templates/stakeholders/history.mak:19
 #: lmkp/customization/lo/templates/stakeholders/history.mak:94
 msgid "Subscribe"
-msgstr ""
+msgstr "S'inscrire"
 
 #: lmkp/customization/lo/templates/activities/history.mak:35
 #: lmkp/customization/lo/templates/stakeholders/history.mak:35
 msgid "Status"
-msgstr ""
+msgstr "Statut"
 
 #: lmkp/customization/lo/templates/activities/history.mak:53
 #: lmkp/customization/lo/templates/activities/history_rss.mak:28
@@ -1260,19 +1411,19 @@ msgstr "Consulter cette version"
 #: lmkp/customization/lo/templates/activities/history_rss.mak:7
 #, python-format
 msgid "Version history of deal #%sidentifier"
-msgstr ""
+msgstr "Version retraçant l'historique de la transaction #%s"
 
 #: lmkp/customization/lo/templates/activities/history_rss.mak:21
 #: lmkp/customization/lo/templates/stakeholders/history_rss.mak:21
 #, python-format
 msgid "Version %s: %s"
-msgstr ""
+msgstr "Version %s: %s"
 
 #: lmkp/customization/lo/templates/activities/history_rss.mak:24
 #: lmkp/customization/lo/templates/stakeholders/history_rss.mak:24
 #, python-format
 msgid "Last change on %s by user %s"
-msgstr ""
+msgstr "Dernier changement sur %s par l'utilisateur %s"
 
 #: lmkp/customization/lo/templates/activities/review.mak:3
 #: lmkp/customization/lo/templates/activities/review.mak:6
@@ -1346,62 +1497,64 @@ msgstr "Commentaires additionnels"
 #: lmkp/customization/lo/templates/activities/statistics.mak:33
 #: lmkp/customization/lo/templates/form/readonly/form.mak:182
 msgid "Areal Statistics"
-msgstr ""
+msgstr "Statistiques sur les superficies "
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:42
 msgid "Statistics are based on a sample radius of"
-msgstr ""
+msgstr "Les statistiques sont basées sur un échantillon de  "
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:49
 msgid "Population Density"
-msgstr ""
+msgstr "Densité de population"
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:55
 msgid "Oak Ridge National Laboratory"
-msgstr ""
+msgstr "Laboratoire National de Oak Ridge"
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:57
 #, python-format
 msgid "Landscan population density layer 2011 from %s."
-msgstr ""
+msgstr "Couche relative à la Densité de population Landscan 2011 de %s"
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:66
 msgid "Average population density"
-msgstr ""
+msgstr "Densité de population moyenne"
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:81
 msgid "Minimum population density"
-msgstr ""
+msgstr "Densité de population minimum "
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:94
 msgid "Maximum population density"
-msgstr ""
+msgstr "Densité de population maximum "
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:108
 msgid "Accessibility"
-msgstr ""
+msgstr "Accessibilité "
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:114
 msgid "Joint Research Centre of the European Commission"
-msgstr ""
+msgstr "Centre Commun de Recherche de la Commission Européenne"
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:116
 #, python-format
 msgid "Travel time to major cities: A global map of accessibility from %s."
 msgstr ""
+"Temps de trajet pour atteindre les villes principales : une carte mondiale "
+"de l'accessibilité de %s"
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:137
 msgid "Land Cover"
-msgstr ""
+msgstr "Couverture végétale "
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:143
 msgid "European Space Agency"
-msgstr ""
+msgstr "Agence Spatiale Européenne"
 
 #: lmkp/customization/lo/templates/activities/statistics.mak:145
 #, python-format
 msgid "Global Land Cover Map 2009 from %s."
-msgstr ""
+msgstr "Carte de la couverture végétale de 2009 de %s"
 
 #: lmkp/customization/lo/templates/changesets/byuser_html.mak:8
 #: lmkp/customization/lo/templates/changesets/byuser_html.mak:40
@@ -1409,41 +1562,43 @@ msgstr ""
 #: lmkp/customization/lo/templates/changesets/byuser_rss.mak:8
 #, python-format
 msgid "Approved changesets by %s"
-msgstr ""
+msgstr "Approuvez les changements réalisés par %s"
 
 #: lmkp/customization/lo/templates/changesets/byuser_html.mak:22
 msgid "All Changesets"
-msgstr ""
+msgstr "Tous les changements réalisés"
 
 #: lmkp/customization/lo/templates/changesets/byuser_html.mak:35
 #: lmkp/customization/lo/templates/changesets/latest_html.mak:27
 msgid "Please note that only approved changes are visible in the changesets."
 msgstr ""
+"Noter s'il vous plaît que seul les changements qui ont été approuvés sont "
+"visibles dans les changements réalisés"
 
 #: lmkp/customization/lo/templates/changesets/byuser_html.mak:56
 #: lmkp/customization/lo/templates/changesets/latest_html.mak:48
 msgid "Changeset description"
-msgstr ""
+msgstr "Description des changements réalisés"
 
 #: lmkp/customization/lo/templates/changesets/byuser_rss.mak:24
 #, python-format
 msgid "Deal #%s updated to version %s"
-msgstr ""
+msgstr "Transaction #%s mise à jour dans la version %s"
 
 #: lmkp/customization/lo/templates/changesets/byuser_rss.mak:28
 #, python-format
 msgid "Investor #%s updated to version %s"
-msgstr ""
+msgstr "Investisseur #%s mis à jour dans la version %s"
 
 #: lmkp/customization/lo/templates/changesets/latest_html.mak:8
 #: lmkp/customization/lo/templates/changesets/latest_html.mak:32
 #: lmkp/customization/lo/templates/changesets/latest_rss.mak:6
 msgid "Latest approved Changesets"
-msgstr ""
+msgstr "Derniers changements approuvés "
 
 #: lmkp/customization/lo/templates/changesets/latest_rss.mak:8
 msgid "The latest approved changes edited on the Land Observatory"
-msgstr ""
+msgstr "Les derniers changements approuvés et édités de l'Observatoire "
 
 #: lmkp/customization/lo/templates/emails/account_activation.mak:1
 #: lmkp/customization/lo/templates/emails/account_approval_confirmation.mak:1
@@ -1598,7 +1753,7 @@ msgstr "Version inactive"
 
 #: lmkp/customization/lo/templates/form/readonly/form.mak:30
 msgid "You are seeing an inactive version which is not active anymore."
-msgstr "\"\"Vous consultez une version inactive."
+msgstr "Vous consultez une version inactive."
 
 #: lmkp/customization/lo/templates/form/readonly/form.mak:34
 msgid "Not an active Version"
@@ -1805,7 +1960,7 @@ msgstr "Cliquez ici pour supprimer les données dans le formulaire"
 
 #: lmkp/customization/lo/templates/review/readonly/form.mak:27
 msgid "There are changes in this section"
-msgstr ""
+msgstr "Il y a eu des changements dans cette section "
 
 #: lmkp/customization/lo/templates/stakeholders/grid.mak:29
 msgid "Show deals by clicking on a specific row."
@@ -1862,12 +2017,12 @@ msgstr "Numéro d'identification de l'investisseur"
 #: lmkp/customization/lo/templates/stakeholders/history_rss.mak:7
 #, python-format
 msgid "Version history of investor #%sidentifier"
-msgstr ""
+msgstr "Version retraçant l'historique de l'investisseur #%s"
 
 #: lmkp/customization/lo/templates/stakeholders/review.mak:3
 #: lmkp/customization/lo/templates/stakeholders/review.mak:6
 msgid "Investor Moderation"
-msgstr ""
+msgstr "Modération à propos des informations sur les investisseurs "
 
 #: lmkp/customization/lo/templates/users/account_form.mak:3
 #: lmkp/customization/lo/templates/users/account_form.mak:34
@@ -1876,7 +2031,7 @@ msgstr "Compte utilisateur"
 
 #: lmkp/customization/lo/templates/users/account_form.mak:20
 msgid "My Changesets"
-msgstr ""
+msgstr "Mes changements réalisés"
 
 #: lmkp/customization/lo/templates/users/account_form.mak:39
 msgid "Update user settings"
@@ -1931,23 +2086,25 @@ msgstr ""
 #: lmkp/customization/lo/templates/users/reset_password_form.mak:3
 #: lmkp/customization/lo/templates/users/reset_password_form.mak:9
 msgid "Password Reset"
-msgstr ""
+msgstr "Refaire le mot de passe "
 
 #: lmkp/customization/lo/templates/users/reset_password_form.mak:30
 msgid "Reset"
-msgstr ""
+msgstr "Refaire"
 
 #: lmkp/customization/lo/templates/users/reset_password_success.mak:3
 #: lmkp/customization/lo/templates/users/reset_password_success.mak:9
 msgid "Password Reset Successful"
-msgstr ""
+msgstr "Mot de passe refait réussi"
 
 #: lmkp/customization/lo/templates/users/reset_password_success.mak:15
 msgid ""
 "Password reset was successful. An email containing the new password has been "
 "sent to your email address."
 msgstr ""
+"Opération réussie. Un e-mail contenant le nouveau mot de passe vous a été "
+"envoyé à l'adresse e-mail précisée. "
 
 #: lmkp/customization/lo/templates/users/reset_password_success.mak:21
 msgid "Proceed to the login page"
-msgstr ""
+msgstr "Etre redirigé vers la page de login "
