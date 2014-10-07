@@ -2351,3 +2351,13 @@ tr.deal-history-active {
     background-color: #f7f7f9;
     margin-bottom: 10px;
 }
+
+.delete-confirm, .form-button-delete {
+    margin-top: 20px;
+}
+.form-button-delete {
+    background-color: #FA5858 !important;
+}
+.form-button-delete:hover {
+    background-color: red !important;
+}
