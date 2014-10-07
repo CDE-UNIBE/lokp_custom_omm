@@ -19,6 +19,16 @@
     .showcase-header-row > div > h3 {
         padding: 15px 0px;
     }
+    .box-shadow {
+        box-shadow:0px 0px 15px #666;
+        -webkit-box-shadow:0px 0px 15px #666; 
+        -moz-box-shadow:0px 0px 15px #666;
+        border: 10px solid #fff;
+    }
+    h3 > a, h3 > a:hover {
+        color: inherit;
+        text-decoration: inherit;
+    }
 </style>
 </%def>
 
@@ -29,9 +39,112 @@
         <a href="${request.route_url('index')}">${_('Back')}</a>
     </div>
 </div>
+
+## Showcase number 5 by Joan, added on Oct, 7 2014
 <div class="row-fluid showcase-header-row">
     <div class="span10 offset1">
-        <h3>${_('Context matters: linking land deals to socioeconomic and environmental characteristics of places')}</h3>
+        <h3>${_('A locally owned tool to engage actors in situ')}</h3>
+    </div>
+</div>
+
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        <%
+            link = '<a href="http://www.landmatrix.org">Land Matrix</a>'
+        %>
+        ${_(u"The Land Observatory is a sister project to the %s, a global and independent land monitoring initiative that promotes transparency and accountability in decisions over land and investments. As a local extension of the system, the Land Observatory aims at providing a greater insight on land related deals and processes at the national and subnational level, by further engaging stakeholders in situ, and linking to relevant local networks and initiatives. The Land Observatory is not just a technical solution; it is a process, though which increased coordination and empowerment is made possible by the activity of people on the ground, and their respective contributions to the crowd sourcing web-portal.") % link|n}
+    </div>
+</div>
+
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        <a data-toggle="lightbox" href="#locally-owned">
+            <img class="box-shadow" src="/custom/img/showcases/locally_owned_prvw.jpg" width="871" height="490" alt="${_("A locally owned tool to coordinate and empower local activities")}"></img>
+        </a>
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="span10 offset1">
+        <a data-toggle="tooltip" title="read more" class="read-more">
+            ${_('Read more')}&nbsp;<i class="icon-double-angle-right"></i>
+        </a>
+    </div>
+</div>
+
+<div class="row-fluid blog-content hidden">
+    <div class="span10 offset1">
+        ${_('In the fast development context of the Lao PDR, land related issues are currently amongst the most critical topics, mobilizing attention from a high diversity of actors, networks and institutions locally. By handing over the keys of the system to local actors in Laos, the Observatory is now fully integrated in the national landscape of land governance through partnerships and dynamic links to other ongoing initiatives, networks and knowledge management systems.')}
+    </div>
+</div>
+
+<div class="row-fluid blog-content hidden paragraph-header">
+    <div class="span10 offset1">
+        <h4>${_('LaoFAB')}</h4>
+    </div>
+</div>
+
+<div class="row-fluid blog-content hidden">
+    <div class="span10 offset1">
+        <%
+            link = '<a href="http://laofab.org">LaoFAB</a>'
+        %>
+        ${_("%s is an online discussion group and document repository launched in 2006, and which now contains about 2,000 reports, and links a community of over 3,600 members with various interests in, and expertise on, land related issues. Thanks to a productive collaboration established locally, discussions often bounce back and forth between the observatory and LaoFAB, offering users a chance to benefit of both the instantaneity and dynamic of the discussions threads, and the more in-depth and spatial analysis capacities of the observatory.") % link|n}
+    </div>
+</div>
+
+<div class="row-fluid blog-content hidden paragraph-header">
+    <div class="span10 offset1">
+        <h4>${_('Lao DECIDE Info')}</h4>
+    </div>
+</div>
+
+<div class="row-fluid blog-content hidden">
+    <div class="span10 offset1">
+        <%
+            link1 = '<a href="http://www.decide.la">Lao DECIDE Info</a>'
+            link2 = '<a href="#context-matters">%s</a>' % _("contextual analysis of specific land deals")
+        %>
+        ${_("%s is an online mapping portal, which aims at providing policy-makers in Laos with tools and data to support better-informed decision making processes. Local partnership with the Decide Info initiative resulted in the addition of multiple context layers in the observatory, such as poverty incidence or accessibility, thereby allowing users to perform in depth %s.") % (link1, link2) | n}
+    </div>
+</div>
+
+## Showcase number 4 by Joan, added on Oct, 6 2014
+<div class="row-fluid showcase-header-row">
+    <div class="span10 offset1">
+        <h3>${_('All in one place: a geocoded data repository on land deals')}</h3>
+    </div>
+</div>
+
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        ${_('When available, information on specific land deal cases is often fragmented and hard to find. Building on a flexible database structure, the Land Observatory offers the possibility to link all types of documents (reports, pictures, web links, GIS files, etc.) to their geographic location on the dynamic map, and allows any user to contribute indefinitely by adding and commenting information.')}
+    </div>
+</div>
+
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        <a data-toggle="lightbox" href="#comments-comp">
+            <img class="box-shadow" src="/custom/img/showcases/comments_comp_prvw.jpg" width="871" height="421" alt="${_("Comments and attached documents on an existing land deal")}"></img>
+        </a>
+    </div>
+</div>
+
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        <%
+            link1 = '<a href="%s">%s</a>' % (request.route_url('activities_read_one', output='html', uid='6a5b9560-63b9-43e5-8637-168deee4e75f'), _(u"Golden Triangle casino paradise"))
+            link2 = '<a href="%s">Outspan</a>' % (request.route_url('stakeholders_read_one', output='html', uid='f3360f25-a9a7-4b5a-862f-97b3e419ab1a'))
+        %>
+        ${_("In cases such as coffee plantations granted to the Singapore based food company %s in Paksong District or the %s leased to the Chinese company Kings Roman, users of the Land Observatory came together to populate the database with dozens of documents including academic papers, Youtube videos, media articles, cross comments observations from the field and official statements by the company. Building on a joint effort by a diversity of users with various expertise and access to information, the crowd sourcing process generated a unique library on these deals, which showcases the different perspectives and claims of stakeholders involved, and can be analyzed, complemented or cross-checked by virtually anybody who has interest in the topic.") % (link1, link2)|n}
+    </div>
+</div>
+
+<div class="row-fluid showcase-header-row">
+    <div class="span10 offset1">
+        <h3>
+            <a name="context-matters">${_('Context matters: linking land deals to socioeconomic and environmental characteristics of places')}</a>
+        </h3>
     </div>
 </div>
 
@@ -214,7 +327,7 @@
 <div class="row-fluid blog-content">
     <div class="span10 offset1">
         <a data-toggle="lightbox" href="#gt-casino">
-            <img src="/custom/img/showcases/gt_casino_prvw.jpg" width="871" height="469" alt="${_("The Golden Triangle SEZ on satellite images")}"></img>
+            <img class="box-shadow" src="/custom/img/showcases/gt_casino_prvw.jpg" width="871" height="469" alt="${_("The Golden Triangle SEZ on satellite images")}"></img>
         </a>
     </div>
 </div>
@@ -242,7 +355,7 @@
 <div class="row-fluid blog-content hidden">
     <div class="span10 offset1">
         <a data-toggle="lightbox" href="#gt-details">
-            <img src="/custom/img/showcases/gt_details_prvw.jpg" width="871" alt="${_("Collected details and data sources about the Golden Triangle SEZ")}"></img>
+            <img class="box-shadow" src="/custom/img/showcases/gt_details_prvw.jpg" width="871" alt="${_("Collected details and data sources about the Golden Triangle SEZ")}"></img>
         </a>
     </div>
 </div>
@@ -281,6 +394,28 @@
     <div class='lightbox-content'>
         <img src="/custom/img/showcases/gt_details.jpg" alt="${_("Crowd-sourced details and data sources about the Golden Triangle SEZ")}"></img>
         <div class="lightbox-caption"><p>${_("Crowd-sourced details and data sources about the Golden Triangle SEZ")}</p></div>
+    </div>
+</div>
+
+<div id="comments-comp" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="lightbox-header">
+        <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true"><i class="icon-remove-sign">&nbsp;</i></button>
+        <h4 class="lightbox-title">Modal title</h4>
+    </div>
+    <div class='lightbox-content'>
+        <img src="/custom/img/showcases/comments_comp.jpg" alt="${_("Comments and attached documents on an existing land deal")}"></img>
+        <div class="lightbox-caption"><p>${_("Comments and attached documents on an existing land deal")}</p></div>
+    </div>
+</div>
+
+<div id="locally-owned" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="lightbox-header">
+        <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true"><i class="icon-remove-sign">&nbsp;</i></button>
+        <h4 class="lightbox-title">Modal title</h4>
+    </div>
+    <div class='lightbox-content'>
+        <img src="/custom/img/showcases/locally_owned.jpg" alt="${_("A locally owned tool to coordinate and empower local activities")}"></img>
+        <div class="lightbox-caption"><p>${_("A locally owned tool to coordinate and empower local activities")}</p></div>
     </div>
 </div>
 
