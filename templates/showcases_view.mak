@@ -40,106 +40,7 @@
     </div>
 </div>
 
-## Showcase number 5 by Joan, added on Oct, 7 2014
-<div class="row-fluid showcase-header-row">
-    <div class="span10 offset1">
-        <h3>${_('A locally owned tool to engage actors in situ')}</h3>
-    </div>
-</div>
-
-<div class="row-fluid blog-content">
-    <div class="span10 offset1">
-        <%
-            link = '<a href="http://www.landmatrix.org">Land Matrix</a>'
-        %>
-        ${_(u"The Land Observatory is a sister project to the %s, a global and independent land monitoring initiative that promotes transparency and accountability in decisions over land and investments. As a local extension of the system, the Land Observatory aims at providing a greater insight on land related deals and processes at the national and subnational level, by further engaging stakeholders in situ, and linking to relevant local networks and initiatives. The Land Observatory is not just a technical solution; it is a process, though which increased coordination and empowerment is made possible by the activity of people on the ground, and their respective contributions to the crowd sourcing web-portal.") % link|n}
-    </div>
-</div>
-
-<div class="row-fluid blog-content">
-    <div class="span10 offset1">
-        <a data-toggle="lightbox" href="#locally-owned">
-            <img class="box-shadow" src="/custom/img/showcases/locally_owned_prvw.jpg" width="871" height="490" alt="${_("A locally owned tool to coordinate and empower local activities")}"></img>
-        </a>
-    </div>
-</div>
-
-<div class="row-fluid">
-    <div class="span10 offset1">
-        <a data-toggle="tooltip" title="read more" class="read-more">
-            ${_('Read more')}&nbsp;<i class="icon-double-angle-right"></i>
-        </a>
-    </div>
-</div>
-
-<div class="row-fluid blog-content hidden">
-    <div class="span10 offset1">
-        ${_('In the fast development context of the Lao PDR, land related issues are currently amongst the most critical topics, mobilizing attention from a high diversity of actors, networks and institutions locally. By handing over the keys of the system to local actors in Laos, the Observatory is now fully integrated in the national landscape of land governance through partnerships and dynamic links to other ongoing initiatives, networks and knowledge management systems.')}
-    </div>
-</div>
-
-<div class="row-fluid blog-content hidden paragraph-header">
-    <div class="span10 offset1">
-        <h4>${_('LaoFAB')}</h4>
-    </div>
-</div>
-
-<div class="row-fluid blog-content hidden">
-    <div class="span10 offset1">
-        <%
-            link = '<a href="http://laofab.org">LaoFAB</a>'
-        %>
-        ${_("%s is an online discussion group and document repository launched in 2006, and which now contains about 2,000 reports, and links a community of over 3,600 members with various interests in, and expertise on, land related issues. Thanks to a productive collaboration established locally, discussions often bounce back and forth between the observatory and LaoFAB, offering users a chance to benefit of both the instantaneity and dynamic of the discussions threads, and the more in-depth and spatial analysis capacities of the observatory.") % link|n}
-    </div>
-</div>
-
-<div class="row-fluid blog-content hidden paragraph-header">
-    <div class="span10 offset1">
-        <h4>${_('Lao DECIDE Info')}</h4>
-    </div>
-</div>
-
-<div class="row-fluid blog-content hidden">
-    <div class="span10 offset1">
-        <%
-            link1 = '<a href="http://www.decide.la">Lao DECIDE Info</a>'
-            link2 = '<a href="#context-matters">%s</a>' % _("contextual analysis of specific land deals")
-        %>
-        ${_("%s is an online mapping portal, which aims at providing policy-makers in Laos with tools and data to support better-informed decision making processes. Local partnership with the Decide Info initiative resulted in the addition of multiple context layers in the observatory, such as poverty incidence or accessibility, thereby allowing users to perform in depth %s.") % (link1, link2) | n}
-    </div>
-</div>
-
-## Showcase number 4 by Joan, added on Oct, 6 2014
-<div class="row-fluid showcase-header-row">
-    <div class="span10 offset1">
-        <h3>${_('All in one place: a geocoded data repository on land deals')}</h3>
-    </div>
-</div>
-
-<div class="row-fluid blog-content">
-    <div class="span10 offset1">
-        ${_('When available, information on specific land deal cases is often fragmented and hard to find. Building on a flexible database structure, the Land Observatory offers the possibility to link all types of documents (reports, pictures, web links, GIS files, etc.) to their geographic location on the dynamic map, and allows any user to contribute indefinitely by adding and commenting information.')}
-    </div>
-</div>
-
-<div class="row-fluid blog-content">
-    <div class="span10 offset1">
-        <a data-toggle="lightbox" href="#comments-comp">
-            <img class="box-shadow" src="/custom/img/showcases/comments_comp_prvw.jpg" width="871" height="421" alt="${_("Comments and attached documents on an existing land deal")}"></img>
-        </a>
-    </div>
-</div>
-
-<div class="row-fluid blog-content">
-    <div class="span10 offset1">
-        <%
-            link1 = '<a href="%s">%s</a>' % (request.route_url('activities_read_one', output='html', uid='6a5b9560-63b9-43e5-8637-168deee4e75f'), _(u"Golden Triangle casino paradise"))
-            link2 = '<a href="%s">Outspan</a>' % (request.route_url('stakeholders_read_one', output='html', uid='f3360f25-a9a7-4b5a-862f-97b3e419ab1a'))
-        %>
-        ${_("In cases such as coffee plantations granted to the Singapore based food company %s in Paksong District or the %s leased to the Chinese company Kings Roman, users of the Land Observatory came together to populate the database with dozens of documents including academic papers, Youtube videos, media articles, cross comments observations from the field and official statements by the company. Building on a joint effort by a diversity of users with various expertise and access to information, the crowd sourcing process generated a unique library on these deals, which showcases the different perspectives and claims of stakeholders involved, and can be analyzed, complemented or cross-checked by virtually anybody who has interest in the topic.") % (link1, link2)|n}
-    </div>
-</div>
-
+## Showcase 1
 <div class="row-fluid showcase-header-row">
     <div class="span10 offset1">
         <h3>
@@ -260,6 +161,70 @@
         ${_("Beyond the specific cases, the observatory also helps getting the bigger picture of large-scale land acquisitions at the national level. One can display all deals matching a certain set of criteria (sector, country of origin, area, etc.) and analyze trends and patterns by overlaying contextual layers. One can for instance look at all Chinese investments and see if tend to be located in poor and remote areas. Equally, one can see on which type of land use agricultural concessions are located. User can perform limitless tailored-made analysis that responds to their specific needs and interests. By linking actors with the location of their interventions and claims, and the contextual information, the observatory provides the public, researchers and government agencies with a powerful tool for bottom-up monitoring and enhanced transparency in large-scale land acquisitions.")}
     </div>
 </div>
+## End showcase 1
+
+## Showcase 2
+<div class="row-fluid showcase-header-row">
+    <div class="span10 offset1">
+        <h3 class="showcase-title">
+            <a name="golden-triangle">${_("Golden Triangle turns into gambling paradise")}</a>
+        </h3>
+    </div>
+</div>
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        <a data-toggle="lightbox" href="#gt-casino">
+            <img class="box-shadow" src="/custom/img/showcases/gt_casino_prvw.jpg" width="871" height="469" alt="${_("The Golden Triangle SEZ on satellite images")}"></img>
+        </a>
+    </div>
+</div>
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        <%
+            link = '<a href="%s">%s</a>' % (request.route_url('activities_read_one', output='html', uid='6a5b9560-63b9-43e5-8637-168deee4e75f'), _("Golden Triangle Special Economic Zone"))
+        %>
+        ${_("In the case of the well-known %s granted for 99 years to the Chinese company Kings Roman, a number of Land Observatory users came together to enter, compare and crosscheck information. Facing some challenges to access certain data, they showed a level creativity that would probably not have happened as part a government-led data collection campaign.") % link|n}
+    </div>
+</div>
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        <a data-toggle="tooltip" title="read more" class="read-more">${_("Read more")}&nbsp;<i class="icon-double-angle-right"></i></a>
+    </div>
+</div>
+<div class="row-fluid blog-content hidden">
+    <div class="span10 offset1">
+        <%
+            link = '<a href="https://www.google.com/maps/@20.3420757,100.0993729,1855m/data=!3m1!1e3!4m2!5m1!1b1">%s</a>' % _("constructions")
+        %>
+        ${_("As users could not find a map of the area allocated, they started a discussion thread via the comments section. At the beginning of the discussion, the latest Google and Bing satellite images available were 2008, and neither the huge casino nor the extensive surrounding infrastructures were visible. At this stage, the best that could be done was to approximately drop a point somewhere in the area. When eventually Google maps were upgraded and displayed images from 2012, the %s became clearly visible, giving a good indication of the location and extent of the concession. When one of the contributors posted a comment to inform that new images from 2012 were available on Google maps, someone with GIS skills almost immediately grasped the opportunity to digitize the concession area and share it via the Observatory. In the meantime, other users had uploaded additional background documents on this case from a variety of different sources and in a diversity of formats including reports, press articles, documentaries and promotional videos.") % link|n}
+    </div>
+</div>
+<div class="row-fluid blog-content hidden">
+    <div class="span10 offset1">
+        <a data-toggle="lightbox" href="#gt-details">
+            <img class="box-shadow" src="/custom/img/showcases/gt_details_prvw.jpg" width="871" alt="${_("Collected details and data sources about the Golden Triangle SEZ")}"></img>
+        </a>
+    </div>
+</div>
+<div class="row-fluid blog-content hidden">
+    <div class="span10 offset1">
+        <%
+            link_1 = '<a href="http://www.rfa.org/english/news/laos/farmers-04112014180934.html">%s</a>' % _("villagers")
+            link_2 = '<a href="http://www.decide.la">DECIDE Info</a>'
+            link_3 = '<a href="http://www.laofab.org/">LaoFab</a>'
+            link_4 = '<a href="https://www.youtube.com/watch?feature=player_detailpage&v=DrDoXSPxkAc#t=26">%s</a>' % _("Youtube video documentary")
+        %>
+        ${_("End of 2013, national and international media reported %s strongly opposing police forces assisting a team sent out to survey the land for the construction of an international airport in the area. The lack of prior consultation and the threat of being deprived of additional land pushed the villagers to take the risk to protest against a government decision. LO users, who were following the case tried to find out the location of the future airport. Once again facing a lack of information, a first contributor used %s (another open access web mapping application in Lao that provides hundreds of geographic layers) to locate all the villages that were mentioned in the media. Simultaneously, the ongoing debate was disseminated in %s, a thematic discussion group on land issues in Lao that connects over 3,000 registered members interested the topic. Finally, the location of the airport was identified based on a 3D map showed by a representative of the company to a journalist in a %s unveiled by LO user.") % (link_1, link_2, link_3, link_4)|n}
+    </div>
+</div>
+<div class="row-fluid blog-content hidden">
+    <div class="span10 offset1">
+        ${_("Thanks to all these debates, sources and ideas, this specific deal is now much better documented, includes over 15 different sources such as press articles, reports and videos, and has significantly gained in spatial and thematic accuracy, despite the probably intentional retention of information.")}
+    </div>
+</div>
+## End showcase 2
+
+## Showcase 3
 <div class="row-fluid showcase-header-row">
     <div class="span10 offset1">
         <h3>
@@ -319,62 +284,112 @@
         ${_("These information were uploaded by users on the Land Observatory, one of which then submitted an updated version based on the newer satellite images available on the web, showing that despite all the complains of the communities on the ground, the expansion of the cleared area beyond the allocated land had not stopped. In the %s, the LO provides valuable information for researchers, local stakeholders, decision-makers. Less powerful actors are empowered by an easy access to critical information and the possibility to contribute to knowledge creation and dissemination of their own perspectives and claims. They are given a voice to raise their concerns, and a space to foster linkages with the global civil society through international platforms such as the land matrix or other similar networks and mechanisms.") % link|n}
     </div>
 </div>
+## End showcase 3
+
+
+## Showcase number 5 by Joan, added on Oct, 7 2014
 <div class="row-fluid showcase-header-row">
     <div class="span10 offset1">
-        <h3 class="showcase-title">${_("Golden Triangle turns into gambling paradise")}</h3>
+        <h3>${_('A locally owned tool to engage actors in situ')}</h3>
     </div>
 </div>
+
 <div class="row-fluid blog-content">
     <div class="span10 offset1">
-        <a data-toggle="lightbox" href="#gt-casino">
-            <img class="box-shadow" src="/custom/img/showcases/gt_casino_prvw.jpg" width="871" height="469" alt="${_("The Golden Triangle SEZ on satellite images")}"></img>
+        <%
+            link = '<a href="http://www.landmatrix.org">Land Matrix</a>'
+        %>
+        ${_(u"The Land Observatory is a sister project to the %s, a global and independent land monitoring initiative that promotes transparency and accountability in decisions over land and investments. As a local extension of the system, the Land Observatory aims at providing a greater insight on land related deals and processes at the national and subnational level, by further engaging stakeholders in situ, and linking to relevant local networks and initiatives. The Land Observatory is not just a technical solution; it is a process, though which increased coordination and empowerment is made possible by the activity of people on the ground, and their respective contributions to the crowd sourcing web-portal.") % link|n}
+    </div>
+</div>
+
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        <a data-toggle="lightbox" href="#locally-owned">
+            <img class="box-shadow" src="/custom/img/showcases/locally_owned_prvw.jpg" width="871" height="490" alt="${_("A locally owned tool to coordinate and empower local activities")}"></img>
         </a>
     </div>
 </div>
-<div class="row-fluid blog-content">
+
+<div class="row-fluid">
     <div class="span10 offset1">
-        <%
-            link = '<a href="%s">%s</a>' % (request.route_url('activities_read_one', output='html', uid='6a5b9560-63b9-43e5-8637-168deee4e75f'), _("Golden Triangle Special Economic Zone"))
-        %>
-        ${_("In the case of the well-known %s granted for 99 years to the Chinese company Kings Roman, a number of Land Observatory users came together to enter, compare and crosscheck information. Facing some challenges to access certain data, they showed a level creativity that would probably not have happened as part a government-led data collection campaign.") % link|n}
-    </div>
-</div>
-<div class="row-fluid blog-content">
-    <div class="span10 offset1">
-        <a data-toggle="tooltip" title="read more" class="read-more">${_("Read more")}&nbsp;<i class="icon-double-angle-right"></i></a>
-    </div>
-</div>
-<div class="row-fluid blog-content hidden">
-    <div class="span10 offset1">
-        <%
-            link = '<a href="https://www.google.com/maps/@20.3420757,100.0993729,1855m/data=!3m1!1e3!4m2!5m1!1b1">%s</a>' % _("constructions")
-        %>
-        ${_("As users could not find a map of the area allocated, they started a discussion thread via the comments section. At the beginning of the discussion, the latest Google and Bing satellite images available were 2008, and neither the huge casino nor the extensive surrounding infrastructures were visible. At this stage, the best that could be done was to approximately drop a point somewhere in the area. When eventually Google maps were upgraded and displayed images from 2012, the %s became clearly visible, giving a good indication of the location and extent of the concession. When one of the contributors posted a comment to inform that new images from 2012 were available on Google maps, someone with GIS skills almost immediately grasped the opportunity to digitize the concession area and share it via the Observatory. In the meantime, other users had uploaded additional background documents on this case from a variety of different sources and in a diversity of formats including reports, press articles, documentaries and promotional videos.") % link|n}
-    </div>
-</div>
-<div class="row-fluid blog-content hidden">
-    <div class="span10 offset1">
-        <a data-toggle="lightbox" href="#gt-details">
-            <img class="box-shadow" src="/custom/img/showcases/gt_details_prvw.jpg" width="871" alt="${_("Collected details and data sources about the Golden Triangle SEZ")}"></img>
+        <a data-toggle="tooltip" title="read more" class="read-more">
+            ${_('Read more')}&nbsp;<i class="icon-double-angle-right"></i>
         </a>
     </div>
 </div>
+
+<div class="row-fluid blog-content hidden">
+    <div class="span10 offset1">
+        ${_('In the fast development context of the Lao PDR, land related issues are currently amongst the most critical topics, mobilizing attention from a high diversity of actors, networks and institutions locally. By handing over the keys of the system to local actors in Laos, the Observatory is now fully integrated in the national landscape of land governance through partnerships and dynamic links to other ongoing initiatives, networks and knowledge management systems.')}
+    </div>
+</div>
+
+<div class="row-fluid blog-content hidden paragraph-header">
+    <div class="span10 offset1">
+        <h4>${_('LaoFAB')}</h4>
+    </div>
+</div>
+
 <div class="row-fluid blog-content hidden">
     <div class="span10 offset1">
         <%
-            link_1 = '<a href="http://www.rfa.org/english/news/laos/farmers-04112014180934.html">%s</a>' % _("villagers")
-            link_2 = '<a href="http://www.decide.la">DECIDE Info</a>'
-            link_3 = '<a href="http://www.laofab.org/">LaoFab</a>'
-            link_4 = '<a href="https://www.youtube.com/watch?feature=player_detailpage&v=DrDoXSPxkAc#t=26">%s</a>' % _("Youtube video documentary")
+            link = '<a href="http://laofab.org">LaoFAB</a>'
         %>
-        ${_("End of 2013, national and international media reported %s strongly opposing police forces assisting a team sent out to survey the land for the construction of an international airport in the area. The lack of prior consultation and the threat of being deprived of additional land pushed the villagers to take the risk to protest against a government decision. LO users, who were following the case tried to find out the location of the future airport. Once again facing a lack of information, a first contributor used %s (another open access web mapping application in Lao that provides hundreds of geographic layers) to locate all the villages that were mentioned in the media. Simultaneously, the ongoing debate was disseminated in %s, a thematic discussion group on land issues in Lao that connects over 3,000 registered members interested the topic. Finally, the location of the airport was identified based on a 3D map showed by a representative of the company to a journalist in a %s unveiled by LO user.") % (link_1, link_2, link_3, link_4)|n}
+        ${_("%s is an online discussion group and document repository launched in 2006, and which now contains about 2,000 reports, and links a community of over 3,600 members with various interests in, and expertise on, land related issues. Thanks to a productive collaboration established locally, discussions often bounce back and forth between the observatory and LaoFAB, offering users a chance to benefit of both the instantaneity and dynamic of the discussions threads, and the more in-depth and spatial analysis capacities of the observatory.") % link|n}
     </div>
 </div>
+
+<div class="row-fluid blog-content hidden paragraph-header">
+    <div class="span10 offset1">
+        <h4>${_('Lao DECIDE Info')}</h4>
+    </div>
+</div>
+
 <div class="row-fluid blog-content hidden">
     <div class="span10 offset1">
-        ${_("Thanks to all these debates, sources and ideas, this specific deal is now much better documented, includes over 15 different sources such as press articles, reports and videos, and has significantly gained in spatial and thematic accuracy, despite the probably intentional retention of information.")}
+        <%
+            link1 = '<a href="http://www.decide.la">Lao DECIDE Info</a>'
+            link2 = '<a href="#context-matters">%s</a>' % _("contextual analysis of specific land deals")
+        %>
+        ${_("%s is an online mapping portal, which aims at providing policy-makers in Laos with tools and data to support better-informed decision making processes. Local partnership with the Decide Info initiative resulted in the addition of multiple context layers in the observatory, such as poverty incidence or accessibility, thereby allowing users to perform in depth %s.") % (link1, link2) | n}
     </div>
 </div>
+## End showcase number 5
+
+## Showcase number 4 by Joan, added on Oct, 6 2014
+<div class="row-fluid showcase-header-row">
+    <div class="span10 offset1">
+        <h3>${_('All in one place: a geocoded data repository on land deals')}</h3>
+    </div>
+</div>
+
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        ${_('When available, information on specific land deal cases is often fragmented and hard to find. Building on a flexible database structure, the Land Observatory offers the possibility to link all types of documents (reports, pictures, web links, GIS files, etc.) to their geographic location on the dynamic map, and allows any user to contribute indefinitely by adding and commenting information.')}
+    </div>
+</div>
+
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        <a data-toggle="lightbox" href="#comments-comp">
+            <img class="box-shadow" src="/custom/img/showcases/comments_comp_prvw.jpg" width="871" height="421" alt="${_("Comments and attached documents on an existing land deal")}"></img>
+        </a>
+    </div>
+</div>
+
+<div class="row-fluid blog-content">
+    <div class="span10 offset1">
+        <%
+            link1 = '<a href="%s">%s</a>' % (request.route_url('activities_read_one', output='html', uid='6a5b9560-63b9-43e5-8637-168deee4e75f'), _(u"Golden Triangle casino paradise"))
+            link2 = '<a href="%s">Outspan</a>' % (request.route_url('stakeholders_read_one', output='html', uid='f3360f25-a9a7-4b5a-862f-97b3e419ab1a'))
+        %>
+        ${_("In cases such as coffee plantations granted to the Singapore based food company %s in Paksong District or the %s leased to the Chinese company Kings Roman, users of the Land Observatory came together to populate the database with dozens of documents including academic papers, Youtube videos, media articles, cross comments observations from the field and official statements by the company. Building on a joint effort by a diversity of users with various expertise and access to information, the crowd sourcing process generated a unique library on these deals, which showcases the different perspectives and claims of stakeholders involved, and can be analyzed, complemented or cross-checked by virtually anybody who has interest in the topic.") % (link1, link2)|n}
+    </div>
+</div>
+## End showcase number 4
+
+## HTML divisions for lightbox
 <div id="gt-casino" class="lightbox hide fade" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="lightbox-header">
         <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true"><i class="icon-remove-sign">&nbsp;</i></button>
