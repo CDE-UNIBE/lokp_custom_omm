@@ -1,7 +1,7 @@
 <%inherit file="lmkp:customization/lo/templates/base.mak" />
 
 <%
-from lmkp.views.profile import (
+from lmkp.views.views import (
     get_current_locale,
     get_current_profile,
 )
