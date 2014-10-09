@@ -42,22 +42,25 @@ ${field.end_mapping()}
                         ${_('Search the database to find an existing Investor. Start typing (at least 4 characters) to search an Investor and select it.')}
                     </p>
 
-                    <div class="input-prepend">
+                    <div class="input-prepend span10">
                       <span class="add-on"><i class="icon-search"></i></span>
                       <input class="span12" id="searchinvinput-${field.oid}" type="text" placeholder="${_('Search an Investor')}"/>
                     </div>
 
-                    <hr class="grey"/>
+                    <div class="row-fluid">
 
-                    <p>
-                        ${_('Nothing found? Maybe the Investor is not yet in the database. You can create a new Investor.')}
-                    </p>
-                    <button id="create_involvement"
-                            class="btn btn-small btn-primary"
-                            value="createinvolvement"
-                            name="createinvolvement_${field.name}">
-                        <i class="icon-pencil"></i>&nbsp;&nbsp;${_('Create a new Investor')}
-                    </button>
+                        <hr class="grey"/>
+
+                        <p>
+                            ${_('Nothing found? Maybe the Investor is not yet in the database. You can create a new Investor.')}
+                        </p>
+                        <button id="create_involvement"
+                                class="btn btn-small btn-primary"
+                                value="createinvolvement"
+                                name="createinvolvement_${field.name}">
+                            <i class="icon-pencil"></i>&nbsp;&nbsp;${_('Create a new Investor')}
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
