@@ -28,35 +28,40 @@ ${field.end_mapping()}
     </a>
 </p>
 
-<div class="accordion add-involvement" id="accordion-${field.oid}">
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-${field.oid}" href="#accordion-content-${field.oid}">
-                <i class="icon-plus"></i> ${_('Select an Investor')}
-            </a>
-        </div>
-        <div id="accordion-content-${field.oid}" class="accordion-body collapse">
-            <div class="accordion-inner">
-                <p>
-                    ${_('Search the database to find an existing Investor. Start typing (at least 4 characters) to search an Investor and select it.')}
-                </p>
+<div>
+    <div class="accordion add-involvement" id="accordion-${field.oid}">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-${field.oid}" href="#accordion-content-${field.oid}">
+                    <i class="icon-plus"></i> ${_('Select an Investor')}
+                </a>
+            </div>
+            <div id="accordion-content-${field.oid}" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <p>
+                        ${_('Search the database to find an existing Investor. Start typing (at least 4 characters) to search an Investor and select it.')}
+                    </p>
 
-                <div class="input-prepend">
-                  <span class="add-on"><i class="icon-search"></i></span>
-                  <input class="span12" id="searchinvinput-${field.oid}" type="text" placeholder="${_('Search a Stakeholder')}">
+                    <div class="input-prepend span10">
+                      <span class="add-on"><i class="icon-search"></i></span>
+                      <input class="span12" id="searchinvinput-${field.oid}" type="text" placeholder="${_('Search an Investor')}"/>
+                    </div>
+
+                    <div class="row-fluid">
+
+                        <hr class="grey"/>
+
+                        <p>
+                            ${_('Nothing found? Maybe the Investor is not yet in the database. You can create a new Investor.')}
+                        </p>
+                        <button id="create_involvement"
+                                class="btn btn-small btn-primary"
+                                value="createinvolvement"
+                                name="createinvolvement_${field.name}">
+                            <i class="icon-pencil"></i>&nbsp;&nbsp;${_('Create a new Investor')}
+                        </button>
+                    </div>
                 </div>
-
-                <hr class="grey"/>
-
-                <p>
-                    ${_('Nothing found? Maybe the Investor is not yet in the database. You can create a new Investor.')}
-                </p>
-                    <button id="create_involvement"
-                            class="btn btn-small btn-primary"
-                            value="createinvolvement"
-                            name="createinvolvement_${field.name}">
-                        <i class="icon-pencil"></i>&nbsp;&nbsp;${_('Create a new Investor')}
-                    </button>
             </div>
         </div>
     </div>

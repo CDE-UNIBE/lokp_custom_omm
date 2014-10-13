@@ -11,7 +11,7 @@
         ${form | n}
         %if site_key is not None:
             <div class="row-fluid">
-                <div id="comments-div" class="span9 comments-div">
+                <div id="comments-div" class="comments-div">
                     ${_('Loading comments ...')}
                 </div>
             </div>
@@ -25,7 +25,7 @@
     var identifier = '${uid}';
     var version = ${version};
 </script>
-    
+
 <%include file="lmkp:templates/map/mapform.mak" args="readonly=True" />
 
 % if site_key is not None:
@@ -66,7 +66,7 @@
             window._juviaRequestCounter++;
             return result;
         }
-        
+
         var s       = document.createElement('script');
         s.async     = true;
         s.type      = 'text/javascript';
