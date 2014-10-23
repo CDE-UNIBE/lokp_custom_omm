@@ -1,22 +1,30 @@
 <%inherit file="lmkp:customization/lo/templates/base.mak" />
 
-<%def name="title()">Charts View</%def>
+<%def name="title()">${_("Charts")}</%def>
+
+<%def name="head_tags()">
+  <link rel="stylesheet" href="/custom/css/charts.css"></link>
+</%def>
 
 <div class="container">
     <div class="content no-border">
 
-        <h3>Charts</h3>
+        <h3>${_("Charts")}</h3>
 
-        <p>Place some meaningful content here ...</p>
-
-        <div class="row-fluid chartGallery">
-            <div class="span4">
-                <a href="${request.route_url('charts_overview')}">
-                    <img src="${request.static_url('lmkp:static/img/charts/overview_thumbnail_medium.png')}" class="img-polaroid" />
-                    <p class="chartGalleryDescription text-center">Overview</p>
+        <ul class="chart-gallery">
+            <li class="span4">
+                <a class="thumbnail" href="${request.route_url('charts', type='bars', params=(u'a',))}">
+                    <img alt="${_('Deal bar charts')}" src="/custom/img/charts/barchart_a.png">
                 </a>
-            </div>
-        </div>
+                <p><a href="${request.route_url('charts', type='bars', params=(u'a',))}">${_('Deal bar charts')}</a></p>
+            </li>
+            <li class="span4">
+                <a class="thumbnail" href="${request.route_url('charts', type='bars', params=(u'sh',))}">
+                    <img alt="${_('Investor bar charts')}" src="/custom/img/charts/barchart_sh.png">
+                </a>
+                <p><a href="${request.route_url('charts', type='bars', params=(u'sh',))}">${_('Investor bar charts')}</a></p>
+            </li>
+        </ul>
+
     </div>
 </div>
-

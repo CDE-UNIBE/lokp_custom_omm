@@ -2,7 +2,7 @@
 
 <%inherit file="lmkp:customization/lo/templates/base.mak" />
 
-<%def name="title()">${_("Charts")}</%def>
+<%def name="title()">${_("Deal bar charts")}</%def>
 
 <%def name="head_tags()">
   <link rel="stylesheet" href="/custom/css/charts.css"></link>
@@ -10,6 +10,11 @@
 
 <div class="container">
   <div class="content no-border">
+    <div class="row-fluid">
+      <a href="${request.route_url('charts_overview')}">
+        <i class="icon-th"></i><span class="link-with-icon">${_("Back to charts overview")}</span>
+      </a>
+    </div>
     <div class="row-fluid">
       <div class="pull-right">
         <ul class="nav nav-pills chartNav" id="group-by-pills">
