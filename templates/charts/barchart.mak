@@ -45,24 +45,26 @@
     var group_activities_by = "${_('Group deals by:')}";
     var show_attribute = "${_('Show attribute:')}";
     var chart_data = {
-      item: 'Activity',
-      attributes: {
+      'item': 'Activity',
+      'attributes': {
         'Activity': 'count',
         'Intended area (ha)': 'sum'
       },
-      groupable: [
-        ['Intention of Investment'],
-        ['Negotiation Status'],
-        ['Implementation status']
-      ]
+      'translate': {
+        'keys': [
+          ['Intention of Investment'],
+          ['Negotiation Status'],
+          ['Implementation status']
+        ]
+      }
     };
     var attribute_names = [
       "${_('Intended area')}",
       "${_('Deals')}"
     ];
 
-    var current_group_key = "${attr}";
-    chart_data['group_by'] = chart_data["groupable"][current_group_key];
+    var group_key = "${attr}";
+    chart_data['group_by'] = chart_data['translate']['keys'][group_key];
 
     d3.xhr('${request.route_url("evaluation")}')
       .header("Content-Type", "application/json")
@@ -74,6 +76,7 @@
             return console.warn(data['msg']);
           }
           $('#loadingRow').hide();
+          updateContent(data);
           visualize(data.data);
         }
       );
