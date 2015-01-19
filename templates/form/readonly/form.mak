@@ -183,6 +183,11 @@ ${editToolbar('bottom')}
       <li>
         <a href="${request.route_url(historyRouteName, output='html', uid=cstruct['id'])}"><i class="icon-time"></i><span class="link-with-icon">${_('History')}</span></a>
       </li>
+      % if not isStakeholder:
+        <li>
+          <a href="${request.route_url(routeName, output='statistics', uid=cstruct['id'])}"><i class="icon-bar-chart"></i><span class="link-with-icon">${_("Areal statistics")}</span></a>
+        </li>
+      % endif
       % if request.user and 'id' in cstruct and not empty:
         <li>
           <a href="${request.route_url(routeName, output='form', uid=cstruct['id'], _query=(('v', cstruct['version']),))}"><i class="icon-pencil"></i><span class="link-with-icon">${editLinkText}</span></a>

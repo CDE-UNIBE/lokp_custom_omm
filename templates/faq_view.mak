@@ -64,7 +64,8 @@
         <hr class="grey" />
 
         <a name="q8"></a><p class="lead">${_('How can I download data?')}</p>
-        <p>${_('The download functionality is currently under development and should be ready soon.')}</p>
+        <p>${_('You can download data in the "Grid" view using the button at the top right corner of the grid. Both deals and investors can be downloaded and you can customize your download to include only selected attributes.')}</p>
+        <p><a href="${request.route_url('download')}">${_('You can also use this link to access the download page.')}</a></p>
         <hr class="grey" />
 
         <a name="q9"></a><p class="lead">${_('Do you protect my privacy?')}</p>
