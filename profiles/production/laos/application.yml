@@ -9,7 +9,7 @@ application:
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "poverty_incidence"
+    - layers: "lo:laos_poverty_incidence"
     - transparent: true
     ol_options:
     - visibility: false
@@ -22,7 +22,7 @@ application:
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "t_to_prov_capital_mean_min"
+    - layers: "lo:laos_t_to_prov_capital_mean_min"
     - transparent: true
     ol_options:
     - visibility: false
@@ -35,7 +35,7 @@ application:
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "w_road_access"
+    - layers: "lo:laos_w_road_access"
     - transparent: true
     ol_options:
     - visibility: false
@@ -48,7 +48,7 @@ application:
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "pop_density"
+    - layers: "lo:laos_pop_density"
     - transparent: true
     ol_options:
     - visibility: false
@@ -62,7 +62,7 @@ application:
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "w_pct_farmhh"
+    - layers: "lo:laos_w_pct_farmhh"
     - transparent: true
     ol_options:
     - visibility: false
@@ -90,7 +90,7 @@ application:
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "pop_econ_active_pct"
+    - layers: "lo:laos_pop_econ_active_pct"
     - transparent: true
     ol_options:
     - visibility: false
