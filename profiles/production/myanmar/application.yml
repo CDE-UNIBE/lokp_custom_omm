@@ -3,6 +3,72 @@ application:
     type: Polygon
     coordinates: [[[92.172,9.537],[92.172,28.547],[101.170,28.547],[101.170,9.537],[92.172,9.537]]]
   name: Myanmar
+  layers:
+  - name: "Accessibility"
+    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/jpeg"
+    - layers: "accessability"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    - opacity: 0.7
+  - name: "Population Density 2008"
+    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/jpeg"
+    - layers: "lspop_2008"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    - opacity: 0.6
+  - name: "Global Land Cover 2009"
+    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/jpeg"
+    - layers: "globcover_2009"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    - opacity: 0.6
+  - name: "Global Cropland"
+    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/jpeg"
+    - layers: "gl_cropland"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    - opacity: 0.6
+  - name: "Global Pasture Land"
+    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    wms_options:
+    - epsg: 900913
+    - format: "image/jpeg"
+    - layers: "gl_pasture"
+    - transparent: true
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    - opacity: 0.6
   spatial_accuracy:
     better than 100m: 100
     100m to 1km: 500
