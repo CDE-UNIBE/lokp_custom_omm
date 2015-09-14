@@ -1,0 +1,11 @@
+application:
+  geometry:
+    type: Polygon
+    coordinates: [[[92.172,9.537],[92.172,28.547],[101.170,28.547],[101.170,9.537],[92.172,9.537]]]
+  name: Myanmar
+  spatial_accuracy:
+    better than 100m: 100
+    100m to 1km: 500
+    1km to 10km: 5000
+    10km to 100km: 50000
+    worse than 100km: 500000
