@@ -27,9 +27,8 @@ profiles = sorted(get_profiles(), key=lambda profile: profile[0])
 </div>
 % else:
 
-<!-- Dropdown Trigger -->
-<a class='dropdown-button btn' href='#' data-activates='dropdown2' style="margin-top: 50px;">${_('Select a country')}<i class="material-icons right">arrow_drop_down</i></a>
-<!-- Dropdown Structure -->
+<br><br>
+<a class='dropdown-button btn' href='#' data-activates='dropdown2'>${_('Select a country')}<i class="material-icons right">arrow_drop_down</i></a>
 <ul id='dropdown2' class='dropdown-content'>
     % if len(profiles) > 0:
         % for p in profiles:
@@ -40,17 +39,16 @@ profiles = sorted(get_profiles(), key=lambda profile: profile[0])
     % endif
 </ul>
 
-<div style="width: 100%; margin-top: 80px;">
-    <h5>${_('Or take a short tour:')}</h5>
-</div>
+<br><br><br><br><br>
+<h5>${_('Or take a short tour:')}</h5>
 
-<div class="slider" style="margin-top: 20px; height: 450px !important;">
+<div class="slider slider-landingpage">
     <ul class="slides">
         <li>
-            <img src="/custom/img/slides/test.jpg" style="height: 100% !important;">
+            <img src="/custom/img/slides/test.jpg">
             <div class="caption right-align">
-                <h3 style="color: teal; text-shadow: 1px 1px 1px #000;">Overview</h3>
-                <h5 class="light grey-text text-lighten-3" style="text-shadow: 1px 1px 1px #000;">
+                <h3>Overview</h3>
+                <h5 class="light grey-text text-lighten-3">
                     ${_('Users in select pilot countries gather, explore and analyze spatial data on large-scale land acquisitions. Data is managed and reviewed locally by partners.')}
                 </h5>
             </div>
@@ -58,8 +56,8 @@ profiles = sorted(get_profiles(), key=lambda profile: profile[0])
         <li>
             <img src="/custom/img/slides/test2.jpg">
             <div class="caption left-align">
-                <h3 style="color: teal; text-shadow: 1px 1px 1px #000;">Deals</h3>
-                <h5 class="light grey-text text-lighten-3" style="text-shadow: 1px 1px 1px #000;">
+                <h3>Deals</h3>
+                <h5 class="light grey-text text-lighten-3">
                     ${_('Users can see deals in full geographical context, learn more about investors and the kinds of investments in question.')}
                 </h5>
             </div>
@@ -67,22 +65,19 @@ profiles = sorted(get_profiles(), key=lambda profile: profile[0])
         <li>
             <img src="/custom/img/slides/test3.jpg">
             <div class="caption right-align">
-                <h3 style="color: teal; text-shadow: 1px 1px 1px #000;">Context Layers</h3>
-                <h5 class="light grey-text text-lighten-3" style="text-shadow: 1px 1px 1px #000;">
+                <h3>Context Layers</h3>
+                <h5 class="light grey-text text-lighten-3">
                     ${_('Want to know if anybody lives on a concession? Use the context layers to view population density and more.')}
                 </h5>
             </div>
         </li>
     </ul>
 </div>
-<script type="text/javascript">
-    $('.slider').slider({full_width: true});
-</script>
 
 % endif
 
-
-<p style="margin-top: 80px;">${_('Are you interested in concrete use cases of the Land Observatory?')}</p>
+</br></br></br></br>
+<p>${_('Are you interested in concrete use cases of the Land Observatory?')}</p>
 </br>
 <a class="waves-effect waves-light btn" href="${request.route_url('showcases_view')}">${_('Check out the showcases!')}</a>
 

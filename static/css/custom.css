@@ -2378,7 +2378,44 @@ a:hover i, a:focus i {
 
 /*** REDESIGN ***/
 
-/**show cases **/
+.brand-logo {
+	height: 80%;
+	line-height: 90px;
+	padding: auto;
+	vertical-align: middle;
+}
+.brand-logo img {
+	height: 100%;
+}
+.dropdown-button-lang {
+	color: #00897b;
+}
+.col-main-page {
+	text-align: center;
+}
+
+.slider-landingpage .indicators .indicator-item.active {
+	background-color: teal;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: teal !important;
+}
+.slider h3 {
+	color: teal;
+	text-shadow: 1px 1px 1px #000;
+}
+.slider h5 {
+	text-shadow: 1px 1px 1px #000;
+}
+
+/** landing page **/
+.slider-landingpage{
+	margin-top: 20px;
+	height: 450px;
+}
+
+/** show cases **/
 .slider-showcases {
 	width: 50%;
 	left: 25%;

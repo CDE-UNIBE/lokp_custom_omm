@@ -105,16 +105,16 @@
     <a class="waves-effect waves-light btn btn-read-more" onclick="$('#showcase2').fadeIn(); $(this).hide();">${_('Read more')}</a>
 
     <div class="showcase" id="showcase2">
-        </br>
+        <br>
         <%
             link = '<a href="https://www.google.com/maps/@20.3420757,100.0993729,1855m/data=!3m1!1e3!4m2!5m1!1b1">%s</a>' % _("constructions")
         %>
         <p>
             ${_("As users could not find a map of the area allocated, they started a discussion thread via the comments section. At the beginning of the discussion, the latest Google and Bing satellite images available were 2008, and neither the huge casino nor the extensive surrounding infrastructures were visible. At this stage, the best that could be done was to approximately drop a point somewhere in the area. When eventually Google maps were upgraded and displayed images from 2012, the %s became clearly visible, giving a good indication of the location and extent of the concession. When one of the contributors posted a comment to inform that new images from 2012 were available on Google maps, someone with GIS skills almost immediately grasped the opportunity to digitize the concession area and share it via the Observatory. In the meantime, other users had uploaded additional background documents on this case from a variety of different sources and in a diversity of formats including reports, press articles, documentaries and promotional videos.") % link|n}
         </p>
-        </br></br>
+        <br><br>
         <a class="modal-trigger modal-trigger-showcases" href="#modal2"><img src="/custom/img/showcases/gt_details_prvw.jpg" alt="${_("Collected details and data sources about the Golden Triangle SEZ")}"/></a>
-        </br></br></br>
+        <br><br><br>
         <div id="modal2" class="modal modal-showcases">
             <div class="modal-content">
               <img src="/custom/img/showcases/gt_details.jpg" alt="${_("Collected details and data sources about the Golden Triangle SEZ")}" class="img-popup-showcases "/>
@@ -129,7 +129,7 @@
         <p>
             ${_("End of 2013, national and international media reported %s strongly opposing police forces assisting a team sent out to survey the land for the construction of an international airport in the area. The lack of prior consultation and the threat of being deprived of additional land pushed the villagers to take the risk to protest against a government decision. LO users, who were following the case tried to find out the location of the future airport. Once again facing a lack of information, a first contributor used %s (another open access web mapping application in Lao that provides hundreds of geographic layers) to locate all the villages that were mentioned in the media. Simultaneously, the ongoing debate was disseminated in %s, a thematic discussion group on land issues in Lao that connects over 3,000 registered members interested the topic. Finally, the location of the airport was identified based on a 3D map showed by a representative of the company to a journalist in a %s unveiled by LO user.") % (link_1, link_2, link_3, link_4)|n}
         </p>
-        </br>
+        <br>
         <p>
             ${_("Thanks to all these debates, sources and ideas, this specific deal is now much better documented, includes over 15 different sources such as press articles, reports and videos, and has significantly gained in spatial and thematic accuracy, despite the probably intentional retention of information.")}
         </p>
@@ -167,7 +167,7 @@
         <%
             link = '<a href="%s">%s</a>' % (request.route_url('activities_read_one', output='html', uid='b385975a-393c-4127-9cfc-f7957afd4897'), _("Phine district case"))
         %>
-        </br>
+        <br>
         <p>
             ${_("These information were uploaded by users on the Land Observatory, one of which then submitted an updated version based on the newer satellite images available on the web, showing that despite all the complains of the communities on the ground, the expansion of the cleared area beyond the allocated land had not stopped. In the %s, the LO provides valuable information for researchers, local stakeholders, decision-makers. Less powerful actors are empowered by an easy access to critical information and the possibility to contribute to knowledge creation and dissemination of their own perspectives and claims. They are given a voice to raise their concerns, and a space to foster linkages with the global civil society through international platforms such as the land matrix or other similar networks and mechanisms.") % link|n}
         </p>
@@ -191,9 +191,9 @@
         ${_(u"The Land Observatory is a sister project to the %s, a global and independent land monitoring initiative that promotes transparency and accountability in decisions over land and investments. As a local extension of the system, the Land Observatory aims at providing a greater insight on land related deals and processes at the national and subnational level, by further engaging stakeholders in situ, and linking to relevant local networks and initiatives. The Land Observatory is not just a technical solution; it is a process, though which increased coordination and empowerment is made possible by the activity of people on the ground, and their respective contributions to the crowd sourcing web-portal.") % link|n}
     </p>
 
-    </br></br>
+    <br><br>
     <a class="modal-trigger modal-trigger-showcases" href="#modal3"><img src="/custom/img/showcases/locally_owned_prvw.jpg" alt="${_("A locally owned tool to coordinate and empower local activities")}"/></a>
-    </br></br></br>
+    <br><br><br>
     <div id="modal3" class="modal modal-showcases">
         <div class="modal-content">
           <img src="/custom/img/showcases/locally_owned.jpg" alt="${_("The Golden Triangle SEZ on satellite images")}" class="img-popup-showcases "/>
@@ -236,9 +236,9 @@
         ${_('When available, information on specific land deal cases is often fragmented and hard to find. Building on a flexible database structure, the Land Observatory offers the possibility to link all types of documents (reports, pictures, web links, GIS files, etc.) to their geographic location on the dynamic map, and allows any user to contribute indefinitely by adding and commenting information.')}
     </p>
 
-    </br></br></br>
+    <br><br><br>
     <a class="modal-trigger modal-trigger-showcases" href="#modal4"><img src="/custom/img/showcases/comments_comp_prvw.jpg" alt="${_("Comments and attached documents on an existing land deal")}"/></a>
-    </br></br></br>
+    <br><br><br>
     <div id="modal4" class="modal modal-showcases">
         <div class="modal-content">
           <img src="/custom/img/showcases/comments_comp.jpg" alt="${_("Comments and attached documents on an existing land deal")}" class="img-popup-showcases "/>
@@ -253,7 +253,7 @@
     <p class="main-text">
         ${_("In cases such as coffee plantations granted to the Singapore based food company %s in Paksong District or the %s leased to the Chinese company Kings Roman, users of the Land Observatory came together to populate the database with dozens of documents including academic papers, Youtube videos, media articles, cross comments observations from the field and official statements by the company. Building on a joint effort by a diversity of users with various expertise and access to information, the crowd sourcing process generated a unique library on these deals, which showcases the different perspectives and claims of stakeholders involved, and can be analyzed, complemented or cross-checked by virtually anybody who has interest in the topic.") % (link1, link2)|n}
     </p>
-    </br></br></br>
+    <br><br><br>
 
     ## End showcase number 4
 

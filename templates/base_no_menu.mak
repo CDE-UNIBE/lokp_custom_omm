@@ -85,10 +85,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
 
     </head>
     <body>
-        <style>.slider .indicators .indicator-item.active {
-    background-color: teal;
-}
-</style>
+
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -106,15 +103,15 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             <div class="nav-wrapper">
                 <div class="row">
                     <div class="col s10 offset-s1">
-                        <a href="${request.route_url('index')}" class="brand-logo" style="height: 80%; line-height: 90px; padding: auto; vertical-align: middle;">
+                        <a href="${request.route_url('index')}" class="brand-logo">
                             % if mode == 'demo':
                                 <img src="/custom/img/logo_demo.png" class="lo_logo" alt="${_('Land Observatory')}" />
                             % else:
-                                <img src="/custom/img/logo_new.png" alt="${_('Land Observatory')}" style="height: 100%;"/>
+                                <img src="/custom/img/logo_new.png" alt="${_('Land Observatory')}"/>
                             % endif
                         </a>
                         <ul class="right hide-on-med-and-down">
-                            <li><a class="dropdown-button" href="#!" data-activates="dropdown1" style="color: #00897b;">${selectedlanguage[1]}<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a class="dropdown-button dropdown-button-lang" href="#!" data-activates="dropdown1">${selectedlanguage[1]}<i class="material-icons right">arrow_drop_down</i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -125,10 +122,10 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             $(".dropdown-button").dropdown();
         </script>
 
-
         <div class="row">
-          <div class="col s10 offset-s1" style="text-align: center;">
-              <div class="card-panel teal" style="margin-top: 50px;">
+          <div class="col s10 offset-s1 col-main-page">
+              <br>
+              <div class="card-panel teal">
                   <span class="white-text"><strong>${_('The Land Observatory')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}</span>
               </div>
               ${self.body()}
