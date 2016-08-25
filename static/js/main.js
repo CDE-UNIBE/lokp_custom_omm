@@ -18,3 +18,8 @@ $(".read-more").click(function(event) {
         child.addClass("icon-double-angle-right");
     }
 });
+
+$(document).ready(function(){
+    $('.slider').slider({full_width: true});
+    $('.modal-trigger').leanModal();
+});

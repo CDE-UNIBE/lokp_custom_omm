@@ -205,6 +205,10 @@ hr.lightgray {
 	height: 25px; /* .push must be the same height as .footer */
 }
 
+.landing-page-footer,
+.landing-page-push  {
+	height: 50px; /* .push must be the same height as .footer */
+}
 
 .push-top {
 	padding-top: 58px;
@@ -2373,64 +2377,4 @@ a:hover i, a:focus i {
 }
 .item-toolbar i {
 	margin-left: 5px;
-}
-
-
-/*** REDESIGN ***/
-
-/**show cases **/
-.slider-showcases {
-	width: 50%;
-	left: 25%;
-	margin-top: 50px;
-}
-.slider-showcases .slides-showcases {
-	background-color: transparent;
-	margin: 0;
-}
-
-.slider-showcases .slides-showcases li img {
-	height: 100%;
-	width: 100%;
-	background-position: center;
-	background-size:100% auto;
-	background-repeat: no-repeat;
-}
-.caption {
-	height: 100%;
-}
-.main-text {
-	margin-top: 50px;
-	text-align: justify;
-}
-.title-showcase {
-	margin-top: 150px;
-	margin-bottom: 50px;
-}
-.showcase {
-	display: none;
-}
-.showcase p {
-	text-align: justify;
-}
-.showcase h4 {
-	margin-top: 50px;
-}
-.btn-read-more {
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
-.modal-showcases {
-	 width: 90%;
-}
-.modal-trigger-showcases {
-	margin-bottom: 100px;
-}
-.img-popup-showcases {
-	width: 80%;
-}
-.btn-back {
-	position: fixed;
-	bottom: 2%;
-	left: 2%;
 }
