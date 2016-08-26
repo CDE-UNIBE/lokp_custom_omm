@@ -96,7 +96,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <!-- Dropdown Structure -->
         <ul id="dropdown1" class="dropdown-content">
             % for l in languages:
-                <li><a href="${handle_query_string(request.url, add=[('_LOCALE_', l[0])])}">${l[1]}</a></li>
+                <li><a href="${handle_query_string(request.url, add=[('_LOCALE_', l[0])])}" class="text-accent-color">${l[1]}</a></li>
             % endfor
         </ul>
         <nav class="grey lighten-2">
@@ -111,7 +111,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                             % endif
                         </a>
                         <ul class="right hide-on-med-and-down">
-                            <li><a class="dropdown-button dropdown-button-lang" href="#!" data-activates="dropdown1">${selectedlanguage[1]}<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a class="dropdown-button text-accent-color" href="#!" data-activates="dropdown1">${selectedlanguage[1]}<i class="material-icons right">arrow_drop_down</i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -126,7 +126,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             <div class="row">
               <div class="col s10 offset-s1 col-main-page">
                   <br>
-                  <div class="card-panel teal">
+                  <div class="card-panel accent-color">
                       <span class="white-text"><strong>${_('The Land Observatory')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}</span>
                   </div>
                   ${self.body()}
@@ -155,7 +155,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                 class="active"
                             % endif
                             >
-                            <a href="${f[0]}">${f[1]}</a>
+                            <a class="text-accent-color" href="${f[0]}">${f[1]}</a>
                         </li>
                         % endfor
                     </ul>
@@ -167,9 +167,6 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                 display: inline;
                 padding-left: 15px;
                 margin-bottom: 0px;
-            }
-            footer a {
-                color: teal;
             }
             main {
               min-height: calc(100% - 64px - 40px); // 1000% - navbar - footer
