@@ -2471,3 +2471,11 @@ a:hover i, a:focus i {
 	bottom: 2%;
 	left: 2%;
 }
+.dark-primary-color    { background: #616161; }
+.default-primary-color { background: #9E9E9E; }
+.light-primary-color   { background: #F5F5F5; }
+.text-primary-color    { color: #212121; }
+.accent-color          { background: #009688; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }

@@ -122,17 +122,59 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             $(".dropdown-button").dropdown();
         </script>
 
-        <div class="row">
-          <div class="col s10 offset-s1 col-main-page">
-              <br>
-              <div class="card-panel teal">
-                  <span class="white-text"><strong>${_('The Land Observatory')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}</span>
+        <main>
+            <div class="row">
+              <div class="col s10 offset-s1 col-main-page">
+                  <br>
+                  <div class="card-panel teal">
+                      <span class="white-text"><strong>${_('The Land Observatory')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}</span>
+                  </div>
+                  ${self.body()}
               </div>
-              ${self.body()}
-          </div>
-        </div>
+            </div>
+        </main>
 
+        <footer class="grey lighten-2" style="height: 40px; width: 100%; left: 10%;">
+            <div class="row" style="margin: 0; padding: 0;">
+                <div class="col s10 offset-s1" style="line-height: 40px;">
+                    <ul>
+                        <%
+                            # The entries of the footer as arrays with
+                            # - url
+                            # - name
+                            footer = [
+                                [request.route_url('faq_view'), _('FAQ')],
+                                [request.route_url('about_view'), _('About')],
+                                [request.route_url('partners_view'), _('Partners & Donors')]
+                            ]
+                        %>
 
+                        % for f in footer:
+                        <li class="right"
+                            % if request.current_route_url() == f[0]:
+                                class="active"
+                            % endif
+                            >
+                            <a href="${f[0]}">${f[1]}</a>
+                        </li>
+                        % endfor
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <style>
+            footer li {
+                display: inline;
+                padding-left: 15px;
+                margin-bottom: 0px;
+            }
+            footer a {
+                color: teal;
+            }
+            main {
+              min-height: calc(100% - 64px - 40px); // 1000% - navbar - footer
+            }
+        </style>
 
         <script type="text/javascript">
          /* <![CDATA[ */
