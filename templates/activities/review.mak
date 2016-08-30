@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/activities/compare.mak" />
+<%inherit file="lmkp:customization/omm/templates/activities/compare.mak" />
 
 <%def name="title()">${_('Deal Moderation')}</%def>
 

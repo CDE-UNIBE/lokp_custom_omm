@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/stakeholders/compare.mak" />
+<%inherit file="lmkp:customization/omm/templates/stakeholders/compare.mak" />
 
 <%def name="title()">${_('Investor Moderation')}</%def>
 

@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Grid View')} - ${_('Investors')}</%def>
 
@@ -17,7 +17,7 @@
 %>
 
 ## Filter
-<%include file="lmkp:customization/lo/templates/parts/filter.mak" />
+<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
 
 <!-- content -->
 <div class="container">

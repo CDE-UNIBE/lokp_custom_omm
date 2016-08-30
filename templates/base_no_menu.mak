@@ -38,13 +38,9 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/custom/css/bootstrap-combined.no-icons.min.css">
         <link rel="stylesheet" href="/custom/css/font-awesome/css/font-awesome.min.css">
-
-        <link rel="stylesheet" href="/custom/css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="/custom/css/main.css">
 
-        <link rel="stylesheet" href="/custom/css/custom.css">
 
         <!--[if IE 7]>
 
@@ -60,30 +56,14 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <![endif]-->
 
         <script src="/custom/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <script src="/custom/js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
 
-        <style type="text/css">
-            .user {
-                margin-top: -8px;
-                padding-right: 0;
-            }
-            #main {
-                padding-bottom: 50px;
-            }
-            .wrap {
-                margin: 0 auto -50px;
-            }
-            .header_self {
-                height: inherit;
-                max-height: none;
-            }
-            .lo_logo {
-                margin: 0 0 5px 5px;
-            }
-            .btn-country-selector, .btn-start {
-                text-transform: uppercase;
-            }
-        </style>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="/custom/js/vendor/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/custom/js/vendor/materialize.min.js"></script>
+
+
+
 
         ## Include the head tags of the child template if available.
         <%
@@ -93,133 +73,105 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                 pass
         %>
 
+
+
+
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link type="text/css" rel="stylesheet" href="/custom/css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     </head>
     <body>
+
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="wrap">
 
         <!-- Header  -->
 
-                <div id="main" class="clearfix">
-
-                    <div class="navbar header_self">
-                        <div class="container">
-                            <div class="row-fluid hidden-phone">
-                              <div class="span3 text-right">
-                                <a href="${request.route_url('index')}">
-                                  % if mode == 'demo':
-                                      <img src="/custom/img/logo_demo.png" class="lo_logo" alt="${_('Land Observatory')}" />
-                                  % else:
-                                      <img src="/custom/img/logo.png" class="lo_logo" alt="${_('Land Observatory')}" />
-                                  % endif
-                                </a>
-                              </div>
-
-                              <div class="span6 landing-introduction">
-                                  <p>
-                                      <strong>${_('The Land Observatory')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}
-                                  </p>
-                              </div>
-                              <div class="user">
-                                  <ul class="nav nav-pills">
-                                      <li>
-                                          <div class="dropdown">
-                                              <a class="dropdown-toggle blacktemp" data-toggle="dropdown" href="#">
-                                                  <span class="link-icon-right">${selectedlanguage[1]}</span><b class="caret"></b>
-                                              </a>
-                                              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                                  % for l in languages:
-                                                  <li class="cursor">
-                                                      <a href="${handle_query_string(request.url, add=[('_LOCALE_', l[0])])}">${l[1]}</a>
-                                                  </li>
-                                                  % endfor
-                                              </ul>
-                                          </div>
-                                      </li>
-                                  </ul>
-                              </div>
-                            </div>
-                            <div class="row-fluid visible-phone">
-                              <div class="span3">
-                                  <a href="${request.route_url('index')}">
-                                      <img src="custom/img/logo.png" class="lo_logo" />
-                                  </a>
-                              </div>
-                              <div class="span6 landing-introduction">
-                                  <p>
-                                      <strong>${_('The Land Observatory')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}
-                                  </p>
-                              </div>
-                              <div class="span3">
-                                  <div class="user">
-                                      <ul class="nav nav-pills">
-                                          <li>
-                                              <div class="dropdown">
-                                                  <a class="dropdown-toggle blacktemp" data-toggle="dropdown" href="#">
-                                                      ${selectedlanguage[1]}
-                                                      <b class="caret"></b>
-                                                  </a>
-                                                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                                      % for l in languages:
-                                                      <li class="cursor">
-                                                          <a href="${handle_query_string(request.url, add=[('_LOCALE_', l[0])])}">${l[1]}</a>
-                                                      </li>
-                                                      % endfor
-                                                  </ul>
-                                              </div>
-                                          </li>
-                                      </ul>
-                                  </div>
-                              </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- content -->
-
-                    <div class="container">
-                        <div class="content no-border">
-
-                            ## Use the body content of the child template
-                            ${self.body()}
-
-                        </div>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            % for l in languages:
+                <li><a href="${handle_query_string(request.url, add=[('_LOCALE_', l[0])])}" class="text-accent-color">${l[1]}</a></li>
+            % endfor
+        </ul>
+        <nav class="grey lighten-2">
+            <div class="nav-wrapper">
+                <div class="row">
+                    <div class="col s10 offset-s1">
+                        <a href="${request.route_url('index')}" class="brand-logo">
+                            % if mode == 'demo':
+                                <img src="/custom/img/logo_demo.png" class="lo_logo" alt="${_('Land Observatory')}" />
+                            % else:
+                                <img src="/custom/img/logo_new.png" alt="${_('Land Observatory')}"/>
+                            % endif
+                        </a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a class="dropdown-button text-accent-color" href="#!" data-activates="dropdown1">${selectedlanguage[1]}<i class="material-icons right">arrow_drop_down</i></a></li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </nav>
 
-                <div class="landing-page-push">
+        <script type="text/javascript">
+            $(".dropdown-button").dropdown();
+        </script>
+
+        <main>
+            <div class="row">
+              <div class="col s10 offset-s1 col-main-page">
+                  <br>
+                  <div class="card-panel accent-color">
+                      <span class="white-text"><strong>${_('The Land Observatory')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}</span>
+                  </div>
+                  ${self.body()}
+              </div>
+            </div>
+        </main>
+
+        <footer class="grey lighten-2" style="height: 40px; width: 100%; left: 10%;">
+            <div class="row" style="margin: 0; padding: 0;">
+                <div class="col s10 offset-s1" style="line-height: 40px;">
+                    <ul>
+                        <%
+                            # The entries of the footer as arrays with
+                            # - url
+                            # - name
+                            footer = [
+                                [request.route_url('faq_view'), _('FAQ')],
+                                [request.route_url('about_view'), _('About')],
+                                [request.route_url('partners_view'), _('Partners & Donors')]
+                            ]
+                        %>
+
+                        % for f in footer:
+                        <li class="right"
+                            % if request.current_route_url() == f[0]:
+                                class="active"
+                            % endif
+                            >
+                            <a class="text-accent-color" href="${f[0]}">${f[1]}</a>
+                        </li>
+                        % endfor
+                    </ul>
                 </div>
-
             </div>
-
-            <div class="navbar footer landing-page-footer">
-                <ul class="nav pull-right">
-                    <%
-                        # The entries of the footer as arrays with
-                        # - url
-                        # - name
-                        footer = [
-                            [request.route_url('faq_view'), _('FAQ')],
-                            [request.route_url('about_view'), _('About')],
-                            [request.route_url('partners_view'), _('Partners & Donors')]
-                        ]
-                    %>
-
-                    % for f in footer:
-                    <li
-                        % if request.current_route_url() == f[0]:
-                            class="active"
-                        % endif
-                        >
-                        <a href="${f[0]}">${f[1]}</a>
-                    </li>
-                    % endfor
-                </ul>
-            </div>
+        </footer>
+        <style>
+            footer li {
+                display: inline;
+                padding-left: 15px;
+                margin-bottom: 0px;
+            }
+            main {
+              min-height: calc(100% - 64px - 40px); // 1000% - navbar - footer
+            }
+        </style>
 
         <script type="text/javascript">
          /* <![CDATA[ */
@@ -227,12 +179,10 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
          /* ]]> */
         </script>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/custom/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
-        <script src="/custom/js/vendor/bootstrap.min.js"></script>
 
         <script src="/custom/js/main.js"></script>
+        <link rel="stylesheet" href="/custom/css/custom.css">
 
         % if use_piwik_analytics==True:
         <!-- Piwik -->
@@ -259,5 +209,6 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             except AttributeError:
                 pass
         %>
+
     </body>
 </html>

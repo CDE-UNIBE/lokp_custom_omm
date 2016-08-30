@@ -205,10 +205,6 @@ hr.lightgray {
 	height: 25px; /* .push must be the same height as .footer */
 }
 
-.landing-page-footer,
-.landing-page-push  {
-	height: 50px; /* .push must be the same height as .footer */
-}
 
 .push-top {
 	padding-top: 58px;
@@ -2378,3 +2374,109 @@ a:hover i, a:focus i {
 .item-toolbar i {
 	margin-left: 5px;
 }
+
+
+/*** REDESIGN ***/
+
+.brand-logo {
+	height: 80%;
+	line-height: 90px;
+	padding: auto;
+	vertical-align: middle;
+}
+.brand-logo img {
+	height: 100%;
+}
+.col-main-page {
+	text-align: center;
+}
+
+.slider-landingpage .indicators .indicator-item.active {
+	background-color: teal;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: teal !important;
+}
+.slider h3 {
+	color: teal;
+	text-shadow: 1px 1px 1px #000;
+}
+.slider h5 {
+	text-shadow: 1px 1px 1px #000;
+}
+
+/** landing page **/
+.slider-landingpage{
+	margin-top: 20px;
+	height: 450px;
+}
+
+/** show cases **/
+.slider-showcases {
+	width: 50%;
+	left: 25%;
+	margin-top: 50px;
+}
+.slider-showcases .slides-showcases {
+	background-color: transparent;
+	margin: 0;
+}
+
+.slider-showcases .slides-showcases li img {
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-size:100% auto;
+	background-repeat: no-repeat;
+}
+.caption {
+	height: 100%;
+}
+.main-text {
+	margin-top: 50px;
+	text-align: justify;
+}
+.title-showcase {
+	margin-top: 150px;
+	margin-bottom: 50px;
+}
+.showcase {
+	display: none;
+}
+.showcase p {
+	text-align: justify;
+}
+.showcase h4 {
+	margin-top: 50px;
+}
+.btn-read-more {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.modal-showcases {
+	 width: 90%;
+}
+.modal-trigger-showcases {
+	margin-bottom: 100px;
+}
+.img-popup-showcases {
+	width: 80%;
+}
+.btn-back {
+	position: fixed;
+	bottom: 2%;
+	left: 2%;
+}
+a {
+	color: teal;
+}
+.dark-primary-color    { background: #616161; }
+.default-primary-color { background: #9E9E9E; }
+.light-primary-color   { background: #F5F5F5; }
+.text-primary-color    { color: #212121; }
+.accent-color          { background: #009688; }
+.text-accent-color     { color: #009688; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
