@@ -196,13 +196,13 @@ hr.lightgray {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -25px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
 	max-width: 100%;
 }
 
 .footer,
 .push  {
-	height: 25px; /* .push must be the same height as .footer */
+	height: 50px; /* .push must be the same height as .footer */
 }
 
 
@@ -212,7 +212,7 @@ hr.lightgray {
 
 
 #main {
-	padding-bottom: 25px;
+	padding-bottom: 50px;
 }  /* Muss genau so hoch sein wie der Footer */
 
 
@@ -915,8 +915,8 @@ p.deal-detail {
 #googleMapFull {
 	position: absolute;
 	width: 100%;
-	top: 109px;
-	bottom: 25px;
+	top: 85px;
+	bottom: 50px;
 }
 
 .filter_area-opened {
@@ -941,7 +941,7 @@ p.deal-detail {
 
 .map-menu {
 	position: absolute;
-	bottom: 25px;
+	bottom: 50px;
 	background-color: white;
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
@@ -1542,7 +1542,7 @@ background-color: #CB820E;
 	}
 
 	.map-menu {
-		bottom: 25px;
+		bottom: 50px;
 		right: 0;
 		width: auto;
 		background-color: white;
@@ -1620,7 +1620,7 @@ background-color: #CB820E;
 
 	#googleMapFull {
 		top: 140px;
-		bottom: 25px;
+		bottom: 50px;
 	}
 
 	.basic-data {
@@ -1632,7 +1632,7 @@ background-color: #CB820E;
 	}
 
 	.map-menu {
-		bottom: 25px;
+		bottom: 50px;
 		right: 0;
 		width: auto;
 		background-color: white;
@@ -1765,7 +1765,7 @@ background-color: #CB820E;
 	}
 
 	#googleMapFull {
-		bottom: 25px;
+		bottom: 50px;
 	}
 
 	.basic-data {
@@ -1775,7 +1775,7 @@ background-color: #CB820E;
 	}
 
 	.map-menu {
-		bottom: 25px;
+		bottom: 50px;
 		right: 0;
 		width: auto;
 		background-color: white;
@@ -2471,6 +2471,24 @@ a:hover i, a:focus i {
 a {
 	color: teal;
 }
+
+/** base view (navigation and footer) **/
+
+footer{
+	background-color: #E0E0E0;
+	width: 100%;
+	margin-bottom: 0px;
+	height: 50px;
+	line-height: 50px;
+}
+
+footer ul li a{
+	color: teal;
+	float: right;
+	padding-left: 20px;
+}
+
+
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }
 .light-primary-color   { background: #F5F5F5; }
