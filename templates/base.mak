@@ -83,7 +83,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
 
     </head>
 
-    <body>
+    <body onload="whenPageLoaded();">
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -275,6 +275,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
          /* ]]> */
         </script>
 
+
         <script type="text/javascript" src="/custom/js/vendor/bootstrap.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/materialize.min.js"></script>
@@ -312,6 +313,15 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             except AttributeError:
                 pass
         %>
+
+        ## load the side navs (see in map_view) after loading the page, otherwise they dont open
+        ## hide load sign
+        <script>
+            function whenPageLoaded() {
+                $(".button-collapse").sideNav();
+                $(".preloader-wrapper").hide();
+            }
+        </script>
 
     </body>
 

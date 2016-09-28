@@ -50,20 +50,98 @@ geomTaggroups = form_geomtaggroups(request)
 ## Filter
 <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
 
-<!-- content -->
-<div id="googleMapFull">
-    <!--  Placeholder for the map -->
-</div>
-
-<div class="basic-data">
-    <h6 class="deal-headline">${_('Deal')}
-        <span id="deal-shortid-span" class="underline">#</span>
-    </h6>
-    <ul id="taggroups-ul">
-        <li>
-            <p>${_('No deal selected.')}</p>
-        </li>
+<ul id="slide-out-map-options" class="side-nav">
+    <ul class="collapsible" data-collapsible="accordion">
+    <li>
+        <form class="navbar-search" action="">
+            <input name="q" id="search" class="search-query" placeholder="${_('search location')}" />
+            <input value="Search" id="search-submit" />
+        </form><br/>
+        <div class="collapsible-header"><i class="material-icons">map</i>Base Layer</div>
+        <div class="collapsible-body">
+            <!-- Base layers -->
+            <form action="#">
+                <p style="padding-top: 0; padding-bottom: 0;">
+                  <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="streetMapOption" value="streetMap" />
+                  <label for="streetMapOption">${_('Street Map')}</label>
+                </p>
+                <p style="padding-top: 0; padding-bottom: 0;">
+                  <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="satelliteMapOption" value="satelliteMap" />
+                  <label for="satelliteMapOption">${_('Satellite Imagery')}</label>
+                </p>
+                <p style="padding-top: 0; padding-bottom: 0;">
+                  <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="terrainMapOption" value="terrainMap" />
+                  <label for="terrainMapOption">${_('Terrain Map')}</label>
+                </p>
+            </form>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
     </ul>
+
+</ul>
+
+<ul id="slide-out-filter" class="side-nav">
+    <li><a href="#!"><i class="material-icons">filter_list</i>Filters</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons">add</i>Add</a></li>
+</ul>
+
+<!-- content -->
+<div class="row" style="margin: 0; padding: 0;">
+    <div class="col s6" style="margin: 0; padding: 0;">
+        <div id="googleMapFull">
+        <!--  Placeholder for the map -->
+        </div>
+        <div class="preloader-wrapper big active" style="position: fixed; top: 50%; left: 23%;">
+            <div class="spinner-layer spinner-teal-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+        <div style="position: fixed; bottom: 10%; left: 0%; width: 50%;text-align: right;">
+            <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 15px;" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
+                <i class="material-icons">filter_list</i>${_('Back')}
+            </a>
+            <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 40px;" data-position="top" data-tooltip="Map Options" data-activates="slide-out-map-options">
+                <i class="material-icons">map</i>${_('Back')}
+            </a>
+        </div>
+    </div>
+    <div id="map_tabs" class="col s6">
+        <ul class="tabs">
+            <li class="tab col s3"><a href="#tab1" class="active text-accent-color">Preview of deal</a></li>
+            <li class="tab col s3"><a href="#tab2" class="text-accent-color">News</a></li>
+            <li class="tab col s3"><a href="#tab3" class="text-accent-color">Test 4</a></li>
+        </ul>
+        <div id="tab1" class="col s12">
+            <div class="basic-data">
+                <h6 class="deal-headline">${_('Deal')}
+                    <span id="deal-shortid-span" class="underline">#</span>
+                </h6>
+                <ul id="taggroups-ul">
+                    <li>
+                        <p>${_('No deal selected.')}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="tab2" class="col s12">News</div>
+        <div id="tab3" class="col s12">Picture of the week</div>
+    </div>
 </div>
 
 <!-- map menu -->

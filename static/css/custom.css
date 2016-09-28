@@ -914,7 +914,7 @@ p.deal-detail {
 
 #googleMapFull {
 	position: absolute;
-	width: 100%;
+	width: 50%;
 	top: 100px;
 	bottom: 50px;
 }
@@ -935,8 +935,8 @@ p.deal-detail {
 	-moz-box-shadow: 0 0 2px black;
 	-webkit-box-shadow: 0 0 2px black;
 	box-shadow: 0 0 2px black;
-	width: 160px;
-	right: 11.8%;
+	width: 50%;
+	right: 0%;
 }
 
 .map-menu {
@@ -2488,13 +2488,26 @@ footer ul li a{
 	padding-left: 20px;
 }
 
+/** map view **/
+#map_tabs {
+	background-color: lightgray;
+	height: 50%;
+}
+#map_tabs ul {
+	 background-color: transparent;
+}
+#map_tabs .tabs .indicator {
+    background-color: teal;
+}
+
+
 
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }
 .light-primary-color   { background: #F5F5F5; }
 .text-primary-color    { color: #212121; }
 .accent-color          { background: #009688; }
-.text-accent-color     { color: #009688; }
+.text-accent-color     { color: #009688 !important; }
 .primary-text-color    { color: #212121; }
 .secondary-text-color  { color: #757575; }
 .divider-color         { border-color: #BDBDBD; }
