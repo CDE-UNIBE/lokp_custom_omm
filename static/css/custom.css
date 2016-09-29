@@ -915,8 +915,10 @@ p.deal-detail {
 #googleMapFull {
 	position: absolute;
 	width: 50%;
-	top: 100px;
+	top: 64px;
 	bottom: 50px;
+	left: 0px;
+	-webkit-box-shadow: inset 0 5px 6px -6px grey;
 }
 
 .filter_area-opened {
@@ -1529,8 +1531,7 @@ background-color: #CB820E;
 	}
 
 	#googleMapFull {
-		bottom: 25px;
-		z-index: 4;
+		bottom: 50px;
 	}
 
 	.basic-data {
@@ -2474,6 +2475,20 @@ a {
 
 /** base view (navigation and footer) **/
 
+.divider-menu {
+	border: none;
+	border-bottom: solid lightgrey 1px;
+	margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+    .divider-menu {
+		border-right: solid lightgrey 1px;
+		margin-right: 20px;
+		margin-left: 20px;
+		margin-bottom: 0px;
+    }
+}
+
 footer{
 	background-color: #E0E0E0;
 	width: 100%;
@@ -2489,15 +2504,19 @@ footer ul li a{
 }
 
 /** map view **/
-#map_tabs {
+#window_right {
 	background-color: lightgray;
-	height: 50%;
+	-webkit-box-shadow: inset 0 5px 6px -6px grey;
+	margin: 0 !important;
 }
-#map_tabs ul {
-	 background-color: transparent;
+
+#window_right ul {
+	background-color: transparent;
+	margin: 0 !important;
 }
-#map_tabs .tabs .indicator {
+#window_right .tabs .indicator {
     background-color: teal;
+	margin: 0 !important;
 }
 
 
@@ -2508,6 +2527,6 @@ footer ul li a{
 .text-primary-color    { color: #212121; }
 .accent-color          { background: #009688; }
 .text-accent-color     { color: #009688 !important; }
-.primary-text-color    { color: #212121; }
-.secondary-text-color  { color: #757575; }
+.primary-text-color    { color: #757575; }
+.secondary-text-color  { color: #999999; }
 .divider-color         { border-color: #BDBDBD; }

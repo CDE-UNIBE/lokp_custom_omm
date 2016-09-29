@@ -44,48 +44,73 @@ geomTaggroups = form_geomtaggroups(request)
 
 </script>
 </%def>
-
 ## Start of content
 
 ## Filter
-<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+##<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
 
 <ul id="slide-out-map-options" class="side-nav">
-    <ul class="collapsible" data-collapsible="accordion">
-    <li>
-        <form class="navbar-search" action="">
-            <input name="q" id="search" class="search-query" placeholder="${_('search location')}" />
-            <input value="Search" id="search-submit" />
-        </form><br/>
-        <div class="collapsible-header"><i class="material-icons">map</i>Base Layer</div>
-        <div class="collapsible-body">
-            <!-- Base layers -->
-            <form action="#">
-                <p style="padding-top: 0; padding-bottom: 0;">
-                  <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="streetMapOption" value="streetMap" />
-                  <label for="streetMapOption">${_('Street Map')}</label>
-                </p>
-                <p style="padding-top: 0; padding-bottom: 0;">
-                  <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="satelliteMapOption" value="satelliteMap" />
-                  <label for="satelliteMapOption">${_('Satellite Imagery')}</label>
-                </p>
-                <p style="padding-top: 0; padding-bottom: 0;">
-                  <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="terrainMapOption" value="terrainMap" />
-                  <label for="terrainMapOption">${_('Terrain Map')}</label>
-                </p>
-            </form>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-    </li>
-    </ul>
 
+    <div class="input-field" action="" style="height: 25px; line-height: 25px; margin: 18px;">
+        <i class="material-icons prefix" style="">search</i>
+        <input id="search" name="q" type="text" style="height: 20px; line-height: 20px;">
+    </div>
+
+    <ul class="collapsible" data-collapsible="accordion">
+        <!-- Deals -->
+        <li>
+            <div class="collapsible-header"><i class="material-icons">group</i>${_('Deals')}</div>
+            <div class="collapsible-body">
+                <ul>
+                    <li>
+                        <div class="checkbox-modified-small">
+                            <input class="input-top" type="checkbox" id="activityLayerToggle" checked="checked">
+                            <label for="activityLayerToggle"></label>
+                        </div>
+
+                        <div id="map-deals-symbolization" class="dropdown context-layers-description">
+                            ${_('Loading ...')}
+                        </div>
+                        <ul id="map-points-list">
+                            <!-- Placeholder for map points -->
+                        </ul>
+                    </li>
+                </ul>
+                <ul id="map-areas-list">
+                    <!-- Placeholder for area entries -->
+                </ul>
+            </div>
+        </li>
+        <!-- Base layers -->
+        <li>
+            <div class="collapsible-header"><i class="material-icons">map</i>${_('Base layers')}</div>
+            <div class="collapsible-body">
+                <form action="#">
+                    <p style="padding-top: 0; padding-bottom: 0;">
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="streetMapOption" value="streetMap" checked/>
+                      <label for="streetMapOption">${_('Street Map')}</label>
+                    </p>
+                    <p style="padding-top: 0; padding-bottom: 0;">
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="satelliteMapOption" value="satelliteMap" />
+                      <label for="satelliteMapOption">${_('Satellite Imagery')}</label>
+                    </p>
+                    <p style="padding-top: 0; padding-bottom: 0;">
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="terrainMapOption" value="terrainMap" />
+                      <label for="terrainMapOption">${_('Terrain Map')}</label>
+                    </p>
+                </form>
+            </div>
+        </li>
+        <!-- Context layers -->
+        <li>
+            <div class="collapsible-header"><i class="material-icons">layers</i>${_('Context layers')}</div>
+            <div class="collapsible-body">
+                <ul id="context-layers-list">
+                    <!--  Placeholder context layer entries -->
+                </ul>
+            </div>
+        </li>
+    </ul>
 </ul>
 
 <ul id="slide-out-filter" class="side-nav">
@@ -94,9 +119,9 @@ geomTaggroups = form_geomtaggroups(request)
 </ul>
 
 <!-- content -->
-<div class="row" style="margin: 0; padding: 0;">
-    <div class="col s6" style="margin: 0; padding: 0;">
-        <div id="googleMapFull">
+<div class="row" style="margin: 0 !important;">
+    <div id="window_left"  class="col l6">
+        <div id="googleMapFull" style="background-color: yellow;">
         <!--  Placeholder for the map -->
         </div>
         <div class="preloader-wrapper big active" style="position: fixed; top: 50%; left: 23%;">
@@ -121,31 +146,43 @@ geomTaggroups = form_geomtaggroups(request)
             </a>
         </div>
     </div>
-    <div id="map_tabs" class="col s6">
-        <ul class="tabs">
-            <li class="tab col s3"><a href="#tab1" class="active text-accent-color">Preview of deal</a></li>
-            <li class="tab col s3"><a href="#tab2" class="text-accent-color">News</a></li>
-            <li class="tab col s3"><a href="#tab3" class="text-accent-color">Test 4</a></li>
-        </ul>
-        <div id="tab1" class="col s12">
-            <div class="basic-data">
-                <h6 class="deal-headline">${_('Deal')}
-                    <span id="deal-shortid-span" class="underline">#</span>
-                </h6>
-                <ul id="taggroups-ul">
-                    <li>
-                        <p>${_('No deal selected.')}</p>
-                    </li>
-                </ul>
+    <div id="window_right" class="col l6">
+        <div id="window-right-top" style="height: 50%;">
+            <ul class="tabs">
+                <li class="tab col s3"><a href="#tab1" class="active text-accent-color">Preview of deal</a></li>
+                <li class="tab col s3"><a href="#tab2" class="text-accent-color">News</a></li>
+            </ul>
+            <div id="tab1" class="col s12">
+                <div class="basic-data">
+                    <h6 class="deal-headline">${_('Deal')}
+                        <span id="deal-shortid-span" class="underline">#</span>
+                    </h6>
+                    <ul id="taggroups-ul">
+                        <li>
+                            <p>${_('No deal selected.')}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="tab2" class="col s12">News</div>
+        </div>
+        <div id="window-right-bottom" style="height: 50%;">
+            <ul class="tabs">
+                <li class="tab col s3"><a href="#bottom-tab1" class="active text-accent-color">Picture of the week</a></li>
+                <li class="tab col s3"><a href="#bottom-tab2" class="text-accent-color">Archive</a></li>
+            </ul>
+            <div id="bottom-tab1" class="col s12">
+                picture of the week
+            </div>
+            <div id="bottom-tab2" class="col s12">
+                archive picture of the week
             </div>
         </div>
-        <div id="tab2" class="col s12">News</div>
-        <div id="tab3" class="col s12">Picture of the week</div>
     </div>
 </div>
 
 <!-- map menu -->
-<div class="map-menu">
+<div class="map-menu" style="display: none;">
     <div id="map-menu-button-container">
         <h6 id="map-menu-button">
             <i class="icon-chevron-up"></i>
@@ -246,3 +283,4 @@ geomTaggroups = form_geomtaggroups(request)
 <script src="${request.static_url('lmkp:static/v2/filters.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lmkp:static/v2/jquery.cookie.js')}" type="text/javascript"></script>
 </%def>
+
