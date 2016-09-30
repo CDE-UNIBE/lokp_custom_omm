@@ -272,8 +272,9 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                 ## Content
 
                 ## Use the body of the child template
+                <div id="content" style="background-color: lightgray;">
                 ${self.body()}
-
+                </div>
                 ## End of Content
 
             </div>
@@ -344,7 +345,6 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <script type="text/javascript" src="/custom/js/vendor/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/materialize.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/typeahead.min.js"></script>
-
         <script type="text/javascript" src="${request.static_url('lmkp:static/v2/main.js')}"></script>
 
         % if use_piwik_analytics==True:
@@ -384,12 +384,24 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             function whenPageLoaded() {
                 $(".button-collapse").sideNav();
                 $(".preloader-wrapper").hide();
+                document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
             }
             $(window).on( 'resize', function () {
-                $('#window_right').height(
-                        $('#googleMapFull').height()-1
-                );
-            }).resize();
+                document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
+                if ($(window).width() > 982) {
+                    document.getElementById("window-right-top").style.marginTop = "0px";
+                    document.getElementById("googleMapFull").style.width = "50%";
+                    document.getElementById("content").style.height = String(Math.max($('#googleMapFull').height(),$('#window_right').height())) + "px";
+                    $('#window_right').height(
+                            $('#googleMapFull').height()-1
+                    );
+                }
+                else {
+                    document.getElementById("window-right-top").style.marginTop = "25px";
+                    document.getElementById("googleMapFull").style.width = "100%";
+                    document.getElementById("content").style.height = String($('#googleMapFull').height() + $('#window_right').height()) + "px";
+                }}).resize();
+
         </script>
 
     </body>

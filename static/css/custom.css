@@ -918,7 +918,6 @@ p.deal-detail {
 	top: 64px;
 	bottom: 50px;
 	left: 0px;
-	-webkit-box-shadow: inset 0 5px 6px -6px grey;
 }
 
 .filter_area-opened {
@@ -1620,7 +1619,7 @@ background-color: #CB820E;
 	}
 
 	#googleMapFull {
-		top: 140px;
+		top: 64px;
 		bottom: 50px;
 	}
 
@@ -2480,7 +2479,7 @@ a {
 	border-bottom: solid lightgrey 1px;
 	margin-bottom: 20px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 982px) {
     .divider-menu {
 		border-right: solid lightgrey 1px;
 		margin-right: 20px;
@@ -2518,7 +2517,9 @@ footer ul li a{
     background-color: teal;
 	margin: 0 !important;
 }
-
+#floating-buttons {
+	margin-top: 400px;
+}
 
 
 .dark-primary-color    { background: #616161; }

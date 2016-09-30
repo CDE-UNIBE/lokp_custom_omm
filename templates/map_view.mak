@@ -120,8 +120,8 @@ geomTaggroups = form_geomtaggroups(request)
 
 <!-- content -->
 <div class="row" style="margin: 0 !important;">
-    <div id="window_left"  class="col l6">
-        <div id="googleMapFull" style="background-color: yellow;">
+    <div id="window_left"  class="col s12 m12 l6">
+        <div id="googleMapFull">
         <!--  Placeholder for the map -->
         </div>
         <div class="preloader-wrapper big active" style="position: fixed; top: 50%; left: 23%;">
@@ -137,7 +137,7 @@ geomTaggroups = form_geomtaggroups(request)
                 </div>
             </div>
         </div>
-        <div style="position: fixed; bottom: 10%; left: 0%; width: 50%;text-align: right;">
+        <div id="floating-buttons" style="text-align: right;">
             <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 15px;" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
                 <i class="material-icons">filter_list</i>${_('Back')}
             </a>
@@ -146,7 +146,7 @@ geomTaggroups = form_geomtaggroups(request)
             </a>
         </div>
     </div>
-    <div id="window_right" class="col l6">
+    <div id="window_right" class="col s12 m12  l6">
         <div id="window-right-top" style="height: 50%;">
             <ul class="tabs">
                 <li class="tab col s3"><a href="#tab1" class="active text-accent-color">Preview of deal</a></li>
@@ -171,8 +171,11 @@ geomTaggroups = form_geomtaggroups(request)
                 <li class="tab col s3"><a href="#bottom-tab1" class="active text-accent-color">Picture of the week</a></li>
                 <li class="tab col s3"><a href="#bottom-tab2" class="text-accent-color">Archive</a></li>
             </ul>
-            <div id="bottom-tab1" class="col s12">
-                picture of the week
+            <div id="bottom-tab1" class="col s12" style="height: 75%; text-align: center;">
+
+                  <img src="/custom/img/slides/phin_accessibility_prvw.jpg" style="height: 100%; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
             </div>
             <div id="bottom-tab2" class="col s12">
                 archive picture of the week
