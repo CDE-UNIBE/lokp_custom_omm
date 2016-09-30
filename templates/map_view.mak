@@ -120,7 +120,7 @@ geomTaggroups = form_geomtaggroups(request)
 
 <!-- content -->
 <div class="row" style="margin: 0 !important;">
-    <div id="window_left"  class="col s12 m12 l6">
+    <div id="window_left"  class="col s12 m12 l8">
         <div id="googleMapFull">
         <!--  Placeholder for the map -->
         </div>
@@ -146,25 +146,25 @@ geomTaggroups = form_geomtaggroups(request)
             </a>
         </div>
     </div>
-    <div id="window_right" class="col s12 m12  l6">
+    <div id="window_right" class="col s12 m12  l4">
         <div id="window-right-top" style="height: 50%;">
             <ul class="tabs">
                 <li class="tab col s3"><a href="#tab1" class="active text-accent-color">Preview of deal</a></li>
                 <li class="tab col s3"><a href="#tab2" class="text-accent-color">News</a></li>
             </ul>
             <div id="tab1" class="col s12">
-                <div class="basic-data">
-                    <h6 class="deal-headline">${_('Deal')}
-                        <span id="deal-shortid-span" class="underline">#</span>
-                    </h6>
-                    <ul id="taggroups-ul">
-                        <li>
-                            <p>${_('No deal selected.')}</p>
-                        </li>
-                    </ul>
-                </div>
+                <h5 class="deal-headline">${_('Deal')}
+                    <span id="deal-shortid-span" class="underline">#</span>
+                </h5>
+                <ul id="taggroups-ul">
+                    <li>
+                        <p>${_('No deal selected.')}</p>
+                    </li>
+                </ul>
             </div>
-            <div id="tab2" class="col s12">News</div>
+            <div id="tab2" class="col s12">
+                <h5 class="deal-headline">News</h5>
+            </div>
         </div>
         <div id="window-right-bottom" style="height: 50%;">
             <ul class="tabs">
@@ -172,13 +172,10 @@ geomTaggroups = form_geomtaggroups(request)
                 <li class="tab col s3"><a href="#bottom-tab2" class="text-accent-color">Archive</a></li>
             </ul>
             <div id="bottom-tab1" class="col s12" style="height: 75%; text-align: center;">
-
-                  <img src="/custom/img/slides/phin_accessibility_prvw.jpg" style="height: 100%; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
+                  <img src="/custom/img/slides/pictureoftheweek.jpeg" style="height: 100%; margin-top: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
             </div>
             <div id="bottom-tab2" class="col s12">
-                archive picture of the week
+                <h5 class="deal-headline">Archive</h5>
             </div>
         </div>
     </div>

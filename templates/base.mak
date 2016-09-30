@@ -390,7 +390,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                 document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
                 if ($(window).width() > 982) {
                     document.getElementById("window-right-top").style.marginTop = "0px";
-                    document.getElementById("googleMapFull").style.width = "50%";
+                    document.getElementById("googleMapFull").style.width = "66.7%";
                     document.getElementById("content").style.height = String(Math.max($('#googleMapFull').height(),$('#window_right').height())) + "px";
                     $('#window_right').height(
                             $('#googleMapFull').height()-1
