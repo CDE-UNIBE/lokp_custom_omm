@@ -152,18 +152,18 @@ geomTaggroups = form_geomtaggroups(request)
                 <li class="tab col s3"><a href="#tab1" class="active text-accent-color">Preview of deal</a></li>
                 <li class="tab col s3"><a href="#tab2" class="text-accent-color">News</a></li>
             </ul>
-            <div id="tab1" class="col s12">
-                <h5 class="deal-headline">${_('Deal')}
+            <div id="tab1" class="col s12" style="padding: 30px;">
+                <h5 class="deal-headline text-primary-color">${_('Deal')}
                     <span id="deal-shortid-span" class="underline">#</span>
                 </h5>
-                <ul id="taggroups-ul">
+                <ul id="taggroups-ul" class="text-primary-color">
                     <li>
                         <p>${_('No deal selected.')}</p>
                     </li>
                 </ul>
             </div>
-            <div id="tab2" class="col s12">
-                <h5 class="deal-headline">News</h5>
+            <div id="tab2" class="col s12" style="padding: 30px;">
+                <h5 class="deal-headline text-primary-color">News</h5>
             </div>
         </div>
         <div id="window-right-bottom" style="height: 50%;">
@@ -172,9 +172,9 @@ geomTaggroups = form_geomtaggroups(request)
                 <li class="tab col s3"><a href="#bottom-tab2" class="text-accent-color">Archive</a></li>
             </ul>
             <div id="bottom-tab1" class="col s12" style="text-align: center; height: 100%; margin: 0;">
-                  <img src="/custom/img/slides/pictureoftheweek.jpeg" id="img-weekpicture" style="margin-top: 30px; margin-bottom: 30px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                  <img src="/custom/img/slides/pictureoftheweek.jpeg" id="img-weekpicture" style="margin-top: 30px; margin-bottom: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
             </div>
-            <div id="bottom-tab2" class="col s12">
+            <div id="bottom-tab2" class="col s12" style="padding: 30px;">
                 <h5 class="deal-headline">Archive</h5>
             </div>
         </div>

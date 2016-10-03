@@ -386,7 +386,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                 $(".preloader-wrapper").hide();
                 document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
                 document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
-                document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width() - 30) + "px";
+                document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width()-20) + "px";
                 document.getElementById("img-weekpicture").style.height = "auto";
                 if (document.getElementById("img-weekpicture").clientHeight > (document.getElementById("window-right-bottom").clientHeight-50-60)) {
                     document.getElementById("img-weekpicture").style.height = String(document.getElementById("window-right-bottom").clientHeight-50-60) + "px";
@@ -396,7 +396,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             $(window).on( 'resize', function () {
                 document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
                 document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
-                document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width() - 30) + "px";
+                document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width()-20) + "px";
                 document.getElementById("img-weekpicture").style.height = "auto";
                 if (document.getElementById("img-weekpicture").clientHeight > (document.getElementById("window-right-bottom").clientHeight-50-60)) {
                     document.getElementById("img-weekpicture").style.height = String(document.getElementById("window-right-bottom").clientHeight-50-60) + "px";
