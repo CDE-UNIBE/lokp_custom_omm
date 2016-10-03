@@ -153,6 +153,7 @@ geomTaggroups = form_geomtaggroups(request)
                 <li class="tab col s3"><a href="#tab2" class="text-accent-color">News</a></li>
             </ul>
             <div id="tab1" class="col s12" style="padding: 30px;">
+                <div class="deal-data">
                 <h5 class="deal-headline text-primary-color">${_('Deal')}
                     <span id="deal-shortid-span" class="underline">#</span>
                 </h5>
@@ -161,9 +162,11 @@ geomTaggroups = form_geomtaggroups(request)
                         <p>${_('No deal selected.')}</p>
                     </li>
                 </ul>
+                    </div>
             </div>
             <div id="tab2" class="col s12" style="padding: 30px;">
                 <h5 class="deal-headline text-primary-color">News</h5>
+
             </div>
         </div>
         <div id="window-right-bottom" style="height: 50%;">
