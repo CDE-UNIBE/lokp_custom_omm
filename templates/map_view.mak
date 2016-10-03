@@ -171,8 +171,8 @@ geomTaggroups = form_geomtaggroups(request)
                 <li class="tab col s3"><a href="#bottom-tab1" class="active text-accent-color">Picture of the week</a></li>
                 <li class="tab col s3"><a href="#bottom-tab2" class="text-accent-color">Archive</a></li>
             </ul>
-            <div id="bottom-tab1" class="col s12" style="height: 75%; text-align: center;">
-                  <img src="/custom/img/slides/pictureoftheweek.jpeg" style="height: 100%; margin-top: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div id="bottom-tab1" class="col s12" style="text-align: center; height: 100%; margin: 0;">
+                  <img src="/custom/img/slides/pictureoftheweek.jpeg" id="img-weekpicture" style="margin-top: 30px; margin-bottom: 30px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
             </div>
             <div id="bottom-tab2" class="col s12">
                 <h5 class="deal-headline">Archive</h5>

@@ -385,9 +385,23 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                 $(".button-collapse").sideNav();
                 $(".preloader-wrapper").hide();
                 document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
+                document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
+                document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width() - 30) + "px";
+                document.getElementById("img-weekpicture").style.height = "auto";
+                if (document.getElementById("img-weekpicture").clientHeight > (document.getElementById("window-right-bottom").clientHeight-50-60)) {
+                    document.getElementById("img-weekpicture").style.height = String(document.getElementById("window-right-bottom").clientHeight-50-60) + "px";
+                    document.getElementById("img-weekpicture").style.width = "auto";
+                }
             }
             $(window).on( 'resize', function () {
                 document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
+                document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
+                document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width() - 30) + "px";
+                document.getElementById("img-weekpicture").style.height = "auto";
+                if (document.getElementById("img-weekpicture").clientHeight > (document.getElementById("window-right-bottom").clientHeight-50-60)) {
+                    document.getElementById("img-weekpicture").style.height = String(document.getElementById("window-right-bottom").clientHeight-50-60) + "px";
+                    document.getElementById("img-weekpicture").style.width = "auto";
+                }
                 if ($(window).width() > 982) {
                     document.getElementById("window-right-top").style.marginTop = "0px";
                     document.getElementById("googleMapFull").style.width = "66.7%";
