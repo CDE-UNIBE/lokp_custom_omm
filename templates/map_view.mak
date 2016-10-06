@@ -49,7 +49,7 @@ geomTaggroups = form_geomtaggroups(request)
 ## Filter
 ##<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
 
-<ul id="slide-out-map-options" class="side-nav">
+<ul id="slide-out-map-options" class="side-nav" style="min-width: 450px;">
 
     <div class="input-field" action="" style="height: 25px; line-height: 25px; margin: 18px;">
         <i class="material-icons prefix" style="">search</i>
@@ -61,11 +61,31 @@ geomTaggroups = form_geomtaggroups(request)
         <li>
             <div class="collapsible-header"><i class="material-icons">group</i>${_('Deals')}</div>
             <div class="collapsible-body">
+                <form action="#" id="map-areas-list">
+                    <p style="padding-top: 0; padding-bottom: 0; margin: 0;">
+                        <input class="input-top" type="checkbox" id="activityLayerToggle" checked="checked" style="line-height: 22px; height: 22px; background-color: red;">
+                        <label class="text-primary-color" for="activityLayerToggle" style="line-height: 22px; height: 22px;">
+                            <span id="map-deals-symbolization">
+
+                            </span>
+                        </label>
+                        <ul id="map-points-list" style="margin: 0; padding: 0; padding-left: 100px;">
+                        <!-- Placeholder for map points -->
+                        </ul>
+                    </p>
+                </form>
+            </div>
+        </li>
+
+        <!-- Deals -->
+        <li>
+        <div class="map-menu-deals" style="display: none;">
+            <div class="map-deals-content">
                 <ul>
                     <li>
                         <div class="checkbox-modified-small">
                             <input class="input-top" type="checkbox" id="activityLayerToggle" checked="checked">
-                            <label for="activityLayerToggle"></label>
+                            <label for="activityLayerToggle">asdf</label>
                         </div>
 
                         <div id="map-deals-symbolization" class="dropdown context-layers-description">
@@ -80,7 +100,13 @@ geomTaggroups = form_geomtaggroups(request)
                     <!-- Placeholder for area entries -->
                 </ul>
             </div>
-        </li>
+
+        </div>
+</li>
+
+
+
+
         <!-- Base layers -->
         <li>
             <div class="collapsible-header"><i class="material-icons">map</i>${_('Base layers')}</div>
@@ -105,9 +131,9 @@ geomTaggroups = form_geomtaggroups(request)
         <li>
             <div class="collapsible-header"><i class="material-icons">layers</i>${_('Context layers')}</div>
             <div class="collapsible-body">
-                <ul id="context-layers-list">
+                <form action="#" id="context-layers-list">
                     <!--  Placeholder context layer entries -->
-                </ul>
+                </form>
             </div>
         </li>
     </ul>
@@ -154,19 +180,18 @@ geomTaggroups = form_geomtaggroups(request)
             </ul>
             <div id="tab1" class="col s12" style="padding: 30px;">
                 <div class="deal-data">
-                <h5 class="deal-headline text-primary-color">${_('Deal')}
+                <h5 class="deal-headline">${_('Deal')}
                     <span id="deal-shortid-span" class="underline">#</span>
                 </h5>
                 <ul id="taggroups-ul" class="text-primary-color">
                     <li>
-                        <p>${_('No deal selected.')}</p>
+                        <p>${_('Select a deal on the map to show details. If you select multiple deals, zoom in and use the list view to show the details.')}</p>
                     </li>
                 </ul>
                     </div>
             </div>
             <div id="tab2" class="col s12" style="padding: 30px;">
                 <h5 class="deal-headline text-primary-color">News</h5>
-
             </div>
         </div>
         <div id="window-right-bottom" style="height: 50%;">
@@ -264,16 +289,12 @@ geomTaggroups = form_geomtaggroups(request)
 
 ## End of content
 
-<div id="mapModal" class="modal fade hide">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3 id="mapModalHeader"><!-- Placeholder --></h3>
-    </div>
-    <div id="mapModalBody" class="modal-body">
+<div id="mapModal" class="modal bottom-sheet">
+    <div id="mapModalBody" class="modal-content">
         <!-- Placeholder -->
     </div>
     <div class="modal-footer">
-        <button id="mapModalClose" class="btn" data-dismiss="modal" aria-hidden="true">${_('Close')}</button>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
 </div>
 
@@ -286,4 +307,3 @@ geomTaggroups = form_geomtaggroups(request)
 <script src="${request.static_url('lmkp:static/v2/filters.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lmkp:static/v2/jquery.cookie.js')}" type="text/javascript"></script>
 </%def>
-

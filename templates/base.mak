@@ -384,6 +384,8 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             function whenPageLoaded() {
                 $(".button-collapse").sideNav();
                 $(".preloader-wrapper").hide();
+                $('.modal-trigger').leanModal();
+                initializeDropdown();
                 document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
                 document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
                 document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width()-20) + "px";
@@ -415,7 +417,18 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                     document.getElementById("googleMapFull").style.width = "100%";
                     document.getElementById("content").style.height = String($('#googleMapFull').height() + $('#window_right').height()) + "px";
                 }}).resize();
-
+            function initializeDropdown() {
+                $('.dropdown-button').dropdown({
+                            inDuration: 300,
+                            outDuration: 225,
+                            constrain_width: false, // Does not change width of dropdown to that of the activator
+                            hover: true, // Activate on hover
+                            gutter: 0, // Spacing from edge
+                            belowOrigin: false, // Displays dropdown below the button
+                            alignment: 'left' // Displays dropdown with edge aligned to the left of button
+                        }
+                );
+            }
         </script>
 
     </body>
