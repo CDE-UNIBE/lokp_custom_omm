@@ -16,7 +16,7 @@
 %>
 
 ## Filter
-<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+##<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
 
 <!-- content -->
 <div class="container">
