@@ -2138,7 +2138,7 @@ h3.form-below-toolbar {
     cursor: pointer;
 }
 #new-filter-value-internal {
-    width: 178px;
+    width: 100%;
 }
 .input-append #new-filter-value {
     width: 147px;

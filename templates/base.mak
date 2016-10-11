@@ -429,6 +429,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                         }
                 );
             }
+
         </script>
 
     </body>

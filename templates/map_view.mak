@@ -47,7 +47,8 @@ geomTaggroups = form_geomtaggroups(request)
 ## Start of content
 
 ## Filter
-##<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+
+
 
 <ul id="slide-out-map-options" class="side-nav" style="min-width: 450px;">
 
@@ -76,35 +77,6 @@ geomTaggroups = form_geomtaggroups(request)
                 </form>
             </div>
         </li>
-
-        <!-- Deals -->
-        <li>
-        <div class="map-menu-deals" style="display: none;">
-            <div class="map-deals-content">
-                <ul>
-                    <li>
-                        <div class="checkbox-modified-small">
-                            <input class="input-top" type="checkbox" id="activityLayerToggle" checked="checked">
-                            <label for="activityLayerToggle">asdf</label>
-                        </div>
-
-                        <div id="map-deals-symbolization" class="dropdown context-layers-description">
-                            ${_('Loading ...')}
-                        </div>
-                        <ul id="map-points-list">
-                            <!-- Placeholder for map points -->
-                        </ul>
-                    </li>
-                </ul>
-                <ul id="map-areas-list">
-                    <!-- Placeholder for area entries -->
-                </ul>
-            </div>
-
-        </div>
-</li>
-
-
 
 
         <!-- Base layers -->
@@ -139,9 +111,11 @@ geomTaggroups = form_geomtaggroups(request)
     </ul>
 </ul>
 
-<ul id="slide-out-filter" class="side-nav">
-    <li><a href="#!"><i class="material-icons">filter_list</i>Filters</a></li>
-    <li><a class="waves-effect" href="#!"><i class="material-icons">add</i>Add</a></li>
+<ul id="slide-out-filter" class="side-nav" style="min-width: 450px;">
+    <li>
+        <a href="#!"><i class="material-icons">filter_list</i>Filters</a>
+        <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+    </li>
 </ul>
 
 <!-- content -->
@@ -173,6 +147,7 @@ geomTaggroups = form_geomtaggroups(request)
         </div>
     </div>
     <div id="window_right" class="col s12 m12  l4">
+
         <div id="window-right-top" style="height: 50%;">
             <ul class="tabs">
                 <li class="tab col s3"><a href="#tab1" class="active text-accent-color">Preview of deal</a></li>
