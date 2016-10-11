@@ -272,7 +272,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                 ## Content
 
                 ## Use the body of the child template
-                <div id="content" style="background-color: lightgray;">
+                <div id="content" style="background-color: white;">
                 ${self.body()}
                 </div>
                 ## End of Content
@@ -409,7 +409,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                     document.getElementById("googleMapFull").style.width = "66.7%";
                     document.getElementById("content").style.height = String(Math.max($('#googleMapFull').height(),$('#window_right').height())) + "px";
                     $('#window_right').height(
-                            $('#googleMapFull').height()-1
+                            $('#googleMapFull').height()
                     );
                 }
                 else {

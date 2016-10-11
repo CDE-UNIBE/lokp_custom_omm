@@ -2479,13 +2479,22 @@ a {
 	border-bottom: solid lightgrey 1px;
 	margin-bottom: 20px;
 }
+
+.preloader-wrapper {
+	left: 47%;
+}
+
 @media screen and (min-width: 982px) {
     .divider-menu {
+		border: none;
 		border-right: solid lightgrey 1px;
 		margin-right: 20px;
 		margin-left: 20px;
 		margin-bottom: 0px;
     }
+	.preloader-wrapper {
+		left: 30%;
+	}
 }
 
 footer{
@@ -2521,7 +2530,6 @@ footer ul li a{
 #floating-buttons {
 	margin-top: 400px;
 }
-
 
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }

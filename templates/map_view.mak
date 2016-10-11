@@ -129,7 +129,7 @@
         <div id="googleMapFull">
         <!--  Placeholder for the map -->
         </div>
-        <div class="preloader-wrapper big active" style="position: fixed; top: 50%; left: 23%;">
+        <div class="preloader-wrapper big active" style="position: fixed; top: 50%;">
             <div class="spinner-layer spinner-teal-only">
                 <div class="circle-clipper left">
                     <div class="circle"></div>
