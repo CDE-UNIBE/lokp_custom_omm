@@ -272,7 +272,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                 ## Content
 
                 ## Use the body of the child template
-                <div id="content" style="background-color: lightgray;">
+                <div id="content" style="background-color: white;">
                 ${self.body()}
                 </div>
                 ## End of Content

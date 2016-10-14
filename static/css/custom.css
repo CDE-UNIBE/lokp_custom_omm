@@ -2518,16 +2518,31 @@ footer ul li a{
     background-color: teal;
 	margin: 0 !important;
 }
+
+#gridview_tab .tabs .indicator{
+    background-color: teal;
+	margin: 0 !important;
+}
+
+.gridview_button{
+    float: right;
+    margin-right: 5px;
+}
+
 #floating-buttons {
 	margin-top: 400px;
 }
 
+#gridview_tableoptions{
+    margin-top: 20px;
+}
 
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }
 .light-primary-color   { background: #F5F5F5; }
 .text-primary-color    { color: #212121; }
 .accent-color          { background: #009688; }
+.accent-background-color { background-color: #009688 !important; }
 .text-accent-color     { color: #009688 !important; }
 .primary-text-color    { color: #757575; }
 .secondary-text-color  { color: #999999; }
