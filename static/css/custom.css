@@ -2519,9 +2519,15 @@ footer ul li a{
 	margin: 0 !important;
 }
 
+
+/** Gridview **/
 #gridview_tab .tabs .indicator{
     background-color: teal;
 	margin: 0 !important;
+}
+
+#gridview_dropdown{
+    float: left;
 }
 
 .gridview_button{
@@ -2535,6 +2541,41 @@ footer ul li a{
 
 #gridview_tableoptions{
     margin-top: 20px;
+}
+
+#btn-small{
+    padding: 0px 0.5rem;
+}
+
+.gridview_desktop_hidden{
+        display: none;
+    }
+
+#pagination{
+    float:right;
+}
+
+@media screen and ( max-width: 1450px )  {
+      /* linearization for grid module */
+      .linearize-level-1 {
+        display: block;
+        float: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        width: 100% !important;
+      }
+
+    #gridview_tableoptions .s3{
+        width: auto;
+    }
+
+    .gridview_mobile_hidden{
+        display: none;
+    }
+
+    .gridview_desktop_hidden{
+        display: block;
+    }
 }
 
 .dark-primary-color    { background: #616161; }

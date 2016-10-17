@@ -80,7 +80,7 @@
             % else:
                 <li>
             % endif
-                <a href="${request.route_url('activities_read_many', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Deals')}</a>
+                <a href="${request.route_url('activities_read_many', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Deals')}/a>
             </li>
             % if request.current_route_url() in [request.route_url('stakeholders_byactivities_all', output='html'), request.route_url('stakeholders_byactivities', output='html', uids=a_uids), request.route_url('stakeholders_read_many', output='html')]:
                 % if is_moderator:
