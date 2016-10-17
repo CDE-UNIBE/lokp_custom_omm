@@ -98,7 +98,7 @@
                         <a class="active text-accent-color" href="${request.route_url('activities_read_many', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Deals')}</a>
                     </li>
 
-                    ##zweites Tab
+                    ##Unklar
                     % if is_moderator:
                         % if 'status=pending' in request.path_qs:
                             <li class="active moderator-show-pending-right tab col s3">
@@ -115,7 +115,7 @@
                         % endif
                     % endif
 
-                    ##Unklar
+                    ##zweites Tab
                     % if request.current_route_url() in [request.route_url('stakeholders_byactivities_all', output='html')]:
                         <li class="active tab col s3" onClick="self.location.href='${request.route_url('stakeholders_byactivities_all', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}'">
                     % else:
@@ -215,9 +215,9 @@
                             %>
 
                             % if pending:
-                               <tr class="pending tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}" data-href="http://myspace.com">
+                               <tr class="pending tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}">
                             % else:
-                                <tr class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}" data-href="http://myspace.com">
+                                <tr class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}">
                             % endif
                                 <td>
                                     <a class="btn" href="${request.route_url('activities_read_one', output='html', uid=id)}">

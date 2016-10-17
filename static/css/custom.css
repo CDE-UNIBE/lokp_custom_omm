@@ -635,7 +635,7 @@ div.item-grid-wrapper {
 .table-self tbody tr:hover > td,
  .table-self tbody tr:hover > th,
  .active-row  {
-    background-color: #dbdb9b;
+    background-color: #9E9E9E;
     cursor: pointer;
 }
 
