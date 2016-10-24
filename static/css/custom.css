@@ -2485,11 +2485,7 @@ a:hover i, a:focus i {
 .img-popup-showcases {
 	width: 80%;
 }
-.btn-back {
-	position: fixed;
-	bottom: 2%;
-	left: 2%;
-}
+
 a {
 	color: teal;
 }
@@ -2541,7 +2537,6 @@ footer ul li a{
 	margin: 0 !important;
 }
 
-
 /** Gridview **/
 #gridview_tab .tabs .indicator{
     background-color: teal;
@@ -2577,6 +2572,12 @@ footer ul li a{
     float:right;
 }
 
+.btn-back{
+    position: fixed ! important;
+    bottom: 6%;
+    left: 2%;
+}
+
 @media screen and ( max-width: 1450px )  {
       /* linearization for grid module */
       .linearize-level-1 {
@@ -2599,6 +2600,27 @@ footer ul li a{
         display: block;
     }
 }
+
+/*Single Chart Views */
+#group-by-title{
+    margin: 0px;
+    font-size: 1.8rem;
+    display: inline;
+}
+
+.inactive{
+    background-color: grey !important;
+}
+
+#attribute-buttons{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#graphoptions{
+    margin-top: 50px;
+}
+
 
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }

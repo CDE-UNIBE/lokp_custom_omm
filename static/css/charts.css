@@ -12,14 +12,14 @@
     cursor: pointer;
 }
 .bar {
-    fill: #A3A708;
+    fill: #009688;
 }
 .bar:hover, .bar.hover {
-    fill: #DBDB9B;
+    fill: #4cb5ab;
 }
 
 .valueShape {
-    fill: #A3A708;
+    fill: #4cb5ab;
     stroke: darkGrey;
 }
 
@@ -31,14 +31,14 @@ ul.chartNav li a {
     color: #333333;
 }
 ul.chartNav li a:hover {
-    background-color: #DBDB9B;
+    background-color: #4cb5ab;
 }
 ul.chartNav li.active a {
-    background-color: #A3A708;
+    background-color: #009688;
     color: #white;
 }
 ul.chartNav li.active a:hover {
-    background-color: #A3A708;
+    background-color: #4cb5ab;
 }
 .btn-bar-sort {
   float: right !important;

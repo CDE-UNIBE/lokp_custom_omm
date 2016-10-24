@@ -10,26 +10,31 @@
 
 <div class="container">
   <div class="content no-border">
-    <div class="row-fluid">
-      <a href="${request.route_url('charts_overview')}">
-        <i class="icon-th"></i><span class="link-with-icon">${_("Back to charts overview")}</span>
-      </a>
-    </div>
-    <div class="row-fluid">
-      <div class="pull-right">
-        <ul class="nav nav-pills chartNav" id="group-by-pills">
-          <!-- Placeholder -->
+
+    <!--backbutton-->
+    <a class="btn-floating btn-large waves-effect waves-light btn btn-back" href="${request.route_url('charts_overview')}">
+      <i class="material-icons">arrow_back</i>Back
+    </a>
+
+    <!--dropdownlist-->
+    <div class="row">
+        <h4 id="group-by-title"><!-- Placeholder --></h4>
+        <a id="group-by-dropdown-title" class='dropdown-button btn right' href='#' data-toggle="dropdown" href='#' data-activates='group-by-pills'></a>
+        <ul class="dropdown-content nav nav-pills chartNav" id="group-by-pills">
+            <!-- Placeholder -->
         </ul>
-      </div>
     </div>
-    <h4 id="group-by-title"><!-- Placeholder --></h4>
+
+    <!--graph-->
     <div id="loadingRow" class="row-fluid">
       <div class="span12">
         <div id="graphLoading" style="height: ${height()}px;"></div>
       </div>
     </div>
     <div id="chart" class="row-fluid"><!-- Placeholder --></div>
-    <div class="row-fluid">
+
+    <!--graphopions-->
+    <div class="row">
       <div class="btn-group" data-toggle="buttons-radio" id="attribute-buttons"><!-- Placeholder --></div>
     </div>
   </div>

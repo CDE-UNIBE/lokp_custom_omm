@@ -8,19 +8,20 @@
 
 <div class="container">
   <div class="content no-border">
-    <div class="row-fluid chart-top-menu">
-      <a href="${request.route_url('charts_overview')}">
-        <i class="icon-th"></i><span class="link-with-icon">${_("Back to charts overview")}</span>
+
+    <!--backbutton-->
+      <a class="btn-floating btn-large waves-effect waves-light btn btn-back" href="${request.route_url('charts_overview')}">
+        <i class="material-icons">arrow_back</i>Back
       </a>
+
+
+
+    <div class="row-fluid chart-top-menu">
       % if len(profiles) > 0:
         <div class="pull-right">
           <div class="map-profile-select">${_("Profile")}:</div>
-          <div class="btn-group">
-            <button class="btn btn-country-selector">${profile}</button>
-            <button class="btn btn_favorite_right dropdown-toggle" data-toggle="dropdown">
-              <i class="icon-caret-down"></i>
-            </button>
-            <ul class="dropdown-menu" id="profile-selector">
+             <a id="group-by-dropdown-title" class='dropdown-button btn right' href='#' data-toggle="dropdown" href='#' data-activates='profile-selector'>${profile}</a>
+            <ul class="dropdown-content" id="profile-selector">
               % for p in profiles:
                 <li><a href="javascript:void(0);" data-profile="${p[1]}">${p[0]}</a></li>
               % endfor
@@ -29,6 +30,9 @@
         </div>
       % endif
     </div>
+
+
+
     <div class="row-fluid visible-phone">
       <h2 class="chart-title"><!-- Placeholder --></h2>
     </div>
