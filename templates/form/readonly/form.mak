@@ -181,24 +181,24 @@ ${editToolbar('bottom')}
   <div class="span12 text-right deal-${position}-toolbar">
     <ul class="inline item-toolbar">
       <li>
-        <a href="${request.route_url(historyRouteName, output='html', uid=cstruct['id'])}"><i class="icon-time"></i><span class="link-with-icon">${_('History')}</span></a>
+        <a class="text-accent-color right" href="${request.route_url(historyRouteName, output='html', uid=cstruct['id'])}"><i class="icon-time"></i><span class="link-with-icon">${_('History')}</span></a>
       </li>
       % if not isStakeholder:
         <li>
-          <a href="${request.route_url(routeName, output='statistics', uid=cstruct['id'])}"><i class="icon-bar-chart"></i><span class="link-with-icon">${_("Areal statistics")}</span></a>
+          <a  class="text-accent-color right"href="${request.route_url(routeName, output='statistics', uid=cstruct['id'])}"><i class="icon-bar-chart"></i><span class="link-with-icon">${_("Areal statistics")}</span><span class="dealview_seperator"span>|</span></a>
         </li>
       % endif
       % if request.user and 'id' in cstruct and not empty:
         <li>
-          <a href="${request.route_url(routeName, output='form', uid=cstruct['id'], _query=(('v', cstruct['version']),))}"><i class="icon-pencil"></i><span class="link-with-icon">${editLinkText}</span></a>
+          <a  class="text-accent-color right"href="${request.route_url(routeName, output='form', uid=cstruct['id'], _query=(('v', cstruct['version']),))}"><i class="icon-pencil"></i><span class="link-with-icon">${editLinkText}</span></a>
         </li>
         <li>
-          <a href="javascript:void(0);" data-toggle="collapse" data-target="#delete-${form_id}-${position}"><i class="icon-trash"></i><span class="link-with-icon">${deleteLinkText}</span></a>
+          <a  class="text-accent-color right"href="javascript:void(0);" data-toggle="collapse" data-target="#delete-${form_id}-${position}"><i class="icon-trash"></i><span class="link-with-icon">${deleteLinkText}</span></a>
         </li>
       % endif
       % if request.user and isModerator and statusId == '1':
         <li>
-          <a href="${request.route_url(routeName, output='review', uid=cstruct['id'])}"><i class="icon-check"></i><span class="link-with-icon">${_('Review')}</span></a>
+          <a  class="text-accent-color right"href="${request.route_url(routeName, output='review', uid=cstruct['id'])}"><i class="icon-check"></i><span class="link-with-icon">${_('Review')}</span></a>
         </li>
       % endif
     </ul>
