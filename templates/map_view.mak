@@ -1,3 +1,11 @@
+<%
+    from lmkp.views.views import getFilterKeys
+    from lmkp.views.views import getActiveFilters
+
+    aFilterKeys, shFilterKeys = getFilterKeys(request)
+    activeFilters = getActiveFilters(request)
+%>
+
 <%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Map View')}</%def>
@@ -6,21 +14,22 @@
 <link rel="stylesheet" href="${request.static_url('lmkp:static/lib/OpenLayers-2.12/theme/default/style.css')}" type="text/css" />
 <script type="text/javascript">
 <%
-from lmkp.views.profile import _getCurrentProfileExtent
-from lmkp.views.views import getOverviewKeys
-from lmkp.views.views import getFilterValuesForKey
-from lmkp.views.views import getMapSymbolKeys
-from lmkp.views.config import form_geomtaggroups
-import json
+    from lmkp.views.profile import _getCurrentProfileExtent
+    from lmkp.views.views import getOverviewKeys
+    from lmkp.views.views import getFilterValuesForKey
+    from lmkp.views.views import getMapSymbolKeys
+    from lmkp.views.config import form_geomtaggroups
+    import json
 
-aKeys, shKeys = getOverviewKeys(request)
-extent = json.dumps(_getCurrentProfileExtent(request))
-mapSymbols = getMapSymbolKeys(request)
-mapCriteria = mapSymbols[0]
-mapSymbolValues = [v[0] for v in sorted(getFilterValuesForKey(request,
-    predefinedType='a', predefinedKey=mapCriteria[1]),
-    key=lambda value: value[1])]
-geomTaggroups = form_geomtaggroups(request)
+    aKeys, shKeys = getOverviewKeys(request)
+    extent = json.dumps(_getCurrentProfileExtent(request))
+    mapSymbols = getMapSymbolKeys(request)
+    mapCriteria = mapSymbols[0]
+    mapSymbolValues = [v[0] for v in sorted(getFilterValuesForKey(request,
+        predefinedType='a', predefinedKey=mapCriteria[1]),
+        key=lambda value: value[1])]
+    geomTaggroups = form_geomtaggroups(request)
+
 %>
     var profilePolygon = ${extent | n};
     var aKeys = ${json.dumps(aKeys) | n};
@@ -49,8 +58,7 @@ geomTaggroups = form_geomtaggroups(request)
 ## Filter
 
 
-
-<ul id="slide-out-map-options" class="side-nav" style="min-width: 450px;">
+<ul id="slide-out-map-options" class="side-nav" style="min-width: 550px;">
 
     <div class="input-field" action="" style="height: 25px; line-height: 25px; margin: 18px;">
         <i class="material-icons prefix" style="">search</i>
@@ -111,11 +119,8 @@ geomTaggroups = form_geomtaggroups(request)
     </ul>
 </ul>
 
-<ul id="slide-out-filter" class="side-nav" style="min-width: 450px;">
-    <li>
-        <a href="#!"><i class="material-icons">filter_list</i>Filters</a>
-        <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
-    </li>
+<ul id="slide-out-filter" class="side-nav" style="min-width: 550px;">
+    <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
 </ul>
 
 <!-- content -->
@@ -124,7 +129,7 @@ geomTaggroups = form_geomtaggroups(request)
         <div id="googleMapFull">
         <!--  Placeholder for the map -->
         </div>
-        <div class="preloader-wrapper big active" style="position: fixed; top: 50%; left: 23%;">
+        <div class="preloader-wrapper big active" style="position: fixed; top: 50%;">
             <div class="spinner-layer spinner-teal-only">
                 <div class="circle-clipper left">
                     <div class="circle"></div>
@@ -138,12 +143,17 @@ geomTaggroups = form_geomtaggroups(request)
             </div>
         </div>
         <div id="floating-buttons" style="text-align: right;">
+            <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 15px;" data-position="top" data-tooltip="Map Options" data-activates="slide-out-map-options">
+                <i class="material-icons">map</i>
+            </a>
             <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 15px;" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
-                <i class="material-icons">filter_list</i>${_('Back')}
+                <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
             </a>
-            <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 40px;" data-position="top" data-tooltip="Map Options" data-activates="slide-out-map-options">
-                <i class="material-icons">map</i>${_('Back')}
-            </a>
+            % if len(activeFilters) == 1:
+                <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
+            % else:
+                <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
+            % endif
         </div>
     </div>
     <div id="window_right" class="col s12 m12  l4">
