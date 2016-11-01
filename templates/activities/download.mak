@@ -1,5 +1,13 @@
 <%inherit file="lmkp:customization/omm/templates/base.mak" />
 
+<%
+    from lmkp.views.views import getFilterKeys
+    from lmkp.views.views import getActiveFilters
+
+    aFilterKeys, shFilterKeys = getFilterKeys(request)
+    activeFilters = getActiveFilters(request)
+%>
+
 <%def name="title()">${_('Download Deals')}</%def>
 
 <%
@@ -7,7 +15,11 @@
 %>
 
 ## Filter
-<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+##<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+<ul id="slide-out-filter" class="side-nav" style="min-width: 550px;">
+    <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+</ul>
+
 
 <div class="container">
     <div class="content no-border">
@@ -92,6 +104,16 @@
             <div class="row-fluid">
                 <div class="span12 text-right">
                     <button type="submit" class="btn btn-primary">${_('Download')}</button>
+                </div>
+                <div style="float: right;">
+                    <a class="btn-floating tooltipped btn-large button-collapse" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
+                        <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
+                    </a>
+                    % if len(activeFilters) == 1:
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
+                    % else:
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
+                    % endif
                 </div>
             </div>
         </form>
