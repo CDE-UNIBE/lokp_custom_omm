@@ -2631,6 +2631,24 @@ footer ul li a{
     margin-top: 50px;
 }
 
+/*Dealview*/
+
+.dealview_item_titel{
+    font-size: 0.7rem;
+    padding-bottom: 0px;
+}
+
+.dealview_titel_investor{
+    margin-bottom: 0;
+    margin-top: 15px;
+    padding-bottom: 0;
+}
+
+.dealview_seperator{
+    color: black;
+    padding: 0 5px;
+}
+
 
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }
