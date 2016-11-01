@@ -635,7 +635,7 @@ div.item-grid-wrapper {
 .table-self tbody tr:hover > td,
  .table-self tbody tr:hover > th,
  .active-row  {
-    background-color: #dbdb9b;
+    background-color: #9E9E9E;
     cursor: pointer;
 }
 
@@ -2528,16 +2528,72 @@ footer ul li a{
     background-color: teal;
 	margin: 0 !important;
 }
+
+
+/** Gridview **/
+#gridview_tab .tabs .indicator{
+    background-color: teal;
+	margin: 0 !important;
+}
+
+#gridview_dropdown{
+    float: left;
+}
+
+.gridview_button{
+    float: right;
+    margin-right: 5px;
+}
+
 #floating-buttons {
 	margin-top: 400px;
 }
 
+#gridview_tableoptions{
+    margin-top: 20px;
+}
+
+#btn-small{
+    padding: 0px 0.5rem;
+}
+
+.gridview_desktop_hidden{
+        display: none;
+    }
+
+#pagination{
+    float:right;
+}
+
+@media screen and ( max-width: 1450px )  {
+      /* linearization for grid module */
+      .linearize-level-1 {
+        display: block;
+        float: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        width: 100% !important;
+      }
+
+    #gridview_tableoptions .s3{
+        width: auto;
+    }
+
+    .gridview_mobile_hidden{
+        display: none;
+    }
+
+    .gridview_desktop_hidden{
+        display: block;
+    }
+}
 
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }
 .light-primary-color   { background: #F5F5F5; }
 .text-primary-color    { color: #212121; }
 .accent-color          { background: #009688; }
+.accent-background-color { background-color: #009688 !important; }
 .text-accent-color     { color: #009688 !important; }
 .primary-text-color    { color: #757575; }
 .secondary-text-color  { color: #999999; }

@@ -16,7 +16,7 @@
 %>
 
 ## Filter
-<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+##<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
 
 <!-- content -->
 <div class="container">
@@ -35,102 +35,102 @@
                 spatialFilterLink = _('Show all Deals of the profile.')
         %>
 
+
         % if spatialfilter:
-        <div class="alert alert-info">
-            <i class="icon-globe"></i>&nbsp;
-            <strong>${_('Spatial Filter')}</strong> ${_('based on')}
+        <div class="alert alert-info card-panel accent-background-color">
+            <p class="white-text">
+                <i class="icon-globe white-text"></i>&nbsp;
+                <strong >${_('Spatial Filter')}</strong> ${_('based on')}
+                    % if spatialFilterLink:
+                        <strong><a href="${request.route_url('map_view')}" >${spatialFilterBasedOn}</a></strong>.
+                    % else:
+                        <strong>${spatialFilterBasedOn}</strong>.
+                    % endif
+                ${spatialFilterExplanation}
                 % if spatialFilterLink:
-                    <strong><a href="${request.route_url('map_view')}">${spatialFilterBasedOn}</a></strong>.
-                % else:
-                    <strong>${spatialFilterBasedOn}</strong>.
+                    <br/><a href="${handle_query_string(request.url, add=[('bbox', 'profile')])}">${spatialFilterLink}</a>
                 % endif
-            ${spatialFilterExplanation}
-            % if spatialFilterLink:
-                <br/><a href="${handle_query_string(request.url, add=[('bbox', 'profile')])}">${spatialFilterLink}</a>
-            % endif
+            </p>
         </div>
         % endif
 
         ## Involvement Filter
         % if invfilter:
-        <div class="alert alert-info">
-            <i class="icon-filter"></i>&nbsp;
-            <strong>${_('Investor Filter')}</strong>: ${_('You are currently only seeing Deals where Investor')}
-            % for uid in invfilter:
-                <a href="${request.route_url('stakeholders_read_one', output='html', uid=uid)}">
-                    ${uid[:6]}</a>
-            % endfor
-            ${_('is involved.')}<br/><a href="${request.route_url('activities_read_many', output='html')}">${_('Remove this filter and show all Deals')}</a>.
+        <div class="alert alert-info card-panel accent-background-color">
+            <p class="white-text">
+                <i class="icon-filter"></i>&nbsp;
+                <strong>${_('Investor Filter')}</strong>: ${_('You are currently only seeing Deals where Investor')}
+                % for uid in invfilter:
+                    <a href="${request.route_url('stakeholders_read_one', output='html', uid=uid)}">
+                        ${uid[:6]}</a>
+                % endfor
+                ${_('is involved.')}<br/><a href="${request.route_url('activities_read_many', output='html')}">${_('Remove this filter and show all Deals')}</a>.
+            </p>
         </div>
         % endif
 
         ## Status Filter
         % if statusfilter:
-        <div class="alert alert-info">
-            <i class="icon-filter"></i>&nbsp;
-            <strong>${_('Status Filter')}</strong>: ${_('You are only seeing Deals with the following status:')} ${statusfilter}
+        <div class="alert alert-info card-panel accent-background-color">
+            <p class="white-text">
+                <i class="icon-filter"></i>&nbsp;
+                <strong>${_('Status Filter')}</strong>: ${_('You are only seeing Deals with the following status:')} ${statusfilter}
+            </p>
         </div>
         % endif
 
         ## Tabs
-        <ul class="nav nav-tabs table_tabs">
-            % if request.current_route_url() in [request.route_url('activities_read_many', output='html'), request.route_url('activities_bystakeholders', output='html', uids=sh_uids)]:
-                % if is_moderator:
-                    <li class="active moderator-show-pending-left">
-                % else:
-                    <li class="active">
-                % endif
-            % else:
-                <li>
-            % endif
-                <a href="${request.route_url('activities_read_many', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Deals')}</a>
-            </li>
-            % if is_moderator:
-                % if 'status=pending' in request.path_qs:
-                    <li class="active moderator-show-pending-right">
-                        <a href="${handle_query_string(request.current_route_url(), remove=['status'])}" data-toggle="tooltip" title="${_('Show all')}">
-                            <i class="icon-flag"></i>
-                        </a>
+        <div id="gridview_tab" class="row">
+            <div class="col s12">
+                <!-- ul class="nav nav-tabs table_tabs tabs" -->
+                <ul class="tabs">
+
+                    ##erstes Tab
+                    % if request.current_route_url() in [request.route_url('activities_read_many', output='html'), request.route_url('activities_bystakeholders', output='html', uids=sh_uids)]:
+                        % if is_moderator:
+                            <li class="active moderator-show-pending-left tab col s3">
+                        % else:
+                            <li class="active tab col s3">
+                        % endif
+                    % else:
+                        <li class="tab col s3">
+                    % endif
+                        <a class="active text-accent-color" href="${request.route_url('activities_read_many', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Deals')}</a>
                     </li>
-                % else:
-                    <li class="moderator-show-pending-right">
-                        <a href="${handle_query_string(request.current_route_url(), add=[('status', 'pending')])}" data-toggle="tooltip" title="${_('Show only pending')}">
-                            <i class="icon-flag"></i>
-                            </a>
+
+                    ##Unklar
+                    % if is_moderator:
+                        % if 'status=pending' in request.path_qs:
+                            <li class="active moderator-show-pending-right tab col s3">
+                                <a class="active text-accent-color" href="${handle_query_string(request.current_route_url(), remove=['status'])}" data-toggle="tooltip" title="${_('Show all')}">
+                                    <i class="icon-flag"></i>
+                                </a>
+                            </li>
+                        % else:
+                            <li class="moderator-show-pending-right tab col s3">
+                                <a class="active text-accent-color" href="${handle_query_string(request.current_route_url(), add=[('status', 'pending')])}" data-toggle="tooltip" title="${_('Show only pending')}">
+                                    <i class="icon-flag"></i>
+                                </a>
+                            </li>
+                        % endif
+                    % endif
+
+                    ##zweites Tab
+                    % if request.current_route_url() in [request.route_url('stakeholders_byactivities_all', output='html')]:
+                        <li class="active tab col s3" onClick="self.location.href='${request.route_url('stakeholders_byactivities_all', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}'">
+                    % else:
+                        <li class="tab col s3" onClick="self.location.href='${request.route_url('stakeholders_byactivities_all', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}'">
+                    % endif
+                        <a class="active text-accent-color" href="${request.route_url('stakeholders_byactivities_all', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Investors')}</a>
                     </li>
-                % endif
-            % endif
 
-            % if request.current_route_url() in [request.route_url('stakeholders_byactivities_all', output='html')]:
-                <li class="active">
-            % else:
-                <li>
-            % endif
-                <a href="${request.route_url('stakeholders_byactivities_all', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Investors')}</a>
-            </li>
-
-            <li class="grid-tab-right">
-                <a href="${request.route_url('activities_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}" data-toggle="tooltip" title="${_('Download Deals')}">
-                    <i class="icon-download-alt"></i>
-                </a>
-            </li>
-            <li class="grid-tab-right">
-                <a href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', locale),('_PROFILE_', profile)))}" data-toggle="tooltip" title="${_('View and subscribe to latest changes')}">
-                    <i class="icon-rss"></i>
-                </a>
-            </li>
-
-            % if default_search_translated:
-                <li class="grid-tab-right">
-                    <a href="javascript:void(0)" id="search" data-toggle="tooltip" title="${_('Search by')} ${default_search_translated}">
-                        <i class="icon-search"></i>
-                    </a>
-                </li>
-            % endif
-        </ul>
+                </ul>
+            </div>
+        </div>
 
         ## Table
-        <div class="table_wrapper item-grid-wrapper">
+        <div class="item-grid-wraper">
+        <!--<div class="table_wrapper item-grid-wrapper">-->
 
             % if len(data) == 0:
 
@@ -186,6 +186,7 @@
                                 </th>
                             % endfor
                         </tr>
+                    </thead>
                     <tbody>
                         ## The table body
 
@@ -214,12 +215,12 @@
                             %>
 
                             % if pending:
-                                <tr class="pending">
+                               <tr class="pending tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}">
                             % else:
-                                <tr>
+                                <tr class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}">
                             % endif
                                 <td>
-                                    <a href="${request.route_url('activities_read_one', output='html', uid=id)}">
+                                    <a class="btn" href="${request.route_url('activities_read_one', output='html', uid=id)}">
                                         ${id[:6]}
                                     </a>
                                 </td>
@@ -240,13 +241,48 @@
             % endif
         </div>
 
-        ## Pagination
-        % if len(data) > 0:
-            <%include file="lmkp:templates/parts/pagination.mak"
-                args="totalitems=total, currentpage=currentpage, pagesize=pagesize, itemsname=_('Deals')"
-            />
-        % endif
+        <div id="gridview_tableoptions" class="row">
+            <!-- Buttons für Desktop Ansicht -->
+            <div class="col s3 right gridview_mobile_hidden">
+                <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Deals')}" href="${request.route_url('activities_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
+                    <i class="icon-download-alt"></i>
+                </a>
 
+                <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', locale),('_PROFILE_', profile)))}">
+                    <i class="icon-rss"></i>
+                </a>
+
+                % if default_search_translated:
+                    <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Search by')} ${default_search_translated}" href="javascript:void(0)" id="search">
+                        <i class="icon-search"></i>
+                    </a>
+                % endif
+            </div>
+
+            ## Pagination
+            % if len(data) > 0:
+                <%include file="lmkp:templates/parts/pagination.mak"
+                    args="totalitems=total, currentpage=currentpage, pagesize=pagesize, itemsname=_('Deals')"
+                />
+            % endif
+
+            <!-- Buttons für Mobile Ansicht -->
+            <div class="col right gridview_desktop_hidden">
+                <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Deals')}" href="${request.route_url('activities_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
+                    <i class="icon-download-alt"></i>
+                </a>
+
+                <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', locale),('_PROFILE_', profile)))}">
+                    <i class="icon-rss"></i>
+                </a>
+
+                % if default_search_translated:
+                    <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Search by')} ${default_search_translated}" href="javascript:void(0)" id="search">
+                        <i class="icon-search"></i>
+                    </a>
+                % endif
+            </div>
+        </div>
     </div>
 </div>
 
@@ -257,7 +293,7 @@
         $(function () {
             $("a[data-toggle='tooltip']").tooltip({
                 container: 'body',
-                placement: 'bottom'
+                placement: 'top'
             });
         });
         var link_involvement_text = '${_("Show investors for this deal")}';
