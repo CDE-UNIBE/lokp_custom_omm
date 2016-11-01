@@ -20,7 +20,7 @@
         # Activities
         templateName = 'form_activity.mak'
 
-    resolver = lmkpAssetResolver.resolve('customization/lo/templates/form/%s' % templateName)
+    resolver = lmkpAssetResolver.resolve('customization/omm/templates/form/%s' % templateName)
     template = Template(filename=resolver.abspath())
 %>
 

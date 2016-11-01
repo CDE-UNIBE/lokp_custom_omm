@@ -34,52 +34,47 @@
         % endfor
 
         ## Show form to add a new filter
-        <div class="control-group new-filter new-filter">
-            <label class="control-label">${_('New Filter')}</label>
+
+
+        <div class="control-group new-filter">
             <div class="controls">
+                <h6>${_('New Filter')}</h6></br>
                 ## Key
-                <div class="btn-group input-append">
-                    <input id="new-filter-key" class="select_btn_filter" type="text" placeholder="${_('Key')}" />
-                    <input id="new-filter-key-internal" type="hidden" value=""/>
-                    <input id="new-filter-itemtype" type="hidden" value="a"/>
-                    <button class="btn select_btn_filter_right dropdown-toggle" data-toggle="dropdown">
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu pull-right" role="menu">
-                        <li class="disabled filterCategory">${_('Deals')}</li>
-                        % for k in aFilterKeys:
-                        <% escaped_k = k[0].replace("'", "\\'") %>
-                            <li><a href="#" onClick="javascript:selectKey('${escaped_k}', '${k[1]}', '${k[2]}', 'a')">${k[0]}</a></li>
-                        % endfor
-                        <li class="disabled filterCategory">${_('Investors')}</li>
-                        % for k in shFilterKeys:
-                        <% escaped_k = k[0].replace("'", "\\'") %>
-                            <li><a href="#" onClick="javascript:selectKey('${escaped_k}', '${k[1]}', '${k[2]}', 'sh')">${k[0]}</a></li>
-                        % endfor
-                    </ul>
-                </div>
+                <a id="new-filter-key" class='dropdown-button btn' href='#' data-activates='dropdown1' style="width: 80%;">${_('Key')}<i class="material-icons right">arrow_drop_down</i></a>
+                <input id="new-filter-key-internal" type="hidden" value=""/>
+
+                <input id="new-filter-itemtype" type="hidden" value="a"/>
+
+                <ul class="dropdown-content" id="dropdown1">
+                    <li class="disabled filterCategory">${_('Deals')}</li>
+                    % for k in aFilterKeys:
+                    <% escaped_k = k[0].replace("'", "\\'") %>
+                        <li><a href="#" onClick="javascript:selectKey('${escaped_k}', '${k[1]}', '${k[2]}', 'a')">${k[0]}</a></li>
+                    % endfor
+                    <li class="disabled filterCategory">${_('Investors')}</li>
+                    % for k in shFilterKeys:
+                    <% escaped_k = k[0].replace("'", "\\'") %>
+                        <li><a href="#" onClick="javascript:selectKey('${escaped_k}', '${k[1]}', '${k[2]}', 'sh')">${k[0]}</a></li>
+                    % endfor
+                </ul>
+
                 ## Operator
-                <div class="btn-group">
-                    <button id="new-filter-operator-display" class="btn select_btn_operator"></button>
-                    <input id="new-filter-operator" type="hidden" />
-                    <button class="btn select_btn_operator_right dropdown-toggle" data-toggle="dropdown">
-                        <span class="caret"></span>
-                    </button>
-                    <ul id="new-filter-operator-dropdown" class="dropdown-menu small">
+                <a id="new-filter-operator-display" class='dropdown-button btn' href='#' data-activates='new-filter-operator-dropdown' style="width: 80%;"></a>
+                <ul id="new-filter-operator-dropdown" class="dropdown-content">
                         <!-- Placeholder for the operators -->
-                    </ul>
-                </div>
+                </ul>
+                <input id="new-filter-operator" type="hidden" />
+
+
                 ## Value
-                <div id="new-filter-value-box" class="btn-group">
+                <div id="new-filter-value-box" class="input-field" action="" style="height: 25px; line-height: 25px; margin: 18px; width: 80%;">
                     <!-- will be replaced -->
-                    <input id="new-filter-value-internal" type="text" class="filter-value" placeholder="${_('Value')}" />
-                </div>
-                <span class="icon-add" onClick="javascript:addNewFilter();">
-                    <i class="icon-plus pointer"></i>
-                </span>
+                    <input id="new-filter-value-internal"  placeholder="${_('Value')}" type="text" style="height: 20px; line-height: 20px;">
+                </div></br>
+                <a class="waves-effect waves-light btn" onClick="javascript:addNewFilter();" style="width: 80%;">Add<i class="material-icons right">add</i></a>
             </div>
         </div>
-<!--        <div class="favorite">
+<!--    <div class="favorite">
             <div class="btn-group favorite">
                 <button class="btn btn_favorite">Favorite</button>
                 <button class="btn btn_favorite_right dropdown-toggle" data-toggle="dropdown">

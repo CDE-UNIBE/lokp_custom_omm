@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Map View')}</%def>
 
@@ -44,30 +44,148 @@ geomTaggroups = form_geomtaggroups(request)
 
 </script>
 </%def>
-
 ## Start of content
 
 ## Filter
-<%include file="lmkp:customization/lo/templates/parts/filter.mak" />
 
-<!-- content -->
-<div id="googleMapFull">
-    <!--  Placeholder for the map -->
-</div>
 
-<div class="basic-data">
-    <h6 class="deal-headline">${_('Deal')}
-        <span id="deal-shortid-span" class="underline">#</span>
-    </h6>
-    <ul id="taggroups-ul">
+
+<ul id="slide-out-map-options" class="side-nav" style="min-width: 450px;">
+
+    <div class="input-field" action="" style="height: 25px; line-height: 25px; margin: 18px;">
+        <i class="material-icons prefix" style="">search</i>
+        <input id="search" name="q" type="text" style="height: 20px; line-height: 20px;">
+    </div>
+
+    <ul class="collapsible" data-collapsible="accordion">
+        <!-- Deals -->
         <li>
-            <p>${_('No deal selected.')}</p>
+            <div class="collapsible-header"><i class="material-icons">group</i>${_('Deals')}</div>
+            <div class="collapsible-body">
+                <form action="#" id="map-areas-list">
+                    <p style="padding-top: 0; padding-bottom: 0; margin: 0;">
+                        <input class="input-top" type="checkbox" id="activityLayerToggle" checked="checked" style="line-height: 22px; height: 22px; background-color: red;">
+                        <label class="text-primary-color" for="activityLayerToggle" style="line-height: 22px; height: 22px;">
+                            <span id="map-deals-symbolization">
+
+                            </span>
+                        </label>
+                        <ul id="map-points-list" style="margin: 0; padding: 0; padding-left: 100px;">
+                        <!-- Placeholder for map points -->
+                        </ul>
+                    </p>
+                </form>
+            </div>
+        </li>
+
+
+        <!-- Base layers -->
+        <li>
+            <div class="collapsible-header"><i class="material-icons">map</i>${_('Base layers')}</div>
+            <div class="collapsible-body">
+                <form action="#">
+                    <p style="padding-top: 0; padding-bottom: 0;">
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="streetMapOption" value="streetMap" checked/>
+                      <label for="streetMapOption">${_('Street Map')}</label>
+                    </p>
+                    <p style="padding-top: 0; padding-bottom: 0;">
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="satelliteMapOption" value="satelliteMap" />
+                      <label for="satelliteMapOption">${_('Satellite Imagery')}</label>
+                    </p>
+                    <p style="padding-top: 0; padding-bottom: 0;">
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="terrainMapOption" value="terrainMap" />
+                      <label for="terrainMapOption">${_('Terrain Map')}</label>
+                    </p>
+                </form>
+            </div>
+        </li>
+        <!-- Context layers -->
+        <li>
+            <div class="collapsible-header"><i class="material-icons">layers</i>${_('Context layers')}</div>
+            <div class="collapsible-body">
+                <form action="#" id="context-layers-list">
+                    <!--  Placeholder context layer entries -->
+                </form>
+            </div>
         </li>
     </ul>
+</ul>
+
+<ul id="slide-out-filter" class="side-nav" style="min-width: 450px;">
+    <li>
+        <a href="#!"><i class="material-icons">filter_list</i>Filters</a>
+        <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+    </li>
+</ul>
+
+<!-- content -->
+<div class="row" style="margin: 0 !important;">
+    <div id="window_left"  class="col s12 m12 l8">
+        <div id="googleMapFull">
+        <!--  Placeholder for the map -->
+        </div>
+        <div class="preloader-wrapper big active" style="position: fixed; top: 50%; left: 23%;">
+            <div class="spinner-layer spinner-teal-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+        <div id="floating-buttons" style="text-align: right;">
+            <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 15px;" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
+                <i class="material-icons">filter_list</i>${_('Back')}
+            </a>
+            <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 40px;" data-position="top" data-tooltip="Map Options" data-activates="slide-out-map-options">
+                <i class="material-icons">map</i>${_('Back')}
+            </a>
+        </div>
+    </div>
+    <div id="window_right" class="col s12 m12  l4">
+
+        <div id="window-right-top" style="height: 50%;">
+            <ul class="tabs">
+                <li class="tab col s3"><a href="#tab1" class="active text-accent-color">Preview of deal</a></li>
+                <li class="tab col s3"><a href="#tab2" class="text-accent-color">News</a></li>
+            </ul>
+            <div id="tab1" class="col s12" style="padding: 30px;">
+                <div class="deal-data">
+                <h5 class="deal-headline">${_('Deal')}
+                    <span id="deal-shortid-span" class="underline">#</span>
+                </h5>
+                <ul id="taggroups-ul" class="text-primary-color">
+                    <li>
+                        <p>${_('Select a deal on the map to show details. If you select multiple deals, zoom in and use the list view to show the details.')}</p>
+                    </li>
+                </ul>
+                    </div>
+            </div>
+            <div id="tab2" class="col s12" style="padding: 30px;">
+                <h5 class="deal-headline text-primary-color">News</h5>
+            </div>
+        </div>
+        <div id="window-right-bottom" style="height: 50%;">
+            <ul class="tabs">
+                <li class="tab col s3"><a href="#bottom-tab1" class="active text-accent-color">Picture of the week</a></li>
+                <li class="tab col s3"><a href="#bottom-tab2" class="text-accent-color">Archive</a></li>
+            </ul>
+            <div id="bottom-tab1" class="col s12" style="text-align: center; height: 100%; margin: 0;">
+                  <img src="/custom/img/slides/pictureoftheweek.jpeg" id="img-weekpicture" style="margin-top: 30px; margin-bottom: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            </div>
+            <div id="bottom-tab2" class="col s12" style="padding: 30px;">
+                <h5 class="deal-headline">Archive</h5>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- map menu -->
-<div class="map-menu">
+<div class="map-menu" style="display: none;">
     <div id="map-menu-button-container">
         <h6 id="map-menu-button">
             <i class="icon-chevron-up"></i>
@@ -146,16 +264,12 @@ geomTaggroups = form_geomtaggroups(request)
 
 ## End of content
 
-<div id="mapModal" class="modal fade hide">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3 id="mapModalHeader"><!-- Placeholder --></h3>
-    </div>
-    <div id="mapModalBody" class="modal-body">
+<div id="mapModal" class="modal bottom-sheet">
+    <div id="mapModalBody" class="modal-content">
         <!-- Placeholder -->
     </div>
     <div class="modal-footer">
-        <button id="mapModalClose" class="btn" data-dismiss="modal" aria-hidden="true">${_('Close')}</button>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
 </div>
 

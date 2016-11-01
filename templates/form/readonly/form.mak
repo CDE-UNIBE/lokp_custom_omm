@@ -66,6 +66,8 @@ ${editToolbar('top')}
     % endif
 </div>
 
+
+
 % if not isStakeholder and not empty:
     ## Map container
     <div class="row-fluid">

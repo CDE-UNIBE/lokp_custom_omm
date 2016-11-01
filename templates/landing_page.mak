@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base_no_menu.mak" />
+<%inherit file="lmkp:customization/omm/templates/base_no_menu.mak" />
 
 <%def name="head_tags()">
 
