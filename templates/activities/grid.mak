@@ -1,5 +1,13 @@
 <%inherit file="lmkp:customization/omm/templates/base.mak" />
 
+<%
+    from lmkp.views.views import getFilterKeys
+    from lmkp.views.views import getActiveFilters
+
+    aFilterKeys, shFilterKeys = getFilterKeys(request)
+    activeFilters = getActiveFilters(request)
+%>
+
 <%def name="title()">${_('Grid View')} - ${_('Deals')}</%def>
 
 ## Start of content
@@ -17,6 +25,10 @@
 
 ## Filter
 ##<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+
+<ul id="slide-out-filter" class="side-nav" style="min-width: 550px;">
+    <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+</ul>
 
 <!-- content -->
 <div class="container">
@@ -243,7 +255,17 @@
 
         <div id="gridview_tableoptions" class="row">
             <!-- Buttons für Desktop Ansicht -->
-            <div class="col s3 right gridview_mobile_hidden">
+            <div class="col s6 right gridview_mobile_hidden">
+                <div style="float: right;">
+                    <a class="btn-floating tooltipped btn-large button-collapse" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
+                        <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
+                    </a>
+                    % if len(activeFilters) == 1:
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
+                    % else:
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
+                    % endif
+                </div>
                 <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Deals')}" href="${request.route_url('activities_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
                     <i class="icon-download-alt"></i>
                 </a>
@@ -251,6 +273,7 @@
                 <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', locale),('_PROFILE_', profile)))}">
                     <i class="icon-rss"></i>
                 </a>
+
 
                 % if default_search_translated:
                     <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Search by')} ${default_search_translated}" href="javascript:void(0)" id="search">
