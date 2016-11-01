@@ -914,9 +914,10 @@ p.deal-detail {
 
 #googleMapFull {
 	position: absolute;
-	width: 100%;
-	top: 85px;
+	width: 66.7%;
+	top: 64px;
 	bottom: 50px;
+	left: 0px;
 }
 
 .filter_area-opened {
@@ -935,8 +936,8 @@ p.deal-detail {
 	-moz-box-shadow: 0 0 2px black;
 	-webkit-box-shadow: 0 0 2px black;
 	box-shadow: 0 0 2px black;
-	width: 160px;
-	right: 11.8%;
+	width: 50%;
+	right: 0%;
 }
 
 .map-menu {
@@ -1051,8 +1052,8 @@ p.deal-detail {
 	margin: -24px 0 4px 20px;
 }
 #map-points-list {
-    margin-bottom: 10px;
-    margin-left: 15px;
+    margin-bottom: 0px;
+    margin-left: 0px;
 }
 
 
@@ -1529,8 +1530,7 @@ background-color: #CB820E;
 	}
 
 	#googleMapFull {
-		bottom: 25px;
-		z-index: 4;
+		bottom: 50px;
 	}
 
 	.basic-data {
@@ -1619,7 +1619,7 @@ background-color: #CB820E;
 	}
 
 	#googleMapFull {
-		top: 140px;
+		top: 64px;
 		bottom: 50px;
 	}
 
@@ -2116,8 +2116,8 @@ h3.form-below-toolbar {
     margin-top: 0;
 }
 #form-map-menu-content #map-points-list {
-    margin-bottom: 5px;
-    margin-left: 20px;
+    margin-bottom: 0px;
+    margin-left: 0px;
 }
 #form-map-menu-content .contentLayersMainCheckbox {
     margin-bottom: -6px;
@@ -2138,7 +2138,7 @@ h3.form-below-toolbar {
     cursor: pointer;
 }
 #new-filter-value-internal {
-    width: 178px;
+    width: 100%;
 }
 .input-append #new-filter-value {
     width: 147px;
@@ -2474,6 +2474,20 @@ a {
 
 /** base view (navigation and footer) **/
 
+.divider-menu {
+	border: none;
+	border-bottom: solid lightgrey 1px;
+	margin-bottom: 20px;
+}
+@media screen and (min-width: 982px) {
+    .divider-menu {
+		border-right: solid lightgrey 1px;
+		margin-right: 20px;
+		margin-left: 20px;
+		margin-bottom: 0px;
+    }
+}
+
 footer{
 	background-color: #E0E0E0;
 	width: 100%;
@@ -2488,13 +2502,33 @@ footer ul li a{
 	padding-left: 20px;
 }
 
+/** map view **/
+#window_right {
+	background-color: #EAEAEA;
+	-webkit-box-shadow: inset 0 5px 6px -6px grey;
+	-webkit-box-shadow: inset 0 0 6px grey;
+	margin: 0 !important;
+}
+
+#window_right ul {
+	background-color: transparent;
+	margin: 0 !important;
+}
+#window_right .tabs .indicator {
+    background-color: teal;
+	margin: 0 !important;
+}
+#floating-buttons {
+	margin-top: 400px;
+}
+
 
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }
 .light-primary-color   { background: #F5F5F5; }
 .text-primary-color    { color: #212121; }
 .accent-color          { background: #009688; }
-.text-accent-color     { color: #009688; }
-.primary-text-color    { color: #212121; }
-.secondary-text-color  { color: #757575; }
+.text-accent-color     { color: #009688 !important; }
+.primary-text-color    { color: #757575; }
+.secondary-text-color  { color: #999999; }
 .divider-color         { border-color: #BDBDBD; }

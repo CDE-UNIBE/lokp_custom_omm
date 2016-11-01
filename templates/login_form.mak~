@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lmkp:customization/lo/templates/base.mak" />
 
 <%def name="title()">${_('Login')}</%def>
 
@@ -28,7 +28,7 @@ if 'lmkp.mode' in request.registry.settings:
                         ${warning | n}
                     </div>
                 % endif
-                <!--<form action="/login" method="POST">
+                <form action="/login" method="POST">
                     <fieldset class="simple_login">
                         <label for="login">${_(u"Username")}:</label>
                         <input class="input-style span12" type="text" id="login" name="login" /><br />
@@ -37,44 +37,15 @@ if 'lmkp.mode' in request.registry.settings:
                         <input type="hidden" name="came_from" value="${came_from}"/><br />
                         <input class="btn btn-primary" type="submit" name="form.submitted" value="${_('Login')}"/>
                     </fieldset>
-                </form>-->
-
-                  <div class="row">
-                    <form action="/login" method="POST" class="col s12">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix">account_circle</i>
-                                <input id="login" name="login" type="text" class="validate">
-                                <label for="login">${_(u"Username")}:</label>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix">lock_outline</i>
-                                <input id="password" name="password" type="password" class="validate">
-                                <label for="password">${_(u"Password")}:</label>
-                                <input type="hidden" name="came_from" value="${came_from}"/><br />
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <button class="btn waves-effect waves-light" type="submit" name="form.submitted" value="${_('Login')}">Submit
-                                    <i class="material-icons right">send</i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                  </div>
+                </form>
 
                 % if mode != 'demo':
                 <p>
                     <a href="/reset">${_(u"Forgot Password?")}</a>
                 </p>
-                <br>
+                <hr class="grey" />
                 <p>
-                    ${_('You dot not have a password yet?')}<br/><a href="${request.route_url('user_self_registration')}">${_('Register now!')}</a>
+                    ${_('You do not have a password yet?')}<br/><a href="${request.route_url('user_self_registration')}">${_('Register now!')}</a>
                 </p>
             </div>
         </div>

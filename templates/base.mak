@@ -83,7 +83,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
 
     </head>
 
-    <body>
+    <body onload="whenPageLoaded();">
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -92,16 +92,17 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <div class="wrap">
             <div id="main" class="clearfix">
                 ## Header
-                <ul id="dropdown_languages" class="dropdown-content">
+                <ul id="dropdown-languages" class="dropdown-content">
                     % for l in languages:
                         <li><a href="${handle_query_string(request.url, add=[('_LOCALE_', l[0])])}" class="text-accent-color">${l[1]}</a></li>
                     % endfor
                 </ul>
-                <nav class="grey lighten-2">
+                <nav class="grey lighten-2" style="z-index: 1001;">
                     <div class="nav-wrapper">
                         <div class="row">
                             <div class="col s10 offset-s1">
-                                <a href="${request.route_url('index')}" class="brand-logo left" style="float: left !important;">
+                                <a href="#" data-activates="mobile-menu" class="button-collapse text-accent-color"><i class="material-icons">menu</i></a>
+                                <a href="${request.route_url('index')}" class="brand-logo" style="float: left !important;">
                                     % if mode == 'demo':
                                         <img src="/custom/img/logo_demo.png" class="lo_logo" alt="${_('Land Observatory')}" />
                                     % else:
@@ -110,38 +111,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                 </a>
 
                                 <ul class="right hide-on-med-and-down">
-                                    <li><a class="dropdown-button text-accent-color" href="#!" data-activates="dropdown_languages">${selectedlanguage[1]}<i class="material-icons right">arrow_drop_down</i></a></li>
-                                </ul>
 
-                                <ul class="right hide-on-med-and-down">
-                                    % if request.user is None:
-                                        <li>
-                                            <div>
-                                                <a class="text-accent-color" href="${request.route_url('login_form')}">
-                                                    <i class="material-icons left" style="font-size: 20px;">account_circle</i>${_('Login')}
-                                                </a>
-                                            </div>
-                                        </li>
-                                    % if mode != 'demo':
-                                        <li>
-                                            <div>
-                                                <a class="text-accent-color" href="${request.route_url('user_self_registration')}">
-                                                    ${_('Register')}
-                                                </a>
-                                            </div>
-                                        </li>
-                                    % endif
-                                    % else:
-                                        <li>
-                                            <div>
-                                                <a class="text-accent-color" href="${request.route_url('user_account')}">${request.user.username}</a>
-                                                (<a href="${request.route_url('logout')}" class="blacklink">${_('Logout')}</a>)&nbsp;&nbsp;
-                                            </div>
-                                        </li>
-                                    % endif
-                                </ul>
-                                <div style="width: 100%; text-align: center; ">
-                                <ul style="display:inline-table;">
                                     <%
                                         # The entries of the top menus as arrays
                                         # with
@@ -179,10 +149,16 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                             % endif
                                             >
                                             <a href="${t[0][0]}${handle_query_string(request.url, return_value='query_string', remove=['bbox', 'order_by', 'dir'])}" class="text-accent-color">
-                                                <i class="material-icons left ">${t[1]}</i><span class="">&nbsp;&nbsp;${t[2]}</span>
+                                                <i class="material-icons left ">${t[1]}</i><span>&nbsp;&nbsp;${t[2]}</span>
                                             </a>
                                         </li>
                                     % endfor
+
+
+
+                                    <li class="divider-menu">&nbsp;</li>
+
+
 
                                     ## If the user is logged in, show link to add a new deal
                                     % if request.user:
@@ -197,19 +173,108 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                             </a>
                                         </li>
                                     % endif
-                                </ul></div>
+                                    % if request.user is None:
+                                        <li>
+                                            <div>
+                                                <a class="text-accent-color" href="${request.route_url('login_form')}">
+                                                    <i class="material-icons left" style="font-size: 20px;">account_circle</i>${_('Login')}
+                                                </a>
+                                            </div>
+                                        </li>
+                                    % if mode != 'demo':
+                                        <li>
+                                            <div>
+                                                <a class="text-accent-color" href="${request.route_url('user_self_registration')}">
+                                                    <i class="material-icons left" style="font-size: 20px;">person_add</i>${_('Register')}
+                                                </a>
+                                            </div>
+                                        </li>
+                                    % endif
+                                    % else:
+                                        <li>
+                                            <div>
+                                                <a class="text-accent-color" href="${request.route_url('user_account')}">${request.user.username}</a>
+                                                (<a href="${request.route_url('logout')}" class="blacklink">${_('Logout')}</a>)&nbsp;&nbsp;
+                                            </div>
+                                        </li>
+                                    % endif
+
+
+
+                                    <li>
+                                        <a class="dropdown-button text-accent-color" href="#!" data-activates="dropdown-languages">
+                                            <i class="material-icons left" style="font-size: 20px;">language</i>${selectedlanguage[1]}<i class="material-icons right">arrow_drop_down</i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </nav>
+
+                <ul id="dropdown-languages-mobile" class="dropdown-content">
+                    % for l in languages:
+                        <li><a href="${handle_query_string(request.url, add=[('_LOCALE_', l[0])])}" class="text-accent-color">${l[1]}</a></li>
+                    % endfor
+                </ul>
+                <ul class="side-nav" id="mobile-menu">
+                    % for t in topmenu:
+                        <li>
+                            <a class="text-accent-color" href="${t[0][0]}${handle_query_string(request.url, return_value='query_string', remove=['bbox', 'order_by', 'dir'])}">
+                                <i class="material-icons left">${t[1]}</i>${t[2]}
+                            </a>
+                        </li>
+                    % endfor
+
+                    <li class="divider-menu">&nbsp;</li>
+
+                    ## If the user is logged in, show link to add a new deal
+                    % if request.user:
+                        <li
+                            % if request.current_route_url() == request.route_url('activities_read_many', output='form'):
+                                class="active"
+                            % endif
+                            >
+                            <a href="${request.route_url('activities_read_many', output='form')}">
+                                <i class="icon-pencil"></i>
+                                <span class="hidden-verysmall">${_('New Deal')}</span>
+                            </a>
+                        </li>
+                    % endif
+                    % if request.user is None:
+                        <li>
+                            <a class="text-accent-color" href="${request.route_url('login_form')}">
+                                <i class="material-icons left" style="font-size: 20px;">account_circle</i>${_('Login')}
+                            </a>
+                        </li>
+                    % if mode != 'demo':
+                        <li>
+                            <a class="text-accent-color" href="${request.route_url('user_self_registration')}">
+                                    <i class="material-icons left" style="font-size: 20px;">person_add</i>${_('Register')}
+                            </a>
+                        </li>
+                    % endif
+                    % else:
+                        <li>
+                            <a class="text-accent-color" href="${request.route_url('user_account')}">${request.user.username}</a>
+                            (<a href="${request.route_url('logout')}" class="blacklink">${_('Logout')}</a>)&nbsp;&nbsp;
+                        </li>
+                    % endif
+                    <li>
+                        <a class="dropdown-button text-accent-color" href="#!" data-activates="dropdown-languages-mobile">
+                            <i class="material-icons left" style="font-size: 20px;">language</i>${selectedlanguage[1]}<i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                </ul>
 
                 ## End of Header
 
                 ## Content
 
                 ## Use the body of the child template
+                <div id="content" style="background-color: lightgray;">
                 ${self.body()}
-
+                </div>
                 ## End of Content
 
             </div>
@@ -275,11 +340,11 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
          /* ]]> */
         </script>
 
+
         <script type="text/javascript" src="/custom/js/vendor/bootstrap.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/materialize.min.js"></script>
-
-
+        <script type="text/javascript" src="/custom/js/vendor/typeahead.min.js"></script>
         <script type="text/javascript" src="${request.static_url('lmkp:static/v2/main.js')}"></script>
 
         % if use_piwik_analytics==True:
@@ -312,6 +377,60 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             except AttributeError:
                 pass
         %>
+
+        ## load the side navs (see in map_view) after loading the page, otherwise they dont open
+        ## hide load sign
+        <script>
+            function whenPageLoaded() {
+                $(".button-collapse").sideNav();
+                $(".preloader-wrapper").hide();
+                $('.modal-trigger').leanModal();
+                initializeDropdown();
+                document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
+                document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
+                document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width()-20) + "px";
+                document.getElementById("img-weekpicture").style.height = "auto";
+                if (document.getElementById("img-weekpicture").clientHeight > (document.getElementById("window-right-bottom").clientHeight-50-60)) {
+                    document.getElementById("img-weekpicture").style.height = String(document.getElementById("window-right-bottom").clientHeight-50-60) + "px";
+                    document.getElementById("img-weekpicture").style.width = "auto";
+                }
+            }
+            $(window).on( 'resize', function () {
+                document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
+                document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
+                document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width()-20) + "px";
+                document.getElementById("img-weekpicture").style.height = "auto";
+                if (document.getElementById("img-weekpicture").clientHeight > (document.getElementById("window-right-bottom").clientHeight-50-60)) {
+                    document.getElementById("img-weekpicture").style.height = String(document.getElementById("window-right-bottom").clientHeight-50-60) + "px";
+                    document.getElementById("img-weekpicture").style.width = "auto";
+                }
+                if ($(window).width() > 982) {
+                    document.getElementById("window-right-top").style.marginTop = "0px";
+                    document.getElementById("googleMapFull").style.width = "66.7%";
+                    document.getElementById("content").style.height = String(Math.max($('#googleMapFull').height(),$('#window_right').height())) + "px";
+                    $('#window_right').height(
+                            $('#googleMapFull').height()-1
+                    );
+                }
+                else {
+                    document.getElementById("window-right-top").style.marginTop = "25px";
+                    document.getElementById("googleMapFull").style.width = "100%";
+                    document.getElementById("content").style.height = String($('#googleMapFull').height() + $('#window_right').height()) + "px";
+                }}).resize();
+            function initializeDropdown() {
+                $('.dropdown-button').dropdown({
+                            inDuration: 300,
+                            outDuration: 225,
+                            constrain_width: false, // Does not change width of dropdown to that of the activator
+                            hover: true, // Activate on hover
+                            gutter: 0, // Spacing from edge
+                            belowOrigin: false, // Displays dropdown below the button
+                            alignment: 'left' // Displays dropdown with edge aligned to the left of button
+                        }
+                );
+            }
+
+        </script>
 
     </body>
 
