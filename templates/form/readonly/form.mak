@@ -66,7 +66,7 @@ ${editToolbar('top')}
     % endif
 </div>
 
-<ul id="slide-out-map-options" class="side-nav" style="min-width: 550px;">
+<ul id="slide-out-map-options" class="side-nav" style="min-width: 550px; z-index: 10000;">
     <ul class="collapsible" data-collapsible="accordion">
         <!-- Deals -->
         <li>
