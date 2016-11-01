@@ -48,12 +48,12 @@
             <div class="control-group new-filter" style="padding-left: 50px; padding-top: 30px;">
                 <div class="controls">
                     ## Key
-                    <a id="new-filter-key" class='dropdown-button btn' href='#' data-activates='dropdown1' style="width: 80%;">${_('Key')}<i class="material-icons right">arrow_drop_down</i></a>
+                    <a id="new-filter-key" class='dropdown-button btn' href='#' data-activates='dropdown_categories' style="width: 80%;">${_('Key')}<i class="material-icons right">arrow_drop_down</i></a>
                     <input id="new-filter-key-internal" type="hidden" value=""/>
 
                     <input id="new-filter-itemtype" type="hidden" value="a"/>
 
-                    <ul class="dropdown-content" id="dropdown1">
+                    <ul class="dropdown-content" id="dropdown_categories">
                         <li class="disabled filterCategory">${_('Deals')}</li>
                         % for k in aFilterKeys:
                         <% escaped_k = k[0].replace("'", "\\'") %>
