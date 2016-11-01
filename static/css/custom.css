@@ -196,19 +196,15 @@ hr.lightgray {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -25px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
 	max-width: 100%;
 }
 
 .footer,
 .push  {
-	height: 25px; /* .push must be the same height as .footer */
-}
-
-.landing-page-footer,
-.landing-page-push  {
 	height: 50px; /* .push must be the same height as .footer */
 }
+
 
 .push-top {
 	padding-top: 58px;
@@ -216,7 +212,7 @@ hr.lightgray {
 
 
 #main {
-	padding-bottom: 25px;
+	padding-bottom: 50px;
 }  /* Muss genau so hoch sein wie der Footer */
 
 
@@ -919,8 +915,8 @@ p.deal-detail {
 #googleMapFull {
 	position: absolute;
 	width: 100%;
-	top: 109px;
-	bottom: 25px;
+	top: 85px;
+	bottom: 50px;
 }
 
 .filter_area-opened {
@@ -945,7 +941,7 @@ p.deal-detail {
 
 .map-menu {
 	position: absolute;
-	bottom: 25px;
+	bottom: 50px;
 	background-color: white;
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
@@ -1546,7 +1542,7 @@ background-color: #CB820E;
 	}
 
 	.map-menu {
-		bottom: 25px;
+		bottom: 50px;
 		right: 0;
 		width: auto;
 		background-color: white;
@@ -1624,7 +1620,7 @@ background-color: #CB820E;
 
 	#googleMapFull {
 		top: 140px;
-		bottom: 25px;
+		bottom: 50px;
 	}
 
 	.basic-data {
@@ -1636,7 +1632,7 @@ background-color: #CB820E;
 	}
 
 	.map-menu {
-		bottom: 25px;
+		bottom: 50px;
 		right: 0;
 		width: auto;
 		background-color: white;
@@ -1769,7 +1765,7 @@ background-color: #CB820E;
 	}
 
 	#googleMapFull {
-		bottom: 25px;
+		bottom: 50px;
 	}
 
 	.basic-data {
@@ -1779,7 +1775,7 @@ background-color: #CB820E;
 	}
 
 	.map-menu {
-		bottom: 25px;
+		bottom: 50px;
 		right: 0;
 		width: auto;
 		background-color: white;
@@ -2378,3 +2374,127 @@ a:hover i, a:focus i {
 .item-toolbar i {
 	margin-left: 5px;
 }
+
+
+/*** REDESIGN ***/
+
+.brand-logo {
+	height: 80%;
+	line-height: 90px;
+	padding: auto;
+	vertical-align: middle;
+}
+.brand-logo img {
+	height: 100%;
+}
+.col-main-page {
+	text-align: center;
+}
+
+.slider-landingpage .indicators .indicator-item.active {
+	background-color: teal;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: teal !important;
+}
+.slider h3 {
+	color: teal;
+	text-shadow: 1px 1px 1px #000;
+}
+.slider h5 {
+	text-shadow: 1px 1px 1px #000;
+}
+
+/** landing page **/
+.slider-landingpage{
+	margin-top: 20px;
+	height: 450px;
+}
+
+/** show cases **/
+.slider-showcases {
+	width: 50%;
+	left: 25%;
+	margin-top: 50px;
+}
+.slider-showcases .slides-showcases {
+	background-color: transparent;
+	margin: 0;
+}
+
+.slider-showcases .slides-showcases li img {
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-size:100% auto;
+	background-repeat: no-repeat;
+}
+.caption {
+	height: 100%;
+}
+.main-text {
+	margin-top: 50px;
+	text-align: justify;
+}
+.title-showcase {
+	margin-top: 150px;
+	margin-bottom: 50px;
+}
+.showcase {
+	display: none;
+}
+.showcase p {
+	text-align: justify;
+}
+.showcase h4 {
+	margin-top: 50px;
+}
+.btn-read-more {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.modal-showcases {
+	 width: 90%;
+}
+.modal-trigger-showcases {
+	margin-bottom: 100px;
+}
+.img-popup-showcases {
+	width: 80%;
+}
+.btn-back {
+	position: fixed;
+	bottom: 2%;
+	left: 2%;
+}
+a {
+	color: teal;
+}
+
+/** base view (navigation and footer) **/
+
+footer{
+	background-color: #E0E0E0;
+	width: 100%;
+	margin-bottom: 0px;
+	height: 50px;
+	line-height: 50px;
+}
+
+footer ul li a{
+	color: teal;
+	float: right;
+	padding-left: 20px;
+}
+
+
+.dark-primary-color    { background: #616161; }
+.default-primary-color { background: #9E9E9E; }
+.light-primary-color   { background: #F5F5F5; }
+.text-primary-color    { color: #212121; }
+.accent-color          { background: #009688; }
+.text-accent-color     { color: #009688; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }

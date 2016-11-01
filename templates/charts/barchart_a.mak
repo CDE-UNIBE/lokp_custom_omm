@@ -1,6 +1,6 @@
 <%def name="height()">500</%def>
 
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_("Deal bar charts")}</%def>
 

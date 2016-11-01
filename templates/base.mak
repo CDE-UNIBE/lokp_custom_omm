@@ -45,22 +45,19 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width" />
 
-        <link rel="stylesheet" href="/custom/css/bootstrap-combined.no-icons.min.css"></link>
-        <link rel="stylesheet" href="/custom/css/font-awesome/css/font-awesome.min.css"></link>
 
-        <link rel="stylesheet" href="/custom/css/bootstrap-responsive.min.css"></link>
-        <link rel="stylesheet" href="/custom/css/main.css"></link>
+        <link rel="stylesheet" href="/custom/css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/custom/css/main.css">
 
-        <link rel="stylesheet" href="/custom/css/custom.css"></link>
+
+        <link rel="stylesheet" href="/custom/css/custom.css">
 
         <!--[if IE 7]>
 
-            <link rel="stylesheet" href="/custom/css/ie7.css"></link>
-            <link rel="stylesheet" href="/custom/css/font-awesome/css/font-awesome-ie7.css"></link>
+            <link rel="stylesheet" href="/custom/css/ie7.css">
+            <link rel="stylesheet" href="/custom/css/font-awesome/css/font-awesome-ie7.css">
 
         <![endif]-->
-
-
         <!--[if IE 8]>
 
             <link rel="stylesheet" href="/custom/css/ie8.css"></link>
@@ -68,6 +65,13 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <![endif]-->
 
         <script type="text/javascript" src="/custom/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link type="text/css" rel="stylesheet" href="/custom/css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         ## Include the head tags of the child template if available.
         <%
@@ -78,166 +82,126 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         %>
 
     </head>
+
     <body>
+
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
         <div class="wrap">
             <div id="main" class="clearfix">
-
                 ## Header
-
-                <div class="navbar header_self">
-                    <div class="container">
-                        <div class="logo">
-                            <a href="${request.route_url('index')}">
-                                % if mode == 'demo':
-                                    <img src="/custom/img/logo_demo.png" alt="${_('Land Observatory')}" />
-                                % else:
-                                    <img src="/custom/img/logo.png" alt="${_('Land Observatory')}" />
-                                % endif
-                            </a>
-                        </div>
-                        <ul class="top-menu">
-                            <%
-                                # The entries of the top menus as arrays
-                                # with
-                                # - an array of urls (the first one being used for the link)
-                                # - icon (li class)
-                                # - name
-                                topmenu = [
-                                    [
-                                        [request.route_url('map_view')],
-                                        'icon-map-marker',
-                                        _('Map')
-                                    ], [
-                                        [
-                                            request.route_url('grid_view'),
-                                            request.route_url('activities_read_many', output='html'),
-                                            request.route_url('stakeholders_read_many', output='html'),
-                                            request.route_url('stakeholders_byactivities_all', output='html')
-                                        ],
-                                        'icon-align-justify',
-                                        _('Grid')
-                                    ], [
-                                        [
-                                            request.route_url('charts_view'),
-                                            request.route_url('charts_overview')
-                                        ],
-                                        'icon-bar-chart',
-                                        _('Charts')
-                                    ]
-                                ]
-                            %>
-
-                            % for t in topmenu:
-                                <li
-                                    % if request.current_route_url() in t[0]:
-                                        class="active grid"
+                <ul id="dropdown_languages" class="dropdown-content">
+                    % for l in languages:
+                        <li><a href="${handle_query_string(request.url, add=[('_LOCALE_', l[0])])}" class="text-accent-color">${l[1]}</a></li>
+                    % endfor
+                </ul>
+                <nav class="grey lighten-2">
+                    <div class="nav-wrapper">
+                        <div class="row">
+                            <div class="col s10 offset-s1">
+                                <a href="${request.route_url('index')}" class="brand-logo left" style="float: left !important;">
+                                    % if mode == 'demo':
+                                        <img src="/custom/img/logo_demo.png" class="lo_logo" alt="${_('Land Observatory')}" />
+                                    % else:
+                                        <img src="/custom/img/logo_new.png" alt="${_('Land Observatory')}"/>
                                     % endif
-                                    >
-                                    <a href="${t[0][0]}${handle_query_string(request.url, return_value='query_string', remove=['bbox', 'order_by', 'dir'])}">
-                                        <i class="${t[1]}"></i><span class="hidden-verysmall">&nbsp;&nbsp;${t[2]}</span>
-                                    </a>
-                                </li>
-                            % endfor
+                                </a>
 
-                            ## If the user is logged in, show link to add a new deal
-                            % if request.user:
-                                <li
-                                    % if request.current_route_url() == request.route_url('activities_read_many', output='form'):
-                                        class="active grid"
-                                    % endif
-                                    >
-                                    <a href="${request.route_url('activities_read_many', output='form')}" >
-                                        <i class="icon-pencil"></i>
-                                        <span class="hidden-verysmall">${_('New Deal')}</span>
-                                    </a>
-                                </li>
-                            % endif
-                        </ul>
-                        <div class="user">
-                            <ul class="nav nav-pills">
-                                % if request.user is None:
-                                    <li class="active">
-                                        <div>
-                                            <a class="blacktemp" href="${request.route_url('login_form')}">
-                                                ${_('Login')}
-                                            </a>
-                                        </div>
-                                    </li>
-                                    % if mode != 'demo':
-                                        <li>/</li>
-                                        <li class="active">
+                                <ul class="right hide-on-med-and-down">
+                                    <li><a class="dropdown-button text-accent-color" href="#!" data-activates="dropdown_languages">${selectedlanguage[1]}<i class="material-icons right">arrow_drop_down</i></a></li>
+                                </ul>
+
+                                <ul class="right hide-on-med-and-down">
+                                    % if request.user is None:
+                                        <li>
                                             <div>
-                                                <a class="blacktemp" href="${request.route_url('user_self_registration')}">
+                                                <a class="text-accent-color" href="${request.route_url('login_form')}">
+                                                    <i class="material-icons left" style="font-size: 20px;">account_circle</i>${_('Login')}
+                                                </a>
+                                            </div>
+                                        </li>
+                                    % if mode != 'demo':
+                                        <li>
+                                            <div>
+                                                <a class="text-accent-color" href="${request.route_url('user_self_registration')}">
                                                     ${_('Register')}
                                                 </a>
                                             </div>
                                         </li>
                                     % endif
-                                % else:
-                                    <li>
-                                        <div>
-                                            <a class="blacklink" href="${request.route_url('user_account')}">${request.user.username}</a>
-                                            (<a href="${request.route_url('logout')}" class="blacklink">${_('Logout')}</a>)&nbsp;&nbsp;
-                                        </div>
-                                    </li>
-                                % endif
+                                    % else:
+                                        <li>
+                                            <div>
+                                                <a class="text-accent-color" href="${request.route_url('user_account')}">${request.user.username}</a>
+                                                (<a href="${request.route_url('logout')}" class="blacklink">${_('Logout')}</a>)&nbsp;&nbsp;
+                                            </div>
+                                        </li>
+                                    % endif
+                                </ul>
+                                <div style="width: 100%; text-align: center; ">
+                                <ul style="display:inline-table;">
+                                    <%
+                                        # The entries of the top menus as arrays
+                                        # with
+                                        # - an array of urls (the first one being used for the link)
+                                        # - icon (li class)
+                                        # - name
+                                        topmenu = [
+                                            [
+                                                [request.route_url('map_view')],
+                                                'public',
+                                                _('Map')
+                                            ], [
+                                                [
+                                                    request.route_url('grid_view'),
+                                                    request.route_url('activities_read_many', output='html'),
+                                                    request.route_url('stakeholders_read_many', output='html'),
+                                                    request.route_url('stakeholders_byactivities_all', output='html')
+                                                ],
+                                                'list',
+                                                _('List')
+                                            ], [
+                                                [
+                                                    request.route_url('charts_view'),
+                                                    request.route_url('charts_overview')
+                                                ],
+                                                'insert_chart',
+                                                _('Charts')
+                                            ]
+                                        ]
+                                    %>
+                                    % for t in topmenu:
+                                        <li
+                                            % if request.current_route_url() in t[0]:
+                                                class="active"
+                                            % endif
+                                            >
+                                            <a href="${t[0][0]}${handle_query_string(request.url, return_value='query_string', remove=['bbox', 'order_by', 'dir'])}" class="text-accent-color">
+                                                <i class="material-icons left ">${t[1]}</i><span class="">&nbsp;&nbsp;${t[2]}</span>
+                                            </a>
+                                        </li>
+                                    % endfor
 
-                                <li>|</li>
-                                <li>
-                                    <div class="dropdown">
-                                        <a class="dropdown-toggle blacktemp" data-toggle="dropdown" href="#">
-                                            <span class="link-icon-right">${selectedlanguage[1]}</span><b class="caret"></b>
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                            % for l in languages:
-                                                <li class="cursor">
-                                                    <a href="${handle_query_string(request.url, add=[('_LOCALE_', l[0])])}">${l[1]}</a>
-                                                </li>
-                                            % endfor
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>|</li>
-                                <li>
-                                    <div class="dropdown">
-                                        <a href="${request.route_url('index')}" class="blacktemp">${_('Home')}</a>
-                                    </div>
-                                </li>
-                                <%
-
-                                """
-                                % if len(profiles) >= 1:
-                                   <li>|</li>
-                                   <li>
-                                       <div class="dropdown">
-                                           <a class="dropdown-toggle blacktemp" data-toggle="dropdown" href="#">
-                                               % if selectedprofile is None:
-                                                   ${_('Select Profile')}
-                                               % else:
-                                                   ${selectedprofile[1]}
-                                               % endif
-                                               <b class="caret"></b>
-                                           </a>
-                                           <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                               % for p in profiles:
-                                                   <li class="cursor">
-                                                       <a href="/${p[0]}">${p[1]}</a>
-                                                   </li>
-                                               % endfor
-                                           </ul>
-                                       </div>
-                                   </li>
-                               % endif
-                               """
-                               %>
-                            </ul>
+                                    ## If the user is logged in, show link to add a new deal
+                                    % if request.user:
+                                        <li
+                                            % if request.current_route_url() == request.route_url('activities_read_many', output='form'):
+                                                class="active"
+                                            % endif
+                                            >
+                                            <a href="${request.route_url('activities_read_many', output='form')}" >
+                                                <i class="icon-pencil"></i>
+                                                <span class="hidden-verysmall">${_('New Deal')}</span>
+                                            </a>
+                                        </li>
+                                    % endif
+                                </ul></div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </nav>
 
                 ## End of Header
 
@@ -249,56 +213,59 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                 ## End of Content
 
             </div>
-            <div class="push"></div>
         </div>
 
         ## Footer
+        <footer>
+            <div class="row" style="margin: 0;">
+                <div class="col s10 offset-s1">
+                    <ul>
+                        <%
+                        # The entries of the footer as arrays with
+                        # - url
+                        # - name
+                        footer = [
+                            [request.route_url('faq_view'), _('FAQ')],
+                            [request.route_url('about_view'), _('About')],
+                            [request.route_url('partners_view'), _('Partners & Donors')]
+                        ]
+                        %>
 
-        <div class="navbar footer">
-            <ul class="nav pull-right">
-                <li>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=${quote_plus(request.url)}"
-                       onclick="javascript:window.open(this.href, '',
-                           'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;">
-                        <i class="icon-facebook" style="line-height: 0.5em;"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/intent/tweet?text=${quote_plus(request.url)}&via=LandObservatory"
-                       onclick="javascript:window.open(this.href, '',
-                           'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;">
-                        <i class="icon-twitter" style="line-height: 0.5em;"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://plus.google.com/share?url=${quote_plus(request.url)}"
-                       onclick="javascript:window.open(this.href, '',
-                           'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;">
-                        <i class="icon-google-plus" style="line-height: 0.5em;"></i>
-                    </a>
-                </li>
-                <%
-                # The entries of the footer as arrays with
-                # - url
-                # - name
-                footer = [
-                    [request.route_url('faq_view'), _('FAQ')],
-                    [request.route_url('about_view'), _('About')],
-                    [request.route_url('partners_view'), _('Partners & Donors')]
-                ]
-                %>
+                        % for f in footer:
+                            <li
+                                % if request.current_route_url() == f[0]:
+                                    class="active"
+                                % endif
+                                >
+                                <a href="${f[0]}">${f[1]}</a>
+                            </li>
+                        % endfor
 
-                % for f in footer:
-                    <li
-                        % if request.current_route_url() == f[0]:
-                            class="active"
-                        % endif
-                        >
-                        <a href="${f[0]}">${f[1]}</a>
-                    </li>
-                % endfor
-            </ul>
-        </div>
+                        <li>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=${quote_plus(request.url)}" style="padding-right: 30px;"
+                               onclick="javascript:window.open(this.href, '',
+                                   'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;">
+                                <i class="icon-facebook" style="line-height: 0.5em;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/intent/tweet?text=${quote_plus(request.url)}&via=LandObservatory"
+                               onclick="javascript:window.open(this.href, '',
+                                   'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;">
+                                <i class="icon-twitter" style="line-height: 0.5em;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/share?url=${quote_plus(request.url)}"
+                               onclick="javascript:window.open(this.href, '',
+                                   'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;">
+                                <i class="icon-google-plus" style="line-height: 0.5em;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
         ## End of Footer
 
@@ -308,10 +275,10 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
          /* ]]> */
         </script>
 
-<!--        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-        <script>window.jQuery || document.write('<script type="text/javascript" src="/custom/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
         <script type="text/javascript" src="/custom/js/vendor/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/custom/js/vendor/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/custom/js/vendor/materialize.min.js"></script>
+
 
         <script type="text/javascript" src="${request.static_url('lmkp:static/v2/main.js')}"></script>
 

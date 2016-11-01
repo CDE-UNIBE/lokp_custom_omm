@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Map View')}</%def>
 
@@ -48,7 +48,7 @@ geomTaggroups = form_geomtaggroups(request)
 ## Start of content
 
 ## Filter
-<%include file="lmkp:customization/lo/templates/parts/filter.mak" />
+<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
 
 <!-- content -->
 <div id="googleMapFull">
