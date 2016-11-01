@@ -25,9 +25,7 @@
     var identifier = '${uid}';
     var version = ${version};
 </script>
-
 <%include file="lmkp:templates/map/mapform.mak" args="readonly=True" />
-
 % if site_key is not None:
 <script type="text/javascript" class="juvia">
     (function() {

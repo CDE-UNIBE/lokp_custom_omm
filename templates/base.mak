@@ -344,7 +344,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <script type="text/javascript" src="/custom/js/vendor/bootstrap.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/materialize.min.js"></script>
-        <script type="text/javascript" src="/custom/js/vendor/typeahead.min.js"></script>
+        <script type="text/javascript" src="/custom/js/vendor/typeahead.js"></script>
         <script type="text/javascript" src="${request.static_url('lmkp:static/v2/main.js')}"></script>
 
         % if use_piwik_analytics==True:
