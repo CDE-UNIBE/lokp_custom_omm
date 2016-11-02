@@ -34,9 +34,8 @@
                 ${_('Please select one of the download options below.')}
             </p>
         </div>
-        <hr class="grey" />
-        <div class="row-fluid">
-            <div class="span12 text-center">
+        <div class="row">
+            <div id="downloadoverviewbuttoncontainer" class="col s12 ">
                 <div style="float: right;">
                     <a class="btn-floating tooltipped btn-large button-collapse" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
                         <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>

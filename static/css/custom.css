@@ -2663,6 +2663,11 @@ footer ul li a{
 	margin-top: 30px;
 }
 
+#downloadoverviewbuttoncontainer{
+	margin-top: 30px;
+	padding: 0;
+}
+
 
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }
