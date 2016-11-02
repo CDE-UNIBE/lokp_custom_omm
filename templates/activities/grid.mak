@@ -255,22 +255,21 @@
 
         <div id="gridview_tableoptions" class="row">
             <!-- Buttons für Desktop Ansicht -->
-            <div class="col s6 right gridview_mobile_hidden">
-                <div style="float: right;">
-                    <a class="btn-floating tooltipped btn-large button-collapse" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
+            <div class="col s3 right gridview_mobile_hidden">
+                    <a class="btn-floating btn-large tooltipped waves-effect waves-light button-collapse gridview_button" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
                         <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
                     </a>
                     % if len(activeFilters) == 1:
-                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 190px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
                     % else:
-                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 190px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
                     % endif
-                </div>
-                <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Deals')}" href="${request.route_url('activities_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
+
+                <a id="downloadbuttonbugfix" class="btn-floating btn-large  accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Deals')}" href="${request.route_url('activities_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
                     <i class="icon-download-alt"></i>
                 </a>
 
-                <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', locale),('_PROFILE_', profile)))}">
+                <a  class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', locale),('_PROFILE_', profile)))}" style="top:-18px;">
                     <i class="icon-rss"></i>
                 </a>
 
@@ -291,16 +290,15 @@
 
             <!-- Buttons für Mobile Ansicht -->
             <div class="col right gridview_desktop_hidden">
-                <div style="float: right;">
-                        <a class="btn-floating tooltipped btn-large button-collapse" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
-                            <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
-                        </a>
-                        % if len(activeFilters) == 1:
-                            <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
-                        % else:
-                            <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
-                        % endif
-                </div>
+                <a class="btn-floating btn-large tooltipped waves-effect waves-light button-collapse gridview_button" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
+                        <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
+                    </a>
+                    % if len(activeFilters) == 1:
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 240px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
+                    % else:
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 240px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
+                    % endif
+
                 <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Deals')}" href="${request.route_url('activities_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
                     <i class="icon-download-alt"></i>
                 </a>
