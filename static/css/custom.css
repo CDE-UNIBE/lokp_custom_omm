@@ -2587,7 +2587,7 @@ footer ul li a{
     left: 2%;
 }
 
-@media screen and ( max-width: 1512px ) {
+@media screen and ( max-width: 1557px ) {
 	#downloadbuttonbugfix{
 		top:-18px;
 	}

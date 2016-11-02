@@ -250,17 +250,50 @@
 
         <div id="gridview_tableoptions" class="row">
             <!-- Buttons für Desktop Ansicht -->
-            <div class="col s6 right gridview_mobile_hidden">
-                <div style="float: right;">
-                    <a class="btn-floating tooltipped btn-large button-collapse" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
+            <div class="col s3 right gridview_mobile_hidden">
+                <a class="btn-floating btn-large tooltipped waves-effect waves-light button-collapse gridview_button" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
+                    <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
+                </a>
+                % if len(activeFilters) == 1:
+                    <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 190px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
+                % else:
+                    <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 190px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
+                % endif
+
+                <a id="downloadbuttonbugfix" class="btn-floating btn-large  accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Investors')}" href="${request.route_url('stakeholders_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
+                    <i class="icon-download-alt"></i>
+                </a>
+
+                <a  class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', locale),('_PROFILE_', profile)))}" style="top:-18px;">
+                    <i class="icon-rss"></i>
+                </a>
+
+
+                % if default_search_translated:
+                    <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Search by')} ${default_search_translated}" href="javascript:void(0)" id="search">
+                        <i class="icon-search"></i>
+                    </a>
+                % endif
+            </div>
+
+            ## Pagination
+            % if len(data) > 0:
+                <%include file="lmkp:templates/parts/pagination.mak"
+                    args="totalitems=total, currentpage=currentpage, pagesize=pagesize, itemsname=_('Deals')"
+                />
+            % endif
+
+            <!-- Buttons für Mobile Ansicht -->
+            <div class="col right gridview_desktop_hidden">
+                <a class="btn-floating btn-large tooltipped waves-effect waves-light button-collapse gridview_button" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
                         <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
                     </a>
                     % if len(activeFilters) == 1:
-                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 240px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
                     % else:
-                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 240px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
                     % endif
-                </div>
+
                 <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Investors')}" href="${request.route_url('stakeholders_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
                     <i class="icon-download-alt"></i>
                 </a>
@@ -270,50 +303,12 @@
                 </a>
 
                 % if default_search_translated:
-                        <li class="grid-tab-right">
-                            <a href="javascript:void(0)" id="search" data-toggle="tooltip" title="${_('Search by')} ${default_search_translated}">
-                                <i class="icon-search"></i>
-                            </a>
-                        </li>
+                    <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Search by')} ${default_search_translated}" href="javascript:void(0)" id="search">
+                        <i class="icon-search"></i>
+                    </a>
                 % endif
             </div>
-
-            ## Pagination
-            % if len(data) > 0:
-                <%include file="lmkp:templates/parts/pagination.mak"
-                    args="totalitems=total, currentpage=currentpage, pagesize=pagesize, itemsname=_('Investors')"
-                />
-            % endif
-
-             <!-- Buttons für Mobile Ansicht -->
-                <div class="col s3 right gridview_desktop_hidden">
-                    <div style="float: right;">
-                        <a class="btn-floating tooltipped btn-large button-collapse" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
-                            <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
-                        </a>
-                        % if len(activeFilters) == 1:
-                            <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
-                        % else:
-                            <span class="badge" style="color: white; background-color: #323232; position: relative; top: -25px; left: -40px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
-                        % endif
-                    </div>
-                    <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Investors')}" href="${request.route_url('stakeholders_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
-                        <i class="icon-download-alt"></i>
-                    </a>
-
-                    <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', locale),('_PROFILE_', profile)))}">
-                        <i class="icon-rss"></i>
-                    </a>
-
-                    % if default_search_translated:
-                            <li class="grid-tab-right">
-                                <a href="javascript:void(0)" id="search" data-toggle="tooltip" title="${_('Search by')} ${default_search_translated}">
-                                    <i class="icon-search"></i>
-                                </a>
-                            </li>
-                    % endif
-                </div>
-            </div>
+        </div>
     </div>
 </div>
 
