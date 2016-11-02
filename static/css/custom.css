@@ -103,7 +103,6 @@ ul, ol  {
 	display: inline-block;
 }
 
-
 * html
 .clearfix {
 	height: 1%;
@@ -2649,6 +2648,17 @@ footer ul li a{
     padding: 0 5px;
 }
 
+/*Passwordview*/
+.simple_login{
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+
+#passwordresetbutton{
+	margin-top: 30px;
+}
+
 
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }
@@ -2660,4 +2670,3 @@ footer ul li a{
 .primary-text-color    { color: #757575; }
 .secondary-text-color  { color: #999999; }
 .divider-color         { border-color: #BDBDBD; }
-
