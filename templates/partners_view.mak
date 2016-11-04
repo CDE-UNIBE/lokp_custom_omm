@@ -26,7 +26,7 @@
                     </div>
                  </div>
             </a>
-
+            
             <a href="http://www.sdc.admin.ch/" target="_blank">
                 <div class="col s6">
                      <div class="valign-wrapper partnersimgdiv">
