@@ -25,20 +25,20 @@
 %>
 
 % if statusId != '2':
-    <div class="row-fluid">
-        <div class="span12 alert alert-block">
+    <div class="row">
+        <div class="col s12 alert alert-info card-panel accent-background-color white-text">
             % if statusId == '1':
                 ## Pending
-                <h4>${_('Pending Version')}</h4>
+                <h5>${_('Pending Version')}</h5>
                 <p>${_('You are seeing a pending version which needs to be reviewed before it is publicly visible.')}</p>
             % elif statusId == '3':
                 ## Inactive
-                <h4>${_('Inactive Version')}</h4>
+                <h5>${_('Inactive Version')}</h5>
                 <p>${_('You are seeing an inactive version which is not active anymore.')}</p>
             % else:
                 ## All the rest (deleted, rejected, edited).
                 ## TODO: Should there be a separate messages for these statuses?
-                <h4>${_('Not an active Version')}</h4>
+                <h5>${_('Not an active Version')}</h5>
                 <p>${_('You are seeing a version which is not active.')}</p>
             % endif
         </div>

@@ -2701,6 +2701,12 @@ ul.about li {
 	text-align: center;
 }
 
+/*History View*/
+.all_changset_description a{
+	color: #009688 !important;
+}
+
+
 
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }

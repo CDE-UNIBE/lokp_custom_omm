@@ -48,8 +48,8 @@ from lmkp.views.views import (
                                 % endif
                                 <td class="deal-history-links">
                                     % if isModerator and v['statusId'] == 1:
-                                    <a href="${request.route_url('activities_read_one', output='review', uid=v['identifier'], _query=(('new', v['version']),))}">
-                                        <i class="icon-check ttip" data-toggle="tooltip" data-original-title="${_('Review this version')}"></i>
+                                    <a href="${request.route_url('activities_read_one', output='review', uid=v['identifier'], _query=(('new', v['version']),))}" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="${_('Review this version')}">
+                                        <i class="icon-check text-accent-color"></i>
                                     </a>
                                     |
                                     % endif
@@ -58,8 +58,8 @@ from lmkp.views.views import (
                                     refV = v['version'] if v['version'] < activeVersion else activeVersion
                                     newV = v['version'] if v['version'] > activeVersion else activeVersion
                                     %>
-                                    <a href="${request.route_url('activities_read_one', output='compare', uid=v['identifier'], _query=(('ref', refV),('new', newV)))}">
-                                        <i class="icon-exchange ttip" data-toggle="tooltip" data-original-title="${_('Compare this version with the active version')}"></i>
+                                    <a href="${request.route_url('activities_read_one', output='compare', uid=v['identifier'], _query=(('ref', refV),('new', newV)))}" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="${_('Compare this version with the active version')}">
+                                        <i class="icon-exchange text-accent-color"></i>
                                     </a>
                                     |
                                     % endif
@@ -90,7 +90,7 @@ from lmkp.views.views import (
 
             <div class="row" style="margin-top: 50px;">
                 <div class="col s12">
-                    <a  class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('activities_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}" style="top:-18px;">
+                    <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('activities_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}" style="top:-18px;">
                     <i class="icon-rss"></i>
                 </a>
                 </div>

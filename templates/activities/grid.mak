@@ -265,7 +265,7 @@
                         <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 190px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
                     % endif
 
-                <a id="downloadbuttonbugfix" class="btn-floating btn-large  accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Deals')}" href="${request.route_url('activities_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
+                <a id="rssbuttonbugfix" class="btn-floating btn-large  accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Deals')}" href="${request.route_url('activities_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
                     <i class="icon-download-alt"></i>
                 </a>
 
