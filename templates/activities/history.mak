@@ -21,14 +21,6 @@ from lmkp.views.views import (
             </div>
         % else:
             <div class="row-fluid">
-                <div class="span9 text-right">
-                    <a href="${request.route_url('activities_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
-                        <i class="icon-rss"></i> ${_("Subscribe")}
-                    </a>
-                </div>
-            </div>
-
-            <div class="row-fluid">
                 <div class="span9">
                     <h3 class="form-below-toolbar">${_('Version History')}</h3>
                 </div>
@@ -71,8 +63,8 @@ from lmkp.views.views import (
                                     </a>
                                     |
                                     % endif
-                                    <a href="${request.route_url('activities_read_one', output='html', uid=v['identifier'], _query=(('v', v['version']),))}">
-                                        <i class="icon-eye-open ttip" data-toggle="tooltip" data-original-title="${_('View this version')}"></i>
+                                    <a href="${request.route_url('activities_read_one', output='html', uid=v['identifier'], _query=(('v', v['version']),))}" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="${_('View this version')}" >
+                                        <i class="icon-eye-open text-accent-color"></i>
                                     </a>
                                 </td>
                                 <td>
@@ -82,7 +74,7 @@ from lmkp.views.views import (
                                     ${v['timestamp']}
                                 </td>
                                 <td>
-                                    <a href="${request.route_url('changesets_read_byuser', username=v['username'], output='html')}">
+                                    <a href="${request.route_url('changesets_read_byuser', username=v['username'], output='html')}" class="text-accent-color ">
                                     ${v['username']}
                                     </a>
                                 </td>
@@ -95,11 +87,12 @@ from lmkp.views.views import (
                     </table>
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span9 text-right">
-                    <a href="${request.route_url('activities_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
-                        <i class="icon-rss"></i> ${_("Subscribe")}
-                    </a>
+
+            <div class="row" style="margin-top: 50px;">
+                <div class="col s12">
+                    <a  class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('activities_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}" style="top:-18px;">
+                    <i class="icon-rss"></i>
+                </a>
                 </div>
             </div>
         % endif
