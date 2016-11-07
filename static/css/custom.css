@@ -2220,18 +2220,6 @@ tr.pending {
     background-color: #EEEEEE !important;
 }
 
-/* About */
-ul.about {
-    list-style-type: disc;
-    margin: 0 25px 15px;
-}
-ul.about li {
-    margin: 5px 0;
-}
-.introvideo {
-    margin-top: 40px;
-}
-
 /* FAQ */
 ul.links {
     margin: 20px 0;
@@ -2544,6 +2532,10 @@ footer ul li a{
 	margin: 0 !important;
 }
 
+.twitter-typeahead {
+	margin-left: 50px;
+}
+
 /** Gridview **/
 #gridview_tab .tabs .indicator{
     background-color: teal;
@@ -2689,6 +2681,24 @@ footer ul li a{
 .partnersimg{
 	margin: 0 auto 0 auto;
 	width: 90%;
+}
+
+/*Aboutview */
+.lead{
+	font-size: 18px;
+}
+
+ul.about {
+    list-style-type: bullet;
+    margin: 0 25px 15px;
+}
+ul.about li {
+    margin: 5px 0;
+	list-style-type: disc;
+}
+.introvideo {
+    margin-top: 40px;
+	text-align: center;
 }
 
 

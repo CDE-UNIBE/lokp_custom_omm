@@ -70,13 +70,16 @@
 
                             <label class="text-accent-color">${_('Attributes')}</label>
                                 <div id="attributes_checkboxes" class="update_checkbox_in_overview">
+                                    <% i = 0 %>
                                     % for attribute in attributes:
+                                        <% id = attribute[0] + "_" + str(i) %>
                                     <p>
                                         <label class="checkbox">
-                                        <input id="${attribute[0]}" type="checkbox" checked="checked" value="${attribute[0]}" name="attributes">
-                                        <label for="${attribute[0]}">${attribute[1]}</label>
+                                        <input id="${id}" type="checkbox" checked="checked" value="${attribute[0]}" name="attributes">
+                                        <label for="${id}">${attribute[1]}</label>
                                             </label>
                                     </p>
+                                        <% i = i + 1 %>
                                     % endfor
                                 </div>
                       </div>
@@ -126,7 +129,6 @@
                     % endif
                 </div>
             </div>
-            ID bei Checkboxen muss noch dynamisch angepasst werden
         </form>
     </div>
 </div>
