@@ -2663,6 +2663,12 @@ footer ul li a{
 	margin-top: 30px;
 }
 
+
+/*Downloadview*/
+.optiondownloaddiv{
+	padding: 20px;
+}
+
 #downloadoverviewbuttoncontainer{
 	margin-top: 30px;
 	padding: 0;
