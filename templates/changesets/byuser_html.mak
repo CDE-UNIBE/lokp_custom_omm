@@ -12,16 +12,15 @@ from lmkp.views.views import (
 <%def name="inlinemenu()">
 <div class="row-fluid">
     <div class="span9 text-right">
-        <a href="${request.route_url('changesets_read_byuser', username=username, output='rss', _query=(('_LOCALE_', get_current_locale(request)),))}">
-            <i class="icon-rss"></i> ${_(u'Subscribe')}
+        <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_(u'Subscribe')}" href="${request.route_url('changesets_read_byuser', username=username, output='rss', _query=(('_LOCALE_', get_current_locale(request)),))}">
+            <i class="icon-rss"></i>
         </a>
-        &nbsp;|&nbsp
         % if pagesize != 10:
-        <a href="${request.route_url('changesets_read_latest', output='html', _query=(('pagesize', pagesize),))}">
+        <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_(u'All Changesets')}" href="${request.route_url('changesets_read_latest', output='html', _query=(('pagesize', pagesize),))}">
         % else:
-        <a href="${request.route_url('changesets_read_latest', output='html')}">
+        <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_(u'All Changesets')}" href="${request.route_url('changesets_read_latest', output='html')}">
         % endif
-            <i class="icon-list-ul"></i> ${_(u'All Changesets')}
+            <i class="icon-list-ul"></i>
         </a>
     </div>
 </div>
@@ -30,10 +29,7 @@ from lmkp.views.views import (
 <div class="container">
     <div class="content no-border">
 
-        ## Header menu bar
-        ${inlinemenu()}
-
-        <div class="alert alert-info">
+        <div class="alert alert-info card-panel accent-background-color white-text">
             ${_('Please note that only approved changes are visible in the changesets.')}
         </div>
 
@@ -67,13 +63,13 @@ from lmkp.views.views import (
                             %>
                             % if item['type'] == "activity":
                             <td>Update of deal
-                                <a href="${request.route_url('activities_read_one', output='html', uid=item['identifier'], _query=(('v', item['version']),))}">
+                                <a href="${request.route_url('activities_read_one', output='html', uid=item['identifier'], _query=(('v', item['version']),))}" class="text-accent-color">
                                     #${item['identifier'].split("-")[0].upper()}
                                 </a> on ${date} to version&nbsp;${item['version']}
                             </td>
                             % elif item['type'] == "stakeholder":
                             <td>Update of investor
-                                <a href="${request.route_url('stakeholders_read_one', output='html', uid=item['identifier'], _query=(('v', item['version']),))}">
+                                <a href="${request.route_url('stakeholders_read_one', output='html', uid=item['identifier'], _query=(('v', item['version']),))}" class="text-accent-color">
                                     #${item['identifier'].split("-")[0].upper()}
                                 </a>
                                 on ${date} to version&nbsp;${item['version']}</td>
@@ -85,19 +81,29 @@ from lmkp.views.views import (
             </div>
         </div>
 
-        ## Pagination
-        % if len(items) > 0:
-        <div class="row-fluid">
-            <div class="span9">
-                <%include file="lmkp:templates/parts/pagination.mak"
-                args="totalitems=totalitems, currentpage=currentpage, pagesize=pagesize, itemsname=_('Changesets')"
-                />
+        <div id="gridviw_tableoptions" class="row" style="margin-top: 30px;">
+            <!-- Buttons für Desktop Ansicht -->
+            <div class="col s3 right gridview_mobile_hidden">
+                ## Footer menu bar
+                ${inlinemenu()}
+            </div>
+
+            ## Pagination
+            % if len(items) > 0:
+            <div class="row-fluid">
+                <div class="span9">
+                    <%include file="lmkp:templates/parts/pagination.mak"
+                    args="totalitems=totalitems, currentpage=currentpage, pagesize=pagesize, itemsname=_('Changesets')"
+                    />
+                </div>
+            </div>
+            % endif
+
+            <!-- Buttons für Mobile Ansicht -->
+            <div class="col right gridview_desktop_hidden">
+                ## Footer menu bar
+                ${inlinemenu()}
             </div>
         </div>
-        % endif
-
-        ## Footer menu bar
-        ${inlinemenu()}
-
     </div>
 </div>
