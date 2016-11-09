@@ -2587,6 +2587,12 @@ footer ul li a{
     left: 2%;
 }
 
+@media screen and ( max-width: 1512px ) {
+	#downloadbuttonbugfix{
+		top:-18px;
+	}
+}
+
 @media screen and ( max-width: 1450px )  {
       /* linearization for grid module */
       .linearize-level-1 {
