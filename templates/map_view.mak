@@ -59,10 +59,11 @@
 
 
 <ul id="slide-out-map-options" class="side-nav" style="min-width: 550px;">
-
-    <div class="input-field" action="" style="height: 25px; line-height: 25px; margin: 18px;">
-        <i class="material-icons prefix" style="">search</i>
-        <input id="search" name="q" type="text" style="height: 20px; line-height: 20px;">
+    <div class="row" style="margin: 10px 0px 0px 0px;">
+        <div class="input-field col s11" action="">
+            <i class="material-icons prefix">search</i>
+            <input id="search" name="q" type="text" style="height: 20px; line-height: 20px;">
+        </div>
     </div>
 
     <ul class="collapsible" data-collapsible="accordion">
