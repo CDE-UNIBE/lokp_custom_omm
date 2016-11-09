@@ -2674,6 +2674,11 @@ footer ul li a{
 	padding: 0;
 }
 
+/* FAQ */
+#faqcollapsible{
+	margin-top: 50px;
+}
+
 
 .dark-primary-color    { background: #616161; }
 .default-primary-color { background: #9E9E9E; }
