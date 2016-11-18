@@ -9,132 +9,135 @@
 
 % if not isStakeholder:
 ## Map container
-<div class="row-fluid accordion accordion-group">
-    
-    <%
-     cls = 'accordion-heading category'
-     clsBody = 'row-fluid accordion-body collapse'
-     chevronClass = 'icon-chevron-down'
-     if geomChanged == 'change':
-        cls += ' change'
-        clsBody += ' in'
-        chevronClass = 'icon-chevron-up'
-    %>
-    
-    <div class="${cls}" id="form-map-compare-heading">
-        <div class="span12">
-            % if geomChanged == 'change':
-                <i class="icon-exclamation-sign ttip pointer" data-toggle="tooltip" data-original-title="${_('There are changes in this section')}"></i>
-            % endif
-            <a class="accordion-toggle" data-toggle="collapse" href="#collapse-map">
-                ${_('Map')}
-                <i class="${chevronClass}"></i>
-            </a>
-        </div>
-    </div>
-    <div id="collapse-map" class="${clsBody}">
-        <div class="span12">
-            <div id="googleMapNotFull">
-                <div class="form-map-compare-controls">
-                    <div class="form-map-compare-legend row-fluid">
-                        <div id="refMapLegend" class="span6 hide">
-                            <div class="checkbox-modified-small">
-                                <input type="checkbox" id="refLayerToggle" class="input-top" checked="checked">
-                                <label for="refLayerToggle"></label>
+<ul class="row comparemapcontainer collapsible">
+<li>
+
+            <%
+             cls = 'collapsible-header category row'
+             clsBody = 'row collapsible-body collapse'
+             chevronClass = 'expand_more'
+             if geomChanged == 'change':
+                cls += ' change'
+                clsBody += ' in'
+                chevronClass = 'expand_less'
+            %>
+
+            <div class="${cls}" id="form-map-compare-heading">
+                <div class="col s12 compareviewmapcollapsetitle">
+                    % if geomChanged == 'change':
+                        <i class="icon-exclamation-sign ttip pointer" data-toggle="tooltip" data-original-title="${_('There are changes in this section')}"></i>
+                    % endif
+                    <a class="accordion-toggle text-accent-color" data-toggle="collapse" href="#collapse-map">
+                        ${_('Map')}
+                        <i class="material-icons text-accent-color right">${chevronClass}</i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="collapse-map" class="${clsBody}">
+                <div class="col s12">
+                    <div id="googleMapNotFull">
+                        <div class="form-map-compare-controls">
+                            <div class="form-map-compare-legend row-fluid">
+                                <div id="refMapLegend" class="span6 hide">
+                                    <div class="checkbox-modified-small">
+                                        <input type="checkbox" id="refLayerToggle" class="input-top" checked="checked">
+                                        <label for="refLayerToggle"></label>
+                                    </div>
+                                    <p class="context-layers-description">
+                                        <span class="compare-legend" style="background:#00ccff;">&nbsp;</span>
+                                        <span id="refMapLegendEntry"></span>
+                                    </p>
+                                </div>
+                                <div id="newMapLegend" class="span6 hide">
+                                    <div class="checkbox-modified-small">
+                                        <input type="checkbox" id="newLayerToggle" class="input-top" checked="checked">
+                                        <label for="newLayerToggle"></label>
+                                    </div>
+                                    <p class="context-layers-description">
+                                        <span class="compare-legend" style="background:#ffcc00;">&nbsp;</span>
+                                        <span id="newMapLegendEntry"></span>
+                                    </p>
+                                </div>
                             </div>
-                            <p class="context-layers-description">
-                                <span class="compare-legend" style="background:#00ccff;">&nbsp;</span>
-                                <span id="refMapLegendEntry"></span>
-                            </p>
-                        </div>
-                        <div id="newMapLegend" class="span6 hide">
-                            <div class="checkbox-modified-small">
-                                <input type="checkbox" id="newLayerToggle" class="input-top" checked="checked">
-                                <label for="newLayerToggle"></label>
-                            </div>
-                            <p class="context-layers-description">
-                                <span class="compare-legend" style="background:#ffcc00;">&nbsp;</span>
-                                <span id="newMapLegendEntry"></span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="form-map-compare-menu">
-                        <button type="button" class="btn btn-mini pull-right form-map-menu-toggle ttip" data-close-text="<i class='icon-remove'></i>" data-toggle="tooltip" title="${_('Turn layers on and off')}"><i class="icon-cog"></i></button>
-                        <div class="accordion" id="form-map-menu-content">
-                            
-                            <!-- All deals -->
-                            <div class="map-menu-deals accordion-group">
-                                <h6 class="map-deals">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#form-map-menu-content" href="#contentLayers">
-                                        <i class="icon-chevron-right"></i>
-                                        ${_('All Deals')}
-                                    </a>
-                                </h6>
-                                <div id="contentLayers" class="accordion-body collapse">
-                                    <ul>
-                                        <li class="contentLayersMainCheckbox">
-                                            <div class="checkbox-modified-small">
-                                                <input class="input-top" type="checkbox" id="activityLayerToggle">
-                                                <label for="activityLayerToggle"></label>
-                                            </div>
-                                            <div id="map-deals-symbolization" class="dropdown context-layers-description">
-                                                ${_('Loading ...')}
-                                            </div>
-                                            <ul id="map-points-list" class="hide">
-                                                <!-- Placeholder for map points -->
+                            <div class="form-map-compare-menu">
+                                <button type="button" class="btn btn-mini pull-right form-map-menu-toggle ttip" data-close-text="<i class='icon-remove'></i>" data-toggle="tooltip" title="${_('Turn layers on and off')}"><i class="icon-cog"></i></button>
+                                <div class="accordion" id="form-map-menu-content">
+
+                                    <!-- All deals -->
+                                    <div class="map-menu-deals accordion-group">
+                                        <h6 class="map-deals">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#form-map-menu-content" href="#contentLayers">
+                                                <i class="icon-chevron-right"></i>
+                                                ${_('All Deals')}
+                                            </a>
+                                        </h6>
+                                        <div id="contentLayers" class="accordion-body collapse">
+                                            <ul>
+                                                <li class="contentLayersMainCheckbox">
+                                                    <div class="checkbox-modified-small">
+                                                        <input class="input-top" type="checkbox" id="activityLayerToggle">
+                                                        <label for="activityLayerToggle"></label>
+                                                    </div>
+                                                    <div id="map-deals-symbolization" class="dropdown context-layers-description">
+                                                        ${_('Loading ...')}
+                                                    </div>
+                                                    <ul id="map-points-list" class="hide">
+                                                        <!-- Placeholder for map points -->
+                                                    </ul>
+                                                </li>
                                             </ul>
-                                        </li>
-                                    </ul>
-                                    <ul id="map-areas-list">
-                                        <!-- Placeholder for area entries -->
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Base layers -->
-                            <div class="accordion-group">
-                                <h6>
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#form-map-menu-content" href="#baseLayers">
-                                        <i class="icon-chevron-right"></i>
-                                        ${_('Base layers')}
-                                    </a>
-                                </h6>
-                                <div id="baseLayers" class="accordion-body collapse">
-                                    <ul>
-                                        <li>
-                                            <label class="radio inline"><input type="radio" class="baseMapOptions" name="baseMapOptions" id="streetMapOption" value="streetMap" />${_('Street Map')}</label>
-                                        </li>
-                                        <li>
-                                            <label class="radio inline"><input type="radio" class="baseMapOptions" name="baseMapOptions" id="satelliteMapOption" value="satelliteMap" checked="checked" />${_('Satellite Imagery')}</label>
-                                        </li>
-                                        <li>
-                                            <label class="radio inline"><input type="radio" class="baseMapOptions" name="baseMapOptions" id="terrainMapOption" value="terrainMap" />${_('Terrain Map')}</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Context layers -->
-                            <div class="accordion-group">
-                                <h6>
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#form-map-menu-content" href="#contextLayers">
-                                        <i class="icon-chevron-right"></i>
-                                        ${_('Context layers')}
-                                    </a>
-                                </h6>
-                                <div id="contextLayers" class="accordion-body collapse">
-                                    <ul id="context-layers-list">
-                                          <!-- Placeholder for context layers entries -->
-                                    </ul>
+                                            <ul id="map-areas-list">
+                                                <!-- Placeholder for area entries -->
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Base layers -->
+                                    <div class="accordion-group">
+                                        <h6>
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#form-map-menu-content" href="#baseLayers">
+                                                <i class="icon-chevron-right"></i>
+                                                ${_('Base layers')}
+                                            </a>
+                                        </h6>
+                                        <div id="baseLayers" class="accordion-body collapse">
+                                            <ul>
+                                                <li>
+                                                    <label class="radio inline"><input type="radio" class="baseMapOptions" name="baseMapOptions" id="streetMapOption" value="streetMap" />${_('Street Map')}</label>
+                                                </li>
+                                                <li>
+                                                    <label class="radio inline"><input type="radio" class="baseMapOptions" name="baseMapOptions" id="satelliteMapOption" value="satelliteMap" checked="checked" />${_('Satellite Imagery')}</label>
+                                                </li>
+                                                <li>
+                                                    <label class="radio inline"><input type="radio" class="baseMapOptions" name="baseMapOptions" id="terrainMapOption" value="terrainMap" />${_('Terrain Map')}</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Context layers -->
+                                    <div class="accordion-group">
+                                        <h6>
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#form-map-menu-content" href="#contextLayers">
+                                                <i class="icon-chevron-right"></i>
+                                                ${_('Context layers')}
+                                            </a>
+                                        </h6>
+                                        <div id="contextLayers" class="accordion-body collapse">
+                                            <ul id="context-layers-list">
+                                                  <!-- Placeholder for context layers entries -->
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+    </li>
+</ul>
 % endif
 
 % for child in field:
