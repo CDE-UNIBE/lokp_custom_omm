@@ -718,11 +718,6 @@ div.item-grid-wrapper {
 	padding-left: 7px;
 }
 
-.grid-area {
-	border-top: 1px solid gray;
-	padding: 10px 0 0;
-}
-
 .select-list li {
 	float: left;
 	margin-bottom: 20px;
@@ -1300,24 +1295,6 @@ ul.country-selector {
 	border: none;
 }
 
-.accordion-heading.category a,
-span.emptyCategory {
-	background-color: #A3A708;
-	margin-bottom: 5px;
-	margin-top: 10px;
-	padding: 2px 8px 2px 8px;
-	border-radius: 4px;
-	color: white;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: 0.9em;
-	text-align: left;
-}
-
-span.emptyCategory {
-    display: block;
-}
-
 .accordion-toggle .icon-chevron-down,
 .accordion-toggle .icon-chevron-up {
 	float: right;
@@ -1346,23 +1323,11 @@ span.emptyCategory {
 	margin-top: 5px;
 }
 
-.accordion-heading.category.change a {
-	background-color: #cb820e;
-
-}
-
-.change {
-	background-color: rgba(203, 130, 14, 0.3);
-}
-
-.change .accordion-heading .accordion-toggle h5 {
-	color: #cb820e;
-}
-
 .change .icon-exclamation-sign {
-	color: #cb820e;
+	color:  #009688;;
 	position: absolute;
-	margin-left: -25px;
+	margin-left: -65px;
+	margin-top: -1px !important;
 	font-size: 180%;
 }
 
@@ -1881,6 +1846,7 @@ div.grid-area div.row-fluid div.span5 h5.moderate-metadata {
 }
 .fileDisplay {
     margin-bottom: 5px;
+	height: 50px;
 }
 .fileNameField input {
     border: 1px solid #A4A4A4;
@@ -2236,9 +2202,8 @@ ul.links li {
     color: #CB820E;
 }
 .taggroup-content {
-    padding-left: 20px;
-    padding-top: 10px;
 }
+
 .deal-moderate-content .accordion-group {
     margin-bottom: 0;
 }
@@ -2705,6 +2670,109 @@ ul.about li {
 .all_changset_description a{
 	color: #009688 !important;
 }
+
+/*Version Compare */
+.versioncomparetitle{
+	font-size: 14px;
+	margin: 0 0 0 0;
+	padding: 0;
+}
+
+.compareviewcontainer .row{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.comparedetailcontainer .row {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.grid-area {
+	border-top: 1px solid #ddd;
+	padding: 10px 0 0;
+}
+
+.comparedetailcontainer .deal-detail{
+	padding: 0;
+}
+
+.compareitem{
+	padding: 1.5rem 0px 2rem 1.5px;
+}
+
+.customheaderleft{
+	padding-left: 2rem;
+	padding-right: 0px !important;
+	width: 99%;
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+.customheaderright{
+	padding-left: 2rem !important;
+	width: 99%;
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+.category{
+	padding-left: 0px !important;
+}
+
+.comparedetailcontainer.collapsible{
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	box-shadow: none;
+}
+
+.comparemapcontainer {
+	margin-left: 0px !important;
+	margin-right: 4px !important;
+}
+
+.comparedetailcontainer .collapsible-header{
+	border-bottom: none;
+}
+
+.trennstrich{
+	padding-left: 0px;
+}
+
+.compareinvestortitle{
+	font-size: 20px;
+	margin-left: 1rem;
+	font-weight: bold;
+}
+
+.compareupdates{
+	position: relative;
+	left: -40px;
+	top: -8px;
+}
+
+#form-map-compare-heading {
+	margin-left: 1rem;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding-right: 0px;
+	border-bottom: none;
+}
+
+.comparedetailcontainer .pull-right a{
+	margin: 10px 2px 30px 0px;
+}
+
 
 
 
