@@ -53,6 +53,11 @@
 
 <%def name="bottom_tags()">
 <script type="text/javascript">
-    deform.load();
+
+    $(document).ready(function() {
+        Materialize.updateTextFields();
+        deform.load();
+      });
+
 </script>
 </%def>
