@@ -167,12 +167,18 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                                 class="active"
                                             % endif
                                             >
-                                            <a href="${request.route_url('activities_read_many', output='form')}" >
-                                                <i class="icon-pencil"></i>
-                                                <span class="hidden-verysmall">${_('New Deal')}</span>
-                                            </a>
+                                            <div>
+                                                <a class="text-accent-color" href="${request.route_url('activities_read_many', output='form')}">
+                                                    <i class="material-icons left" style="font-size: 20px;">mode_edit</i>${_('New Deal')}
+                                                </a>
+                                            </div>
                                         </li>
                                     % endif
+                                    <li>
+                                        <a class="dropdown-button text-accent-color" href="#!" data-activates="dropdown-languages">
+                                            <i class="material-icons left" style="font-size: 20px;">language</i>${selectedlanguage[1]}<i class="material-icons right">arrow_drop_down</i>
+                                        </a>
+                                    </li>
                                     % if request.user is None:
                                         <li>
                                             <div>
@@ -193,19 +199,19 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                     % else:
                                         <li>
                                             <div>
-                                                <a class="text-accent-color" href="${request.route_url('user_account')}">${request.user.username}</a>
-                                                (<a href="${request.route_url('logout')}" class="blacklink">${_('Logout')}</a>)&nbsp;&nbsp;
+                                                <a class="text-accent-color" href="${request.route_url('user_account')}">
+                                                    <i class="material-icons left" style="font-size: 20px;">account_circle</i>${request.user.username}
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <a class="text-accent-color" href="${request.route_url('logout')}">
+                                                    <i class="material-icons left" style="font-size: 20px;">exit_to_app</i>${_('Logout')}
+                                                </a>
                                             </div>
                                         </li>
                                     % endif
-
-
-
-                                    <li>
-                                        <a class="dropdown-button text-accent-color" href="#!" data-activates="dropdown-languages">
-                                            <i class="material-icons left" style="font-size: 20px;">language</i>${selectedlanguage[1]}<i class="material-icons right">arrow_drop_down</i>
-                                        </a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -344,7 +350,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <script type="text/javascript" src="/custom/js/vendor/bootstrap.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/materialize.min.js"></script>
-        <script type="text/javascript" src="/custom/js/vendor/typeahead.js"></script>
+        <script type="text/javascript" src="/custom/js/vendor/typeahead.min.js"></script>
         <script type="text/javascript" src="${request.static_url('lmkp:static/v2/main.js')}"></script>
 
         % if use_piwik_analytics==True:
