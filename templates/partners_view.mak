@@ -14,7 +14,7 @@
              <a href="http://www.landcoalition.org/" target="_blank">
                  <div class="col s6">
                      <div class="valign-wrapper partnersimgdiv">
-                        <img class="valign center-align partnersimg" src="/custom/img/logos/ilc.png" />
+                        <img class="valign center-align partnersimg" src="/custom/img/logos/ilc.png" style="width: auto;" />
                     </div>
                  </div>
              </a>
@@ -22,7 +22,7 @@
             <a href="http://www.cde.unibe.ch/" target="_blank">
                 <div class="col s6">
                      <div class="valign-wrapper partnersimgdiv">
-                        <img class="valign center-align partnersimg" src="/custom/img/logos/cde.jpg" style="height: 80%; width: auto;"/>
+                        <img class="valign center-align partnersimg" src="/custom/img/logos/cde.jpg" style="width: auto;"/>
                     </div>
                  </div>
             </a>
@@ -30,7 +30,7 @@
             <a href="http://www.sdc.admin.ch/" target="_blank">
                 <div class="col s6">
                      <div class="valign-wrapper partnersimgdiv">
-                        <img class="valign center-align partnersimg" src="/custom/img/logos/sdc.jpg" />
+                        <img class="valign center-align partnersimg" src="/custom/img/logos/sdc.jpg" style="width: auto;" />
                      </div>
                 </div>
             </a>
@@ -38,7 +38,7 @@
             <a href="http://www.fordfoundation.org/" target="_blank">
                 <div class="col s6">
                      <div class="valign-wrapper partnersimgdiv">
-                        <img class="valign center-align partnersimg" src="/custom/img/logos/fordfoundation.png" />
+                        <img class="valign center-align partnersimg" src="/custom/img/logos/fordfoundation.png" style="width: auto;" />
                      </div>
                 </div>
             </a>

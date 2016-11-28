@@ -17,7 +17,7 @@
                 <div class="col s12 m6">
                   <div class="card hoverable">
                     <div class="card-image">
-                     <img alt="${_('Deal bar charts')}" src="/custom/img/charts/barchart_a.png">
+                     <img alt="${_('Deal bar charts')}" src="/custom/img/charts/dealbarcharts.jpg">
                       <span class="card-title">${_('Deal bar charts')}</span>
                     </div>
                     <div class="card-action">
@@ -32,7 +32,7 @@
                   <div class="col s12 m6">
                       <div class="card hoverable">
                         <div class="card-image">
-                         <img alt="${_('Deal stacked bar charts')}" src="/custom/img/charts/stackedbarchart_a.png">
+                         <img alt="${_('Deal stacked bar charts')}" src="/custom/img/charts/implementationstatus.jpg">
                           <span class="card-title">${_('Deal stacked bar charts')}</span>
                         </div>
                         <div class="card-action">
@@ -46,7 +46,7 @@
                   <div class="col s12 m6">
                       <div class="card hoverable">
                         <div class="card-image">
-                         <img alt="${_('Investor bar charts')}" src="/custom/img/charts/barchart_sh.png">
+                         <img alt="${_('Investor bar charts')}" src="/custom/img/charts/investorbarcharts.jpg">
                           <span class="card-title">${_('Investor bar charts')}</span>
                         </div>
                         <div class="card-action">

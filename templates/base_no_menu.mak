@@ -134,7 +134,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             </div>
         </main>
 
-        <footer class="grey lighten-2" style="height: 40px; width: 100%; left: 10%;">
+        <footer class="grey lighten-2" style="height: 40px; width: 100%; left: 10%; margin-top: 50px;">
             <div class="row" style="margin: 0; padding: 0;">
                 <div class="col s10 offset-s1" style="line-height: 40px;">
                     <ul>

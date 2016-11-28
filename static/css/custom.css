@@ -62,7 +62,7 @@ ul {
 }
 
 
-::-webkit-input-placeholder,
+::-webkit-input-placeholder
  {
    color: #585858;
    opacity: 1;
@@ -2383,6 +2383,9 @@ a:hover i, a:focus i {
 	margin-top: 20px;
 	height: 450px;
 }
+.card-panel a {
+	color: silver;
+}
 
 /** show cases **/
 .slider-showcases {
@@ -2589,6 +2592,9 @@ footer ul li a{
 
 #graphoptions{
     margin-top: 50px;
+}
+.card-image img {
+	padding: 15px;
 }
 
 /*Dealview*/
