@@ -401,6 +401,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                         document.getElementById("img-weekpicture").style.width = "auto";
                     }
                 }
+                $('select').material_select();
             }
             $(window).on( 'resize', function () {
                 if ($('#floating-buttons').length > 0 && $('#floating-buttons').length > 0) {

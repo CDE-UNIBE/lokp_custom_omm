@@ -150,29 +150,32 @@ ${editToolbar('top')}
 % endif
 
 ${editToolbar('bottom')}
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 <%def name="editToolbar(position)">
-<div class="row-fluid">
+<div class="row-fluid" style="margin-bottom: 30px;">
   <div class="span12 text-right deal-${position}-toolbar">
     <ul class="inline item-toolbar">
       <li>
         <a class="text-accent-color right" href="${request.route_url(historyRouteName, output='html', uid=cstruct['id'])}"><i class="icon-time"></i><span class="link-with-icon">${_('History')}</span></a>
       </li>
       % if not isStakeholder:
-        <li>
-          <a  class="text-accent-color right"href="${request.route_url(routeName, output='statistics', uid=cstruct['id'])}"><i class="icon-bar-chart"></i><span class="link-with-icon">${_("Areal statistics")}</span><span class="dealview_seperator"span>|</span></a>
+        <li style="margin-left: 10px;">
+          <a  class="text-accent-color right"href="${request.route_url(routeName, output='statistics', uid=cstruct['id'])}"><i class="icon-bar-chart" style="margin-left: 10px;"></i><span class="link-with-icon">${_("Areal statistics")}</span><span class="dealview_seperator"span>|</span></a>
         </li>
       % endif
       % if request.user and 'id' in cstruct and not empty:
-        <li>
-          <a  class="text-accent-color right"href="${request.route_url(routeName, output='form', uid=cstruct['id'], _query=(('v', cstruct['version']),))}"><i class="icon-pencil"></i><span class="link-with-icon">${editLinkText}</span></a>
+        <li style="margin-left: 10px;">
+          <a  class="text-accent-color right"href="${request.route_url(routeName, output='form', uid=cstruct['id'], _query=(('v', cstruct['version']),))}"><i class="icon-pencil" style="margin-left: 10px;"></i><span class="link-with-icon">${editLinkText}</span></a>
         </li>
-        <li>
-          <a  class="text-accent-color right"href="javascript:void(0);" data-toggle="collapse" data-target="#delete-${form_id}-${position}"><i class="icon-trash"></i><span class="link-with-icon">${deleteLinkText}</span></a>
+        <li style="margin-left: 10px;">
+            <a  class="text-accent-color right" href="javascript:void(0);" onclick='$( "#delete-${form_id}-${position}" ).show();'><i class="icon-trash" style="margin-left: 10px;"></i><span class="link-with-icon">${deleteLinkText}</span></a>
         </li>
       % endif
       % if request.user and isModerator and statusId == '1':
-        <li>
+        <li style="margin-left: 10px;">
           <a  class="text-accent-color right"href="${request.route_url(routeName, output='review', uid=cstruct['id'])}"><i class="icon-check"></i><span class="link-with-icon">${_('Review')}</span></a>
         </li>
       % endif
@@ -180,14 +183,14 @@ ${editToolbar('bottom')}
   </div>
 </div>
 % if request.user and 'id' in cstruct:
-  <div id="delete-${form_id}-${position}" class="collapse">
+  <div id="delete-${form_id}-${position}" style="display: none; margin-top: 50px;">
     <form id="${form_id}-${position}" class="delete-confirm alert alert-error" action="${request.route_url(routeName, output='form', uid=cstruct['id'])}" method="POST">
       <input type="hidden" name="__formid__" value="${form_id}"/>
       <input type="hidden" name="id" value="${cstruct['id']}"/>
       <input type="hidden" name="version" value="${cstruct['version']}"/>
       <p>${deleteConfirmText}</p>
-      <button name="delete" class="btn btn-small btn-danger">${_('Delete')}</button>
-      <button onclick="javascript:console.log($('#delete-${form_id}-${position}')); $('#delete-${form_id}-${position}').collapse('hide'); return false;" class="btn btn-small delete-confirm-cancel">${_('Cancel')}</button>
+      <button name="delete" class="btn red">${_('Delete')}</button>
+      <button onclick="this.parentNode.parentNode.style.display = 'none';" class="btn grey delete-confirm-cancel">${_('Cancel')}</button>
     </form>
   </div>
 % endif
