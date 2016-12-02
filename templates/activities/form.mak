@@ -21,6 +21,7 @@
     % endif
 </%def>
 
+
 <div class="container deal-edit-content">
     <div class="content no-border">
 

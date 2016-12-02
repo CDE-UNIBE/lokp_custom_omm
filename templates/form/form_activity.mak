@@ -30,8 +30,8 @@
            value="${field.formid}"
     />
 
-    <div class="row-fluid">
-        <div class="span9">
+    <div class="row">
+        <div class="col s9">
             % if field.error:
                 <div class="alert alert-error">
                     <h5>${_("There was a problem with your submission")}</h5>
@@ -42,7 +42,7 @@
                 ${child.render_template(field.widget.item_template)}
             % endfor
         </div>
-        <div class="deal-editor-menu-bar span3">
+        <div class="deal-editor-menu-bar col s3">
             <div id="menu-affix" data-clampedwidth=".deal-editor-menu-bar">
                 % for button in field.buttons:
                     <ul>
