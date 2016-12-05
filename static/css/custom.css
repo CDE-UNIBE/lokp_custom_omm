@@ -1899,7 +1899,7 @@ div.grid-area div.row-fluid div.span5 h5.moderate-metadata {
     text-overflow: ellipsis;
 }
 .truncate-input {
-	margin-top: 5px;
+	margin-top: 25px;
 }
 
 /* Map / Map Form */
@@ -2607,7 +2607,7 @@ footer ul li a{
 }
 
 .dealview_titel_investor{
-    margin-bottom: 0;
+    margin-bottom: 15px;
     margin-top: 15px;
     padding-bottom: 0;
 }
