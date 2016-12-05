@@ -32,6 +32,7 @@
     </div>
 </div>
 
+
 <%def name="bottom_tags()">
     <script type="text/javascript">
 
@@ -64,6 +65,9 @@
                 resizeFn();
                 $(window).resize(resizeFn);
             });
+
+            Materialize.updateTextFields();
+            deform.load();
         });
     </script>
 </%def>
