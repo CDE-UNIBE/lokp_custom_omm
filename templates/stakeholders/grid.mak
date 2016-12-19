@@ -228,7 +228,8 @@
                             % endif
                                 <td>
                                     <a class="btn" href="${request.route_url('stakeholders_read_one', output='html', uid=id)}">
-                                        ${id[:6]}
+                                        ##${id[:6]}
+                                        Go to deal
                                     </a>
                                 </td>
                                 <td>${timestamp}</td>
