@@ -160,7 +160,7 @@
     <div id="window_right" class="col s12 m12  l4">
 
         <div id="window-right-top" style="height: 50%;">
-            <ul class="tabs">
+            <ul class="tabs" style="overflow-x: hidden;">
                 <li class="tab col s3"><a href="#tab1" class="active text-accent-color">Preview of deal</a></li>
                 <li class="tab col s3"><a href="#tab2" class="text-accent-color">News</a></li>
             </ul>
@@ -183,7 +183,7 @@
             </div>
         </div>
         <div id="window-right-bottom" style="height: 50%;">
-            <ul class="tabs">
+            <ul class="tabs" style="overflow-x: hidden;">
                 <li class="tab col s3"><a href="#bottom-tab1" class="active text-accent-color">Picture of the week</a></li>
                 <li class="tab col s3"><a href="#bottom-tab2" class="text-accent-color">Archive</a></li>
             </ul>
