@@ -192,6 +192,7 @@
             </div>
             <div id="bottom-tab2" class="col s12" style="padding: 30px;">
                 <h5 class="deal-headline">Archive</h5>
+                <p>No archived data at the moment..</p>
             </div>
         </div>
     </div>
@@ -287,7 +288,7 @@
 </div>
 
 <%def name="bottom_tags()">
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&amp;"></script>
 <script src="${request.static_url('lmkp:static/build/openlayers/OpenLayers.mapview.min.js')}" type="text/javascript"></script>
 <script type="text/javascript" src="${request.route_url('context_layers')}"></script>
 <script src="${request.static_url('lmkp:static/v2/maps/main.js')}" type="text/javascript"></script>
