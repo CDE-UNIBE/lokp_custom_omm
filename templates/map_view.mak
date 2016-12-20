@@ -166,15 +166,17 @@
             </ul>
             <div id="tab1" class="col s12" style="padding: 30px;">
                 <div class="deal-data">
-                <h5 class="deal-headline">${_('Deal')}
-                    <span id="deal-shortid-span" class="underline">#</span>
-                </h5>
-                <ul id="taggroups-ul" class="text-primary-color">
-                    <li>
-                        <p>${_('Select a deal on the map to show details. If you select multiple deals, zoom in and use the list view to show the details.')}</p>
-                    </li>
-                </ul>
-                    </div>
+                    <h5 class="deal-headline">${_('Deal')}
+                        <span id="deal-shortid-span" class="underline">#</span>
+                    </h5>
+                    <ul id="taggroups-ul" class="text-primary-color">
+                        <li>
+                            <p>${_('Select a deal on the map to show details. If you select multiple deals, zoom in and use the list view to show the details.')}</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="deal-data-footer" style="font-size: 12px; margin-top: 10px;">
+                </div>
             </div>
             <div id="tab2" class="col s12" style="padding: 30px;">
                 <h5 class="deal-headline text-primary-color">News</h5>
