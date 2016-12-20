@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="/static/form.css" type="text/css" />
 
     <script type="text/javascript" src="${request.static_url('lmkp:static/v2/form.js')}"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=${str(request.registry.settings.get('lmkp.google_maps_api_key'))}"></script>
 
     <!-- REQUIREMENTS -->
     <!-- CSS -->
