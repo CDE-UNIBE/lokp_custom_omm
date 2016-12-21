@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     potw = {
         "picurl":"/custom/img/potw/pictureoftheweek.jpeg",
-        "dealurl":"http://localhost:6543/activities/html/cc4091e4-8800-48ae-a9a6-3a1406844a4f",
+        "dealurl":"http://dev.mmlandreporting.info/activities/html/cc4091e4-8800-48ae-a9a6-3a1406844a4f",
         "text":"Headline"
     };
 
