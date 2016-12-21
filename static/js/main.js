@@ -22,4 +22,5 @@ $(".read-more").click(function(event) {
 $(document).ready(function(){
     $('.slider').slider({full_width: true});
     $('.modal-trigger').leanModal();
+
 });
