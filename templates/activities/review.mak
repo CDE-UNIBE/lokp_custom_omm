@@ -139,8 +139,8 @@
 
 <%def name="moderate_buttons()">
     <form class="moderate-form" action="${request.route_url('activities_review')}" method="POST">
-        <div class="row-fluid">
-                <div class="span4">
+        <div class="row">
+                <div class="col s4">
                     % if reviewable is True:
                         <button name="review_decision" value="approve" class="btn btn-large btn-block disabled btn-success deal-moderate-button">
                             ${_('Approve')}
@@ -151,12 +151,12 @@
                         </button>
                     % endif
                 </div>
-                <div class="span4">
+                <div class="col s4">
                     <button name="review_decision" value="reject" class="btn btn-large btn-block disabled btn-warning deal-moderate-button">
                         ${_('Deny')}
                     </button>
                 </div>
-                <div class="span4">
+                <div class="col s4">
                     <a class="btn btn-large btn-block disabled btn-warning deal-moderate-button" href="${request.route_url('activities_read_one', output='form', uid=identifier, _query=(('v', newVersion),))}">
                         ${_('Edit')} (${_('Version')} ${newVersion})
                     </a>
