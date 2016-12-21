@@ -179,7 +179,7 @@
                 </div>
             </div>
             <div id="tab2" class="col s12" style="padding: 30px;">
-                <h5 class="deal-headline text-primary-color">News</h5>
+                <div id="newscontent"></div>
             </div>
         </div>
         <div id="window-right-bottom" style="height: 50%;">
@@ -295,4 +295,6 @@
 <script src="${request.static_url('lmkp:static/v2/maps/base.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lmkp:static/v2/filters.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lmkp:static/v2/jquery.cookie.js')}" type="text/javascript"></script>
+<script src="${request.static_url('lmkp:static/v2/jquery.cookie.js')}" type="text/javascript"></script>
+    <script src="/custom/js/news.js"></script>
 </%def>
