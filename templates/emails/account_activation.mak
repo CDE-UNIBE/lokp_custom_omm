@@ -7,4 +7,4 @@ ${activation_link}
 
 ${_(u"Your account will be approved after activation.")}
 
-${_(u"The Land Observatory")}
+${_(u"The Myanmar land reporting")}

@@ -6,4 +6,4 @@ The new password is
 
 ${new_password}
 
-Enjoy the Land Observatory!
+Enjoy the Myanmar land reporting!

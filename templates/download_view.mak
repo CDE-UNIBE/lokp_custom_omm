@@ -28,7 +28,7 @@
                 ${_('Download')}
             </h3>
             <p>
-                ${_('All the information about the Deals or Investors found on the Land Observatory can be downloaded.')}
+                ${_('All the information about the Deals or Investors found on the Myanmar land reporting can be downloaded.')}
             </p>
             <p>
                 ${_('Please select one of the download options below.')}

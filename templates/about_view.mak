@@ -33,7 +33,7 @@
           <div class="col s12">
             <div class="card-panel teal">
              <p class="lead white-text">
-                ${_('The Land Observatory is a pilot project of some of the partners of the Land Matrix initiative, to support observatories designed to crowdsource data about land deals, allowing for greater transparency and improved decision-making.')}
+                ${_('The Myanmar land reporting is a pilot project of some of the partners of the Land Matrix initiative, to support observatories designed to crowdsource data about land deals, allowing for greater transparency and improved decision-making.')}
             </p>
             </div>
           </div>

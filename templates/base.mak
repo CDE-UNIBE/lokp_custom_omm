@@ -37,9 +37,9 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <title>
             <%
                 try:
-                    context.write("%s - %s" % (self.title(), _("Land Observatory")))
+                    context.write("%s - %s" % (self.title(), _("Myanmar land reporting")))
                 except AttributeError:
-                    context.write(_("Land Observatory"))
+                    context.write(_("Myanmar land reporting"))
             %>
         </title>
         <meta name="description" content="" />
@@ -104,9 +104,9 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                 <a href="#" data-activates="mobile-menu" class="button-collapse text-accent-color"><i class="material-icons">menu</i></a>
                                 <a href="${request.route_url('index')}" class="brand-logo" style="float: left !important;">
                                     % if mode == 'demo':
-                                        <img src="/custom/img/logo_demo.png" class="lo_logo" alt="${_('Land Observatory')}" />
+                                        <img src="/custom/img/logo_demo.png" class="lo_logo" alt="${_('Myanmar land reporting')}" />
                                     % else:
-                                        <img src="/custom/img/logo_new.png" alt="${_('Land Observatory')}"/>
+                                        <img src="/custom/img/logo_new.png" alt="${_('Myanmar land reporting')}"/>
                                     % endif
                                 </a>
 

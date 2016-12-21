@@ -40,7 +40,7 @@
     </div>
 
     <p class="main-text">
-        ${_('As opposed to traditional tabular databases, the Land Observatory can be used to perform in-depth contextual analysis of the areas in which the land deals are taking place, and therefore provide a better insight on the socioeconomic and environmental conditions of places and the characteristics of the affected population.')}
+        ${_('As opposed to traditional tabular databases, the Myanmar land reporting can be used to perform in-depth contextual analysis of the areas in which the land deals are taking place, and therefore provide a better insight on the socioeconomic and environmental conditions of places and the characteristics of the affected population.')}
     </p>
 
     <a class="waves-effect waves-light btn btn-read-more" onclick="$('#showcase1').fadeIn(); $(this).hide();">${_('Read more')}</a>
@@ -50,7 +50,7 @@
             link = '<a href="%s">Olam International</a>' % request.route_url('stakeholders_read_one', output='html', uid='f3360f25-a9a7-4b5a-862f-97b3e419ab1a')
         %>
         <p>
-            ${_("Looking at all documents and comments posted by users about the Paksong District in the Land Observatory, we learn that in 2009, the Lao Government granted a 30 years land concession to Outspan, a subsidiary of international agribusiness company %s. Reports indicate that in total, 4 villages and 275 households were affected by the expansion of coffee plantations. Due to the lack of prior consultation, low financial compensation offered, and clearing of land far beyond the limits of the granted area, a grassroots contestation movement emerged amongst the villagers, who seized the company's trucks, threatened to cut down the trees, and sent delegations to Vientiane to get back their lands.") % link|n}
+            ${_("Looking at all documents and comments posted by users about the Paksong District in the Myanmar land reporting, we learn that in 2009, the Lao Government granted a 30 years land concession to Outspan, a subsidiary of international agribusiness company %s. Reports indicate that in total, 4 villages and 275 households were affected by the expansion of coffee plantations. Due to the lack of prior consultation, low financial compensation offered, and clearing of land far beyond the limits of the granted area, a grassroots contestation movement emerged amongst the villagers, who seized the company's trucks, threatened to cut down the trees, and sent delegations to Vientiane to get back their lands.") % link|n}
         </p>
 
         <h4>${_('Going further: looking at social and environmental context')}</h4>
@@ -58,7 +58,7 @@
             link = '<a href="%s">%s</a>' % (request.route_url('activities_read_one', output='html', uid='9b2891e8-159d-48b6-8828-c9666231253b'), _("Paksong case"))
         %>
         <p>
-            ${_("But thanks to its powerful mapping capacities, the Land Observatory allows much more than just looking at documents and background information. In the %s, for instance, displaying the density population layer shows that the concession has been granted in villages with very different population patterns, from very low to high density. While this gives an indication of the size of the population affected, far more interesting is to look at the socioeconomic characteristics of this population. Indeed, another geographic layer available shows that the proportion of households being farming households stands above 90%%. This most likely means that the population's livelihoods are strongly dependent upon land-related resources, and that their level of vulnerability to the loss of productive land is high if no appropriate coping mechanism is set-up.") % link|n}
+            ${_("But thanks to its powerful mapping capacities, the Myanmar land reporting allows much more than just looking at documents and background information. In the %s, for instance, displaying the density population layer shows that the concession has been granted in villages with very different population patterns, from very low to high density. While this gives an indication of the size of the population affected, far more interesting is to look at the socioeconomic characteristics of this population. Indeed, another geographic layer available shows that the proportion of households being farming households stands above 90%%. This most likely means that the population's livelihoods are strongly dependent upon land-related resources, and that their level of vulnerability to the loss of productive land is high if no appropriate coping mechanism is set-up.") % link|n}
         </p>
 
         <p>
@@ -99,7 +99,7 @@
         link = '<a href="%s">%s</a>' % (request.route_url('activities_read_one', output='html', uid='6a5b9560-63b9-43e5-8637-168deee4e75f'), _("Golden Triangle Special Economic Zone"))
     %>
     <p class="main-text">
-        ${_("In the case of the well-known %s granted for 99 years to the Chinese company Kings Roman, a number of Land Observatory users came together to enter, compare and crosscheck information. Facing some challenges to access certain data, they showed a level creativity that would probably not have happened as part a government-led data collection campaign.") % link|n}
+        ${_("In the case of the well-known %s granted for 99 years to the Chinese company Kings Roman, a number of Myanmar land reporting users came together to enter, compare and crosscheck information. Facing some challenges to access certain data, they showed a level creativity that would probably not have happened as part a government-led data collection campaign.") % link|n}
     </p>
 
     <a class="waves-effect waves-light btn btn-read-more" onclick="$('#showcase2').fadeIn(); $(this).hide();">${_('Read more')}</a>
@@ -169,7 +169,7 @@
         %>
         <br>
         <p>
-            ${_("These information were uploaded by users on the Land Observatory, one of which then submitted an updated version based on the newer satellite images available on the web, showing that despite all the complains of the communities on the ground, the expansion of the cleared area beyond the allocated land had not stopped. In the %s, the LO provides valuable information for researchers, local stakeholders, decision-makers. Less powerful actors are empowered by an easy access to critical information and the possibility to contribute to knowledge creation and dissemination of their own perspectives and claims. They are given a voice to raise their concerns, and a space to foster linkages with the global civil society through international platforms such as the land matrix or other similar networks and mechanisms.") % link|n}
+            ${_("These information were uploaded by users on the Myanmar land reporting, one of which then submitted an updated version based on the newer satellite images available on the web, showing that despite all the complains of the communities on the ground, the expansion of the cleared area beyond the allocated land had not stopped. In the %s, the LO provides valuable information for researchers, local stakeholders, decision-makers. Less powerful actors are empowered by an easy access to critical information and the possibility to contribute to knowledge creation and dissemination of their own perspectives and claims. They are given a voice to raise their concerns, and a space to foster linkages with the global civil society through international platforms such as the land matrix or other similar networks and mechanisms.") % link|n}
         </p>
     </div>
 
@@ -188,7 +188,7 @@
         link = '<a href="http://www.landmatrix.org">Land Matrix</a>'
     %>
     <p class="main-text">
-        ${_(u"The Land Observatory is a sister project to the %s, a global and independent land monitoring initiative that promotes transparency and accountability in decisions over land and investments. As a local extension of the system, the Land Observatory aims at providing a greater insight on land related deals and processes at the national and subnational level, by further engaging stakeholders in situ, and linking to relevant local networks and initiatives. The Land Observatory is not just a technical solution; it is a process, though which increased coordination and empowerment is made possible by the activity of people on the ground, and their respective contributions to the crowd sourcing web-portal.") % link|n}
+        ${_(u"The Myanmar land reporting is a sister project to the %s, a global and independent land monitoring initiative that promotes transparency and accountability in decisions over land and investments. As a local extension of the system, the Myanmar land reporting aims at providing a greater insight on land related deals and processes at the national and subnational level, by further engaging stakeholders in situ, and linking to relevant local networks and initiatives. The Myanmar land reporting is not just a technical solution; it is a process, though which increased coordination and empowerment is made possible by the activity of people on the ground, and their respective contributions to the crowd sourcing web-portal.") % link|n}
     </p>
 
     <br><br>
@@ -233,7 +233,7 @@
 
     <h3 class="title-showcase">${_('All in one place: a geocoded data repository on land deals')}</h3>
     <p class="main-text">
-        ${_('When available, information on specific land deal cases is often fragmented and hard to find. Building on a flexible database structure, the Land Observatory offers the possibility to link all types of documents (reports, pictures, web links, GIS files, etc.) to their geographic location on the dynamic map, and allows any user to contribute indefinitely by adding and commenting information.')}
+        ${_('When available, information on specific land deal cases is often fragmented and hard to find. Building on a flexible database structure, the Myanmar land reporting offers the possibility to link all types of documents (reports, pictures, web links, GIS files, etc.) to their geographic location on the dynamic map, and allows any user to contribute indefinitely by adding and commenting information.')}
     </p>
 
     <br><br><br>
@@ -251,7 +251,7 @@
         link2 = '<a href="%s">Outspan</a>' % (request.route_url('stakeholders_read_one', output='html', uid='f3360f25-a9a7-4b5a-862f-97b3e419ab1a'))
     %>
     <p class="main-text">
-        ${_("In cases such as coffee plantations granted to the Singapore based food company %s in Paksong District or the %s leased to the Chinese company Kings Roman, users of the Land Observatory came together to populate the database with dozens of documents including academic papers, Youtube videos, media articles, cross comments observations from the field and official statements by the company. Building on a joint effort by a diversity of users with various expertise and access to information, the crowd sourcing process generated a unique library on these deals, which showcases the different perspectives and claims of stakeholders involved, and can be analyzed, complemented or cross-checked by virtually anybody who has interest in the topic.") % (link1, link2)|n}
+        ${_("In cases such as coffee plantations granted to the Singapore based food company %s in Paksong District or the %s leased to the Chinese company Kings Roman, users of the Myanmar land reporting came together to populate the database with dozens of documents including academic papers, Youtube videos, media articles, cross comments observations from the field and official statements by the company. Building on a joint effort by a diversity of users with various expertise and access to information, the crowd sourcing process generated a unique library on these deals, which showcases the different perspectives and claims of stakeholders involved, and can be analyzed, complemented or cross-checked by virtually anybody who has interest in the topic.") % (link1, link2)|n}
     </p>
     <br><br><br>
 

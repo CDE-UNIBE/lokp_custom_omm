@@ -26,7 +26,7 @@ msgstr "A propos"
 
 #: lmkp/customization/omm/templates/about_view.mak:34
 msgid ""
-"The Land Observatory is a pilot project of some of the partners of the "
+"The Myanmar land reporting is a pilot project of some of the partners of the "
 "Land Matrix initiative, to support observatories designed to crowdsource "
 "data about land deals, allowing for greater transparency and improved "
 "decision-making."
@@ -132,7 +132,7 @@ msgstr "Cliquer ici si vous ne visualisez pas la vidéo"
 #: lmkp/customization/omm/templates/changesets/byuser_rss.mak:6
 #: lmkp/customization/omm/templates/changesets/latest_rss.mak:6
 #: lmkp/customization/omm/templates/stakeholders/history_rss.mak:15
-msgid "Land Observatory"
+msgid "Myanmar land reporting"
 msgstr "Observatoire des transactions foncières"
 
 #: lmkp/customization/omm/templates/base.mak:113
@@ -196,7 +196,7 @@ msgstr "Partenaires et bailleurs"
 #: lmkp/customization/omm/templates/emails/account_activation.mak:10
 #: lmkp/customization/omm/templates/emails/account_approval_confirmation.mak:7
 #: lmkp/customization/omm/templates/emails/account_approval_request.mak:12
-msgid "The Land Observatory"
+msgid "The Myanmar land reporting"
 msgstr "L'Observatoire des transactions foncières"
 
 #: lmkp/customization/omm/templates/base_no_menu.mak:123
@@ -604,7 +604,7 @@ msgstr ""
 "exemple la densité de population dans la zone concernée."
 
 #: lmkp/customization/omm/templates/landing_page.mak:161
-msgid "Are you interested in concrete use cases of the Land Observatory?"
+msgid "Are you interested in concrete use cases of the Myanmar land reporting?"
 msgstr ""
 "Etes vous intéressés par des cas concrets d'utilisation de l'Observatoire"
 " ? "
@@ -862,7 +862,7 @@ msgstr ""
 
 #: lmkp/customization/omm/templates/showcases_view.mak:108
 msgid ""
-"As opposed to traditional tabular databases, the Land Observatory can be "
+"As opposed to traditional tabular databases, the Myanmar land reporting can be "
 "used to perform in-depth contextual analysis of the areas in which the "
 "land deals are taking place, and therefore provide a better insight on "
 "the socioeconomic and environmental conditions of places and the "
@@ -890,7 +890,7 @@ msgstr "Obtenir des précisions"
 #, python-format
 msgid ""
 "Looking at all documents and comments posted by users about the Paksong "
-"District in the Land Observatory, we learn that in 2009, the Lao "
+"District in the Myanmar land reporting, we learn that in 2009, the Lao "
 "Government granted a 30 years land concession to Outspan, a subsidiary of"
 " international agribusiness company %s. Reports indicate that in total, 4"
 " villages and 275 households were affected by the expansion of coffee "
@@ -924,7 +924,7 @@ msgstr "Le cas de Paksong"
 #: lmkp/customization/omm/templates/showcases_view.mak:141
 #, python-format
 msgid ""
-"But thanks to its powerful mapping capacities, the Land Observatory "
+"But thanks to its powerful mapping capacities, the Myanmar land reporting "
 "allows much more than just looking at documents and background "
 "information. In the %s, for instance, displaying the density population "
 "layer shows that the concession has been granted in villages with very "
@@ -1047,7 +1047,7 @@ msgstr "la ZOne Economique Spéciale du Triangle d'Or"
 #, python-format
 msgid ""
 "In the case of the well-known %s granted for 99 years to the Chinese "
-"company Kings Roman, a number of Land Observatory users came together to "
+"company Kings Roman, a number of Myanmar land reporting users came together to "
 "enter, compare and crosscheck information. Facing some challenges to "
 "access certain data, they showed a level creativity that would probably "
 "not have happened as part a government-led data collection campaign."
@@ -1214,7 +1214,7 @@ msgstr "Le cas du district de Phine"
 #: lmkp/customization/omm/templates/showcases_view.mak:284
 #, python-format
 msgid ""
-"These information were uploaded by users on the Land Observatory, one of "
+"These information were uploaded by users on the Myanmar land reporting, one of "
 "which then submitted an updated version based on the newer satellite "
 "images available on the web, showing that despite all the complains of "
 "the communities on the ground, the expansion of the cleared area beyond "
@@ -1248,13 +1248,13 @@ msgstr ""
 #: lmkp/customization/omm/templates/showcases_view.mak:302
 #, python-format
 msgid ""
-"The Land Observatory is a sister project to the %s, a global and "
+"The Myanmar land reporting is a sister project to the %s, a global and "
 "independent land monitoring initiative that promotes transparency and "
 "accountability in decisions over land and investments. As a local "
-"extension of the system, the Land Observatory aims at providing a greater"
+"extension of the system, the Myanmar land reporting aims at providing a greater"
 " insight on land related deals and processes at the national and "
 "subnational level, by further engaging stakeholders in situ, and linking "
-"to relevant local networks and initiatives. The Land Observatory is not "
+"to relevant local networks and initiatives. The Myanmar land reporting is not "
 "just a technical solution; it is a process, though which increased "
 "coordination and empowerment is made possible by the activity of people "
 "on the ground, and their respective contributions to the crowd sourcing "
@@ -1322,7 +1322,7 @@ msgstr ""
 msgid ""
 "When available, information on specific land deal cases is often "
 "fragmented and hard to find. Building on a flexible database structure, "
-"the Land Observatory offers the possibility to link all types of "
+"the Myanmar land reporting offers the possibility to link all types of "
 "documents (reports, pictures, web links, GIS files, etc.) to their "
 "geographic location on the dynamic map, and allows any user to contribute"
 " indefinitely by adding and commenting information."
@@ -1345,7 +1345,7 @@ msgstr "Le Triange d'or tourne en un paradis "
 msgid ""
 "In cases such as coffee plantations granted to the Singapore based food "
 "company %s in Paksong District or the %s leased to the Chinese company "
-"Kings Roman, users of the Land Observatory came together to populate the "
+"Kings Roman, users of the Myanmar land reporting came together to populate the "
 "database with dozens of documents including academic papers, Youtube "
 "videos, media articles, cross comments observations from the field and "
 "official statements by the company. Building on a joint effort by a "
@@ -1887,7 +1887,7 @@ msgid "Latest approved Changesets"
 msgstr "Derniers changements approuvés "
 
 #: lmkp/customization/omm/templates/changesets/latest_rss.mak:8
-msgid "The latest approved changes edited on the Land Observatory"
+msgid "The latest approved changes edited on the Myanmar land reporting"
 msgstr "Les derniers changements approuvés et édités de l'Observatoire "
 
 #: lmkp/customization/omm/templates/charts/barchart_a.mak:15
@@ -2486,7 +2486,7 @@ msgid "User Registration"
 msgstr "Enregistrement des utilisateurs"
 
 #: lmkp/customization/omm/templates/users/registration_form.mak:20
-msgid "Please register for the Land Observatory."
+msgid "Please register for the Myanmar land reporting."
 msgstr "Enregistrez-vous s'il vous plaît sur l'Observatoire"
 
 #: lmkp/customization/omm/templates/users/registration_success.mak:7

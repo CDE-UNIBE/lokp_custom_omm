@@ -12,7 +12,7 @@ from datetime import datetime
         <pubDate>Sat, 5 Apr 2014 22:11:29</pubDate>
         <image>
             <url>/custom/img/logo.png</url>
-            <title>${_('Land Observatory')}</title>
+            <title>${_('Myanmar land reporting')}</title>
             <link>${request.route_url('index')}</link>
         </image>
 

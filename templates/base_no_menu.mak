@@ -30,9 +30,9 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <title>
             <%
                 try:
-                    context.write("%s - %s" % (self.title(), _("Land Observatory")))
+                    context.write("%s - %s" % (self.title(), _("Myanmar land reporting")))
                 except AttributeError:
-                    context.write(_("Land Observatory"))
+                    context.write(_("Myanmar land reporting"))
             %>
         </title>
         <meta name="description" content="">
@@ -105,9 +105,9 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                     <div class="col s10 offset-s1">
                         <a href="${request.route_url('index')}" class="brand-logo">
                             % if mode == 'demo':
-                                <img src="/custom/img/logo_demo.png" class="lo_logo" alt="${_('Land Observatory')}" />
+                                <img src="/custom/img/logo_demo.png" class="lo_logo" alt="${_('Myanmar land reporting')}" />
                             % else:
-                                <img src="/custom/img/logo_new.png" alt="${_('Land Observatory')}"/>
+                                <img src="/custom/img/logo_new.png" alt="${_('Myanmar land reporting')}"/>
                             % endif
                         </a>
                         <ul class="right hide-on-med-and-down">
@@ -127,7 +127,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
               <div class="col s10 offset-s1 col-main-page">
                   <br>
                   <div class="card-panel accent-color">
-                      <span class="white-text"><strong>${_('The Land Observatory')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}</span>
+                      <span class="white-text"><strong>${_('The Myanmar land reporting')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}</span>
                   </div>
                   ${self.body()}
               </div>

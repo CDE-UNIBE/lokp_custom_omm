@@ -9,4 +9,4 @@ ${_(u"Profiles")}: ${profiles}
 ${_(u"In order to approve this account, please visit the following link or copy it to your web browser.")}
 ${approval_link}
 
-${_(u"The Land Observatory")}
+${_(u"The Myanmar land reporting")}

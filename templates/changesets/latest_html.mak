@@ -34,7 +34,7 @@ from lmkp.views.views import (
 
         ##<div class="row-fluid">
         ##    <div class="span9">
-        ##        <span>${_('The latest approved changes edited on the Land Observatory')}</span>
+        ##        <span>${_('The latest approved changes edited on the Myanmar land reporting')}</span>
         ##    </div>
         ##</div>
 

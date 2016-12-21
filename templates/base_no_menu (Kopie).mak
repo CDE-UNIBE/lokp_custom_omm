@@ -30,9 +30,9 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <title>
             <%
                 try:
-                    context.write("%s - %s" % (self.title(), _("Land Observatory")))
+                    context.write("%s - %s" % (self.title(), _("Myanmar land reporting")))
                 except AttributeError:
-                    context.write(_("Land Observatory"))
+                    context.write(_("Myanmar land reporting"))
             %>
         </title>
         <meta name="description" content="">
@@ -111,16 +111,16 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                               <div class="span3 text-right">
                                 <a href="${request.route_url('index')}">
                                   % if mode == 'demo':
-                                      <img src="/custom/img/logo_demo.png" class="lo_logo" alt="${_('Land Observatory')}" />
+                                      <img src="/custom/img/logo_demo.png" class="lo_logo" alt="${_('Myanmar land reporting')}" />
                                   % else:
-                                      <img src="/custom/img/logo.png" class="lo_logo" alt="${_('Land Observatory')}" />
+                                      <img src="/custom/img/logo.png" class="lo_logo" alt="${_('Myanmar land reporting')}" />
                                   % endif
                                 </a>
                               </div>
 
                               <div class="span6 landing-introduction">
                                   <p>
-                                      <strong>${_('The Land Observatory')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}
+                                      <strong>${_('The Myanmar land reporting')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}
                                   </p>
                               </div>
                               <div class="user">
@@ -150,7 +150,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                               </div>
                               <div class="span6 landing-introduction">
                                   <p>
-                                      <strong>${_('The Land Observatory')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}
+                                      <strong>${_('The Myanmar land reporting')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}
                                   </p>
                               </div>
                               <div class="span3">
