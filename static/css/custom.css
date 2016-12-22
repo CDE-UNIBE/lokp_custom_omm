@@ -677,7 +677,7 @@ div.item-grid-wrapper {
 }
 
 .deal-editor-menu-bar ul li {
-	background-color: teal;
+	background-color: grey;
 	margin-bottom: 5px;
 	padding: 2px 8px 2px 8px;
 	border-radius: 2px;
@@ -686,7 +686,7 @@ div.item-grid-wrapper {
 }
 
 .deal-editor-menu-bar ul li:hover {
-	background-color: gray;
+	background-color: teal;
 	color: white;
 }
 
@@ -709,6 +709,10 @@ div.item-grid-wrapper {
 	margin-left: -8px;
 	background-size: 12px 12px;
 	padding-left: 7px;
+}
+
+.active-wrapper li {
+	background-color: teal !important;
 }
 
 .active-wrapper:hover {
