@@ -52,15 +52,17 @@
 
                         <li
                             % if button.name == 'submit':
-                                style="background-color:gray;"
+                                style="background-color:teal;"
                             % endif
                             >
                             <button
                                 id="${field.formid + button.name}"
                                 name="${button.name}"
                                 value="${button.value}"
+                                style="width: 100%"
                                 class="btnText ${button.css_class}">
                                 ${button.title}
+                                <i class="material-icons right">send</i>
                             </button>
                             % if button.css_class == 'formstepvisited':
                                 <span class="form-button-visited"><i class="icon-ok-sign"></i></span>

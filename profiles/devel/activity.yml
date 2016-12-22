@@ -5,6 +5,7 @@
 site_key: fsgvbfurtvjjzge46g1k3tpwv0do13a
 fields:
   mandatory:
+  optional:
     Spatial Accuracy:
       type: String
       predefined:
@@ -20,7 +21,7 @@ fields:
       - Oral agreement
       - Contract signed
       - Negotiations failed
-      - Contract cancelled 
+      - Contract cancelled
     Country:
       type: String
       predefined:
@@ -277,7 +278,7 @@ fields:
       - Yemen
       - Zambia
       - Zimbabwe
-      
+
     Intended area (ha):
       type: Number
       validator: if(value >= 0){return true;} else {return Lmkp.ts.msg("input-validation_number-greater-than-0");}
@@ -293,8 +294,8 @@ fields:
       - Conservation
       - Renewable energy
       - Other
-  
-  
+
+
     Data source:
       type: String
       predefined:
@@ -304,10 +305,7 @@ fields:
       - Company sources
       - Contract
       - Personal information
-      - Other 
-      
-     
-  optional:
+      - Other
     Name:
       type: String
     Nature of the deal:

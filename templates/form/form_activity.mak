@@ -52,16 +52,30 @@
 
                         <li
                             % if button.name == 'submit':
-                                style="background-color:gray;"
+                                style="background-color:teal;"
                             % endif
                             >
-                            <button
-                                id="${field.formid + button.name}"
-                                name="${button.name}"
-                                value="${button.value}"
-                                class="btnText ${button.css_class}">
-                                ${button.title}
-                            </button>
+                            % if button.name == 'submit':
+                                <button
+                                    id="${field.formid + button.name}"
+                                    name="${button.name}"
+                                    value="${button.value}"
+                                    style="width: 100%"
+                                    class="btnText ${button.css_class}">
+                                    ${button.title}
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            % else:
+                                <button
+                                    id="${field.formid + button.name}"
+                                    name="${button.name}"
+                                    value="${button.value}"
+                                    style="width: 100%"
+                                    class="btnText ${button.css_class}">
+                                    ${button.title}
+                                </button>
+                            % endif
+
                             % if button.css_class == 'formstepvisited':
                                 <span class="form-button-visited"><i class="icon-ok-sign"></i></span>
                             % endif
