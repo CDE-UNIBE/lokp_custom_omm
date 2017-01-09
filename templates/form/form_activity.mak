@@ -31,18 +31,7 @@
     />
 
     <div class="row">
-        <div class="col s9">
-            % if field.error:
-                <div class="alert alert-error">
-                    <h5>${_("There was a problem with your submission")}</h5>
-                    ${_("Errors have been highlighted below")}
-                </div>
-            % endif
-            % for child in field.children:
-                ${child.render_template(field.widget.item_template)}
-            % endfor
-        </div>
-        <div class="deal-editor-menu-bar col s3">
+        <div class="deal-editor-menu-bar col l3 pull-right">
             <div id="menu-affix" data-clampedwidth=".deal-editor-menu-bar">
                 % for button in field.buttons:
                     <ul>
@@ -87,6 +76,17 @@
                     </ul>
                 % endfor
             </div>
+        </div>
+        <div class="col l9">
+            % if field.error:
+                <div class="alert alert-error">
+                    <h5>${_("There was a problem with your submission")}</h5>
+                    ${_("Errors have been highlighted below")}
+                </div>
+            % endif
+            % for child in field.children:
+                ${child.render_template(field.widget.item_template)}
+            % endfor
         </div>
     </div>
 

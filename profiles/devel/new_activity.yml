@@ -39,26 +39,28 @@
           mapsymbol: 1
           filterable: true
           gridcolumn: 3
-      # [TG]
       2:
-        # [K] 46: Scope of agriculture
-        46:
-          maintag: true
-          filterable: true
-      # [TG]
-      3:
-        # [K] 9: Scope of forestry
-        9:
-          maintag: true
-          filterable: true
-      # [TG]
-      4:
         # [K] 53: Remark (Intention of Investment)
         53:
           maintag: true
+    # [C-THG] 22: Primary Investor
+    22:
+      order: 2
+      # [TG]
+      involvement:
+        name: 'primaryinvestor'
+        roles: [6]
+    # [C-THG] 23: Secondary Investor
+    23:
+      order: 3
+      # [TG]
+      involvement:
+        name: 'secondaryinvestor'
+        roles: [7]
+        repeat: true
     # [C-THG] 17: Implementation status
     17:
-      order: 3
+      order: 4
       # [TG]
       1:
         repeat: true
@@ -74,7 +76,7 @@
         25: null
     # [C-THG] 12: Land Area
     12:
-      order: 4
+      order: 5
       # [TG]
       1:
         geometry: true
@@ -108,7 +110,7 @@
           validator: [2000,2100]
     # [C-THG] 33: Detailed Crop, Animal and Mineral Information
     33:
-      order: 5
+      order: 6
       # [TG]
       1:
         # [K] 44: Crop
@@ -127,24 +129,25 @@
         13:
           maintag: true
           filterable: true
-    # [C-THG] 22: Primary Investor
-    22:
-      order: 6
-      # [TG]
-      involvement:
-        name: 'primaryinvestor'
-        roles: [6]
-    # [C-THG] 23: Secondary Investor
-    23:
-      order: 7
-      # [TG]
-      involvement:
-        name: 'secondaryinvestor'
-        roles: [7]
-        repeat: true
   # [C] 2: General Information
   2:
     order: 2
+    # [C-THG] 13: Intention of Investment
+    13:
+      order: 1
+      # [TG]
+      2:
+        # [K] 46: Scope of agriculture
+        46:
+          maintag: true
+          filterable: true
+      # [TG]
+      3:
+        # [K] 9: Scope of forestry
+        9:
+          maintag: true
+          filterable: true
+      # [TG]
     # [C-THG] 14: Nature of the deal
     14:
       order: 3

@@ -1623,7 +1623,8 @@ background-color: #CB820E;
 	}
 
 	.deal-editor-menu-bar {
-		top: 130px;
+		position: relative !important;
+		margin-bottom: 30px;
 	}
 
 	.row-fluid,
@@ -1761,9 +1762,8 @@ background-color: #CB820E;
 	}
 
 	.deal-editor-menu-bar {
-		top: 140px;
-		left: 20px;
-		right: 20px;
+		position: relative !important;
+		margin-bottom: 30px;
 	}
 
 	.deal-edit-content {
@@ -1792,6 +1792,13 @@ background-color: #CB820E;
 	}
 
 
+}
+
+@media (min-width: 992px) {
+	.deal-editor-menu-bar {
+		position: fixed !important;
+		right: 20px !important;
+	}
 }
 
 /* CUSTOM FIXES */
