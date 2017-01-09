@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
     var potw = '';
-    $.getJSON("http://mmlandreporting.info/news.json", function(json) {
+    $.getJSON("http://mmlandreporting.info/potw.json", function(json) {
         text = JSON.stringify(json);
         var obj = JSON.parse(text);
         $("#bottom-tab1").html(
