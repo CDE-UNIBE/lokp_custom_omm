@@ -1,17 +1,15 @@
 
 $(document).ready(function(){
 
-    potw = {
-        "picurl":"/custom/img/potw/pictureoftheweek.jpeg",
-        "dealurl":"http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72",
-        "text":"Headline"
-    };
-
-
-    $("#bottom-tab1").html(
-        '<p style="margin-top: 20px; margin-bottom: 10px; font-weight: bold;">' + potw.text + '</p>' +
-        '<a href="' + potw.dealurl + '">' +
-            '<img src="' + potw.picurl + '" id="img-weekpicture">' +
-        '</a>'
-    );
+    var potw = '';
+    $.getJSON("http://mmlandreporting.info/news.json", function(json) {
+        text = JSON.stringify(json);
+        var obj = JSON.parse(text);
+        $("#bottom-tab1").html(
+            '<p style="margin-top: 20px; margin-bottom: 10px; font-weight: bold;">' + obj.text + '</p>' +
+            '<a href="' + obj.dealurl + '">' +
+                '<img src="' + obj.picurl + '" id="img-weekpicture">' +
+            '</a>'
+        );
+    });
 });

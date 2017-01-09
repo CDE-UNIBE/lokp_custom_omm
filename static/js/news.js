@@ -1,20 +1,12 @@
 
 $(document).ready(function(){
-
-    news1 = {
-        "header":"News Title 1",
-        "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    };
-    news2 = {
-        "header":"News Title 2",
-        "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    };
-
-
-    $("#newscontent").html(
-        '<h5>' + news1.header + '</h5>' +
-        '<p>' + news1.text + '</p></br>' +
-        '<h5>' + news2.header + '</h5>' +
-        '<p>' + news2.text + '</p></br>'
-    );
+    var newsfield = '';
+    $.getJSON("http://mmlandreporting.info/news.json", function(json) {
+        text = JSON.stringify(json);
+        var obj = JSON.parse(text);
+        for (i=0; i < obj.news.length; i++) {
+            newsfield = newsfield + '<h1>' + obj.news[i].header + '</h1><p>' + obj.news[i].text + '</p>';
+        }
+        $("#newscontent").html(newsfield);
+    });
 });
