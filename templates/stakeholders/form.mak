@@ -10,12 +10,13 @@
 
     <%
         if 'scripts/jquery-ui-1.8.11.custom.min.js' not in js_links:
-            js_links.append('scripts/jquery-ui-1.8.11.custom.min.js')
+            js_links.append('scripts/jquery-ui-1.12.1.min.js')
     %>
 
     % for reqt in js_links:
         <script type="text/javascript" src="/formstatic/${reqt}"></script>
     % endfor
+    <script type="text/javascript" src="/formstatic/jquery-ui-1.12.1.min.js"></script>
 </%def>
 
 <div class="container deal-edit-content">
