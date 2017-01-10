@@ -13,8 +13,19 @@
         <link rel="stylesheet" href="/formstatic/${reqt}" type="text/css" />
     % endfor
     % for reqt in js_links:
+      % if reqt == 'scripts/jquery-1.7.2.min.js':
+      ##  Only use 1 version of jQuery
+
+      % elif reqt == 'scripts/jquery-ui-1.8.11.custom.min.js':
+        <script type="text/javascript" src="/custom/js/vendor/jquery-ui-1.12.1.min.js"></script>
+      % else:
         <script type="text/javascript" src="/formstatic/${reqt}"></script>
+      % endif
     % endfor
+
+    <script type="text/javascript">
+      jQuery.fn.autocompleteJQuery = jQuery.fn.autocomplete;
+    </script>
 
     % if js:
         <script type="text/javascript">${js|n}</script>
