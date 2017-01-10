@@ -187,12 +187,8 @@
                 <li class="tab col s3"><a href="#bottom-tab1" class="active text-accent-color">Picture of the week</a></li>
                 <li class="tab col s3"><a href="#bottom-tab2" class="text-accent-color">Archive</a></li>
             </ul>
-            <div id="bottom-tab1" class="col s12" style="text-align: center; height: 100%; margin: 0;">
-                  </div>
-            <div id="bottom-tab2" class="col s12" style="padding: 30px;">
-                <h5 class="deal-headline">Archive</h5>
-                <p>No archived data at the moment..</p>
-            </div>
+            <div id="bottom-tab1" class="col s12" style="text-align: center; height: 100%; margin: 0;"></div>
+            <div id="bottom-tab2" class="col s12" style="padding: 30px;"></div>
         </div>
     </div>
 </div>

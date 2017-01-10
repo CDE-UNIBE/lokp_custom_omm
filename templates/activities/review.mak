@@ -122,7 +122,7 @@
         <div class="row">
                 <div class="col s4">
                     % if reviewable is True:
-                        <button name="review_decision" value="approve" class="btn btn-large deal-moderate-button" style="width: 100%;">
+                        <button name="review_decision" value="approve" class="btn btn-large ydeal-moderate-button" style="width: 100%;">
                             ${_('Approve')}
                         </button>
                     % else:
