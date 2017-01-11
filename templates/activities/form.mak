@@ -18,6 +18,8 @@
 
       % elif reqt == 'scripts/jquery-ui-1.8.11.custom.min.js':
         <script type="text/javascript" src="/custom/js/vendor/jquery-ui-1.12.1.min.js"></script>
+      % elif reqt == 'scripts/jquery.maskedinput-1.2.2.min.js':
+        <script type="text/javascript" src="/custom/js/vendor/jquery.maskedinput.1.4.1.min.js"></script>
       % else:
         <script type="text/javascript" src="/formstatic/${reqt}"></script>
       % endif
