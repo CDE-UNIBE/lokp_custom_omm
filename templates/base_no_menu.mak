@@ -56,7 +56,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <![endif]-->
 
         <script src="/custom/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+        <script src="/custom/js/vendor/hammer.min.js"></script>
 
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="/custom/js/vendor/jquery-2.1.1.min.js"></script>

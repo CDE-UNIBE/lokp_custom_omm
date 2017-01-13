@@ -66,7 +66,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
 
         <script type="text/javascript" src="/custom/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <link type="text/css" rel="stylesheet" href="/custom/css/materialize.min.css"  media="screen,projection"/>
 
