@@ -243,9 +243,8 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                 class="active"
                             % endif
                             >
-                            <a href="${request.route_url('activities_read_many', output='form')}">
-                                <i class="icon-pencil"></i>
-                                <span class="hidden-verysmall">${_('New Deal')}</span>
+                            <a class="text-accent-color" href="${request.route_url('activities_read_many', output='form')}">
+                                <i class="material-icons left" style="font-size: 20px;">mode_edit</i>${_('New Deal')}
                             </a>
                         </li>
                     % endif
@@ -264,8 +263,12 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                     % endif
                     % else:
                         <li>
-                            <a class="text-accent-color" href="${request.route_url('user_account')}">${request.user.username}</a>
-                            (<a href="${request.route_url('logout')}" class="blacklink">${_('Logout')}</a>)&nbsp;&nbsp;
+                            <a class="text-accent-color" href="${request.route_url('user_account')}">
+                                <i class="material-icons left" style="font-size: 20px;">account_circle</i>${request.user.username}
+                            </a>
+                            <a href="${request.route_url('logout')}" class="blacklink">
+                                <i class="material-icons left" style="font-size: 20px;">exit_to_app</i>${_('Logout')}
+                            </a>
                         </li>
                     % endif
                     <li>
