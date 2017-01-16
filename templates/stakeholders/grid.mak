@@ -115,26 +115,21 @@
                     % endif
                         <a class="active text-accent-color" href="${request.route_url('stakeholders_byactivities_all', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Investors')}</a>
                     </li>
-
-                    ##Unklar
-                    % if is_moderator:
-                        % if 'status=pending' in request.path_qs:
-                            <li class="active moderator-show-pending-right tab col s3">
-                                <a class="active text-accent-color" href="${handle_query_string(request.current_route_url(), remove=['status'])}" data-toggle="tooltip" title="${_('Show all')}">
-                                    <i class="icon-flag"></i>
-                                </a>
-                            </li>
-                        % else:
-                            <li class="moderator-show-pending-right tab col s3">
-                                <a class="active text-accent-color" href="${handle_query_string(request.current_route_url(), add=[('status', 'pending')])}" data-toggle="tooltip" title="${_('Show only pending')}">
-                                    <i class="icon-flag"></i>
-                                </a>
-                            </li>
-                        % endif
-                    % endif
                 </ul>
                 </div>
         </div>
+
+        % if is_moderator:
+            % if 'status=pending' in request.path_qs:
+                    <a class="btn" href="${handle_query_string(request.current_route_url(), remove=['status'])}">
+                        <i class="material-icons right">flag</i> ${_('Show all')}
+                    </a>
+            % else:
+                    <a class="btn" href="${handle_query_string(request.current_route_url(), add=[('status', 'pending')])}">
+                        <i class="material-icons right">flag</i>${_('Show only pending')}
+                    </a>
+            % endif
+        % endif
 
         ## Table
         <div>
