@@ -178,7 +178,7 @@
                 <div class="deal-data-footer" style="font-size: 12px; margin-top: 10px;">
                 </div>
             </div>
-            <div id="tab2" class="col s12" style="padding: 30px;">
+            <div id="tab2" class="col s12" style="padding: 30px; overflow-y: auto; height: 80%;">
                 <div id="newscontent"></div>
             </div>
         </div>
@@ -188,7 +188,7 @@
                 <li class="tab col s3"><a href="#bottom-tab2" class="text-accent-color">Archive</a></li>
             </ul>
             <div id="bottom-tab1" class="col s12" style="text-align: center; height: 100%; margin: 0;"></div>
-            <div id="bottom-tab2" class="col s12" style="padding: 30px;"></div>
+            <div id="bottom-tab2" class="col s12" style="padding: 30px; overflow-y: auto; height: 80%;"></div>
         </div>
     </div>
 </div>
