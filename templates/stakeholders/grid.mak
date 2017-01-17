@@ -216,10 +216,10 @@
                             %>
 
                             % if pending:
-                                <tr class="pending tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show deals of this investor")}">
+                                <tr class="pending">
                             % else:
 
-                                <tr class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show deals of this investor")}">
+                                <tr>
                             % endif
                                 <td>
                                     <a class="btn" href="${request.route_url('stakeholders_read_one', output='html', uid=id)}">
@@ -227,9 +227,9 @@
                                         Go to deal
                                     </a>
                                 </td>
-                                <td>${timestamp}</td>
+                                <td class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show deals of this investor")}">${timestamp}</td>
                                 % for v in values:
-                                    <td>${v}</td>
+                                    <td class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show deals of this investor")}">${v}</td>
                                 % endfor
 
                                 <td class="identifier hide">${id}</td>
@@ -311,15 +311,6 @@
 ## End of content
 
 <%def name="bottom_tags()">
-    <script type="text/javascript">
-        $(function () {
-            $("a[data-toggle='tooltip']").tooltip({
-                container: 'body',
-                placement: 'bottom'
-            });
-        });
-        var link_involvement_text = '${_("Show deals of this investor")}';
-    </script>
     <script src="${request.static_url('lmkp:static/v2/grid.js')}" type="text/javascript"></script>
     <script src="${request.static_url('lmkp:static/v2/filters.js')}" type="text/javascript"></script>
 </%def>

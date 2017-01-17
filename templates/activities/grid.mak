@@ -222,9 +222,9 @@
                             %>
 
                             % if pending:
-                               <tr class="pending tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}">
+                               <tr class="pending">
                             % else:
-                                <tr class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}">
+                                <tr>
                             % endif
                                 <td>
                                     <a class="btn" href="${request.route_url('activities_read_one', output='html', uid=id)}">
@@ -232,9 +232,9 @@
                                         Go to deal
                                     </a>
                                 </td>
-                                <td>${timestamp}</td>
+                                <td class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}">${timestamp}</td>
                                 % for v in values:
-                                    <td>${v}</td>
+                                    <td class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}">${v}</td>
                                 % endfor
 
                                 <td class="identifier hide">${id}</td>
@@ -316,15 +316,6 @@
 ## End of content
 
 <%def name="bottom_tags()">
-    <script type="text/javascript">
-        $(function () {
-            $("a[data-toggle='tooltip']").tooltip({
-                container: 'body',
-                placement: 'top'
-            });
-        });
-        var link_involvement_text = '${_("Show investors for this deal")}';
-    </script>
     <script src="${request.static_url('lmkp:static/v2/grid.js')}" type="text/javascript"></script>
     <script src="${request.static_url('lmkp:static/v2/filters.js')}" type="text/javascript"></script>
 </%def>
