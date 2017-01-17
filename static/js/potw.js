@@ -14,8 +14,8 @@ $(document).ready(function(){
                 '<i class="material-icons" style="margin: 0px; padding: 0px; font-size: 14px; margin-left: 10px;">info</i></a></p>'
         }
 
-        potw = potw + '<a href="' + obj.dealurl + '">' +
-                '<img src="' + obj.picurl + '" id="img-weekpicture">';
+        potw = potw + '<a href="#" onclick="setMapPosition(' + obj.latitude + ',' + obj.longitude + ',' + obj.zoomlevel + ');">' +
+                '<img src="' + obj.picurl + '" id="img-weekpicture"></a>';
         $("#bottom-tab1").html(potw);
 
 
@@ -28,7 +28,9 @@ $(document).ready(function(){
                     '<div class="collapsible-body" style="margin: 0px;">' +
                         '<div class="row">' +
                             '<div class="col s4">' +
+                            '<a href="#" onclick="setMapPosition(' + obj.latitude + ',' + obj.longitude + ',' + obj.zoomlevel + ');">' +
                                 '<img style="margin-top: 10px; margin-bottom: 10px; width: 100%;" src="' + obj.picurl + '">' +
+                                '</a>' +
                             '</div>';
         if (obj.description != undefined ) {
             archive = archive + '<div class="col s8" style="margin-top: 10px;">' + obj.description + '</div>';
@@ -46,7 +48,8 @@ $(document).ready(function(){
                     '<div class="collapsible-body" style="margin: 0px;">' +
                         '<div class="row">' +
                             '<div class="col s4">' +
-                                '<img style="margin-top: 10px; margin-bottom: 10px; width: 100%;" src="' + obj.archived[i].picurl + '">' +
+                                '<a href="#" onclick="setMapPosition(' + obj.archived[i].latitude + ',' + obj.archived[i].longitude + ',' + obj.archived[i].zoomlevel + ');">' +
+                                '<img style="margin-top: 10px; margin-bottom: 10px; width: 100%;" src="' + obj.archived[i].picurl + '"></a>' +
                             '</div>';
             if (obj.description =! undefined) {
               archive = archive + '<div class="col s8" style="margin-top: 10px;">' + obj.archived[i].description + '</div>';
@@ -58,9 +61,20 @@ $(document).ready(function(){
         }
         archive = archive + '</ul>';
         $("#bottom-tab2").html(archive);
+
     });
+
     setTimeout(function(){
         $('.tooltipped').tooltip({delay: 50});
         $('.collapsible').collapsible();
-    }, 100)
+    }, 100);
+
+
 });
+
+function setMapPosition(lat,lon,zoom) {
+    var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+    var toProjection = new OpenLayers.Projection("EPSG:900913");
+    var position = new OpenLayers.LonLat(lon, lat).transform(fromProjection, toProjection);
+    map.setCenter(position, zoom);
+}
