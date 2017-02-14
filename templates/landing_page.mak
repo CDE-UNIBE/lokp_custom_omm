@@ -28,16 +28,7 @@ profiles = sorted(get_profiles(), key=lambda profile: profile[0])
 % else:
 
 <br><br>
-<a class='dropdown-button btn' href='#' data-activates='dropdown2'>${_('Select a country')}<i class="material-icons right">arrow_drop_down</i></a>
-<ul id='dropdown2' class='dropdown-content'>
-    % if len(profiles) > 0:
-        % for p in profiles:
-        <li><a href="/${p[1]}">${p[0].capitalize()}</a></li>
-        % endfor
-    % else:
-        <li><a href="/global">${_('Global')}</a></li>
-    % endif
-</ul>
+<a href="/myanmar" class="btn"><i class="material-icons left ">public</i>${_('Enter')}</a>
 
 <br><br><br><br><br>
 <h5>${_('Or take a short tour:')}</h5>
@@ -75,10 +66,5 @@ profiles = sorted(get_profiles(), key=lambda profile: profile[0])
 </div>
 
 % endif
-
-</br></br></br></br>
-<p>${_('Are you interested in concrete use cases of the Myanmar land reporting?')}</p>
-</br>
-<a class="waves-effect waves-light btn" href="${request.route_url('showcases_view')}">${_('Check out the showcases!')}</a>
 
 </%def>
