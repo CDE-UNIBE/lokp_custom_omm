@@ -1018,7 +1018,7 @@ CREATE OR REPLACE FUNCTION geomfromtext(
     text,
     integer)
   RETURNS geometry AS
-'$libdir/postgis-2.1', 'LWGEOM_from_text'
+'$libdir/postgis-2.2', 'LWGEOM_from_text'
   LANGUAGE c IMMUTABLE STRICT
   COST 1;
 ALTER FUNCTION geomfromtext(text, integer)
