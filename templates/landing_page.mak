@@ -10,6 +10,11 @@ from lmkp.views.translation import get_profiles
 profiles = sorted(get_profiles(), key=lambda profile: profile[0])
 %>
 
+
+% if mode == 'demo':
+  DEMO
+% else:
+
 <br><br>
 <a href="/myanmar" class="btn"><i class="material-icons left ">public</i>${_('Enter')}</a>
 
