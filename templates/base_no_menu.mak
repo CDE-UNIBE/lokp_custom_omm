@@ -76,7 +76,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
 
 
 
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <link type="text/css" rel="stylesheet" href="/custom/css/materialize.min.css"  media="screen,projection"/>
 
@@ -127,7 +127,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
               <div class="col s10 offset-s1 col-main-page">
                   <br>
                   <div class="card-panel accent-color">
-                      <span class="white-text"><strong>${_('The Myanmar land reporting')} </strong>${_('is a pilot project by some partners of the')} <a href="http://www.landmatrix.org">${_('Land Matrix')}</a>, ${_('designed to provide greater context and deeper insight on land deals, from a more local perspective.')}</span>
+                      <span class="white-text"><strong>${_('The Myanmar land reporting')} </strong>${_('is a project of OneMap Myanmar.')}</span>
                   </div>
                   ${self.body()}
               </div>
