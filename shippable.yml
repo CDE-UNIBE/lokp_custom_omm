@@ -32,6 +32,9 @@ integrations:
   # http://docs.shippable.com/integrations/notifications/email/
     - integrationName: email
       type: email
+      recipients:
+        --last_committer
+        - onemap-support@cde.unibe.ch
       on_success: always
       on_failure: always
 on_pull_request: never
