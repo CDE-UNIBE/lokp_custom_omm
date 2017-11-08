@@ -273,12 +273,12 @@
 
 ## End of content
 
-<div id="mapModal" class="modal bottom-sheet">
+<div id="mapModal" class="modal">
     <div id="mapModalBody" class="modal-content">
         <!-- Placeholder -->
     </div>
     <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">${_('Close')}</a>
     </div>
 </div>
 

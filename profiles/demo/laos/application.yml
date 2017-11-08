@@ -5,7 +5,7 @@ application:
   name: ສາທາລະນະລັດປະຊາທິປະໄຕ ປະຊາຊົນລາວ
   layers:
   - name: "Blue Marble"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -46,7 +46,7 @@ application:
     - maxExtent: [11063487.59, 1543945.80, 12059351.76, 2593727.60]
     - opacity: 0.7
   - name: "Accessibility"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -73,7 +73,7 @@ application:
     - maxExtent: [11063487.59, 1543945.80, 12059351.76, 2593727.60]
     - opacity: 0.7
   - name: "Population Density 2008"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -86,7 +86,7 @@ application:
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
   - name: "Global Land Cover 2009"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -99,7 +99,7 @@ application:
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
   - name: "Global Cropland"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -112,7 +112,7 @@ application:
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
   - name: "Global Pasture Land"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
