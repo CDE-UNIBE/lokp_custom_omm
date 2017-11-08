@@ -1,7 +1,7 @@
 {
-  "picurl": "/custom/img/potw/logo.png",
+  "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
   "date": "Jan 10 2017",
-  "title": "Title2 POTW",
+  "title": "Title POTW",
   "description": "Additional description about the picture.",
   "latitude": "47.35387",
   "longitude": "7.4361246",
@@ -9,20 +9,10 @@
   "dealurl": "http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72",
   "archived": [
     {
-      "picurl": "/custom/img/potw/logo.png",
-      "date": "Jan 10 2017",
-      "title": "Title2 POTW",
-      "description": "Additional description about the picture.",
-      "latitude": "47.35387",
-      "longitude": "7.4361246",
-      "zoomlevel": "15",
-      "dealurl": "http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72"
-    },
-    {
       "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
       "date": "Jan 09 2017",
       "title": "Title POTW",
-      "description": "",
+      "description": "Additional description about the picture.",
       "latitude": "46.35387",
       "longitude": "7.48",
       "zoomlevel": "15",
