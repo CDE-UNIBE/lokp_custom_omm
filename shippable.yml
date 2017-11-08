@@ -19,7 +19,7 @@ build:
     - python -m json.tool < static/js/news.json
   # http://docs.shippable.com/ci/shippableyml/#ci
   on_success:
-    - ssh -tt $HOST 'cd /srv/webapps/mmlokp-live/lokp/lmkp/customization/omm && git pull origin master'
+    - ssh -v $HOST 'cd /srv/webapps/mmlokp-live/lokp/lmkp/customization/omm && git pull origin master'
 
 
 # Integrations are used to connect external resources to CI
