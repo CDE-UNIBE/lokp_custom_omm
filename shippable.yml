@@ -37,4 +37,8 @@ integrations:
         - onemap-support@cde.unibe.ch
       on_success: always
       on_failure: always
-on_pull_request: never
+      on_pull_request: never
+  
+  key:
+    - integrationName: ssh_mmlokpprod
+      type: sshKey
