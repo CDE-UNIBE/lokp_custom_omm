@@ -1,7 +1,7 @@
 {
   "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
   "date": "Jan 10 2017",
-  "title": "Title POTW",
+  "title": "Title",
   "description": "Additional description about the picture.",
   "latitude": "47.35387",
   "longitude": "7.4361246",
@@ -31,6 +31,16 @@
     {
       "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
       "date": "Jan 07 2017",
+      "title": "Title POTW",
+      "description": "Additional description about the picture.",
+      "latitude": "47.35387",
+      "longitude": "7.48",
+      "zoomlevel": "15",
+      "dealurl": "http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72"
+    },
+    {
+      "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
+      "date": "Jan 06 2017",
       "title": "Title POTW",
       "description": "Additional description about the picture.",
       "latitude": "47.35387",
