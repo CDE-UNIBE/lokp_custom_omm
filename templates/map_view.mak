@@ -62,7 +62,7 @@
     <div class="row" style="margin: 10px 0px 0px 0px;">
         <div class="input-field col s11" action="">
             <i class="material-icons prefix">search</i>
-            <input id="search" name="q" type="text" style="height: 20px; line-height: 20px;">
+            <input id="js-map-search" name="q" type="text" style="height: 20px; line-height: 20px;">
         </div>
     </div>
 
@@ -203,7 +203,7 @@
     </div>
     <div id="map-menu-container" class="hide">
         <form class="navbar-search" action="">
-            <input name="q" id="search" class="search-query" placeholder="${_('search location')}" />
+            <input name="q" id="js-map-search" class="search-query" placeholder="${_('search location')}" />
             <input value="Search" id="search-submit" />
         </form><br/>
 
@@ -283,7 +283,7 @@
 </div>
 
 <%def name="bottom_tags()">
-<script type="text/javascript" src="//maps.google.com/maps/api/js?v=3&amp;key=${str(request.registry.settings.get('lmkp.google_maps_api_key'))}"></script>
+<script type="text/javascript" src="//maps.google.com/maps/api/js?v=3&amp;key=${str(request.registry.settings.get('lmkp.google_maps_api_key'))}&libraries=places"></script>
 <script src="${request.static_url('lmkp:static/build/openlayers/OpenLayers.mapview.min.js')}" type="text/javascript"></script>
 <script type="text/javascript" src="${request.route_url('context_layers')}"></script>
 <script src="${request.static_url('lmkp:static/v2/maps/main.js')}" type="text/javascript"></script>
