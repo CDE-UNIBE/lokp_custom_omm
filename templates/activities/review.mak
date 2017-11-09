@@ -9,33 +9,40 @@
 
     <h3>${_('Deal Moderation')}</h3>
     <p class="id">${identifier}</p>
-    <div class="row">
+
+    <div class="row compareviewcontainer">
         <div class="col s6">
             <div class="row">
-                        <a href="" onclick="javascript:return false;" class="btn teal">
+                <ul>
+                    <li class="active">
+                        <a class="btn disabled" href="" onclick="javascript:return false;" class="btn teal">
                             % if refMetadata:
                                 ${refMetadata['status']}
                             % else:
                                 -
                             % endif
                         </a>
+                    </li>
+                </ul>
             </div>
             % if refMetadata:
             <div class="row">
-                <div class="col s12 grid-area border-bottom deal-data">
-                    <div class="col s5">
-                        <h5>
-                            ${_('Version')}
-                        </h5>
-                    </div>
-                    <div class="col s7">
-                        ${refVersion}
+                <div class="col s12 grid-area deal-data">
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="text-accent-color versioncomparetitle">
+                                ${_('Version')}
+                            </div>
+                        </div>
+                        <div class="col s7">
+                            ${refVersion}
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col s5">
-                            <h5 class="moderate-metadata">
+                            <div class="text-accent-color versioncomparetitle">
                                 ${_('Timestamp')}
-                            </h5>
+                            </div>
                         </div>
                         <div class="col s7">
                             ${refMetadata['timestamp']}
@@ -43,9 +50,9 @@
                     </div>
                     <div class="row">
                         <div class="col s5">
-                            <h5 class="moderate-metadata">
+                            <div class="text-accent-color versioncomparetitle">
                                 ${_('User')}
-                            </h5>
+                            </div>
                         </div>
                         <div class="col s7">
                             ${refMetadata['username']}
@@ -63,12 +70,16 @@
         </div>
         <div class="col s6">
             <div class="row">
-                <div class="col s3">
-                    <a href="" onclick="javascript:return false;" class="btn teal">
-                        ${newMetadata['status']}
-                    </a>
+                <div class="col s7">
+                    <ul>
+                        <li class="active">
+                            <a class="btn disabled" href="" onclick="javascript:return false;" class="btn teal">
+                                ${newMetadata['status']}
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col s6">
+                <div class="col s5">
                     % if len(pendingVersions) > 1:
                     <div class="btn-group">
                         <button class="btn select_btn_bordered"></button>
@@ -84,33 +95,45 @@
                         </ul>
                     </div>
                     % endif
-                </div>
-                <div class="col s3">
-                            <a href="${request.route_url('activities_read_one_history', output='html', uid=identifier)}">${_('History')}</a>
+                    <ul>
+                        <li>
+                            <a class="waves-effect waves-light btn" href="${request.route_url('activities_read_one_history', output='html', uid=identifier)}">${_('History')}</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 grid-area deal-data">
-                        <h6>
-                            ${_('Version')}
-                        </h6>
-                        ${newVersion}
-                        </br></br>
-
-                        <h6 class="moderate-metadata">
-                            ${_('Timestamp')}
-                        </h6>
-                        ${newMetadata['timestamp']}
-                        </br></br>
-
-
-                        <h6 class="moderate-metadata">
-                            ${_('User')}
-                        </h6>
-
-                        ${newMetadata['username']}
-                        </br></br>
-
+                    <div class="row">
+                        <div class="col s5">
+                            <h5 class="text-accent-color versioncomparetitle">
+                                ${_('Version')}
+                            </h5>
+                        </div>
+                        <div class="col s7">
+                            ${newVersion}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5">
+                            <h5 class="text-accent-color versioncomparetitle">
+                                ${_('Timestamp')}
+                            </h5>
+                        </div>
+                        <div class="col s7">
+                            ${newMetadata['timestamp']}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5">
+                            <h5 class="text-accent-color versioncomparetitle">
+                                ${_('User')}
+                            </h5>
+                        </div>
+                        <div class="col s7">
+                            ${newMetadata['username']}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -120,29 +143,29 @@
 <%def name="moderate_buttons()">
     <form class="moderate-form" action="${request.route_url('activities_review')}" method="POST">
         <div class="row">
-                <div class="col s4">
-                    % if reviewable is True:
-                        <button name="review_decision" value="approve" class="btn btn-large ydeal-moderate-button" style="width: 100%;">
-                            ${_('Approve')}
-                        </button>
-                    % else:
-                        <button name="review_decision" value="approve" class="btn btn-large disabled" onclick="javascript:return false;" style="width: 100%;">
-                            [ ${_('Approve')} ]
-                        </button>
-                    % endif
-                </div>
-                <div class="col s4">
-                    <button name="review_decision" value="reject" class="btn btn-large deal-moderate-button" style="width: 100%;">
-                        ${_('Deny')}
+            <div class="col s4">
+                % if reviewable is True:
+                    <button name="review_decision" value="approve" class="btn btn-large deal-moderate-button" style="width: 100%;">
+                        ${_('Approve')}
                     </button>
-                </div>
-                <div class="col s4">
-                    <a class="btn btn-large deal-moderate-button" style="width: 100%;" href="${request.route_url('activities_read_one', output='form', uid=identifier, _query=(('v', newVersion),))}">
-                        ${_('Edit')} (${_('Version')} ${newVersion})
-                    </a>
-                </div>
-                <input type="hidden" name="identifier" value="${identifier}">
-                <input type="hidden" name="version" value="${newVersion}">
+                % else:
+                    <button name="review_decision" value="approve" class="btn btn-large disabled" onclick="javascript:return false;" style="width: 100%;">
+                        [ ${_('Approve')} ]
+                    </button>
+                % endif
+            </div>
+            <div class="col s4">
+                <button name="review_decision" value="reject" class="btn btn-large deal-moderate-button" style="width: 100%;">
+                    ${_('Deny')}
+                </button>
+            </div>
+            <div class="col s4">
+                <a class="btn btn-large deal-moderate-button" style="width: 100%;" href="${request.route_url('activities_read_one', output='form', uid=identifier, _query=(('v', newVersion),))}">
+                    ${_('Edit')} (${_('Version')} ${newVersion})
+                </a>
+            </div>
+            <input type="hidden" name="identifier" value="${identifier}">
+            <input type="hidden" name="version" value="${newVersion}">
         </div>
         % if len(missingKeys) > 0:
             <div class="alert alert-error alert-block alert-missing-mandatory-keys">
@@ -157,7 +180,7 @@
             </div>
         % endif
         % if reviewableMessage:
-            <div class="alert alert-danger alert-block alert-missing-mandatory-keys">
+            <div class="alert alert-error alert-block alert-missing-mandatory-keys">
                 <p><strong>${_('Warning')}</strong></p>
                 <p>${reviewableMessage}</p>
             </div>
@@ -168,12 +191,12 @@
                 <p>${_('The two versions are not based directly on each other. The new version is calculated to display only the changes made to this version. Approving it will create a new version.')}</p>
             </div>
         % endif
-        <div class="row-fluid comments">
+        <div class="row comments">
             <div class="col s12">
                 <div class="col s5">
                     <h5>${_('Additional comments')}</h5>
                 </div>
-                <div class="col s12">
+                <div class="col s7">
                     <textarea name="review_comment" class="input-style materialize-textarea" rows="4"></textarea>
                 </div>
             </div>

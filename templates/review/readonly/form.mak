@@ -25,7 +25,7 @@
             <div class="${cls}" id="form-map-compare-heading">
                 <div class="col s12 compareviewmapcollapsetitle">
                     % if geomChanged == 'change':
-                        <i class="icon-exclamation-sign ttip pointer" data-toggle="tooltip" data-original-title="${_('There are changes in this section')}"></i>
+                        <i class="icon-exclamation-sign ttip pointer" data-toggle="tooltip" data-tooltip="${_('There are changes in this section')}"></i>
                     % endif
                     <a class="accordion-toggle text-accent-color" data-toggle="collapse" href="#collapse-map">
                         ${_('Map')}

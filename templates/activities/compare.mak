@@ -36,7 +36,7 @@
     <div class="row compareviewcontainer">
         <div class="col s6">
             <div class="row">
-                <ul class="">
+                <ul>
                     <li class="active">
                         <a class="btn disabled" href="" onclick="javascript:return false;">
                             % if refMetadata:
@@ -50,7 +50,7 @@
             </div>
             % if refMetadata:
             <div class="row">
-                <div class="col s12 grid-area border-bottom deal-data">
+                <div class="col s12 grid-area deal-data">
                     <div class="row">
                         <div class="col s5">
                             <div class="text-accent-color versioncomparetitle">
@@ -111,7 +111,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 grid-area border-bottom deal-data">
+                <div class="col s12 grid-area deal-data">
                     <div class="row">
                         <div class="col s5">
                             <h5 class="text-accent-color versioncomparetitle">
@@ -146,7 +146,6 @@
             </div>
         </div>
     </div>
-
 </%def>
 
 <%def name="bottom_tags()">

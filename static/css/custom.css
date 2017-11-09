@@ -2217,6 +2217,10 @@ ul.links li {
 .taggroup-content {
 }
 
+.comparedetailcontainer .taggroup-content.change {
+	background-color: #ffd3d3;
+}
+
 .deal-moderate-content .accordion-group {
     margin-bottom: 0;
 }

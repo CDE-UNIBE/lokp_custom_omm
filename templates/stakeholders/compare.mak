@@ -33,12 +33,12 @@
     <h3>${_('Version Compare')}</h3>
     <p class="id">${identifier}</p>
 
-    <div class="row-fluid">
-        <div class="span6">
-            <div class="row-fluid">
-                <ul class="nav nav-tabs table_tabs">
+    <div class="row compareviewcontainer">
+        <div class="col s6">
+            <div class="row">
+                <ul>
                     <li class="active">
-                        <a href="" onclick="javascript:return false;">
+                        <a class="btn disabled" href="" onclick="javascript:return false;">
                             % if refMetadata:
                                 ${refMetadata['status']}
                             % else:
@@ -49,92 +49,96 @@
                 </ul>
             </div>
             % if refMetadata:
-            <div class="row-fluid">
-                <div class="span12 grid-area border-bottom deal-data">
-                    <div class="span5">
-                        <h5 class="green">
-                            ${_('Version')}
-                        </h5>
-                    </div>
-                    <div class="span7">
-                        ${refVersion}
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span5">
-                            <h5 class="green moderate-metadata">
-                                ${_('Timestamp')}
-                            </h5>
+            <div class="row">
+                <div class="col s12 grid-area deal-data">
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="text-accent-color versioncomparetitle">
+                                ${_('Version')}
+                            </div>
                         </div>
-                        <div class="span7">
+                        <div class="col s7">
+                            ${refVersion}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="text-accent-color versioncomparetitle">
+                                ${_('Timestamp')}
+                            </div>
+                        </div>
+                        <div class="col s7">
                             ${refMetadata['timestamp']}
                         </div>
                     </div>
-                    <div class="row-fluid">
-                        <div class="span5">
-                            <h5 class="green moderate-metadata">
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="text-accent-color versioncomparetitle">
                                 ${_('User')}
-                            </h5>
+                            </div>
                         </div>
-                        <div class="span7">
+                        <div class="col s7">
                             ${refMetadata['username']}
                         </div>
                     </div>
                 </div>
             </div>
             % else:
-            <div class="row-fluid">
-                <div class="span12 grid-area deal-data">
+            <div class="row">
+                <div class="col s12 grid-area deal-data">
                     ${_('There is no previous version available.')}
                 </div>
             </div>
             % endif
         </div>
-        <div class="span6">
-            <div class="row-fluid">
-                <div class="span9">
-                    <ul class="nav nav-tabs table_tabs">
+        <div class="col s6">
+            <div class="row">
+                <div class="col s7">
+                    <ul>
                         <li class="active">
-                            <a href="" onclick="javascript:return false;">
+                            <a class="btn disabled" href="" onclick="javascript:return false;">
                                 ${newMetadata['status']}
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="span3">
-                    <ul class="nav nav-tabs table_tabs">
+                <div class="col s5">
+                    <ul>
                         <li>
-                            <a href="${request.route_url('stakeholders_read_one_history', output='html', uid=identifier)}">${_('History')}</a>
+                            <a class="waves-effect waves-light btn" href="${request.route_url('stakeholders_read_one_history', output='html', uid=identifier)}">${_('History')}</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span12 grid-area border-bottom deal-data">
-                    <div class="span5">
-                        <h5 class="green">
-                            ${_('Version')}
-                        </h5>
+            <div class="row">
+                <div class="col s12 grid-area deal-data">
+                    <div class="row">
+                        <div class="col s5">
+                            <h5 class="text-accent-color versioncomparetitle">
+                                ${_('Version')}
+                            </h5>
+                        </div>
+                        <div class="col s7">
+                            ${newVersion}
+                        </div>
                     </div>
-                    <div class="span7">
-                        ${newVersion}
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span5">
-                            <h5 class="green moderate-metadata">
+                    <div class="row">
+                        <div class="col s5">
+                            <h5 class="text-accent-color versioncomparetitle">
                                 ${_('Timestamp')}
                             </h5>
                         </div>
-                        <div class="span7">
+                        <div class="col s7">
                             ${newMetadata['timestamp']}
                         </div>
                     </div>
-                    <div class="row-fluid">
-                        <div class="span5">
-                            <h5 class="green moderate-metadata">
+                    <div class="row">
+                        <div class="col s5">
+                            <h5 class="text-accent-color versioncomparetitle">
                                 ${_('User')}
                             </h5>
                         </div>
-                        <div class="span7">
+                        <div class="col s7">
                             ${newMetadata['username']}
                         </div>
                     </div>
