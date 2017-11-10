@@ -222,9 +222,9 @@
                             %>
 
                             % if pending:
-                               <tr class="pending">
+                               <tr class="pending js-list-row-link" data-href="${request.route_url('stakeholders_byactivities', output='html', uids=id)}">
                             % else:
-                                <tr>
+                                <tr class="js-list-row-link" data-href="${request.route_url('stakeholders_byactivities', output='html', uids=id)}">
                             % endif
                                 <td>
                                     <a class="btn" href="${request.route_url('activities_read_one', output='html', uid=id)}">
@@ -234,7 +234,9 @@
                                 </td>
                                 <td class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}">${timestamp}</td>
                                 % for v in values:
-                                    <td class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}">${v}</td>
+                                    <td class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show investors for this deal")}">
+                                      ${v}
+                                    </td>
                                 % endfor
 
                                 <td class="identifier hide">${id}</td>

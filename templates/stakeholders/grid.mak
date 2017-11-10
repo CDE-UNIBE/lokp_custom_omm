@@ -216,10 +216,9 @@
                             %>
 
                             % if pending:
-                                <tr class="pending">
+                                <tr class="pending js-list-row-link" data-href="${request.route_url('activities_bystakeholders', output='html', uids=id)}">
                             % else:
-
-                                <tr>
+                                <tr class="js-list-row-link" data-href="${request.route_url('activities_bystakeholders', output='html', uids=id)}">
                             % endif
                                 <td>
                                     <a class="btn" href="${request.route_url('stakeholders_read_one', output='html', uid=id)}">
