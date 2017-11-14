@@ -223,7 +223,7 @@
                                 <td>
                                     <a class="btn" href="${request.route_url('stakeholders_read_one', output='html', uid=id)}">
                                         ##${id[:6]}
-                                        Go to deal
+                                        ${_('Go to Investor')}
                                     </a>
                                 </td>
                                 <td class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show deals of this investor")}">${timestamp}</td>

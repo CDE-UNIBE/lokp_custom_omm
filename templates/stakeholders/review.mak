@@ -70,7 +70,7 @@
         </div>
         <div class="col s6">
             <div class="row">
-                <div class="col s7">
+                <div class="col s4">
                     <ul>
                         <li class="active">
                             <a class="btn disabled" href="" onclick="javascript:return false;" class="btn teal">
@@ -79,27 +79,16 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col s5">
+                <div class="col s8 right-align">
                     % if len(pendingVersions) > 1:
-                    <div class="btn-group">
-                        <button class="btn select_btn_bordered"></button>
-                        <button class="btn select_btn_bordered_right dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            % for pV in pendingVersions:
-                            <li>
-                                <a href="?new=${pV}">${_('Version')} ${pV}</a>
-                            </li>
-                            % endfor
-                        </ul>
-                    </div>
+                      <a class='dropdown-button btn' href='#' data-activates='version_dropdown'>${_('Version')} ${newVersion}</a>
+                      <ul id='version_dropdown' class='dropdown-content'>
+                        % for pV in pendingVersions:
+                          <li><a href="?new=${pV}">${_('Version')} ${pV}</a></li>
+                        % endfor
+                      </ul>
                     % endif
-                    <ul>
-                        <li>
-                            <a class="waves-effect waves-light btn" href="${request.route_url('stakeholders_read_one_history', output='html', uid=identifier)}">${_('History')}</a>
-                        </li>
-                    </ul>
+                    <a class="waves-effect waves-light btn" href="${request.route_url('stakeholders_read_one_history', output='html', uid=identifier)}">${_('History')}</a>
                 </div>
             </div>
             <div class="row">
