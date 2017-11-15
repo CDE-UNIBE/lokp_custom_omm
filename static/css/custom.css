@@ -2549,6 +2549,7 @@ footer ul li a{
 #layer-transparency-slider {
 	width: 20%;
 	margin-right: 30px;
+	border: none;
 }
 input#layer-transparency-slider+.thumb {
 	display: none;

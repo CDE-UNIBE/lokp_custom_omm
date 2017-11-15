@@ -94,16 +94,24 @@
             <div class="collapsible-body">
                 <form action="#">
                     <p style="padding-top: 0; padding-bottom: 0;">
-                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="streetMapOption" value="streetMap" checked/>
-                      <label for="streetMapOption">${_('Street Map')}</label>
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="satelliteMapOption" value="satelliteMap" checked="checked" />
+                      <label for="satelliteMapOption">${_('Google Earth satellite images')}</label>
                     </p>
                     <p style="padding-top: 0; padding-bottom: 0;">
-                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="satelliteMapOption" value="satelliteMap" />
-                      <label for="satelliteMapOption">${_('Satellite Imagery')}</label>
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="esriSatelliteMapOption" value="esriSatellite" />
+                      <label for="esriSatelliteMapOption">${_('ESRI World Imagery')}</label>
+                    </p>
+                    <p style="padding-top: 0; padding-bottom: 0;">
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="bingSatelliteOption" value="bingSatellite" />
+                      <label for="bingSatelliteOption">${_('Bing Aerial')}</label>
                     </p>
                     <p style="padding-top: 0; padding-bottom: 0;">
                       <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="terrainMapOption" value="terrainMap" />
-                      <label for="terrainMapOption">${_('Terrain Map')}</label>
+                      <label for="terrainMapOption">${_('Google Terrain Map')}</label>
+                    </p>
+                    <p style="padding-top: 0; padding-bottom: 0;">
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="streetMapOption" value="streetMap"/>
+                      <label for="streetMapOption">${_('OpenStreetMap')}</label>
                     </p>
                 </form>
             </div>
