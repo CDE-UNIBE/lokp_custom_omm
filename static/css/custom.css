@@ -2546,6 +2546,19 @@ footer ul li a{
 	margin-top: 400px;
 }
 
+#layer-transparency-slider {
+	width: 20%;
+	margin-right: 30px;
+}
+input#layer-transparency-slider+.thumb {
+	display: none;
+}
+
+#contextLegendContent p {
+	padding: 0.5rem 0;
+}
+
+
 #gridview_tableoptions{
     margin-top: 20px;
 }

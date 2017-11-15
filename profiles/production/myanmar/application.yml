@@ -16,7 +16,6 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
-    - opacity: 0.7
   - name: "Population Density 2008"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
@@ -29,7 +28,6 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
-    - opacity: 0.6
   - name: "Global Land Cover 2009"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
@@ -42,7 +40,6 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
-    - opacity: 0.6
   - name: "Global Cropland"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
@@ -55,7 +52,6 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
-    - opacity: 0.6
   - name: "Global Pasture Land"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
@@ -68,7 +64,6 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
-    - opacity: 0.6
   - name: "Global Forest Change Loss Year 2001-2016 (Hansen et al.)"
     url: "https://gis2.onemapmyanmar.info/gis2/services/hansen_lossyear_gfc2016_transp/MapServer/WMSServer"
     wms_options:
@@ -76,7 +71,7 @@ application:
     - format: "image/jpeg"
     - layers: "0"
     - transparent: true
-    - abstract: "<p>Results from time-series analysis of Landsat images characterizing forest extent and change.</p><p>Trees are defined as vegetation taller than 5m in height and are expressed as a percentage per output grid cell as ‘2000 Percent Tree Cover’. ‘Forest Cover Loss’ is defined as a stand-replacement disturbance, or a change from a forest to non-forest state, during the period 2000–2016. ‘Forest Cover Gain’ is defined as the inverse of loss, or a non-forest to forest change entirely within the period 2000–2012. ‘Forest Loss Year’ is a disaggregation of total ‘Forest Loss’ to annual time scales.</p><p>Source: <a href='http://science.sciencemag.org/content/342/6160/850'>Hansen et al. 2013</a></p>"
+    - abstract: "<p>Results from time-series analysis of Landsat images characterizing forest extent and change.</p><p>Trees are defined as vegetation taller than 5m in height and are expressed as a percentage per output grid cell as ‘2000 Percent Tree Cover’. ‘Forest Cover Loss’ is defined as a stand-replacement disturbance, or a change from a forest to non-forest state, during the period 2000–2016. ‘Forest Cover Gain’ is defined as the inverse of loss, or a non-forest to forest change entirely within the period 2000–2012. ‘Forest Loss Year’ is a disaggregation of total ‘Forest Loss’ to annual time scales.</p><p>Source: <a href='http://science.sciencemag.org/content/342/6160/850' target='_blank'>Hansen et al. 2013</a></p>"
     ol_options:
     - visibility: false
     - isBaseLayer: false

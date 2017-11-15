@@ -144,6 +144,9 @@
             </div>
         </div>
         <div id="floating-buttons" style="text-align: right;">
+            <span class="range-field tooltipped" data-position="top" data-tooltip="${_('Transparency of context layers')}">
+              <input type="range" id="layer-transparency-slider" min="0" max="100" value="60" />
+            </span>
             <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 15px;" data-position="top" data-tooltip="Map Options" data-activates="slide-out-map-options">
                 <i class="material-icons">map</i>
             </a>
