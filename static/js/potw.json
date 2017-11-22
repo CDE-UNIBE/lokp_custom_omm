@@ -1,11 +1,11 @@
 {
   "picurl": "/custom/img/potw/largest_clearcut.jpeg",
   "date": "Nov 22 2017",
-  "title": "Large-scale deforestation in Sagaing Region and Shant State border area",
-  "description": "Any comments and information about this land conversion are welcome. Click on the picture to jump to the location on the map. <br/> Click <a href='https://earthengine.google.com/timelapse/#v=24.13227,96.57336,9.722,latLng&t=1.10'> here </a> to watch the land conversion in a 30 year timelapse",
+  "title": "Large-scale deforestation in Sagaing Region and Shant State border area. </a>  Click on the picture to jump to the location on the map. <br/> Click <a href='https://earthengine.google.com/timelapse/#v=24.13227,96.57336,9.722,latLng&t=1.10'> here </a> to watch the land conversion in a 30 year timelapse",
+  "description": "Any comments and information about this land conversion are welcome.",
   "latitude": "24.1411272",
   "longitude": "96.5203299",
-  "dealurl": "",
+  "dealurl": "https://www.mmlandreporting.info/map",
   "archived": [
     {
       "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
