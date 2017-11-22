@@ -1,23 +1,22 @@
 {
-  "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
-  "date": "Jan 10 2017",
-  "title": "Title",
-  "description": "Additional gdescription about the picture.",
-  "latitude": "47.35387",
-  "longitude": "7.4361246",
-  "zoomlevel": "15",
-  "dealurl": "http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72",
+  "picurl": "/custom/img/potw/largest_clearcut.jpeg",
+  "date": "Nov 22 2017",
+  "title": "Large-scale deforestation in Sagaing Region and Shant State border area",
+  "description": "Any comments and information about this land conversion are welcome. Click on the picture to jump to the location on the map. <br/> Click <a href='https://earthengine.google.com/timelapse/#v=24.13227,96.57336,9.722,latLng&t=1.10'> here </a> to watch the land conversion in a 30 year timelapse",
+  "latitude": "24.1411272",
+  "longitude": "96.5203299",
+  "dealurl": "",
   "archived": [
     {
       "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
       "date": "Jan 10 2017",
       "title": "Title",
-      "description": "Additional gdescription about the picture.",
+      "description": " Test description 1 about the picture.",
       "latitude": "47.35387",
       "longitude": "7.4361246",
       "zoomlevel": "15",
       "dealurl": "http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72"
-    }
+    },
     {
       "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
       "date": "Jan 09 2017",
@@ -35,16 +34,6 @@
       "description": "Additional description about the picture.",
       "latitude": "46.9536143",
       "longitude": "7.4361246",
-      "zoomlevel": "15",
-      "dealurl": "http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72"
-    },
-    {
-      "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
-      "date": "Jan 07 2017",
-      "title": "Title POTW",
-      "description": "Additional description about the picture.",
-      "latitude": "47.35387",
-      "longitude": "7.48",
       "zoomlevel": "15",
       "dealurl": "http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72"
     },

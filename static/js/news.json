@@ -1,36 +1,24 @@
 {
   "news": [
     {
-      "header": "News Title 1",
-      "text": "Lorem ipsum 1 dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "header": "New Land deals",
+      "text": "Deals concerning the Special Economic Zones (SEZ) in <a href='https://www.mmlandreporting.info/activities/html/0dd2459d-2dd5-4183-9701-6ee774edaf32'> Dawei </a>, <a href='https://www.mmlandreporting.info/activities/html/6ddc8fbd-58b4-4b7d-b648-3f89beda9c06'> Thilawa </a> and <a href='https://www.mmlandreporting.info/activities/html/424e8ebd-3273-41bb-8eb4-a23a62db6d7f'> Kyaukphyu </a> were added <br/> Any further information as well as updates on these deals are most welcome."
     },
     {
-      "header": "News Title 2",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "header": "New base layers are available now",
+      "text": "Google Earth satellite images as well as ESRI World Imagery are available as base map now."
     },
     {
-      "header": "News Title 2",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "header": "Mining areas added as context layer",
+      "text": "Mining areas layer provided by <a href='http://www.mdpi.com/2072-4292/8/11/912/htmConnette'> Connette et al. 2016 </a> is available as context layer now "
     },
     {
-      "header": "News Title 2",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "header": "Global Forest Change Loss Layer added",
+      "text": "The Global Forest Change Loss Layer for a period of time between 2001 and 2016 provided by <a href='http://science.sciencemag.org/content/342/6160/850'> Hansen et al. 2013 </a> is availabel as context layer now."
     },
     {
-      "header": "News Title 2",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      "header": "News Title 2",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      "header": "News Title 2",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      "header": "News Title 2",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "header": "New swipe function",
+      "text": "A swipe function to modify transparency level of context layers was implemented."
     }
   ]
 }
