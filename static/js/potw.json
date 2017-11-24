@@ -9,14 +9,14 @@
   "dealurl": "https://www.mmlandreporting.info/map",
   "archived": [
     {
-      "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
-      "date": "Jan 10 2017",
-      "title": "Title",
-      "description": " Test description 1 about the picture.",
-      "latitude": "47.35387",
-      "longitude": "7.4361246",
-      "zoomlevel": "15",
-      "dealurl": "http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72"
+      "picurl": "/custom/img/potw/Myitson_dam.jpeg",
+      "date": "Nov 24 2017",
+      "title": "Suspended Myitsone Hydropower Project. See deal information <a href='https://www.mmlandreporting.info/activities/html/fca20f34-5dc5-43e7-8f74-f6cef286eb32' here </a>",
+      "description": "Image source: South China Morning Post ",
+      "latitude": "25.6815934",
+      "longitude": "97.5357738",
+      "zoomlevel": "14",
+      "dealurl": "https://www.mmlandreporting.info/activities/html/fca20f34-5dc5-43e7-8f74-f6cef286eb32"
     },
     {
       "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
