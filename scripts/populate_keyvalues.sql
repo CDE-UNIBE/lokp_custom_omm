@@ -24,7 +24,7 @@ INSERT INTO data.categories(id, name, type, fk_language, description, fk_categor
   (2, 'General Information', 'activities', 1, NULL, NULL),
   (3, 'Employment', 'activities', 1, NULL, NULL),
   (4, 'Investor Info', 'activities', 1, NULL, NULL),
-  (5, 'Data Sources', 'activities', 1, NULL, NULL),
+  (5, 'Data Smmources', 'activities', 1, NULL, NULL),
   (6, 'Local Communities', 'activities', 1, NULL, NULL),
   (7, 'Former Use', 'activities', 1, NULL, NULL),
   (8, 'Produce Info', 'activities', 1, NULL, NULL),

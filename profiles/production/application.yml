@@ -70,8 +70,8 @@ application:
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
-  - name: "Global Forest Change Loss Year 2001-2016 (Hansen et al.)"
-    url: "https://gis2.onemapmyanmar.info/gis2/services/hansen_lossyear_gfc2016_transp/MapServer/WMSServer"
+  - name: "Global Forest Change Loss Year 2001-2016 all years (Hansen et al.)"
+    url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/hansen_lossyear_gfc2016_aytp/MapServer/WMSServer"
     wms_options:
     - epsg: 102100
     - format: "image/jpeg"
@@ -82,12 +82,36 @@ application:
     - visibility: false
     - isBaseLayer: false
     - sphericalMercator: true
-  - name: "Mining Areas (Connette et al.)"
-    url: "https://gis2.onemapmyanmar.info/gis2/services/mining_myanmar_mimu_2016/MapServer/WMSServer"
+  - name: "Global Forest Change Loss Year 2001-2016 (Hansen et al.)"
+    url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/hansen_lossyear_gfc2016_tp/MapServer/WMSServer"
     wms_options:
     - epsg: 102100
     - format: "image/jpeg"
-    - layers: "Mining Myanmar"
+    - layers: "0"
+    - transparent: true
+    - abstract: "<p>Results from time-series analysis of Landsat images characterizing forest extent and change.</p><p>Trees are defined as vegetation taller than 5m in height and are expressed as a percentage per output grid cell as ‘2000 Percent Tree Cover’. ‘Forest Cover Loss’ is defined as a stand-replacement disturbance, or a change from a forest to non-forest state, during the period 2000-2016. ‘Forest Cover Gain’ is defined as the inverse of loss, or a non-forest to forest change entirely within the period 2000–2012. ‘Forest Loss Year’ is a disaggregation of total ‘Forest Loss’ to annual time scales.</p><p>Source: <a href='http://science.sciencemag.org/content/342/6160/850' target='_blank'>Hansen et al. 2013</a></p>"
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+  - name: "Myanmar 2002-2014 Forest Cover Change (Bhagwat et al. 2015)"
+    url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/ecodev_fcc_2002_2014_mm/MapServer/WMSServer"
+    wms_options:
+    - epsg: 102100
+    - format: "image/jpeg"
+    - layers: "0"
+    - transparent: true
+    - abstract: "<p>A Landsat-based classification of Myanmar’s forest cover with a focus on changes in intact forest between 2002 and 2014.</p><p>Source: <a href='http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176364' target='_blank'>Bhagwat et al. 2015</a></p>"
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+  - name: "Mining Areas (Connette et al.)"
+    url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/connette_mining_myanmar_2016/MapServer/WMSServer"
+    wms_options:
+    - epsg: 102100
+    - format: "image/jpeg"
+    - layers: "0"
     - transparent: true
     - abstract: "<p>This is a dataset of possible mining areas in Myanmar that was digitized from a systematic search of high-resolution imagery available on Google Earth and Bing Aerial. Digitizing took place in late 2015 and early 2016 with the most recent imagery available (usually 2014 or 2015). A field in the attribute table called 'Certainty' indicates the how confident we were that the digitized polygon is a mine, rather than some other type of ground disturbance.</p><p>Source: <a href='http://www.mdpi.com/2072-4292/8/11/912/htm' target='_blank'>Connette et al. 2016</a></p>"
     ol_options:
