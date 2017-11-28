@@ -11,8 +11,10 @@
     {
       "picurl": "/custom/img/potw/largest_clearcut.jpeg",
       "date": "Nov 22 2017",
-      "title": "Large-scale deforestation in Sagaing Region and Shant State border area. <br/> Click on the picture to jump to the location on the map. <br/> Click <a href='https://earthengine.google.com/timelapse/#v=24.13227,96.57336,9.722,latLng&t=1.10'> here </a> to watch the land conversion in a 30 year timelapse",
-      "description": "Any comments and information on this land conversion are welcome.",
+      "title": "Large-scale deforestation in Sagaing Region and Shant State border area.",
+      "subtitle": "Click on the picture to jump to the location on the map. <br/> Click <a href='https://earthengine.google.com/timelapse/#v=24.13227,96.57336,9.722,latLng&t=1.10' target='_blank'> here </a> to watch the land conversion in a 30 year timelapse.",
+      "description": "Any comments and information about this land conversion are welcome.",
+      "contextlayer": "Global Forest Change Loss Year 2001-2016 (Hansen et al.)",
       "latitude": "24.1411272",
       "longitude": "96.5203299",
       "zoomlevel": "11",

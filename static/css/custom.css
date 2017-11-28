@@ -2841,6 +2841,47 @@ ul.about li {
 	margin-top: 1rem;
 }
 
+/* POTW */
+.potw .potw-title {
+	margin-top: 20px;
+	font-weight: bold;
+}
+.potw-date {
+	font-size: 12px;
+	color: grey;
+	font-weight: normal;
+}
+.potw .potw-description {
+	margin: 0;
+	padding: 0;
+}
+.potw .potw-description i, .potw-archive .potw-description i {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	margin-left: 10px;
+}
+.potw-archive .collapsible-header {
+	line-height: 1rem;
+	padding: 1rem;
+}
+.potw-archive .collapsible-body {
+	margin: 0;
+}
+.potw-archive .potw-image {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+.potw-archive .potw-description {
+	margin-top: 10px;
+}
+.potw-archive .potw-description p {
+	padding: 0;
+}
+.potw-archive .row {
+	margin-bottom: 0;
+}
 
 
 
