@@ -1,4 +1,14 @@
 {
+    "picurl": "/custom/img/potw/shweli_3.jpeg",
+    "date": "Dez 12 2017",
+    "title": "Shweli 3 Hydropower Project construction site. See deal information <a href='https://www.mmlandreporting.info/activities/html/6e3ed7c4-9fad-473f-bcb1-4b6a2fe35e2e'> here </a>",
+    "description": "Image source: AF Consult",
+    "latitude": "23.2704905", 
+    "longitude": "96.6474838",
+    "zoomlevel": "15",
+    "dealurl": "https://www.mmlandreporting.info/activities/html/6e3ed7c4-9fad-473f-bcb1-4b6a2fe35e2e",
+    "archived": [
+    {
     "picurl": "/custom/img/potw/Myitson_dam.jpeg",
     "date": "Nov 24 2017",
     "title": "Suspended Myitsone Hydropower Project. See deal information <a href='https://www.mmlandreporting.info/activities/html/fca20f34-5dc5-43e7-8f74-f6cef286eb32'> here </a>",
@@ -6,8 +16,8 @@
     "latitude": "25.6815934",
     "longitude": "97.5357738",
     "zoomlevel": "14",
-    "dealurl": "https://www.mmlandreporting.info/activities/html/fca20f34-5dc5-43e7-8f74-f6cef286eb32",
-    "archived": [
+    "dealurl": "https://www.mmlandreporting.info/activities/html/fca20f34-5dc5-43e7-8f74-f6cef286eb32"
+    },
     {
       "picurl": "/custom/img/potw/largest_clearcut.jpeg",
       "date": "Nov 22 2017",
