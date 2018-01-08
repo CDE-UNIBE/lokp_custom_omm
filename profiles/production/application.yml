@@ -5,7 +5,7 @@ application:
     coordinates: [[[-180, -84],[180, -84],[180, 84],[-180, 84],[-180, -84]]]
   name: "Land Matrix Knowledge Platform global edition"
   layers:
-  - name: "Accessability"
+  - name: "Accessibility"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
@@ -17,7 +17,6 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
-    - opacity: 0.7
   - name: "Population Density 2008"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
@@ -30,7 +29,6 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
-    - opacity: 0.6
   - name: "Global Land Cover 2009"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
@@ -43,7 +41,6 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
-    - opacity: 0.6
   - name: "Global Cropland"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
@@ -56,7 +53,6 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
-    - opacity: 0.6
   - name: "Global Pasture Land"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
@@ -69,8 +65,7 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
-    - opacity: 0.6
-  - name: "Global Forest Change Loss Year 2001-2016 all years (Hansen et al.)"
+  - name: "Global Forest Loss"
     url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/hansen_lossyear_gfc2016_aytp/MapServer/WMSServer"
     wms_options:
     - epsg: 102100
@@ -82,7 +77,7 @@ application:
     - visibility: false
     - isBaseLayer: false
     - sphericalMercator: true
-  - name: "Global Forest Change Loss Year 2001-2016 (Hansen et al.)"
+  - name: "Global Forest Loss (2015/2016 highlight)"
     url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/hansen_lossyear_gfc2016_tp/MapServer/WMSServer"
     wms_options:
     - epsg: 102100
@@ -94,7 +89,7 @@ application:
     - visibility: false
     - isBaseLayer: false
     - sphericalMercator: true
-  - name: "Myanmar 2002-2014 Forest Cover Change (Bhagwat et al. 2015)"
+  - name: "Myanmar 2002-2014 Forest Cover Change"
     url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/ecodev_fcc_2002_2014_mm/MapServer/WMSServer"
     wms_options:
     - epsg: 102100
@@ -106,7 +101,7 @@ application:
     - visibility: false
     - isBaseLayer: false
     - sphericalMercator: true
-  - name: "Mining Areas (Connette et al.)"
+  - name: "Possible Mining Areas"
     url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/connette_mining_myanmar_2016/MapServer/WMSServer"
     wms_options:
     - epsg: 102100
@@ -114,6 +109,18 @@ application:
     - layers: "0"
     - transparent: true
     - abstract: "<p>This is a dataset of possible mining areas in Myanmar that was digitized from a systematic search of high-resolution imagery available on Google Earth and Bing Aerial. Digitizing took place in late 2015 and early 2016 with the most recent imagery available (usually 2014 or 2015). A field in the attribute table called 'Certainty' indicates the how confident we were that the digitized polygon is a mine, rather than some other type of ground disturbance.</p><p>Source: <a href='http://www.mdpi.com/2072-4292/8/11/912/htm' target='_blank'>Connette et al. 2016</a></p>"
+    ol_options:
+    - visibility: false
+    - isBaseLayer: false
+    - sphericalMercator: true
+  - name: "Existing and planned hydropower dams"
+    url: "https://gis2.onemapmyanmar.info/gis2/services/Hydro_dams/MapServer/WMSServer"
+    wms_options:
+    - epsg: 102100
+    - format: "image/jpeg"
+    - layers: "0"
+    - transparent: true
+    - abstract: "<p>This dataset shows locations of existing, planned and suspended hydropower dam projects. The Layer shows the 2017 project status. The Layer was downloaded on carto.com and edited. </p><p>Source: <a href='https://bethwalker22.carto.com/viz/dc6f5b28-03ad-11e7-98bb-0e05a8b3e3d7/public_map' target='_blank'> carto.com </a></p>"
     ol_options:
     - visibility: false
     - isBaseLayer: false
