@@ -113,11 +113,11 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
   - name: "Existing and planned hydropower dams"
-    url: "https://gis2.onemapmyanmar.info/gis2/services/Hydro_dams/MapServer/WMSServer"
+    url: "https://gis2.onemapmyanmar.info/gis2/services/Hydro_dams2/MapServer/WMSServer"
     wms_options:
     - epsg: 102100
     - format: "image/jpeg"
-    - layers: "Hydropower Myanmar"
+    - layers: "Hydropower projects"
     - transparent: true
     - abstract: "<p>This dataset shows locations of existing, planned and suspended hydropower dam projects. The Layer shows the 2017 project status. The Layer was downloaded on carto.com and edited. </p><p>Source: <a href='https://bethwalker22.carto.com/viz/dc6f5b28-03ad-11e7-98bb-0e05a8b3e3d7/public_map' target='_blank'> carto.com </a></p>"
     ol_options:
