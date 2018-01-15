@@ -102,7 +102,7 @@ application:
     - isBaseLayer: false
     - sphericalMercator: true
   - name: "Possible Mining Areas"
-    url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/connette_mining_myanmar_2016/MapServer/WMSServer"
+    url: "https://gis2.onemapmyanmar.info/gis2/services/Connette_mining/MapServer/WMSServer"
     wms_options:
     - epsg: 102100
     - format: "image/jpeg"
