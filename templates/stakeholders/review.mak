@@ -1,11 +1,11 @@
-<%inherit file="lmkp:customization/omm/templates/stakeholders/compare.mak" />
+<%inherit file="lokp:customization/omm/templates/stakeholders/compare.mak" />
 
 <%def name="title()">${_('Investor Moderation')}</%def>
 
 <%def name="topOfForm()">
 
     ## Session messages
-    <%include file="lmkp:templates/parts/sessionmessage.mak"/>
+    <%include file="lokp:templates/parts/sessionmessage.mak"/>
 
     <h3>${_('Investor Moderation')}</h3>
     <p class="id">${identifier}</p>

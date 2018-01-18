@@ -16,12 +16,12 @@
 
   It also links user 1 (admin) with the Myanmar profile.
 
-  Last update: 2017-02-14 11:00
+  Last update: 2018-01-18 12:00
 */
 
 INSERT INTO data.categories(id, name, type, fk_language, description, fk_category) VALUES
-  (1, 'Spatial Data', 'activities', 1, NULL, NULL),
-  (2, 'General Information', 'activities', 1, NULL, NULL),
+  (1, 'General Information', 'activities', 1, NULL, NULL),
+  (2, 'Additional Information', 'activities', 1, NULL, NULL),
   (3, 'Employment', 'activities', 1, NULL, NULL),
   (4, 'Investor Info', 'activities', 1, NULL, NULL),
   (5, 'Data Sources', 'activities', 1, NULL, NULL),

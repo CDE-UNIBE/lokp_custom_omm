@@ -1,8 +1,7 @@
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%
-    from lmkp.views.views import getFilterKeys
-    from lmkp.views.views import getActiveFilters
+    from lokp.views.filter import getFilterKeys, getActiveFilters
 
     aFilterKeys, shFilterKeys = getFilterKeys(request)
     activeFilters = getActiveFilters(request)
@@ -11,13 +10,12 @@
 <%def name="title()">${_('Download Deals')}</%def>
 
 <%
-    from lmkp.utils import handle_query_string
+    from lokp.utils.views import handle_query_string
 %>
 
 ## Filter
-##<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
 <ul id="slide-out-filter" class="side-nav" style="min-width: 550px;">
-    <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+    <%include file="lokp:customization/omm/templates/parts/filter.mak" />
 </ul>
 
 <div class="container">
@@ -139,8 +137,8 @@
     <script type="text/javascript">
         var translation_all = "${_('All')}";
     </script>
-    <script src="${request.static_url('lmkp:static/v2/download.js')}" type="text/javascript"></script>
-    <script src="${request.static_url('lmkp:static/v2/filters.js')}" type="text/javascript"></script>
+    <script src="${request.static_url('lokp:static/js/download.js')}" type="text/javascript"></script>
+    <script src="${request.static_url('lokp:static/js/filters.js')}" type="text/javascript"></script>
     <script>
         $(document).ready(function() {
         $('select').material_select();

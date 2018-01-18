@@ -1,8 +1,8 @@
 <%
-from lmkp.utils import handle_query_string
-from lmkp.views.translation import get_languages
-from lmkp.views.translation import get_profiles
-from urllib import quote_plus
+from lokp.utils.views import handle_query_string
+from lokp.views.translation import get_languages
+from lokp.views.translation import get_profiles
+from urllib.parse import quote_plus
 languages = get_languages()
 selectedlanguage = languages[0]
 for l in languages:
@@ -14,13 +14,13 @@ for p in profiles:
    if profile == p[0]:
        selectedprofile = p
 mode = None
-if 'lmkp.mode' in request.registry.settings:
-    if str(request.registry.settings['lmkp.mode']).lower() == 'demo':
+if 'lokp.mode' in request.registry.settings:
+    if str(request.registry.settings['lokp.mode']).lower() == 'demo':
         mode = 'demo'
 
 use_piwik_analytics = False
-if 'lmkp.use_piwik_analytics' in request.registry.settings:
-    if str(request.registry.settings['lmkp.use_piwik_analytics']).lower() == "true":
+if 'lokp.use_piwik_analytics' in request.registry.settings:
+    if str(request.registry.settings['lokp.use_piwik_analytics']).lower() == "true":
         use_piwik_analytics = True
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -136,7 +136,6 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                                 _('List')
                                             ], [
                                                 [
-                                                    request.route_url('charts_view'),
                                                     request.route_url('charts_overview')
                                                 ],
                                                 'insert_chart',
@@ -354,7 +353,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <script type="text/javascript" src="/custom/js/vendor/bootstrap.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/materialize.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/typeahead.js"></script>
-        <script type="text/javascript" src="${request.static_url('lmkp:static/v2/main.js')}"></script>
+        <script type="text/javascript" src="${request.static_url('lokp:static/js/main.js')}"></script>
 
         % if use_piwik_analytics==True:
         <!-- Piwik -->

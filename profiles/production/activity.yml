@@ -281,7 +281,7 @@ fields:
 
     Intended area (ha):
       type: Number
-      validator: if(value >= 0){return true;} else {return Lmkp.ts.msg("input-validation_number-greater-than-0");}
+      validator: if(value >= 0){return true;} else {return Lokp.ts.msg("input-validation_number-greater-than-0");}
 
     Intention of Investment:
       type: String
@@ -621,11 +621,11 @@ fields:
     
     Year:
       type: Number
-      validator: if(value == 0 || (value > 1900 && value < 2300)){return true;} else {return Lmkp.ts.msg("input-validation_year");}
+      validator: if(value == 0 || (value > 1900 && value < 2300)){return true;} else {return Lokp.ts.msg("input-validation_year");}
     
     Percentage:
         type: Number
-        validator:  if(value >= 0 && value <= 100){return true;} else {return Lmkp.ts.msg("input-validation_percentage");} 
+        validator:  if(value >= 0 && value <= 100){return true;} else {return Lokp.ts.msg("input-validation_percentage");}
     
     Remark:
       type: String

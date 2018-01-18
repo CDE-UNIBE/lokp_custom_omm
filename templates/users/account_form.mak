@@ -1,16 +1,15 @@
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('User Account')}</%def>
 
 <%def name="head_tags()">
-<!-- REQUIREMENTS -->
-<!-- CSS -->
-% for reqt in css_links:
-<!--link rel="stylesheet" href="/formstatic/${reqt}" type="text/css" /-->
-% endfor
-% for reqt in js_links:
-<script type="text/javascript" src="/formstatic/${reqt}"></script>
-% endfor
+  <!-- REQUIREMENTS -->
+  % for reqt in css_links:
+    <link rel="stylesheet" href="${request.static_url(reqt)}" type="text/css" />
+  % endfor
+  % for reqt in js_links:
+    <script type="text/javascript" src="${request.static_url(reqt)}"></script>
+  % endfor
 </%def>
 
 <%def name="inlinemenu()">

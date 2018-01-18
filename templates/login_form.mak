@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Login')}</%def>
 
@@ -12,8 +12,8 @@
 
 <%
 mode = None
-if 'lmkp.mode' in request.registry.settings:
-    if str(request.registry.settings['lmkp.mode']).lower() == 'demo':
+if 'lokp.mode' in request.registry.settings:
+    if str(request.registry.settings['lokp.mode']).lower() == 'demo':
         mode = 'demo'
 %>
 

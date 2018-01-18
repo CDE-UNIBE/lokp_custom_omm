@@ -1,10 +1,7 @@
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%
-from lmkp.views.views import (
-    get_current_locale,
-    get_current_profile,
-)
+from lokp.utils.views import get_current_locale, get_current_profile
 %>
 
 <%def name="title()">${_('Latest approved Changesets')}</%def>
@@ -70,7 +67,7 @@ from lmkp.views.views import (
             % if len(items) > 0:
             <div class="row-fluid">
                 <div class="span9">
-                    <%include file="lmkp:templates/parts/pagination.mak"
+                    <%include file="lokp:templates/parts/pagination.mak"
                     args="totalitems=totalitems, currentpage=currentpage, pagesize=pagesize, itemsname=_('Changesets')"
                     />
                 </div>

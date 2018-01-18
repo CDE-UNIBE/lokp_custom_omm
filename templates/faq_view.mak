@@ -1,9 +1,9 @@
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('FAQ')}</%def>
 
 <%
-    from lmkp.views.form_config import getCategoryList
+    from lokp.config.form import getCategoryList
     cList = getCategoryList(request, 'activities')
     desiredKeys = cList.getDesiredKeyNames(translated=True)
 %>

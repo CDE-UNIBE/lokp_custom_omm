@@ -1,6 +1,6 @@
 <%def name="height()">500</%def>
 
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_("Investor bar charts")}</%def>
 
@@ -47,7 +47,7 @@
 </div>
 
 <%def name="bottom_tags()">
-  <script src="${request.static_url('lmkp:static/lib/d3/d3.v3.min.js')}" type="text/javascript"></script>
+  <script src="${request.static_url('lokp:static/lib/d3/d3.min.js')}" type="text/javascript"></script>
   <script type="text/javascript">
 
     var group_activities_by = "${_('Group investors by:')}";
@@ -101,6 +101,6 @@
       });
     });
   </script>
-  <script src="${request.static_url('lmkp:static/v2/charts/barchart.js')}" type="text/javascript"></script>
+  <script src="${request.static_url('lokp:static/js/charts/barchart.js')}" type="text/javascript"></script>
 
 </%def>

@@ -1,10 +1,7 @@
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%
-from lmkp.views.views import (
-    get_current_locale,
-    get_current_profile,
-)
+from lokp.utils.views import get_current_locale, get_current_profile
 %>
 
 <%def name="title()">${_('Version History')}</%def>
@@ -13,7 +10,7 @@ from lmkp.views.views import (
     <div class="content no-border">
 
         ## Session messages
-        <%include file="lmkp:templates/parts/sessionmessage.mak"/>
+        <%include file="lokp:templates/parts/sessionmessage.mak"/>
 
         % if len(versions) == 0:
             <div class="row-fluid">
