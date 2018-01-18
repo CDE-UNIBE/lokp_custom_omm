@@ -1,4 +1,12 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
+
+<%
+    from lmkp.views.views import getFilterKeys
+    from lmkp.views.views import getActiveFilters
+
+    aFilterKeys, shFilterKeys = getFilterKeys(request)
+    activeFilters = getActiveFilters(request)
+%>
 
 <%def name="title()">${_('Download Investors')}</%def>
 
@@ -7,63 +15,76 @@
 %>
 
 ## Filter
-<%include file="lmkp:customization/lo/templates/parts/filter.mak" />
+##<%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+<ul id="slide-out-filter" class="side-nav" style="min-width: 550px;">
+    <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+</ul>
 
 <div class="container">
     <div class="content no-border">
-        <ul class="breadcrumb">
-            <li>
-                <a href="${request.route_url('download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Download')}</a>
-                <span class="divider">&raquo;</span>
-            </li>
-            <li class="active">${_('Download Investors')}</li>
-        </ul>
-        <div class="row-fluid">
+        <nav class="accent-background-color row">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="${request.route_url('download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}" class="breadcrumb" style="padding-left:15px;">${_('Download')}</a>
+                    <a href="#!" class="breadcrumb">${_('Download Investors')}</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
             <h3>
                 ${_('Download Investors')}
             </h3>
-            <div class="alert alert-info">
-                ${_('Only Investors which have been approved by a moderator will appear in the downloads.')}
+            <div class="alert alert-info card-panel accent-background-color">
+                 <p class="white-text">${_('Only Investors which have been approved by a moderator will appear in the downloads.')}</p>
             </div>
+
             <p>
                 ${_('Please note that the Investors are filtered spatially. Only Investors involved in Deals which are visible on the map will be downloaded. Also filters based on the attributes of Deals or Investors will be applied.')}
             </p>
         </div>
         <form method="POST">
-            <div class="row-fluid">
-                <div class="accordion" id="download_options">
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#download_options" href="#download_options_customize">
-                                ${_('Change download options')}
-                            </a>
-                        </div>
-                        <div id="download_options_customize" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <legend>${_('Download options')}</legend>
-                                <label for="output_format">${_('Output format')}</label>
-                                <select id="output_format" class="update_option_in_overview" name="format">
-                                    % for format in formats:
-                                        <option value="${format[0]}">${format[1]}</option>
-                                    % endfor
-                                </select>
-                                <label for="involvements">${_('Include involvements')}</label>
-                                <select id="involvements" class="update_option_in_overview" name="involvements">
-                                    <option value="full">${_('Yes')}</option>
-                                    <option value="none">${_('No')}</option>
-                                </select>
-                                <label>${_('Attributes')}</label>
+            <div class="row">
+                <ul class="collapsible" data-collapsible="accordion">
+                   <li>
+                      <div class="collapsible-header"><i class="material-icons">settings</i>${_('Change download options')}</div>
+                        <div class="collapsible-body optiondownloaddiv">
+                            <!--<legend>${_('Download options')}</legend>-->
+                            <div class="input-field col s12">
+                            <select id="output_format" name="format" class="update_option_in_overview">
+                                % for format in formats:
+                                    <option value="${format[0]}">${format[1]}</option>
+                                % endfor
+                            </select>
+                            <label class="text-accent-color">${_('Output format')}</label>
+                            </div>
+
+                            <div class="input-field col s12">
+                            <select id="involvements" name="involvements" class="update_option_in_overview">
+                                <option value="full">${_('Yes')}</option>
+                                <option value="none">${_('No')}</option>
+                            </select>
+                            <label class="text-accent-color">${_('Include involvements')}</label>
+                            </div>
+
+                            <label class="text-accent-color">${_('Attributes')}</label>
                                 <div id="attributes_checkboxes" class="update_checkbox_in_overview">
+                                    <% i = 0 %>
                                     % for attribute in attributes:
+                                       <% id = attribute[0] + "_" + str(i)%>
+                                    <p>
                                         <label class="checkbox">
-                                            <input type="checkbox" checked="checked" value="${attribute[0]}" name="attributes"> ${attribute[1]}
-                                        </label>
+                                        <input id="${id}" type="checkbox" checked="checked" value="${attribute[0]}" name="attributes">
+                                        <label for="${id}">${attribute[1]}</label>
+                                            </label>
+                                    </p>
+                                        <% i = i + 1 %>
                                     % endfor
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                      </div>
+                   </li>
+                </ul>
+
                 <div class="accordion" id="download_overview">
                     <div class="accordion-group">
                         <div class="accordion-body collapse-in">
@@ -88,9 +109,22 @@
                     </div>
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span12 text-right">
-                    <button type="submit" class="btn btn-primary">${_('Download')}</button>
+
+
+            <div class="row">
+                <button class="btn waves-effect waves-light bottom" type="submit" name="action">
+                    <i class="material-icons left">file_download</i>${_('Download')}
+                </button>
+
+                <div style="float: right;">
+                   <a class="btn-floating btn-large tooltipped waves-effect waves-light button-collapse gridview_button" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
+                        <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
+                    </a>
+                    % if len(activeFilters) == 1:
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 120px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
+                    % else:
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 120px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
+                    % endif
                 </div>
             </div>
         </form>
@@ -103,4 +137,9 @@
     </script>
     <script src="${request.static_url('lmkp:static/v2/download.js')}" type="text/javascript"></script>
     <script src="${request.static_url('lmkp:static/v2/filters.js')}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+        $('select').material_select();
+        });
+       </script>
 </%def>

@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%
 from lmkp.views.views import (
@@ -12,8 +12,8 @@ from lmkp.views.views import (
 <%def name="inlinemenu()">
 <div class="row-fluid">
     <div class="span9 text-right">
-        <a href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
-            <i class="icon-rss"></i> ${_("Subscribe")}
+        <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Subscribe")}" href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
+            <i class="icon-rss"></i>
         </a>
     </div>
 </div>
@@ -22,10 +22,7 @@ from lmkp.views.views import (
 <div class="container">
     <div class="content no-border">
 
-        ## Header menu bar
-        ${inlinemenu()}
-
-        <div class="alert alert-info">
+        <div class="alert alert-info card-panel accent-background-color white-text">
             ${_('Please note that only approved changes are visible in the changesets.')}
         </div>
 
@@ -37,7 +34,7 @@ from lmkp.views.views import (
 
         ##<div class="row-fluid">
         ##    <div class="span9">
-        ##        <span>${_('The latest approved changes edited on the Land Observatory')}</span>
+        ##        <span>${_('The latest approved changes edited on the Myanmar land reporting')}</span>
         ##    </div>
         ##</div>
 
@@ -52,7 +49,7 @@ from lmkp.views.views import (
                     </thead>
                     <tbody>
                         % for item in items:
-                        <tr>
+                        <tr class="all_changset_description">
                             <td>${item['pubDate']}</td>
                             <td>${item['description'] | n}</td>
                         </tr>
@@ -62,19 +59,30 @@ from lmkp.views.views import (
             </div>
         </div>
 
-        ## Pagination
-        % if len(items) > 0:
-        <div class="row-fluid">
-            <div class="span9">
-                <%include file="lmkp:templates/parts/pagination.mak"
-                args="totalitems=totalitems, currentpage=currentpage, pagesize=pagesize, itemsname=_('Changesets')"
-                />
+        <div id="gridviw_tableoptions" class="row" style="margin-top: 30px;">
+            <!-- Buttons für Desktop Ansicht -->
+            <div class="col s3 right gridview_mobile_hidden">
+                ## Footer menu bar
+                ${inlinemenu()}
+            </div>
+
+            ## Pagination
+            % if len(items) > 0:
+            <div class="row-fluid">
+                <div class="span9">
+                    <%include file="lmkp:templates/parts/pagination.mak"
+                    args="totalitems=totalitems, currentpage=currentpage, pagesize=pagesize, itemsname=_('Changesets')"
+                    />
+                </div>
+            </div>
+            % endif
+
+            <!-- Buttons für Mobile Ansicht -->
+            <div class="col right gridview_desktop_hidden">
+                ## Footer menu bar
+                ${inlinemenu()}
             </div>
         </div>
-        % endif
-
-        ## Footer menu bar
-        ${inlinemenu()}
 
     </div>
 </div>

@@ -25,20 +25,20 @@
 %>
 
 % if statusId != '2':
-    <div class="row-fluid">
-        <div class="span12 alert alert-block">
+    <div class="row">
+        <div class="col s12 alert alert-info card-panel accent-background-color white-text">
             % if statusId == '1':
                 ## Pending
-                <h4>${_('Pending Version')}</h4>
+                <h5>${_('Pending Version')}</h5>
                 <p>${_('You are seeing a pending version which needs to be reviewed before it is publicly visible.')}</p>
             % elif statusId == '3':
                 ## Inactive
-                <h4>${_('Inactive Version')}</h4>
+                <h5>${_('Inactive Version')}</h5>
                 <p>${_('You are seeing an inactive version which is not active anymore.')}</p>
             % else:
                 ## All the rest (deleted, rejected, edited).
                 ## TODO: Should there be a separate messages for these statuses?
-                <h4>${_('Not an active Version')}</h4>
+                <h5>${_('Not an active Version')}</h5>
                 <p>${_('You are seeing a version which is not active.')}</p>
             % endif
         </div>
@@ -66,6 +66,62 @@ ${editToolbar('top')}
     % endif
 </div>
 
+<ul id="slide-out-map-options" class="side-nav" style="min-width: 550px; z-index: 10000;">
+    <ul class="collapsible" data-collapsible="accordion">
+        <!-- Deals -->
+        <li>
+            <div class="collapsible-header"><i class="material-icons">group</i>${_('Deals')}</div>
+            <div class="collapsible-body">
+                <form action="#" id="map-areas-list">
+                    <p style="padding-top: 0; padding-bottom: 0; margin: 0;">
+                        <input class="input-top" type="checkbox" id="activityLayerToggle" checked="checked" style="line-height: 22px; height: 22px; background-color: red;">
+                        <label class="text-primary-color" for="activityLayerToggle" style="line-height: 22px; height: 22px;">
+                            <span id="map-deals-symbolization">
+
+                            </span>
+                        </label>
+                        <ul id="map-points-list" style="margin: 0; padding: 0; padding-left: 100px;">
+                        <!-- Placeholder for map points -->
+                        </ul>
+                    </p>
+                </form>
+            </div>
+        </li>
+
+
+        <!-- Base layers -->
+        <li>
+            <div class="collapsible-header"><i class="material-icons">map</i>${_('Base layers')}</div>
+            <div class="collapsible-body">
+                <form action="#">
+                    <p style="padding-top: 0; padding-bottom: 0;">
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="streetMapOption" value="streetMap" checked/>
+                      <label for="streetMapOption">${_('Street Map')}</label>
+                    </p>
+                    <p style="padding-top: 0; padding-bottom: 0;">
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="satelliteMapOption" value="satelliteMap" />
+                      <label for="satelliteMapOption">${_('Satellite Imagery')}</label>
+                    </p>
+                    <p style="padding-top: 0; padding-bottom: 0;">
+                      <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="terrainMapOption" value="terrainMap" />
+                      <label for="terrainMapOption">${_('Terrain Map')}</label>
+                    </p>
+                </form>
+            </div>
+        </li>
+        <!-- Context layers -->
+        <li>
+            <div class="collapsible-header"><i class="material-icons">layers</i>${_('Context layers')}</div>
+            <div class="collapsible-body">
+                <form action="#" id="context-layers-list">
+                    <!--  Placeholder context layer entries -->
+                </form>
+            </div>
+        </li>
+    </ul>
+</ul>
+
+
 % if not isStakeholder and not empty:
     ## Map container
     <div class="row-fluid">
@@ -73,90 +129,9 @@ ${editToolbar('top')}
             <div id="googleMapNotFull">
                 <div class="map-form-controls">
                     <div class="form-map-menu pull-right">
-                        <button type="button" class="btn btn-mini pull-right form-map-menu-toggle ttip" data-close-text="<i class='icon-remove'></i>" data-toggle="tooltip" title="${_('Turn layers on and off')}"><i class="icon-cog"></i></button>
-                        <div class="accordion" id="form-map-menu-content">
-
-                            <!-- This deal -->
-                            <div id="thisDealSection" class="map-menu-deals accordion-group">
-                                <h6 class="map-deals">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#form-map-menu-content" href="#thisLayer">
-                                        <i class="icon-chevron-down"></i>
-                                        ${_('This Deal')}
-                                    </a>
-                                </h6>
-                                <div id="thisLayer" class="accordion-body collapse in">
-                                    <ul id="map-this-areas-list">
-                                        <!-- Placeholder for area entries -->
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- All deals -->
-                            <div class="map-menu-deals accordion-group">
-                                <h6 class="map-deals">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#form-map-menu-content" href="#contentLayers">
-                                        <i class="icon-chevron-right"></i>
-                                        ${_('All Deals')}
-                                    </a>
-                                </h6>
-                                <div id="contentLayers" class="accordion-body collapse">
-                                    <ul>
-                                        <li class="contentLayersMainCheckbox">
-                                            <div class="checkbox-modified-small">
-                                                <input class="input-top" type="checkbox" id="activityLayerToggle">
-                                                <label for="activityLayerToggle"></label>
-                                            </div>
-                                            <div id="map-deals-symbolization" class="dropdown context-layers-description">
-                                                ${_('Loading ...')}
-                                            </div>
-                                            <ul id="map-points-list" class="hide">
-                                                <!-- Placeholder for map points -->
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    <ul id="map-areas-list">
-                                        <!-- Placeholder for area entries -->
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Base layers -->
-                            <div class="accordion-group">
-                                <h6>
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#form-map-menu-content" href="#baseLayers">
-                                        <i class="icon-chevron-right"></i>
-                                        ${_('Base layers')}
-                                    </a>
-                                </h6>
-                                <div id="baseLayers" class="accordion-body collapse">
-                                    <ul>
-                                        <li>
-                                            <label class="radio inline"><input type="radio" class="baseMapOptions" name="baseMapOptions" id="streetMapOption" value="streetMap" />${_('Street Map')}</label>
-                                        </li>
-                                        <li>
-                                            <label class="radio inline"><input type="radio" class="baseMapOptions" name="baseMapOptions" id="satelliteMapOption" value="satelliteMap" checked="checked" />${_('Satellite Imagery')}</label>
-                                        </li>
-                                        <li>
-                                            <label class="radio inline"><input type="radio" class="baseMapOptions" name="baseMapOptions" id="terrainMapOption" value="terrainMap" />${_('Terrain Map')}</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Context layers -->
-                            <div class="accordion-group">
-                                <h6>
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#form-map-menu-content" href="#contextLayers">
-                                        <i class="icon-chevron-right"></i>
-                                        ${_('Context layers')}
-                                    </a>
-                                </h6>
-                                <div id="contextLayers" class="accordion-body collapse">
-                                    <ul id="context-layers-list">
-                                          <!-- Placeholder for context layers entries -->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 15px; margin-top: 15px;" data-position="top" data-tooltip="${_('Turn layers on and off')}" data-activates="slide-out-map-options">
+                            <i class="material-icons">map</i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -175,44 +150,47 @@ ${editToolbar('top')}
 % endif
 
 ${editToolbar('bottom')}
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 <%def name="editToolbar(position)">
-<div class="row-fluid">
+<div class="row-fluid" style="margin-bottom: 30px;">
   <div class="span12 text-right deal-${position}-toolbar">
     <ul class="inline item-toolbar">
       <li>
-        <a href="${request.route_url(historyRouteName, output='html', uid=cstruct['id'])}"><i class="icon-time"></i><span class="link-with-icon">${_('History')}</span></a>
+        <a class="text-accent-color right" href="${request.route_url(historyRouteName, output='html', uid=cstruct['id'])}"><i class="icon-time"></i><span class="link-with-icon">${_('History')}</span></a>
       </li>
       % if not isStakeholder:
-        <li>
-          <a href="${request.route_url(routeName, output='statistics', uid=cstruct['id'])}"><i class="icon-bar-chart"></i><span class="link-with-icon">${_("Areal statistics")}</span></a>
+        <li style="margin-left: 10px;">
+          <a  class="text-accent-color right"href="${request.route_url(routeName, output='statistics', uid=cstruct['id'])}"><i class="icon-bar-chart" style="margin-left: 10px;"></i><span class="link-with-icon">${_("Areal statistics")}</span><span class="dealview_seperator"span>|</span></a>
         </li>
       % endif
       % if request.user and 'id' in cstruct and not empty:
-        <li>
-          <a href="${request.route_url(routeName, output='form', uid=cstruct['id'], _query=(('v', cstruct['version']),))}"><i class="icon-pencil"></i><span class="link-with-icon">${editLinkText}</span></a>
+        <li style="margin-left: 10px;">
+          <a  class="text-accent-color right"href="${request.route_url(routeName, output='form', uid=cstruct['id'], _query=(('v', cstruct['version']),))}"><i class="icon-pencil" style="margin-left: 10px;"></i><span class="link-with-icon">${editLinkText}</span></a>
         </li>
-        <li>
-          <a href="javascript:void(0);" data-toggle="collapse" data-target="#delete-${form_id}-${position}"><i class="icon-trash"></i><span class="link-with-icon">${deleteLinkText}</span></a>
+        <li style="margin-left: 10px;">
+            <a  class="text-accent-color right" href="javascript:void(0);" onclick='$( "#delete-${form_id}-${position}" ).show();'><i class="icon-trash" style="margin-left: 10px;"></i><span class="link-with-icon">${deleteLinkText}</span></a>
         </li>
       % endif
       % if request.user and isModerator and statusId == '1':
-        <li>
-          <a href="${request.route_url(routeName, output='review', uid=cstruct['id'])}"><i class="icon-check"></i><span class="link-with-icon">${_('Review')}</span></a>
+        <li style="margin-left: 10px;">
+          <a  class="text-accent-color right"href="${request.route_url(routeName, output='review', uid=cstruct['id'])}"><i class="icon-check"></i><span class="link-with-icon">${_('Review')}</span></a>
         </li>
       % endif
     </ul>
   </div>
 </div>
 % if request.user and 'id' in cstruct:
-  <div id="delete-${form_id}-${position}" class="collapse">
+  <div id="delete-${form_id}-${position}" style="display: none; margin-top: 50px;">
     <form id="${form_id}-${position}" class="delete-confirm alert alert-error" action="${request.route_url(routeName, output='form', uid=cstruct['id'])}" method="POST">
       <input type="hidden" name="__formid__" value="${form_id}"/>
       <input type="hidden" name="id" value="${cstruct['id']}"/>
       <input type="hidden" name="version" value="${cstruct['version']}"/>
       <p>${deleteConfirmText}</p>
-      <button name="delete" class="btn btn-small btn-danger">${_('Delete')}</button>
-      <button onclick="javascript:console.log($('#delete-${form_id}-${position}')); $('#delete-${form_id}-${position}').collapse('hide'); return false;" class="btn btn-small delete-confirm-cancel">${_('Cancel')}</button>
+      <button name="delete" class="btn red">${_('Delete')}</button>
+      <button onclick="this.parentNode.parentNode.style.display = 'none';" class="btn grey delete-confirm-cancel">${_('Cancel')}</button>
     </form>
   </div>
 % endif

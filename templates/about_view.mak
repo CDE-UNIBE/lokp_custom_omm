@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('About')}</%def>
 
@@ -29,10 +29,18 @@
 
 <div class="container">
     <div class="content no-border">
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel teal">
+             <p class="lead white-text">
+                ${_('The Myanmar land reporting is a pilot project of some of the partners of the Land Matrix initiative, to support observatories designed to crowdsource data about land deals, allowing for greater transparency and improved decision-making.')}
+            </p>
+            </div>
+          </div>
+        </div>
 
-        <p class="lead">
-            ${_('The Land Observatory is a pilot project of some of the partners of the Land Matrix initiative, to support observatories designed to crowdsource data about land deals, allowing for greater transparency and improved decision-making.')}
-        </p>
+
+
         <p>
             ${_('We are co-creating software with partner organizations in pilot countries that will allow for them to')}
         </p>

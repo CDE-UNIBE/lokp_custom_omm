@@ -5,7 +5,7 @@ application:
   name: ສາທາລະນະລັດປະຊາທິປະໄຕ ປະຊາຊົນລາວ
   layers:
   - name: "Incidence of poverty"
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
@@ -18,7 +18,7 @@ application:
     - maxExtent: [10018755, 181, 12801601, 3482189]
     - opacity: 0.7
   - name: "Accessibility to province capital"
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
@@ -31,7 +31,7 @@ application:
     - maxExtent: [10018755, 181, 12801601, 3482189]
     - opacity: 0.7
   - name: "Seasonal road accessibility"
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
@@ -44,7 +44,7 @@ application:
     - maxExtent: [10018755, 181, 12801601, 3482189]
     - opacity: 0.7
   - name: "Population density"
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
@@ -58,7 +58,7 @@ application:
     - opacity: 0.7
   # Share of households being farm household
   - name: Share of households being farm household
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
@@ -72,7 +72,7 @@ application:
     - opacity: 0.7
   # Percentage of economically active population
   - name: Percentage of economically active population
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
@@ -85,7 +85,7 @@ application:
     - maxExtent: [10018755, 181, 12801601, 3482189]
     - opacity: 0.7
   - name: "Global Land Cover 2009"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -98,7 +98,7 @@ application:
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
   - name: "Global Cropland"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -111,7 +111,7 @@ application:
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
 #  - name: "Global Pasture Land"
-#    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+#    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
 #    wms_options:
 #    - epsg: 900913
 #    - format: "image/jpeg"

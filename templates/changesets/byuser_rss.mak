@@ -3,7 +3,7 @@
 <rss version="2.0">
 
   <channel>
-    <title>${_('Approved changesets by %s' % username)} - ${_('Land Observatory')}</title>
+    <title>${_('Approved changesets by %s' % username)} - ${_('Myanmar land reporting')}</title>
     <link>${request.route_url("changesets_read_latest", output="rss")}</link>
     <description>${_('Approved changesets by %s' % username)}</description>
     <language>en-US</language>

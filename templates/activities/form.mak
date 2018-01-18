@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Deal Editor')}</%def>
 
@@ -13,23 +13,37 @@
         <link rel="stylesheet" href="/formstatic/${reqt}" type="text/css" />
     % endfor
     % for reqt in js_links:
+      % if reqt == 'scripts/jquery-1.7.2.min.js':
+      ##  Only use 1 version of jQuery
+
+      % elif reqt == 'scripts/jquery-ui-1.8.11.custom.min.js':
+        <script type="text/javascript" src="/custom/js/vendor/jquery-ui-1.12.1.min.js"></script>
+      % elif reqt == 'scripts/jquery.maskedinput-1.2.2.min.js':
+        <script type="text/javascript" src="/custom/js/vendor/jquery.maskedinput.1.4.1.min.js"></script>
+      % else:
         <script type="text/javascript" src="/formstatic/${reqt}"></script>
+      % endif
     % endfor
+
+    <script type="text/javascript">
+      jQuery.fn.autocompleteJQuery = jQuery.fn.autocomplete;
+    </script>
 
     % if js:
         <script type="text/javascript">${js|n}</script>
     % endif
 </%def>
 
+
 <div class="container deal-edit-content">
     <div class="content no-border">
-
         ## Session messages
         <%include file="lmkp:templates/parts/sessionmessage.mak"/>
 
         ${form | n}
     </div>
 </div>
+
 
 <%def name="bottom_tags()">
     <script type="text/javascript">
@@ -42,6 +56,13 @@
         }
 
         $(document).ready(function () {
+            $('.collapsible').collapsible();
+
+            $('.datepicker').pickadate({
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 15} // Creates a dropdown of 15 years to control year
+            );
+
             $('#menu-affix').affix();
             /*
             * Clamped-width.
@@ -63,6 +84,12 @@
                 resizeFn();
                 $(window).resize(resizeFn);
             });
+
+            Materialize.updateTextFields();
+            deform.load();
         });
+
+
     </script>
 </%def>
+

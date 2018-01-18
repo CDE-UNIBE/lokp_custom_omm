@@ -1,4 +1,12 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
+
+<%
+    from lmkp.views.views import getFilterKeys
+    from lmkp.views.views import getActiveFilters
+
+    aFilterKeys, shFilterKeys = getFilterKeys(request)
+    activeFilters = getActiveFilters(request)
+%>
 
 <%def name="title()">${_('Grid View')} - ${_('Investors')}</%def>
 
@@ -17,7 +25,9 @@
 %>
 
 ## Filter
-<%include file="lmkp:customization/lo/templates/parts/filter.mak" />
+<ul id="slide-out-filter" class="side-nav" style="min-width: 550px;">
+    <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+</ul>
 
 <!-- content -->
 <div class="container">
@@ -37,8 +47,9 @@
         %>
 
         % if spatialfilter:
-        <div class="alert alert-info">
-            <i class="icon-globe"></i>&nbsp;
+        <div class="alert alert-info card-panel accent-background-color">
+            <p class="white-text">
+            <i class="icon-globe white-text"></i>&nbsp;
             <strong>${_('Spatial Filter')}</strong> ${_('based on')}
                 % if spatialFilterLink:
                     <strong><a href="${request.route_url('map_view')}">${spatialFilterBasedOn}</a></strong>.
@@ -49,12 +60,14 @@
             % if spatialFilterLink:
                 <br/><a href="${handle_query_string(request.url, add=[('bbox', 'profile')])}">${spatialFilterLink}</a>
             % endif
+             </p>
         </div>
         % endif
 
         ## Involvement Filter
         % if invfilter:
-        <div class="alert alert-info">
+        <div class="alert alert-info card-panel accent-background-color">
+            <p class="white-text">
             <i class="icon-filter"></i>&nbsp;
             <strong>${_('Deal Filter')}</strong>: ${_('You are currently only seeing Investors which are involved in Deal')}
             % for uid in invfilter:
@@ -62,76 +75,64 @@
                     ${uid[:6]}</a>
             % endfor
             .<br/><a href="${request.route_url('stakeholders_byactivities_all', output='html')}">${_('Remove this filter and show all Investors')}</a>.
+            </p>
         </div>
         % endif
 
         ## Status Filter
         % if statusfilter:
-        <div class="alert alert-info">
-            <i class="icon-filter"></i>&nbsp;
-            <strong>${_('Status Filter')}</strong>: ${_('You are only seeing Investors with the following status:')} ${statusfilter}
+        <div class="alert alert-info card-panel accent-background-color">
+            <p class="white-text">
+                <i class="icon-filter"></i>&nbsp;
+                <strong>${_('Status Filter')}</strong>: ${_('You are only seeing Investors with the following status:')} ${statusfilter}
+            </p>
         </div>
         % endif
 
         ## Tabs
-        <ul class="nav nav-tabs table_tabs">
-            % if request.current_route_url() in [request.route_url('activities_read_many', output='html')]:
-                <li class="active">
-            % else:
-                <li>
-            % endif
-                <a href="${request.route_url('activities_read_many', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Deals')}</a>
-            </li>
-            % if request.current_route_url() in [request.route_url('stakeholders_byactivities_all', output='html'), request.route_url('stakeholders_byactivities', output='html', uids=a_uids), request.route_url('stakeholders_read_many', output='html')]:
-                % if is_moderator:
-                    <li class="active moderator-show-pending-left">
-                % else:
-                    <li class="active">
-                % endif
-            % else:
-                <li>
-            % endif
-                <a href="${request.route_url('stakeholders_byactivities_all', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Investors')}</a>
-            </li>
+        <div id="gridview_tab" class="row">
+            <div class="col s12">
+                <ul class="tabs">
 
-            % if is_moderator:
-                % if 'status=pending' in request.path_qs:
-                    <li class="active moderator-show-pending-right">
-                        <a href="${handle_query_string(request.current_route_url(), remove=['status'])}" data-toggle="tooltip" title="${_('Show all')}">
-                            <i class="icon-flag"></i>
-                        </a>
+                    ##erstes Tab
+                    % if request.current_route_url() in [request.route_url('activities_read_many', output='html')]:
+                        <li class="tab col s3" onClick="self.location.href='${request.route_url('activities_read_many', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}'">
+                    % else:
+                        <li class="tab col s3" onClick="self.location.href='${request.route_url('activities_read_many', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}'">
+                    % endif
+                        <a class="text-accent-color" href="${request.route_url('activities_read_many', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Deals')}</a>
                     </li>
-                % else:
-                    <li class="moderator-show-pending-right">
-                        <a href="${handle_query_string(request.current_route_url(), add=[('status', 'pending')])}" data-toggle="tooltip" title="${_('Show only pending')}">
-                            <i class="icon-flag"></i>
-                            </a>
+
+                    ##zweites Tab
+                    % if request.current_route_url() in [request.route_url('stakeholders_byactivities_all', output='html'), request.route_url('stakeholders_byactivities', output='html', uids=a_uids), request.route_url('stakeholders_read_many', output='html')]:
+                        % if is_moderator:
+                            <li class="active moderator-show-pending-left tab col s3">
+                        % else:
+                            <li class="active tab col s3">
+                        % endif
+                    % else:
+                        <li class="active tab col s3">
+                    % endif
+                        <a class="active text-accent-color" href="${request.route_url('stakeholders_byactivities_all', output='html')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">${_('Investors')}</a>
                     </li>
-                % endif
-            % endif
+                </ul>
+                </div>
+        </div>
 
-            <li class="grid-tab-right">
-                <a href="${request.route_url('stakeholders_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}" data-toggle="tooltip" title="${_('Download Investors')}">
-                    <i class="icon-download-alt"></i>
-                </a>
-            </li>
-            <li class="grid-tab-right">
-                <a href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', locale),('_PROFILE_', profile)))}" data-toggle="tooltip" title="${_('View and subscribe to latest changes')}">
-                    <i class="icon-rss"></i>
-                </a>
-            </li>
-
-            % if default_search_translated:
-                <li class="grid-tab-right">
-                    <a href="javascript:void(0)" id="search" data-toggle="tooltip" title="${_('Search by')} ${default_search_translated}">
-                        <i class="icon-search"></i>
+        % if is_moderator:
+            % if 'status=pending' in request.path_qs:
+                    <a class="btn" href="${handle_query_string(request.current_route_url(), remove=['status'])}">
+                        <i class="material-icons right">flag</i> ${_('Show all')}
                     </a>
-                </li>
+            % else:
+                    <a class="btn" href="${handle_query_string(request.current_route_url(), add=[('status', 'pending')])}">
+                        <i class="material-icons right">flag</i>${_('Show only pending')}
+                    </a>
             % endif
-        </ul>
+        % endif
 
         ## Table
-        <div class="table_wrapper item-grid-wrapper">
+        <div>
 
             % if len(data) == 0:
 
@@ -186,6 +187,7 @@
                                 </th>
                             % endfor
                         </tr>
+                    </thead>
                     <tbody>
                         ## The table body
 
@@ -214,18 +216,19 @@
                             %>
 
                             % if pending:
-                                <tr class="pending">
+                                <tr class="pending js-list-row-link" data-href="${request.route_url('activities_bystakeholders', output='html', uids=id)}">
                             % else:
-                                <tr>
+                                <tr class="js-list-row-link" data-href="${request.route_url('activities_bystakeholders', output='html', uids=id)}">
                             % endif
                                 <td>
-                                    <a href="${request.route_url('stakeholders_read_one', output='html', uid=id)}">
-                                        ${id[:6]}
+                                    <a class="btn" href="${request.route_url('stakeholders_read_one', output='html', uid=id)}">
+                                        ##${id[:6]}
+                                        ${_('Go to Investor')}
                                     </a>
                                 </td>
-                                <td>${timestamp}</td>
+                                <td class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show deals of this investor")}">${timestamp}</td>
                                 % for v in values:
-                                    <td>${v}</td>
+                                    <td class="tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Show deals of this investor")}">${v}</td>
                                 % endfor
 
                                 <td class="identifier hide">${id}</td>
@@ -240,28 +243,73 @@
             % endif
         </div>
 
-        ## Pagination
-        % if len(data) > 0:
-            <%include file="lmkp:templates/parts/pagination.mak"
-                args="totalitems=total, currentpage=currentpage, pagesize=pagesize, itemsname=_('Investors')"
-            />
-        % endif
+        <div id="gridview_tableoptions" class="row">
+            <!-- Buttons für Desktop Ansicht -->
+            <div class="col s3 right gridview_mobile_hidden">
+                <a class="btn-floating btn-large tooltipped waves-effect waves-light button-collapse gridview_button" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
+                    <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
+                </a>
+                % if len(activeFilters) == 1:
+                    <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 250px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
+                % else:
+                    <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 250px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
+                % endif
 
+                <a id="downloadbuttonbugfix" class="btn-floating btn-large  accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Investors')}" href="${request.route_url('stakeholders_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
+                    <i class="icon-download-alt"></i>
+                </a>
+
+                <a  class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', locale),('_PROFILE_', profile)))}" style="top:-18px;">
+                    <i class="icon-rss"></i>
+                </a>
+
+
+                % if default_search_translated:
+                    <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Search by')} ${default_search_translated}" href="javascript:void(0)" id="search">
+                        <i class="icon-search"></i>
+                    </a>
+                % endif
+            </div>
+
+            ## Pagination
+            % if len(data) > 0:
+                <%include file="lmkp:templates/parts/pagination.mak"
+                    args="totalitems=total, currentpage=currentpage, pagesize=pagesize, itemsname=_('Deals')"
+                />
+            % endif
+
+            <!-- Buttons für Mobile Ansicht -->
+            <div class="col right gridview_desktop_hidden">
+                <a class="btn-floating btn-large tooltipped waves-effect waves-light button-collapse gridview_button" data-position="top" data-tooltip="Add a Filter" data-activates="slide-out-filter">
+                        <i class="material-icons" style="margin-right: 15px;" data-position="top" >filter_list</i>
+                    </a>
+                    % if len(activeFilters) == 1:
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 240px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filter</span>
+                    % else:
+                        <span class="badge" style="color: white; background-color: #323232; position: relative; top: -7px; left: 240px; z-index: 1; border-radius: 5px;">${len(activeFilters)} active filters</span>
+                    % endif
+
+                <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Download Investors')}" href="${request.route_url('stakeholders_read_many', output='download')}${handle_query_string(request.url, return_value='query_string', remove=['order_by', 'dir', 'status'])}">
+                    <i class="icon-download-alt"></i>
+                </a>
+
+                <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('View and subscribe to latest changes')}" href="${request.route_url('changesets_read_latest', output='rss', _query=(('_LOCALE_', locale),('_PROFILE_', profile)))}">
+                    <i class="icon-rss"></i>
+                </a>
+
+                % if default_search_translated:
+                    <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Search by')} ${default_search_translated}" href="javascript:void(0)" id="search">
+                        <i class="icon-search"></i>
+                    </a>
+                % endif
+            </div>
+        </div>
     </div>
 </div>
 
 ## End of content
 
 <%def name="bottom_tags()">
-    <script type="text/javascript">
-        $(function () {
-            $("a[data-toggle='tooltip']").tooltip({
-                container: 'body',
-                placement: 'bottom'
-            });
-        });
-        var link_involvement_text = '${_("Show deals of this investor")}';
-    </script>
     <script src="${request.static_url('lmkp:static/v2/grid.js')}" type="text/javascript"></script>
     <script src="${request.static_url('lmkp:static/v2/filters.js')}" type="text/javascript"></script>
 </%def>

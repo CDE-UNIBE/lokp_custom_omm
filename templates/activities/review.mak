@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/activities/compare.mak" />
+<%inherit file="lmkp:customization/omm/templates/activities/compare.mak" />
 
 <%def name="title()">${_('Deal Moderation')}</%def>
 
@@ -9,12 +9,13 @@
 
     <h3>${_('Deal Moderation')}</h3>
     <p class="id">${identifier}</p>
-    <div class="row-fluid">
-        <div class="span6">
-            <div class="row-fluid">
-                <ul class="nav nav-tabs table_tabs">
+
+    <div class="row compareviewcontainer">
+        <div class="col s6">
+            <div class="row">
+                <ul>
                     <li class="active">
-                        <a href="" onclick="javascript:return false;">
+                        <a class="btn disabled" href="" onclick="javascript:return false;" class="btn teal">
                             % if refMetadata:
                                 ${refMetadata['status']}
                             % else:
@@ -25,109 +26,100 @@
                 </ul>
             </div>
             % if refMetadata:
-            <div class="row-fluid">
-                <div class="span12 grid-area border-bottom deal-data">
-                    <div class="span5">
-                        <h5 class="green">
-                            ${_('Version')}
-                        </h5>
-                    </div>
-                    <div class="span7">
-                        ${refVersion}
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span5">
-                            <h5 class="green moderate-metadata">
-                                ${_('Timestamp')}
-                            </h5>
+            <div class="row">
+                <div class="col s12 grid-area deal-data">
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="text-accent-color versioncomparetitle">
+                                ${_('Version')}
+                            </div>
                         </div>
-                        <div class="span7">
+                        <div class="col s7">
+                            ${refVersion}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="text-accent-color versioncomparetitle">
+                                ${_('Timestamp')}
+                            </div>
+                        </div>
+                        <div class="col s7">
                             ${refMetadata['timestamp']}
                         </div>
                     </div>
-                    <div class="row-fluid">
-                        <div class="span5">
-                            <h5 class="green moderate-metadata">
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="text-accent-color versioncomparetitle">
                                 ${_('User')}
-                            </h5>
+                            </div>
                         </div>
-                        <div class="span7">
+                        <div class="col s7">
                             ${refMetadata['username']}
                         </div>
                     </div>
                 </div>
             </div>
             % else:
-            <div class="row-fluid">
-                <div class="span12 grid-area deal-data">
+            <div class="row">
+                <div class="col s12 grid-area deal-data">
                     ${_('There is no previous version available.')}
                 </div>
             </div>
             % endif
         </div>
-        <div class="span6">
-            <div class="row-fluid">
-                <div class="span3">
-                    <ul class="nav nav-tabs table_tabs">
+        <div class="col s6">
+            <div class="row">
+                <div class="col s4">
+                    <ul>
                         <li class="active">
-                            <a href="" onclick="javascript:return false;">
+                            <a class="btn disabled" href="" onclick="javascript:return false;" class="btn teal">
                                 ${newMetadata['status']}
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="span6">
+                <div class="col s8 right-align">
                     % if len(pendingVersions) > 1:
-                    <div class="btn-group">
-                        <button class="btn select_btn_bordered"></button>
-                        <button class="btn select_btn_bordered_right dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            % for pV in pendingVersions:
-                            <li>
-                                <a href="?new=${pV}">${_('Version')} ${pV}</a>
-                            </li>
-                            % endfor
-                        </ul>
-                    </div>
+                      <a class='dropdown-button btn' href='#' data-activates='version_dropdown'>${_('Version')} ${newVersion}</a>
+                      <ul id='version_dropdown' class='dropdown-content'>
+                        % for pV in pendingVersions:
+                          <li><a href="?new=${pV}">${_('Version')} ${pV}</a></li>
+                        % endfor
+                      </ul>
                     % endif
-                </div>
-                <div class="span3">
-                    <ul class="nav nav-tabs table_tabs">
-                        <li>
-                            <a href="${request.route_url('activities_read_one_history', output='html', uid=identifier)}">${_('History')}</a>
-                        </li>
-                    </ul>
+                    <a class="waves-effect waves-light btn" href="${request.route_url('activities_read_one_history', output='html', uid=identifier)}">${_('History')}</a>
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span12 grid-area border-bottom deal-data">
-                    <div class="span5">
-                        <h5 class="green">
-                            ${_('Version')}
-                        </h5>
+            <div class="row">
+                <div class="col s12 grid-area deal-data">
+                    <div class="row">
+                        <div class="col s5">
+                            <h5 class="text-accent-color versioncomparetitle">
+                                ${_('Version')}
+                            </h5>
+                        </div>
+                        <div class="col s7">
+                            ${newVersion}
+                        </div>
                     </div>
-                    <div class="span7">
-                        ${newVersion}
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span5">
-                            <h5 class="green moderate-metadata">
+                    <div class="row">
+                        <div class="col s5">
+                            <h5 class="text-accent-color versioncomparetitle">
                                 ${_('Timestamp')}
                             </h5>
                         </div>
-                        <div class="span7">
+                        <div class="col s7">
                             ${newMetadata['timestamp']}
                         </div>
                     </div>
-                    <div class="row-fluid">
-                        <div class="span5">
-                            <h5 class="green moderate-metadata">
+                    <div class="row">
+                        <div class="col s5">
+                            <h5 class="text-accent-color versioncomparetitle">
                                 ${_('User')}
                             </h5>
                         </div>
-                        <div class="span7">
+                        <div class="col s7">
                             ${newMetadata['username']}
                         </div>
                     </div>
@@ -139,33 +131,33 @@
 
 <%def name="moderate_buttons()">
     <form class="moderate-form" action="${request.route_url('activities_review')}" method="POST">
-        <div class="row-fluid">
-                <div class="span4">
-                    % if reviewable is True:
-                        <button name="review_decision" value="approve" class="btn btn-large btn-block disabled btn-success deal-moderate-button">
-                            ${_('Approve')}
-                        </button>
-                    % else:
-                        <button name="review_decision" value="approve" class="btn btn-large btn-block disabled" onclick="javascript:return false;">
-                            [ ${_('Approve')} ]
-                        </button>
-                    % endif
-                </div>
-                <div class="span4">
-                    <button name="review_decision" value="reject" class="btn btn-large btn-block disabled btn-warning deal-moderate-button">
-                        ${_('Deny')}
+        <div class="row">
+            <div class="col s4">
+                % if reviewable is True:
+                    <button name="review_decision" value="approve" class="btn btn-large deal-moderate-button" style="width: 100%;">
+                        ${_('Approve')}
                     </button>
-                </div>
-                <div class="span4">
-                    <a class="btn btn-large btn-block disabled btn-warning deal-moderate-button" href="${request.route_url('activities_read_one', output='form', uid=identifier, _query=(('v', newVersion),))}">
-                        ${_('Edit')} (${_('Version')} ${newVersion})
-                    </a>
-                </div>
-                <input type="hidden" name="identifier" value="${identifier}">
-                <input type="hidden" name="version" value="${newVersion}">
+                % else:
+                    <button name="review_decision" value="approve" class="btn btn-large disabled" onclick="javascript:return false;" style="width: 100%;">
+                        [ ${_('Approve')} ]
+                    </button>
+                % endif
+            </div>
+            <div class="col s4">
+                <button name="review_decision" value="reject" class="btn btn-large deal-moderate-button" style="width: 100%;">
+                    ${_('Deny')}
+                </button>
+            </div>
+            <div class="col s4">
+                <a class="btn btn-large deal-moderate-button" style="width: 100%;" href="${request.route_url('activities_read_one', output='form', uid=identifier, _query=(('v', newVersion),))}">
+                    ${_('Edit')} (${_('Version')} ${newVersion})
+                </a>
+            </div>
+            <input type="hidden" name="identifier" value="${identifier}">
+            <input type="hidden" name="version" value="${newVersion}">
         </div>
         % if len(missingKeys) > 0:
-            <div class="alert alert-danger alert-block alert-missing-mandatory-keys">
+            <div class="alert alert-error alert-block alert-missing-mandatory-keys">
                 <p><strong>${_('Warning')}</strong></p>
                 <p>${_('There are some mandatory keys missing. The item cannot be approved without these keys. Please click the "edit" button to add the missing keys.')}</p>
                 <p>${_('The following keys are missing:')}</p>
@@ -177,7 +169,7 @@
             </div>
         % endif
         % if reviewableMessage:
-            <div class="alert alert-danger alert-block alert-missing-mandatory-keys">
+            <div class="alert alert-error alert-block alert-missing-mandatory-keys">
                 <p><strong>${_('Warning')}</strong></p>
                 <p>${reviewableMessage}</p>
             </div>
@@ -188,15 +180,13 @@
                 <p>${_('The two versions are not based directly on each other. The new version is calculated to display only the changes made to this version. Approving it will create a new version.')}</p>
             </div>
         % endif
-        <div class="row-fluid comments">
-            <div class="span12">
-                <div class="span5">
-                    <h5 class="green">
-                        ${_('Additional comments')}
-                    </h5>
+        <div class="row comments">
+            <div class="col s12">
+                <div class="col s5">
+                    <h5>${_('Additional comments')}</h5>
                 </div>
-                <div class="span7">
-                    <textarea name="review_comment" class="input-style" rows="4"></textarea>
+                <div class="col s7">
+                    <textarea name="review_comment" class="input-style materialize-textarea" rows="4"></textarea>
                 </div>
             </div>
         </div>

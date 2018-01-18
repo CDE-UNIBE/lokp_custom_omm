@@ -5,11 +5,11 @@ application:
   name: ສາທາລະນະລັດປະຊາທິປະໄຕ ປະຊາຊົນລາວ
   layers:
   - name: "Incidence of poverty"
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "poverty_incidence"
+    - layers: "lo:laos_poverty_incidence"
     - transparent: true
     ol_options:
     - visibility: false
@@ -18,11 +18,11 @@ application:
     - maxExtent: [10018755, 181, 12801601, 3482189]
     - opacity: 0.7
   - name: "Accessibility to province capital"
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "t_to_prov_capital_mean_min"
+    - layers: "lo:laos_t_to_prov_capital_mean_min"
     - transparent: true
     ol_options:
     - visibility: false
@@ -31,11 +31,11 @@ application:
     - maxExtent: [10018755, 181, 12801601, 3482189]
     - opacity: 0.7
   - name: "Seasonal road accessibility"
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "w_road_access"
+    - layers: "lo:laos_w_road_access"
     - transparent: true
     ol_options:
     - visibility: false
@@ -44,11 +44,11 @@ application:
     - maxExtent: [10018755, 181, 12801601, 3482189]
     - opacity: 0.7
   - name: "Population density"
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "pop_density"
+    - layers: "lo:laos_pop_density"
     - transparent: true
     ol_options:
     - visibility: false
@@ -58,11 +58,11 @@ application:
     - opacity: 0.7
   # Share of households being farm household
   - name: Share of households being farm household
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "w_pct_farmhh"
+    - layers: "lo:laos_w_pct_farmhh"
     - transparent: true
     ol_options:
     - visibility: false
@@ -72,7 +72,7 @@ application:
     - opacity: 0.7
   # Protected areas in Laos
   - name: Protected areas
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
@@ -86,11 +86,11 @@ application:
     - opacity: 0.7
   # Percentage of economically active population
   - name: Percentage of economically active population
-    url: "http://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/gwc/service/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png8"
-    - layers: "pop_econ_active_pct"
+    - layers: "lo:laos_pop_econ_active_pct"
     - transparent: true
     ol_options:
     - visibility: false
@@ -99,7 +99,7 @@ application:
     - maxExtent: [10018755, 181, 12801601, 3482189]
     - opacity: 0.7
   - name: "Global Land Cover 2009"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -112,7 +112,7 @@ application:
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
   - name: "Global Cropland"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/jpeg"
@@ -125,7 +125,7 @@ application:
     - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
     - opacity: 0.6
 #  - name: "Global Pasture Land"
-#    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+#    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
 #    wms_options:
 #    - epsg: 900913
 #    - format: "image/jpeg"

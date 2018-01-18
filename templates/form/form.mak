@@ -20,17 +20,18 @@
         # Activities
         templateName = 'form_activity.mak'
 
-    resolver = lmkpAssetResolver.resolve('customization/lo/templates/form/%s' % templateName)
+    resolver = lmkpAssetResolver.resolve('customization/omm/templates/form/%s' % templateName)
     template = Template(filename=resolver.abspath())
 %>
 
 ${template.render(request=request, field=field, cstruct=cstruct)}
 
-<div id="formModal" class="modal hide fade">
-    <div class="modal-body">
+
+<div id="formModal" class="modal modal-fixed-footer">
+    <div class="modal-content">
         <!-- Placeholder for the content of the modal window -->
     </div>
     <div class="modal-footer">
-        <button id="formModalClose" class="btn" data-dismiss="modal" aria-hidden="true">${_('Close')}</button>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">${_('Close')}</a>
     </div>
 </div>

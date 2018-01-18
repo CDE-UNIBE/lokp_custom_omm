@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Deal Details')} ${shortuid}</%def>
 
@@ -25,9 +25,7 @@
     var identifier = '${uid}';
     var version = ${version};
 </script>
-
 <%include file="lmkp:templates/map/mapform.mak" args="readonly=True" />
-
 % if site_key is not None:
 <script type="text/javascript" class="juvia">
     (function() {

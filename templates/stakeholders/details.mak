@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Investor Details')} ${shortuid}</%def>
 
@@ -11,7 +11,7 @@
         ${form | n}
         %if site_key is not None:
             <div class="row-fluid">
-                <div id="comments-div" class="span9 comments-div">
+                <div id="comments-div" class="span9 comments-div alert alert-info card-panel accent-background-color" >
                     ${_('Loading comments ...')}
                 </div>
             </div>

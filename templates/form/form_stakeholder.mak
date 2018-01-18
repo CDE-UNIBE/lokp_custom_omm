@@ -30,19 +30,8 @@
            value="${field.formid}"
     />
 
-    <div class="row-fluid">
-        <div class="span9">
-            % if field.error:
-                <div class="alert alert-error">
-                    <h5>${_("There was a problem with your submission")}</h5>
-                    ${_("Errors have been highlighted below")}
-                </div>
-            % endif
-            % for child in field.children:
-                ${child.render_template(field.widget.item_template)}
-            % endfor
-        </div>
-        <div class="deal-editor-menu-bar span3">
+    <div class="row">
+        <div class="deal-editor-menu-bar col l3 pull-right">
             <div id="menu-affix" data-clampedwidth=".deal-editor-menu-bar">
                 % for button in field.buttons:
                     <ul>
@@ -52,15 +41,17 @@
 
                         <li
                             % if button.name == 'submit':
-                                style="background-color:gray;"
+                                style="background-color:teal;"
                             % endif
                             >
                             <button
                                 id="${field.formid + button.name}"
                                 name="${button.name}"
                                 value="${button.value}"
+                                style="width: 100%"
                                 class="btnText ${button.css_class}">
                                 ${button.title}
+                                <i class="material-icons right">send</i>
                             </button>
                             % if button.css_class == 'formstepvisited':
                                 <span class="form-button-visited"><i class="icon-ok-sign"></i></span>
@@ -73,6 +64,17 @@
                     </ul>
                 % endfor
             </div>
+        </div>
+        <div class="col l9">
+            % if field.error:
+                <div class="alert alert-error">
+                    <h5>${_("There was a problem with your submission")}</h5>
+                    ${_("Errors have been highlighted below")}
+                </div>
+            % endif
+            % for child in field.children:
+                ${child.render_template(field.widget.item_template)}
+            % endfor
         </div>
     </div>
 

@@ -1,0 +1,52 @@
+{
+  "news": [
+    {
+      "header": "Chibwe Hydropower Project added",
+      "text": "See details <a href='https://www.mmlandreporting.info/activities/html/0eb88c36-4c02-4aea-ae55-2f7df02e1da7'> here</a>. Any specifications and project status updates are very welcome."
+    },
+    {
+      "header": "Yuzana Group of Companies land deal in Hukawng Valley, Kachin State added",
+      "text": "See details <a href='https://www.mmlandreporting.info/activities/html/b44a700b-6056-435c-923e-36672c32842c'> here</a>. <br/> Click <a href='https://earthengine.google.com/timelapse/#v=26.16712,96.72676,10.378,latLng&t=3.01'> here</a>, to see the land conversion in a 30 year timelapse video."
+    },
+    {
+      "header": "New deal on abandoned oil refinery investment close to Launglon, Tanintharyi added",
+      "text": "See deal details <a href='https://www.mmlandreporting.info/activities/html/ad9518d0-dc44-484f-81e5-ad195109e8f8'> here</a>."
+    },
+    {
+      "header": "New hydropower project deals in Shan and Kayin State and Tanintharyi Region added",
+      "text": "<a href='https://www.mmlandreporting.info/activities/html/9c0d8074-c443-4958-be08-8bdb3a2e43c2'> Mong Tom Dam (Tasang Dam) Project </a> <br/> <a href='https://www.mmlandreporting.info/activities/html/ea26bb4b-36d7-4ace-bb82-9f4ff77f2b76'> Hutgyi Hydropower Project </a> <br/> <a href='https://www.mmlandreporting.info/activities/html/6e3ed7c4-9fad-473f-bcb1-4b6a2fe35e2e'> Shweli 3 Hydropower Project </a> <br/> <a href='https://www.mmlandreporting.info/activities/html/2d7287da-81bc-4dc3-a2f8-74872c0ce229'> Kunlong Dam (Upper Salween Dam) </a> <br/> <a href='https://www.mmlandreporting.info/activities/html/2d472b3a-8270-46d6-9919-939221938c56'>Tanintharyi Hydropower Project </a>"
+    },
+    {
+      "header": "Oil palm deal in Tanintharyi added",
+      "text": "See deal details <a href='https://www.mmlandreporting.info/activities/html/10c6ffe1-d649-4204-90d4-f1aba5dd0341'> here</a>. <br/> Click <a href='https://earthengine.google.com/timelapse/#v=12.49874,98.95779,11.592,latLng&t=1.42'> here</a>, to see the land conversion in a 30 year timelapse video."
+    },
+    {
+      "header": "Deal concerning suspended Myitsone Hydropower Project added",
+      "text": "See deal information <a href='https://www.mmlandreporting.info/activities/html/fca20f34-5dc5-43e7-8f74-f6cef286eb32'> here</a>."
+    },
+    {
+      "header": "New deals in Sagaing Region added",
+      "text": "Two new land deals in Sagaing Region were added. Additional information concerning these deals are very welcome. <br/> See the deal close to Homalin Township <a href='https://www.mmlandreporting.info/activities/html/9b2b967d-d0e2-4ff4-bea0-3dc4c0487067'> here</a>. <br/> See the second deal with a yet unspecified exact location  <a href='https://www.mmlandreporting.info/activities/html/8c2c5fe4-6e2c-4ba5-bc31-8944de63fb65'> here</a>."
+    },
+    {
+      "header": "New Deals concerning Special Economic Zones added",
+      "text": "Deals concerning the Special Economic Zones (SEZ) in <a href='https://www.mmlandreporting.info/activities/html/0dd2459d-2dd5-4183-9701-6ee774edaf32'> Dawei </a>, <a href='https://www.mmlandreporting.info/activities/html/6ddc8fbd-58b4-4b7d-b648-3f89beda9c06'> Thilawa </a> and <a href='https://www.mmlandreporting.info/activities/html/424e8ebd-3273-41bb-8eb4-a23a62db6d7f'> Kyaukphyu </a> were added. <br/> Any further information as well as updates on these deals are most welcome."
+    },
+    {
+      "header": "New base layers are available now",
+      "text": "Google Earth satellite images as well as ESRI World Imagery are available as base map now."
+    },
+    {
+      "header": "Mining areas added as context layer",
+      "text": "Mining areas layer provided by <a href='http://www.mdpi.com/2072-4292/8/11/912/htm'> Connette et al. 2016 </a> is available as context layer now "
+    },
+    {
+      "header": "Global Forest Loss Layer added",
+      "text": "The Global Forest Change Loss Layer for a period of time between 2001 and 2016 provided by <a href='http://science.sciencemag.org/content/342/6160/850'> Hansen et al. 2013 </a> is available as context layer now."
+    },
+    {
+      "header": "New swipe function",
+      "text": "A swipe function to modify transparency level of context layers was implemented."
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%
 from lmkp.views.views import (
@@ -20,14 +20,6 @@ from lmkp.views.views import (
                 <p>${_('No version to display.')}</p>
             </div>
         % else:
-            <div class="row-fluid">
-                <div class="span9 text-right">
-                    <a href="${request.route_url('stakeholders_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
-                        <i class="icon-rss"></i> ${_("Subscribe")}
-                    </a>
-                </div>
-            </div>
-
             <div class="row-fluid">
                 <div class="span9">
                     <h3 class="form-below-toolbar">${_('Version History')}</h3>
@@ -56,8 +48,8 @@ from lmkp.views.views import (
                                 % endif
                                 <td class="deal-history-links">
                                     % if isModerator and v['statusId'] == 1:
-                                    <a href="${request.route_url('stakeholders_read_one', output='review', uid=v['identifier'], _query=(('new', v['version']),))}">
-                                        <i class="icon-check ttip" data-toggle="tooltip" data-original-title="${_('Review this version')}"></i>
+                                    <a href="${request.route_url('stakeholders_read_one', output='review', uid=v['identifier'], _query=(('new', v['version']),))}" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="${_('Review this version')}">
+                                        <i class="icon-check text-accent-color"></i>
                                     </a>
                                     |
                                     % endif
@@ -66,13 +58,13 @@ from lmkp.views.views import (
                                     refV = v['version'] if v['version'] < activeVersion else activeVersion
                                     newV = v['version'] if v['version'] > activeVersion else activeVersion
                                     %>
-                                    <a href="${request.route_url('stakeholders_read_one', output='compare', uid=v['identifier'], _query=(('ref', refV),('new', newV)))}">
-                                        <i class="icon-exchange ttip" data-toggle="tooltip" data-original-title="${_('Compare this version with the active version')}"></i>
+                                    <a href="${request.route_url('stakeholders_read_one', output='compare', uid=v['identifier'], _query=(('ref', refV),('new', newV)))}"  class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="${_('Compare this version with the active version')}">
+                                        <i class="icon-exchange text-accent-color"></i>
                                     </a>
                                     |
                                     % endif
-                                    <a href="${request.route_url('stakeholders_read_one', output='html', uid=v['identifier'], _query=(('v', v['version']),))}">
-                                        <i class="icon-eye-open ttip" data-toggle="tooltip" data-original-title="${_('View this version')}"></i>
+                                    <a href="${request.route_url('stakeholders_read_one', output='html', uid=v['identifier'], _query=(('v', v['version']),))}" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="${_('View this version')}">
+                                        <i class="icon-eye-open text-accent-color"></i>
                                     </a>
                                 </td>
                                 <td>
@@ -82,7 +74,7 @@ from lmkp.views.views import (
                                     ${v['timestamp']}
                                 </td>
                                 <td>
-                                    <a href="${request.route_url('changesets_read_byuser', username=v['username'], output='html')}">
+                                    <a href="${request.route_url('changesets_read_byuser', username=v['username'], output='html')}"                                     <a href="${request.route_url('changesets_read_byuser', username=v['username'], output='html')}" class="text-accent-color">
                                     ${v['username']}
                                     </a>
                                 </td>
@@ -95,10 +87,11 @@ from lmkp.views.views import (
                     </table>
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span9 text-right">
-                    <a href="${request.route_url('stakeholders_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
-                        <i class="icon-rss"></i> ${_("Subscribe")}
+
+           <div class="row" style="margin-top: 50px;">
+                <div class="col s12">
+                    <a class="btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_("Subscribe")}" href="${request.route_url('stakeholders_read_one_history', output='rss', uid=versions[0]['identifier'], _query=(('_LOCALE_', get_current_locale(request)),('_PROFILE_', get_current_profile(request))))}">
+                        <i class="icon-rss"></i>
                     </a>
                 </div>
             </div>

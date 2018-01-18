@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Areal Statistics')} ${shortuid}</%def>
 
@@ -61,6 +61,7 @@
                 ${_(u"Landscan population density layer 2011 from %s.") % link|n}
               </div>
             </div>
+            <table class="striped">
             % for stats in layer['statistics']:
               <%
                 if stats['name'].lower() == "Mean".lower():
@@ -75,19 +76,12 @@
                 else:
                   continue
               %>
-              <div class="row-fluid">
-                <div class="span12 grid-area">
-                  <div class="row-fluid">
-                    <div class="span5">
-                      <h5 class="green">${attribute}</h5>
-                    </div>
-                    <div class="span7">
-                      <p class="deal-detail">${value} pers / km<sup>2</sup></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <tr>
+                  <th width="40%">${attribute}</th>
+                  <td>${value} pers / km<sup>2</sup></td>
+                </tr>
             % endfor
+            </table>
           % elif layer['layername'].lower() == "Accessibility".lower():
             <!-- Accessibility template -->
             <div class="row-fluid">
@@ -103,18 +97,14 @@
                 ${_(u"Travel time to major cities: A global map of accessibility from %s.") % link|n}
               </div>
             </div>
+            <table class="striped">
             % for cls in layer['classes']:
-              <div class="row-fluid">
-                <div class="span12 grid-area">
-                  <div class="row-fluid">
-                    <div class="span5">
-                      <h5 class="green">${'%.2f' % round(cls['areashare'], 2)} % accessible within</h5>
-                    </div>
-                    <div class="span7">${cls['name']}</div>
-                  </div>
-                </div>
-              </div>
+              <tr>
+                <th width="40%">${'%.2f' % round(cls['areashare'], 2)} % accessible within</th>
+                <td>${cls['name']}</td>
+              </tr>
             % endfor
+            </table>
           % elif layer['layername'].lower() == "Land Cover".lower():
             <!-- Land cover template -->
             <div class="row-fluid">
@@ -130,18 +120,14 @@
                 ${_(u"Global Land Cover Map 2009 from %s.") % link|n}
               </div>
             </div>
+            <table class="striped">
             % for cls in sorted(layer['classes'], key= lambda cls: cls['areashare'], reverse=True):
-              <div class="row-fluid">
-                <div class="span12 grid-area">
-                  <div class="row-fluid">
-                    <div class="span5">
-                      <h5 class="green">${'%.2f' % round(cls['areashare'], 2)} % area share:</h5>
-                    </div>
-                    <div class="span7">${cls['name']}</div>
-                  </div>
-                </div>
-              </div>
+              <tr>
+                <th width="40%">${'%.2f' % round(cls['areashare'], 2)} % area share:</th>
+                <td>${cls['name']}</td>
+              </tr>
             % endfor
+            </table>
           % endif
         % endfor
 

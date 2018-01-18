@@ -6,7 +6,7 @@ application:
   name: "Peru: Observatorio de Adquisiciones de Tierras"
   layers:
   - name: "Departamentos"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png"
@@ -19,7 +19,7 @@ application:
     - maxExtent: [-9094802.40, -2225705.15, -7569725.37, 0.00]
     - opacity: 0.6
   - name: "Provincias"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png"
@@ -32,7 +32,7 @@ application:
     - maxExtent: [-9094802.40, -2225705.15, -7569725.37, 0.00]
     - opacity: 0.6
   - name: "Distritos"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png"
@@ -45,7 +45,7 @@ application:
     - maxExtent: [-9094802.40, -2225705.15, -7569725.37, 0.00]
     - opacity: 0.6
   - name: "Areas Naturales Protegidas"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png"
@@ -58,7 +58,7 @@ application:
     - maxExtent: [-9094802.40, -2225705.15, -7569725.37, 0.00]
     - opacity: 0.6
   - name: "Centros Poplados"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png"
@@ -71,7 +71,7 @@ application:
     - maxExtent: [-9094802.40, -2225705.15, -7569725.37, 0.00]
     - opacity: 0.6
   - name: "CF con fines maderables"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png"
@@ -84,7 +84,7 @@ application:
     - maxExtent: [-9094802.40, -2225705.15, -7569725.37, 0.00]
     - opacity: 0.6
   - name: "Comunidades Campesinas"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png"
@@ -97,7 +97,7 @@ application:
     - maxExtent: [-9094802.40, -2225705.15, -7569725.37, 0.00]
     - opacity: 0.6
   - name: "Comunidades Nativas"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png"
@@ -110,7 +110,7 @@ application:
     - maxExtent: [-9094802.40, -2225705.15, -7569725.37, 0.00]
     - opacity: 0.6
   - name: "Conservacion"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png"
@@ -123,7 +123,7 @@ application:
     - maxExtent: [-9094802.40, -2225705.15, -7569725.37, 0.00]
     - opacity: 0.6
   - name: "Ecoturismo"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png"
@@ -136,7 +136,7 @@ application:
     - maxExtent: [-9094802.40, -2225705.15, -7569725.37, 0.00]
     - opacity: 0.6
   - name: "Proyectos de riego"
-    url: "http://sdi.cde.unibe.ch/geoserver/lo/wms"
+    url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
     wms_options:
     - epsg: 900913
     - format: "image/png"

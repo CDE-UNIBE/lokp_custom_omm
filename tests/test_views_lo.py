@@ -11,7 +11,7 @@ from conftest_lo import *
 @pytest.mark.integration
 class ViewTests(TestCase):
 
-    customization_title = 'Land Observatory'
+    customization_title = 'Myanmar land reporting'
 
     def is_url_available(self, url, login=False, find=''):
         if login:

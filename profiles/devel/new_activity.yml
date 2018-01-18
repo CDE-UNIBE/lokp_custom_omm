@@ -26,12 +26,57 @@
           desired: true
           involvementoverview: 3
           filterable: true
-  # [C] 2: General Information
-  2:
-    order: 2
+    # [C-THG] 13: Intention of Investment
+    13:
+      order: 2
+      # [TG]
+      1:
+        # [K] 6: Intention of Investment
+        6:
+          maintag: true
+          desired: true
+          involvementoverview: 1
+          mapsymbol: 1
+          filterable: true
+          gridcolumn: 3
+      2:
+        # [K] 53: Remark (Intention of Investment)
+        53:
+          maintag: true
+    # [C-THG] 22: Primary Investor
+    22:
+      order: 2
+      # [TG]
+      involvement:
+        name: 'primaryinvestor'
+        roles: [6]
+    # [C-THG] 23: Secondary Investor
+    23:
+      order: 3
+      # [TG]
+      involvement:
+        name: 'secondaryinvestor'
+        roles: [7]
+        repeat: true
+    # [C-THG] 17: Implementation status
+    17:
+      order: 4
+      # [TG]
+      1:
+        repeat: true
+        # [K] 43: Implementation Status
+        43:
+          maintag: true
+          desired: true
+          mapsymbol: 4
+          filterable: true
+        # [K] 48: Year
+        48: null
+        # [K] 25: Remark
+        25: null
     # [C-THG] 12: Land Area
     12:
-      order: 1
+      order: 5
       # [TG]
       1:
         geometry: true
@@ -63,19 +108,33 @@
         # [K] 48: Year
         48:
           validator: [2000,2100]
-    # [C-THG] 13: Intention of Investment
-    13:
-      order: 2
+    # [C-THG] 33: Detailed Crop, Animal and Mineral Information
+    33:
+      order: 6
       # [TG]
       1:
-        # [K] 6: Intention of Investment
-        6:
+        # [K] 44: Crop
+        44:
           maintag: true
-          desired: true
-          involvementoverview: 1
-          mapsymbol: 1
           filterable: true
-          gridcolumn: 3
+      # [TG]
+      2:
+        # [K] 26: Animals
+        26:
+          maintag: true
+          filterable: true
+      # [TG]
+      3:
+        # [K] 13: Minerals
+        13:
+          maintag: true
+          filterable: true
+  # [C] 2: General Information
+  2:
+    order: 2
+    # [C-THG] 13: Intention of Investment
+    13:
+      order: 1
       # [TG]
       2:
         # [K] 46: Scope of agriculture
@@ -89,10 +148,6 @@
           maintag: true
           filterable: true
       # [TG]
-      4:
-        # [K] 53: Remark (Intention of Investment)
-        53:
-          maintag: true
     # [C-THG] 14: Nature of the deal
     14:
       order: 3
@@ -145,22 +200,6 @@
           maintag: true
         # [K] 48: Year
         48: null
-    # [C-THG] 17: Implementation status
-    17:
-      order: 6
-      # [TG]
-      1:
-        repeat: true
-        # [K] 43: Implementation Status
-        43:
-          maintag: true
-          desired: true
-          mapsymbol: 4
-          filterable: true
-        # [K] 48: Year
-        48: null
-        # [K] 25: Remark
-        25: null
     # [C-THG] 18: Purchase Price
     18:
       order: 7
@@ -252,24 +291,6 @@
         # [K] 55: Remark (Number of Jobs Created)
         55:
           maintag: true
-  # [C] 4: Investor Info
-  4:
-    order: 4
-    # [C-THG] 22: Primary Investor
-    22:
-      order: 1
-      # [TG]
-      involvement:
-        name: 'primaryinvestor'
-        roles: [6]
-    # [C-THG] 23: Secondary Investor
-    23:
-      order: 2
-      # [TG]
-      involvement:
-        name: 'secondaryinvestor'
-        roles: [7]
-        repeat: true
   # [C] 5: Data Sources
   5:
     order: 5
@@ -383,27 +404,6 @@
   # [C] 8: Produce Info
   8:
     order: 8
-    # [C-THG] 33: Detailed Crop, Animal and Mineral Information
-    33:
-      order: 1
-      # [TG]
-      1:
-        # [K] 44: Crop
-        44:
-          maintag: true
-          filterable: true
-      # [TG]
-      2:
-        # [K] 26: Animals
-        26:
-          maintag: true
-          filterable: true
-      # [TG]
-      3:
-        # [K] 13: Minerals
-        13:
-          maintag: true
-          filterable: true
     # [C-THG] 34: Use of Produce
     34:
       order: 2

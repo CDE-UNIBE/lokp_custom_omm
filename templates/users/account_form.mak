@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/lo/templates/base.mak" />
+<%inherit file="lmkp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('User Account')}</%def>
 
@@ -36,18 +36,14 @@
         </div>
         <div class="row-fluid">
             <div class="span9">
-                <p>${_('Update user settings')}</p>
-            </div>
-        </div>        <div class="row-fluid">
-            <div class="span9">
-                <hr class="grey" />
+                <p>${_('Update user settings')}</p></br>
             </div>
         </div>
         <div class="row-fluid">
             <div class="span9">
                 ${form | n}
             </div>
-        </div>
+        </div></br>
 
         ## Footer menu
         ${inlinemenu()}
@@ -57,6 +53,11 @@
 
 <%def name="bottom_tags()">
 <script type="text/javascript">
-    deform.load();
+
+    $(document).ready(function() {
+        Materialize.updateTextFields();
+        deform.load();
+      });
+
 </script>
 </%def>
