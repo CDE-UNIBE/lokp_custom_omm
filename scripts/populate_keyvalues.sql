@@ -18,6 +18,10 @@
 
   Last update: 2018-01-18 12:00
 */
+-- For some reason, the first query is not correctly executed when loading the
+-- data in the tests. Therefore adding an unimportant query before the insert
+-- queries.
+SELECT * FROM data.categories;
 
 INSERT INTO data.categories(id, name, type, fk_language, description, fk_category) VALUES
   (1, 'General Information', 'activities', 1, NULL, NULL),
@@ -60,7 +64,7 @@ INSERT INTO data.categories(id, name, type, fk_language, description, fk_categor
   (38, 'How Much Water Is Extracted?', 'activities', 1, NULL, NULL),
   (39, 'Overall Comment', 'activities', 1, NULL, NULL),
   (40, 'Stakeholder Information', 'stakeholders', 1, NULL, NULL),
-  (41, 'Amount of Investment', 'activities', 1, NULL, NULL);
+  (41, 'Amount of Investment', 'activities', 1, NULL, NULL)
 ;
 SELECT setval('data.categories_id_seq', 41, true);
 
@@ -1007,32 +1011,3 @@ INSERT INTO data.institution_types(id, name, description) VALUES
     (2, 'Government', NULL)
 ;
 SELECT setval('data.institution_types_id_seq', 2, true);
-
-
-/**
-  Copy and rename PostGIS functions to match with older version of SQLAlchemy.
- */
-
--- st_geomfromtext(text, integer) -> geomfromtext(text, integer)
-CREATE OR REPLACE FUNCTION geomfromtext(
-    text,
-    integer)
-  RETURNS geometry AS
-'$libdir/postgis-2.2', 'LWGEOM_from_text'
-  LANGUAGE c IMMUTABLE STRICT
-  COST 1;
-ALTER FUNCTION geomfromtext(text, integer)
-  OWNER TO postgres;
-COMMENT ON FUNCTION geomfromtext(text, integer) IS 'args: WKT, srid - Return a specified ST_Geometry value from Well-Known Text representation (WKT).';
-
--- st_geomfromwkb(bytea, integer) -> geomfromwkb(bytea, integer)
-CREATE OR REPLACE FUNCTION geomfromwkb(
-    bytea,
-    integer)
-  RETURNS geometry AS
-'SELECT ST_SetSRID(ST_GeomFromWKB($1), $2)'
-  LANGUAGE sql IMMUTABLE STRICT
-  COST 100;
-ALTER FUNCTION geomfromwkb(bytea, integer)
-  OWNER TO postgres;
-COMMENT ON FUNCTION geomfromwkb(bytea, integer) IS 'args: geom, srid - Makes a geometry from WKB with the given SRID';
