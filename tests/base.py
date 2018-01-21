@@ -9,9 +9,9 @@ from selenium import webdriver
 from sqlalchemy import engine_from_config
 from webtest import http
 
-from .pages import Page
+from .pages import Page, LogoutPage
 from lokp import main
-from lokp.models import Base
+from lokp.models import Base, DBSession
 from lokp.scripts.initialize_db import add_sql_triggers, add_initial_values
 
 
@@ -72,7 +72,12 @@ class FunctionalTestCase(unittest.TestCase):
         chrome_options.add_argument('--no-sandbox')
         self.driver = webdriver.Chrome(
             executable_path=chromedriver_path, chrome_options=chrome_options)
+        self.driver.set_window_size(1920, 1080)
         self.driver.implicitly_wait(3)
+
+        # Make sure user is not logged in
+        logout_page = LogoutPage(self.driver)
+        self.get_page(logout_page)
 
     def tearDown(self):
         self.driver.quit()
@@ -80,6 +85,7 @@ class FunctionalTestCase(unittest.TestCase):
             self.display.stop()
         self.server.shutdown()
         Base.metadata.drop_all(self.engine)
+        DBSession.remove()
         testing.tearDown()
 
     def get_url_from_route(
