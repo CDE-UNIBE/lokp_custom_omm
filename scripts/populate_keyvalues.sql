@@ -1,7 +1,7 @@
 /*
 
   *** IMPORTANT *** Use this script only to populate an *EMPTY* (after running
-    lmkp_populate) database!
+    initialize_lokp_db) database!
 
   This script will populate the following tables:
   - Categories
