@@ -1,8 +1,18 @@
+import requests
+from requests.cookies import RequestsCookieJar
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+
+
+class Endpoint:
+    route_kwargs = None
+
+    @property
+    def route_name(self):
+        raise NotImplementedError
 
 
 class Page:
@@ -21,6 +31,12 @@ class Page:
         """
         return self.driver.find_element(*locator)
 
+    def get_els(self, locator: tuple) -> list:
+        """
+        Shortcut to get a list of elements.
+        """
+        return self.driver.find_elements(*locator)
+
     def scroll_to(self, element: WebElement):
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
 
@@ -30,6 +46,14 @@ class Page:
     def set_style(self, element: WebElement, prop: str, value: str):
         self.driver.execute_script(
             f"arguments[0].style.{prop} = {value};", element)
+
+    def do_logout_cookie(self):
+        """
+        Log out by deleting the cookie. Use this if the menu is not accessible.
+        Be sure to redirect or refresh the page (self.driver.refresh()) after
+        logging out.
+        """
+        self.driver.delete_cookie('auth_tkt')
 
 
 class BasePage(Page):
@@ -57,7 +81,7 @@ class BasePage(Page):
         """
         return bool(self.get_el(self.LOC_MENU_LOGIN))
 
-    def do_login(self, username: str, password: str):
+    def do_login(self, user=None, username: str='', password: str=''):
         """
         Do the login for a user.
         """
@@ -66,11 +90,17 @@ class BasePage(Page):
             return
         self.get_el(self.LOC_MENU_LOGIN).click()
         page = LoginPage(self.driver)
+        if user is not None:
+            username = user.username
+            password = user.password
         page.fill_login_form(username, password)
         page.submit_login_form()
 
     def do_logout(self):
         self.get_el(self.LOC_MENU_LOGOUT).click()
+
+    def is_not_found(self):
+        return self.driver.title == '404 Not Found'
 
 
 class LandingPage(Page):
@@ -177,7 +207,11 @@ class CreateActivityPage(BasePage):
 
 class DetailActivityPage(BasePage):
     route_name = 'activities_read_one'
-    route_kwargs = {'output': 'html', 'identifier': None}
+    route_kwargs = {'output': 'html', 'uid': None}
+
+    LOC_ACTIVITY_TOOLBAR_ITEMS = (
+        By.XPATH, '//div[contains(@class, "deal-top-toolbar")]/ul/li/a/span'
+                  '[@class="link-with-icon"]')
 
     def has_status(self, status: str):
         if status == 'pending':
@@ -196,3 +230,45 @@ class DetailActivityPage(BasePage):
                 f'//h5[contains(@class, "dealview_item_titel") and '
                 f'text()="{key}"]/../../div[@class="dealview_item_attribute"]'
                 f'/p[contains(text(), "{value}")]')
+
+    def is_reviewable(self):
+        toolbar_elements = self.get_els(self.LOC_ACTIVITY_TOOLBAR_ITEMS)
+        return 'Review' in [el.text for el in toolbar_elements]
+
+    def is_editable(self):
+        toolbar_elements = self.get_els(self.LOC_ACTIVITY_TOOLBAR_ITEMS)
+        return 'Edit this Deal' in [el.text for el in toolbar_elements]
+
+
+class LoginEndpoint(Endpoint):
+    route_name = 'login_json'
+
+    @staticmethod
+    def login(
+            login_url: str, username: str, password: str) -> RequestsCookieJar:
+        login_data = {
+            'login': username,
+            'password': password,
+        }
+        login_request = requests.post(login_url, json=login_data)
+        assert login_request.status_code == 200
+        assert login_request.json().get('login') == 'true'
+        return login_request.cookies
+
+
+class CreateActivityEndpoint(Endpoint):
+    route_name = 'activities_create'
+
+    @staticmethod
+    def create(
+            create_url: str, login_cookies: RequestsCookieJar,
+            changeset: dict) -> str:
+        """
+        This creates a new Activity by using the JSON API. If successful, the
+        UUID of the new Activity is returned.
+        """
+        create_request = requests.post(
+            create_url, json=changeset, cookies=login_cookies)
+        assert create_request.status_code == 201
+        assert create_request.json().get('created') is True
+        return create_request.json()['data'][0]['id']
