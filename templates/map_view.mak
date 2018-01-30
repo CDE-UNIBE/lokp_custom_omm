@@ -1,28 +1,27 @@
 <%
-    from lmkp.views.views import getFilterKeys
-    from lmkp.views.views import getActiveFilters
+    from lokp.views.filter import getFilterKeys
+    from lokp.views.filter import getActiveFilters
 
     aFilterKeys, shFilterKeys = getFilterKeys(request)
     activeFilters = getActiveFilters(request)
 %>
 
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Map View')}</%def>
 
 <%def name="head_tags()">
-<link rel="stylesheet" href="${request.static_url('lmkp:static/lib/OpenLayers-2.12/theme/default/style.css')}" type="text/css" />
 <script type="text/javascript">
 <%
-    from lmkp.views.profile import _getCurrentProfileExtent
-    from lmkp.views.views import getOverviewKeys
-    from lmkp.views.views import getFilterValuesForKey
-    from lmkp.views.views import getMapSymbolKeys
-    from lmkp.views.config import form_geomtaggroups
+    from lokp.config.profile import get_current_profile_extent
+    from lokp.config.customization import getOverviewKeys
+    from lokp.views.filter import getFilterValuesForKey
+    from lokp.views.map import getMapSymbolKeys
+    from lokp.views.form import form_geomtaggroups
     import json
 
     aKeys, shKeys = getOverviewKeys(request)
-    extent = json.dumps(_getCurrentProfileExtent(request))
+    extent = json.dumps(get_current_profile_extent(request))
     mapSymbols = getMapSymbolKeys(request)
     mapCriteria = mapSymbols[0]
     mapSymbolValues = [v[0] for v in sorted(getFilterValuesForKey(request,
@@ -129,7 +128,7 @@
 </ul>
 
 <ul id="slide-out-filter" class="side-nav" style="min-width: 550px;">
-    <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+    <%include file="lokp:customization/omm/templates/parts/filter.mak" />
 </ul>
 
 <!-- content -->
@@ -294,14 +293,13 @@
 </div>
 
 <%def name="bottom_tags()">
-<script type="text/javascript" src="//maps.google.com/maps/api/js?v=3&amp;key=${str(request.registry.settings.get('lmkp.google_maps_api_key'))}&libraries=places"></script>
-<script src="${request.static_url('lmkp:static/lib/OpenLayers-2.12/OpenLayers.js')}" type="text/javascript"></script>
+<script type="text/javascript" src="//maps.google.com/maps/api/js?v=3&amp;key=${str(request.registry.settings.get('lokp.google_maps_api_key'))}&libraries=places"></script>
+<script src="${request.static_url('lokp:static/lib/OpenLayers/OpenLayers.js')}" type="text/javascript"></script>
 <script type="text/javascript" src="${request.route_url('context_layers')}"></script>
-<script src="${request.static_url('lmkp:static/v2/maps/main.js')}" type="text/javascript"></script>
-<script src="${request.static_url('lmkp:static/v2/maps/base.js')}" type="text/javascript"></script>
-<script src="${request.static_url('lmkp:static/v2/filters.js')}" type="text/javascript"></script>
-<script src="${request.static_url('lmkp:static/v2/jquery.cookie.js')}" type="text/javascript"></script>
-<script src="${request.static_url('lmkp:static/v2/jquery.cookie.js')}" type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/js/maps/main.js')}" type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/js/maps/base.js')}" type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/js/filters.js')}" type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/lib/jquery.cookie/jquery.cookie.min.js')}" type="text/javascript"></script>
 <script src="/custom/js/news.js"></script>
 <script src="/custom/js/potw.js"></script>
 </%def>

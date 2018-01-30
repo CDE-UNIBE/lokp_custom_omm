@@ -71,7 +71,7 @@ ${field.end_mapping()}
 
 <%
     import json
-    from lmkp.views.views import getOverviewKeys, getOverviewRawKeys
+    from lokp.config.customization import getOverviewKeys, getOverviewRawKeys
     aKeys, shKeys = getOverviewKeys(request)
     aRawKeys, shRawKeys = getOverviewRawKeys(request)
 %>

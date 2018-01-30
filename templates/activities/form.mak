@@ -1,32 +1,22 @@
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Deal Editor')}</%def>
 
 <%def name="head_tags()">
-    <link rel="stylesheet" href="/static/form.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/form.css" type="text/css" />
 
-    <script type="text/javascript" src="${request.static_url('lmkp:static/v2/form.js')}"></script>
+    <script type="text/javascript" src="${request.static_url('lokp:static/js/form.js')}"></script>
 
     <!-- REQUIREMENTS -->
-    <!-- CSS -->
     % for reqt in css_links:
-        <link rel="stylesheet" href="/formstatic/${reqt}" type="text/css" />
+        <link rel="stylesheet" href="${request.static_url(reqt)}" type="text/css" />
     % endfor
     % for reqt in js_links:
-      % if reqt == 'scripts/jquery-1.7.2.min.js':
-      ##  Only use 1 version of jQuery
-
-      % elif reqt == 'scripts/jquery-ui-1.8.11.custom.min.js':
-        <script type="text/javascript" src="/custom/js/vendor/jquery-ui-1.12.1.min.js"></script>
-      % elif reqt == 'scripts/jquery.maskedinput-1.2.2.min.js':
-        <script type="text/javascript" src="/custom/js/vendor/jquery.maskedinput.1.4.1.min.js"></script>
-      % else:
-        <script type="text/javascript" src="/formstatic/${reqt}"></script>
-      % endif
+        <script type="text/javascript" src="${request.static_url(reqt)}"></script>
     % endfor
 
     <script type="text/javascript">
-      jQuery.fn.autocompleteJQuery = jQuery.fn.autocomplete;
+       jQuery.fn.autocompleteJQuery = jQuery.fn.autocomplete;
     </script>
 
     % if js:
@@ -38,7 +28,7 @@
 <div class="container deal-edit-content">
     <div class="content no-border">
         ## Session messages
-        <%include file="lmkp:templates/parts/sessionmessage.mak"/>
+        <%include file="lokp:templates/parts/sessionmessage.mak"/>
 
         ${form | n}
     </div>

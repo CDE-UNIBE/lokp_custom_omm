@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/omm/templates/base_no_menu.mak" />
+<%inherit file="lokp:customization/omm/templates/base_no_menu.mak" />
 <%page expression_filter="h"/>
 
 <%def name="title()">${_('Show cases')}</%def>

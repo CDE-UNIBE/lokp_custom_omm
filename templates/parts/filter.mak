@@ -3,8 +3,8 @@
 </%doc>
 
 <%
-    from lmkp.views.views import getFilterKeys
-    from lmkp.views.views import getActiveFilters
+    from lokp.views.filter import getFilterKeys
+    from lokp.views.filter import getActiveFilters
 
     aFilterKeys, shFilterKeys = getFilterKeys(request)
     activeFilters = getActiveFilters(request)

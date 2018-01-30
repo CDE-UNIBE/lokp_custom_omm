@@ -1,8 +1,7 @@
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%
-    from lmkp.views.views import getFilterKeys
-    from lmkp.views.views import getActiveFilters
+    from lokp.views.filter import getFilterKeys, getActiveFilters
 
     aFilterKeys, shFilterKeys = getFilterKeys(request)
     activeFilters = getActiveFilters(request)
@@ -13,12 +12,12 @@
 ## Start of content
 
 <%
-    import urllib
+    import urllib.parse
     import datetime
-    from lmkp.utils import handle_query_string
+    from lokp.utils.views import handle_query_string
 
     # Get the keys and their translation
-    from lmkp.views.config import getGridColumnKeys
+    from lokp.config.customization import getGridColumnKeys
     keys = getGridColumnKeys(request, 'stakeholders')
 
     a_uids = ','.join(invfilter) if invfilter is not None else ''
@@ -26,7 +25,7 @@
 
 ## Filter
 <ul id="slide-out-filter" class="side-nav" style="min-width: 550px;">
-    <%include file="lmkp:customization/omm/templates/parts/filter.mak" />
+    <%include file="lokp:customization/omm/templates/parts/filter.mak" />
 </ul>
 
 <!-- content -->
@@ -155,14 +154,14 @@
                                 ${_('Last Change')}
                                 <a href="${handle_query_string(request.url, add=[('order_by', 'timestamp'), ('dir', 'asc')])}">
                                     <div class="desc
-                                         % if 'order_by=timestamp' in request.path_qs and 'dir=%s' % urllib.quote_plus('asc') in request.path_qs:
+                                         % if 'order_by=timestamp' in request.path_qs and 'dir=%s' % urllib.parse.quote_plus('asc') in request.path_qs:
                                             active
                                          % endif
                                          ">&nbsp;</div>
                                 </a>
                                 <a href="${handle_query_string(request.url, add=[('order_by', 'timestamp'), ('dir', 'desc')])}">
                                 <div class="asc
-                                     % if ('order_by=timestamp' in request.path_qs and 'dir=%s' % urllib.quote_plus('desc') in request.path_qs) or 'order_by=' not in request.path_qs:
+                                     % if ('order_by=timestamp' in request.path_qs and 'dir=%s' % urllib.parse.quote_plus('desc') in request.path_qs) or 'order_by=' not in request.path_qs:
                                         active
                                      % endif
                                      ">&nbsp;</div>
@@ -172,14 +171,14 @@
                                 <th>${k[1]}
                                     <a href="${handle_query_string(request.url, add=[('order_by', k[0]), ('dir', 'asc')])}">
                                         <div class="desc
-                                             % if 'order_by=%s' % urllib.quote_plus(k[0]) in request.path_qs and 'dir=%s' % urllib.quote_plus('asc') in request.path_qs:
+                                             % if 'order_by=%s' % urllib.parse.quote_plus(k[0]) in request.path_qs and 'dir=%s' % urllib.parse.quote_plus('asc') in request.path_qs:
                                                 active
                                              % endif
                                              ">&nbsp;</div>
                                     </a>
                                     <a href="${handle_query_string(request.url, add=[('order_by', k[0]), ('dir', 'desc')])}">
                                     <div class="asc
-                                         % if 'order_by=%s' % urllib.quote_plus(k[0]) in request.path_qs and 'dir=%s' % urllib.quote_plus('desc') in request.path_qs:
+                                         % if 'order_by=%s' % urllib.parse.quote_plus(k[0]) in request.path_qs and 'dir=%s' % urllib.parse.quote_plus('desc') in request.path_qs:
                                             active
                                          % endif
                                          ">&nbsp;</div>
@@ -273,7 +272,7 @@
 
             ## Pagination
             % if len(data) > 0:
-                <%include file="lmkp:templates/parts/pagination.mak"
+                <%include file="lokp:templates/parts/pagination.mak"
                     args="totalitems=total, currentpage=currentpage, pagesize=pagesize, itemsname=_('Deals')"
                 />
             % endif
@@ -310,6 +309,6 @@
 ## End of content
 
 <%def name="bottom_tags()">
-    <script src="${request.static_url('lmkp:static/v2/grid.js')}" type="text/javascript"></script>
-    <script src="${request.static_url('lmkp:static/v2/filters.js')}" type="text/javascript"></script>
+    <script src="${request.static_url('lokp:static/js/grid.js')}" type="text/javascript"></script>
+    <script src="${request.static_url('lokp:static/js/filters.js')}" type="text/javascript"></script>
 </%def>
