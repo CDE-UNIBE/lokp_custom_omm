@@ -1,13 +1,23 @@
 {
+    "picurl": "/custom/img/potw/Dawei_SEZ.jpeg",
+    "date": "Feb 01 2018",
+    "title": "Dawei Special Economi Zone. See deal details <a href='https://www.mmlandreporting.info/activities/html/0dd2459d-2dd5-4183-9701-6ee774edaf32'> here </a>",
+    "description": "Signboard at the entrance to the Dawei Special Economic Zone",
+    "latitude": "14.260271",
+    "longitude": "98.0452428",
+    "zoomlevel": "15",
+    "dealurl": "https://www.mmlandreporting.info/activities/html/6e3ed7c4-9fad-473f-bcb1-4b6a2fe35e2e",
+    "archived": [
+    {
     "picurl": "/custom/img/potw/shweli_3.jpeg",
     "date": "Dez 12 2017",
     "title": "Shweli 3 Hydropower Project construction site. See deal information <a href='https://www.mmlandreporting.info/activities/html/6e3ed7c4-9fad-473f-bcb1-4b6a2fe35e2e'> here </a>",
     "description": "Image source: AF Consult",
-    "latitude": "23.2704905", 
+    "latitude": "23.2704905",
     "longitude": "96.6474838",
     "zoomlevel": "15",
-    "dealurl": "https://www.mmlandreporting.info/activities/html/6e3ed7c4-9fad-473f-bcb1-4b6a2fe35e2e",
-    "archived": [
+    "dealurl": "https://www.mmlandreporting.info/activities/html/6e3ed7c4-9fad-473f-bcb1-4b6a2fe35e2e"
+    },
     {
     "picurl": "/custom/img/potw/Myitson_dam.jpeg",
     "date": "Nov 24 2017",
@@ -29,36 +39,6 @@
       "longitude": "96.5203299",
       "zoomlevel": "11",
       "dealurl": "https://www.mmlandreporting.info/map"
-    },
-    {
-      "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
-      "date": "Jan 09 2017",
-      "title": "Title POTW",
-      "description": "Additional description about the picture.",
-      "latitude": "46.35387",
-      "longitude": "7.48",
-      "zoomlevel": "15",
-      "dealurl": "http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72"
-    },
-    {
-      "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
-      "date": "Jan 08 2017",
-      "title": "Title POTW",
-      "description": "Additional description about the picture.",
-      "latitude": "46.9536143",
-      "longitude": "7.4361246",
-      "zoomlevel": "15",
-      "dealurl": "http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72"
-    },
-    {
-      "picurl": "/custom/img/potw/pictureoftheweek.jpeg",
-      "date": "Jan 06 2017",
-      "title": "Title POTW",
-      "description": "Additional description about the picture.",
-      "latitude": "47.35387",
-      "longitude": "7.48",
-      "zoomlevel": "15",
-      "dealurl": "http://dev.mmlandreporting.info/activities/html/4a29982a-23a3-4c3b-ab1c-b606d1349d72"
     }
   ]
 }
