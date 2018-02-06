@@ -39,6 +39,7 @@
           mapsymbol: 1
           filterable: true
           gridcolumn: 3
+          mapdetail: true
       2:
         # [K] 53: Remark (Intention of Investment)
         53:
@@ -87,6 +88,7 @@
           involvementoverview: 2
           filterable: true
           gridcolumn: 2
+          mapdetail: true
         # [K] 25: Remark
         25: null
       # [TG, repeatable]
@@ -117,6 +119,7 @@
         44:
           maintag: true
           filterable: true
+          mapdetail: true
       # [TG]
       2:
         # [K] 26: Animals

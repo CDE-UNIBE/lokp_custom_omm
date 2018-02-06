@@ -11,6 +11,10 @@
 <%def name="title()">${_('Map View')}</%def>
 
 <%def name="head_tags()">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin=""/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.3.0/MarkerCluster.css">
 <script type="text/javascript">
 <%
     from lokp.config.profile import get_current_profile_extent
@@ -22,21 +26,13 @@
 
     aKeys, shKeys = getOverviewKeys(request)
     extent = json.dumps(get_current_profile_extent(request))
-    mapSymbols = getMapSymbolKeys(request)
-    mapCriteria = mapSymbols[0]
-    mapSymbolValues = [v[0] for v in sorted(getFilterValuesForKey(request,
-        predefinedType='a', predefinedKey=mapCriteria[1]),
-        key=lambda value: value[1])]
     geomTaggroups = form_geomtaggroups(request)
 
 %>
     var profilePolygon = ${extent | n};
     var aKeys = ${json.dumps(aKeys) | n};
     var shKeys = ${json.dumps(shKeys) | n};
-    var mapValues = ${json.dumps(mapSymbolValues) | n};
-    var mapCriteria = ${json.dumps(mapCriteria) | n};
     var areaNames = ${json.dumps(geomTaggroups['mainkeys']) | n};
-    var allMapCriteria = ${json.dumps(mapSymbols) | n};
 
     ## JS Translation
     var tForDeals = '${_("Deal")}';
@@ -57,7 +53,7 @@
 ## Filter
 
 
-<ul id="slide-out-map-options" class="side-nav" style="min-width: 550px;">
+<ul id="slide-out-map-options" class="side-nav" style="min-width: 550px; z-index: 9999;">
     <div class="row" style="margin: 10px 0px 0px 0px;">
         <div class="input-field col s11" action="">
             <i class="material-icons prefix">search</i>
@@ -91,7 +87,7 @@
         <li>
             <div class="collapsible-header"><i class="material-icons">map</i>${_('Base layers')}</div>
             <div class="collapsible-body">
-                <form action="#">
+                <form action="#" data-map-id="googleMapFull">
                     <p style="padding-top: 0; padding-bottom: 0;">
                       <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="satelliteMapOption" value="satelliteMap" checked="checked" />
                       <label for="satelliteMapOption">${_('Google Earth satellite images')}</label>
@@ -100,10 +96,6 @@
                       <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="esriSatelliteMapOption" value="esriSatellite" />
                       <label for="esriSatelliteMapOption">${_('ESRI World Imagery')}</label>
                     </p>
-##                     <p style="padding-top: 0; padding-bottom: 0;">
-##                       <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="bingSatelliteOption" value="bingSatellite" />
-##                       <label for="bingSatelliteOption">${_('Bing Aerial')}</label>
-##                     </p>
                     <p style="padding-top: 0; padding-bottom: 0;">
                       <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="terrainMapOption" value="terrainMap" />
                       <label for="terrainMapOption">${_('Google Terrain Map')}</label>
@@ -294,10 +286,16 @@
 
 <%def name="bottom_tags()">
 <script type="text/javascript" src="//maps.google.com/maps/api/js?v=3&amp;key=${str(request.registry.settings.get('lokp.google_maps_api_key'))}&libraries=places"></script>
-<script src="${request.static_url('lokp:static/lib/OpenLayers/OpenLayers.js')}" type="text/javascript"></script>
-<script type="text/javascript" src="${request.route_url('context_layers')}"></script>
-<script src="${request.static_url('lokp:static/js/maps/main.js')}" type="text/javascript"></script>
-<script src="${request.static_url('lokp:static/js/maps/base.js')}" type="text/javascript"></script>
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+        integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+        crossorigin=""></script>
+<script src='https://unpkg.com/leaflet.gridlayer.googlemutant@latest/Leaflet.GoogleMutant.js'></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.3.0/leaflet.markercluster.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.6/chroma.min.js"></script>
+## <script type="text/javascript" src="${request.route_url('context_layers')}"></script>
+<script type="text/javascript" src="${request.route_url('map_variables')}"></script>
+<script src="${request.static_url('lokp:static/js/maps2/base.js')}" type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/js/maps2/main.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lokp:static/js/filters.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lokp:static/lib/jquery.cookie/jquery.cookie.min.js')}" type="text/javascript"></script>
 <script src="/custom/js/news.js"></script>
