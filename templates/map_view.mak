@@ -53,7 +53,7 @@
 ## Filter
 
 
-<ul id="slide-out-map-options" class="side-nav" style="min-width: 550px; z-index: 9999;">
+<ul id="slide-out-map-options" class="side-nav" style="min-width: 550px; z-index: 1001;">
     <div class="row" style="margin: 10px 0px 0px 0px;">
         <div class="input-field col s11" action="">
             <i class="material-icons prefix">search</i>
@@ -61,7 +61,7 @@
         </div>
     </div>
 
-    <ul class="collapsible" data-collapsible="accordion">
+    <ul class="collapsible" data-collapsible="accordion" data-map-id="googleMapFull">
         <!-- Deals -->
         <li>
             <div class="collapsible-header"><i class="material-icons">group</i>${_('Deals')}</div>
@@ -87,7 +87,7 @@
         <li>
             <div class="collapsible-header"><i class="material-icons">map</i>${_('Base layers')}</div>
             <div class="collapsible-body">
-                <form action="#" data-map-id="googleMapFull">
+                <form action="#">
                     <p style="padding-top: 0; padding-bottom: 0;">
                       <input class="with-gap baseMapOptions" name="baseMapOptions" type="radio" id="satelliteMapOption" value="satelliteMap" checked="checked" />
                       <label for="satelliteMapOption">${_('Google Earth satellite images')}</label>
@@ -119,7 +119,7 @@
     </ul>
 </ul>
 
-<ul id="slide-out-filter" class="side-nav" style="min-width: 550px;">
+<ul id="slide-out-filter" class="side-nav" style="min-width: 550px; z-index: 1001;">
     <%include file="lokp:customization/omm/templates/parts/filter.mak" />
 </ul>
 
@@ -144,7 +144,7 @@
         </div>
         <div id="floating-buttons" style="text-align: right;">
             <span class="range-field tooltipped" data-position="top" data-tooltip="${_('Transparency of context layers')}">
-              <input type="range" id="layer-transparency-slider" min="0" max="100" value="60" />
+              <input type="range" id="layer-transparency-slider" min="0" max="100" value="60" data-map-id="googleMapFull" />
             </span>
             <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 15px;" data-position="top" data-tooltip="Map Options" data-activates="slide-out-map-options">
                 <i class="material-icons">map</i>

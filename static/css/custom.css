@@ -2945,6 +2945,10 @@ ul.about li {
 	font-size: 12px;
 	margin-top: 10px;
 }
+#context-layers-list p.context-layer-checkbox-entry {
+	padding-top: 0;
+	padding-bottom: 0;
+}
 
 
 .dark-primary-color    { background: #616161; }
