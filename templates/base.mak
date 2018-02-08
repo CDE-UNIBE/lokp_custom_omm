@@ -399,7 +399,7 @@ if 'lokp.use_piwik_analytics' in request.registry.settings:
                 $('.modal-trigger').leanModal();
                 initializeDropdown();
                 if ($('#floating-buttons').length > 0) {
-                    document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
+                    document.getElementById("floating-buttons").style.marginTop = String($('#main-map').height()-$('#floating-buttons').height()-15) + "px";
                     document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
                     document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width()-20) + "px";
                     document.getElementById("img-weekpicture").style.height = "auto";
@@ -413,7 +413,7 @@ if 'lokp.use_piwik_analytics' in request.registry.settings:
             $(window).on( 'resize', function () {
                 setTimeout(function(){
                 if ($('#floating-buttons').length > 0) {
-                    document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
+                    document.getElementById("floating-buttons").style.marginTop = String($('#main-map').height()-$('#floating-buttons').height()-15) + "px";
                     document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
                     document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width()-20) + "px";
                     document.getElementById("img-weekpicture").style.height = "auto";
@@ -423,16 +423,16 @@ if 'lokp.use_piwik_analytics' in request.registry.settings:
                     }
                     if ($(window).width() > 982) {
                         document.getElementById("window-right-top").style.marginTop = "0px";
-                        document.getElementById("googleMapFull").style.width = "66.7%";
-                        document.getElementById("content").style.height = String(Math.max($('#googleMapFull').height(),$('#window_right').height())) + "px";
+                        document.getElementById("main-map").style.width = "66.7%";
+                        document.getElementById("content").style.height = String(Math.max($('#main-map').height(),$('#window_right').height())) + "px";
                         $('#window_right').height(
-                                $('#googleMapFull').height()
+                                $('#main-map').height()
                         );
                     }
                     else {
                         document.getElementById("window-right-top").style.marginTop = "25px";
-                        document.getElementById("googleMapFull").style.width = "100%";
-                        document.getElementById("content").style.height = String($('#googleMapFull').height() + $('#window_right').height()) + "px";
+                        document.getElementById("main-map").style.width = "100%";
+                        document.getElementById("content").style.height = String($('#main-map').height() + $('#window_right').height()) + "px";
                     }
                 }
                 },250);

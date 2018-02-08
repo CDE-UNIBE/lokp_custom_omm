@@ -917,7 +917,7 @@ p.deal-detail {
 	height: 400px;
 }
 
-#googleMapFull {
+#main-map {
 	position: absolute;
 	width: 66.7%;
 	top: 64px;
@@ -1505,7 +1505,7 @@ background-color: #CB820E;
 		float: left;
 	}
 
-	#googleMapFull {
+	#main-map {
 		bottom: 50px;
 	}
 
@@ -1594,7 +1594,7 @@ background-color: #CB820E;
 		margin: 0;
 	}
 
-	#googleMapFull {
+	#main-map {
 		top: 64px;
 		bottom: 50px;
 	}
@@ -1741,7 +1741,7 @@ background-color: #CB820E;
 		margin-top: 32px;
 	}
 
-	#googleMapFull {
+	#main-map {
 		bottom: 50px;
 	}
 
@@ -2948,6 +2948,12 @@ ul.about li {
 #context-layers-list p.context-layer-checkbox-entry {
 	padding-top: 0;
 	padding-bottom: 0;
+}
+.pac-container {
+	z-index: 1002;
+}
+.map-menu-form {
+	margin-left: 1.5rem;
 }
 
 

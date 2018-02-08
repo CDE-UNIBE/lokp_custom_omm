@@ -26,13 +26,11 @@
 
     aKeys, shKeys = getOverviewKeys(request)
     extent = json.dumps(get_current_profile_extent(request))
-    geomTaggroups = form_geomtaggroups(request)
 
 %>
     var profilePolygon = ${extent | n};
     var aKeys = ${json.dumps(aKeys) | n};
     var shKeys = ${json.dumps(shKeys) | n};
-    var areaNames = ${json.dumps(geomTaggroups['mainkeys']) | n};
 
     ## JS Translation
     var tForDeals = '${_("Deal")}';
@@ -53,21 +51,21 @@
 ## Filter
 
 
-<ul id="slide-out-map-options" class="side-nav" style="min-width: 550px; z-index: 1001;">
+<div id="slide-out-map-options" class="side-nav" style="min-width: 550px; z-index: 1001;">
     <div class="row" style="margin: 10px 0px 0px 0px;">
-        <div class="input-field col s11" action="">
+        <div class="input-field col s11">
             <i class="material-icons prefix">search</i>
-            <input id="js-map-search" name="q" type="text" style="height: 20px; line-height: 20px;">
+            <input id="js-map-search-main-map" name="q" type="text" style="height: 20px; line-height: 20px;">
         </div>
     </div>
 
-    <ul class="collapsible" data-collapsible="accordion" data-map-id="googleMapFull">
+    <ul class="collapsible" data-collapsible="accordion" data-map-id="main-map">
         <!-- Deals -->
         <li>
-            <div class="collapsible-header"><i class="material-icons">group</i>${_('Deals')}</div>
+            <div class="collapsible-header"><i class="material-icons">room</i>${_('Deals')}</div>
             <div class="collapsible-body">
-                <form action="#" id="map-areas-list">
-                    <p style="padding-top: 0; padding-bottom: 0; margin: 0;">
+                <form action="#" id="map-areas-list" class="map-menu-form">
+                    <div style="padding-top: 0; padding-bottom: 0; margin: 0;">
                         <input class="input-top" type="checkbox" id="activityLayerToggle" checked="checked" style="line-height: 22px; height: 22px; background-color: red;">
                         <label class="text-primary-color" for="activityLayerToggle" style="line-height: 22px; height: 22px;">
                             <span id="map-deals-symbolization">
@@ -77,7 +75,10 @@
                         <ul id="map-points-list" style="margin: 0; padding: 0; padding-left: 100px;">
                         <!-- Placeholder for map points -->
                         </ul>
-                    </p>
+                        <div id="map-polygons-list-main-map">
+                          <!-- Placeholder for polygon list -->
+                        </div>
+                    </div>
                 </form>
             </div>
         </li>
@@ -117,7 +118,7 @@
             </div>
         </li>
     </ul>
-</ul>
+</div>
 
 <ul id="slide-out-filter" class="side-nav" style="min-width: 550px; z-index: 1001;">
     <%include file="lokp:customization/omm/templates/parts/filter.mak" />
@@ -126,7 +127,7 @@
 <!-- content -->
 <div class="row" style="margin: 0 !important;">
     <div id="window_left"  class="col s12 m12 l8">
-        <div id="googleMapFull">
+        <div id="main-map">
         <!--  Placeholder for the map -->
         </div>
         <div class="preloader-wrapper big active" style="position: fixed; top: 50%;">
@@ -144,7 +145,7 @@
         </div>
         <div id="floating-buttons" style="text-align: right;">
             <span class="range-field tooltipped" data-position="top" data-tooltip="${_('Transparency of context layers')}">
-              <input type="range" id="layer-transparency-slider" min="0" max="100" value="60" data-map-id="googleMapFull" />
+              <input type="range" id="layer-transparency-slider" min="0" max="100" value="60" data-map-id="main-map" />
             </span>
             <a class="btn-floating tooltipped btn-large button-collapse" style="margin-right: 15px;" data-position="top" data-tooltip="Map Options" data-activates="slide-out-map-options">
                 <i class="material-icons">map</i>
