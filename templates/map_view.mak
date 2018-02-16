@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.3.0/MarkerCluster.css">
 <script type="text/javascript">
 <%
-    from lokp.config.profile import get_current_profile_extent
     from lokp.config.customization import getOverviewKeys
     from lokp.views.filter import getFilterValuesForKey
     from lokp.views.map import getMapSymbolKeys
@@ -25,11 +24,10 @@
     import json
 
     aKeys, shKeys = getOverviewKeys(request)
-    extent = json.dumps(get_current_profile_extent(request))
     geomTaggroups = form_geomtaggroups(request)
 
 %>
-    var profilePolygon = ${extent | n};
+
     var aKeys = ${json.dumps(aKeys) | n};
     var shKeys = ${json.dumps(shKeys) | n};
     var areaNames = ${json.dumps(geomTaggroups['mainkeys']) | n};

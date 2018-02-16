@@ -12,7 +12,11 @@
         <link rel="stylesheet" href="${request.static_url(reqt)}" type="text/css" />
     % endfor
     % for reqt in js_links:
-        <script type="text/javascript" src="${request.static_url(reqt)}"></script>
+        % if reqt.startswith('/app'):
+            <script type="text/javascript" src="${reqt}"></script>
+        % else:
+            <script type="text/javascript" src="${request.static_url(reqt)}"></script>
+        % endif
     % endfor
 
     <script type="text/javascript">
