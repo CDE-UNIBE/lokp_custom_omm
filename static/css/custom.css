@@ -917,12 +917,12 @@ p.deal-detail {
 	height: 400px;
 }
 
-#main-map {
+.main-map {
 	position: absolute;
 	width: 66.7%;
 	top: 64px;
 	bottom: 50px;
-	left: 0px;
+	left: 0;
 }
 
 .filter_area-opened {
@@ -1505,7 +1505,7 @@ background-color: #CB820E;
 		float: left;
 	}
 
-	#main-map {
+	.main-map {
 		bottom: 50px;
 	}
 
@@ -1594,7 +1594,7 @@ background-color: #CB820E;
 		margin: 0;
 	}
 
-	#main-map {
+	.main-map {
 		top: 64px;
 		bottom: 50px;
 	}
@@ -1741,7 +1741,7 @@ background-color: #CB820E;
 		margin-top: 32px;
 	}
 
-	#main-map {
+	.main-map {
 		bottom: 50px;
 	}
 
@@ -2542,26 +2542,6 @@ footer ul li a{
     margin-right: 5px;
 }
 
-#floating-buttons {
-	margin-top: 400px;
-}
-
-#floating-buttons .btn-floating {
-	z-index: 9999;
-}
-#floating-buttons .range-field {
-	z-index: 9999;
-}
-
-#layer-transparency-slider {
-	width: 20%;
-	margin-right: 30px;
-	border: none;
-}
-input#layer-transparency-slider+.thumb {
-	display: none;
-}
-
 #contextLegendContent p {
 	padding: 0.5rem 0;
 }
@@ -2844,10 +2824,6 @@ ul.about li {
 	margin-bottom: 40px;
 }
 
-#contextLegendImg {
-	margin-top: 1rem;
-}
-
 /* POTW */
 .potw .potw-title {
 	margin-top: 20px;
@@ -2945,15 +2921,76 @@ ul.about li {
 	font-size: 12px;
 	margin-top: 10px;
 }
-#context-layers-list p.context-layer-checkbox-entry {
-	padding-top: 0;
-	padding-bottom: 0;
-}
 .pac-container {
 	z-index: 1002;
 }
 .map-menu-form {
 	margin-left: 1.5rem;
+}
+
+.map-loader.preloader-wrapper {
+	position: absolute;
+	top: 48%;
+	left: 48%;
+}
+
+.map-container {
+	position: relative;
+}
+
+.map-floating-buttons {
+	position: absolute;
+	right: 0;
+	bottom: 2rem;
+	text-align: right;
+	z-index: 1000;
+}
+.map-floating-buttons .btn-floating {
+	margin-right: 15px;
+}
+.map-floating-buttons .badge {
+	color: white;
+	background-color: #323232;
+	position: relative;
+	top: -25px;
+	left: -40px;
+	z-index: 1;
+	border-radius: 5px;
+}
+.map-legend-points-symbols {
+	margin-left: 4rem;
+	margin-bottom: 1rem;
+}
+.collapsible-body .map-base-layer-entries p, .collapsible-body p.context-layer-checkbox-entry {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+input[type=range].layer-transparency-slider {
+	width: 20%;
+	margin-right: 30px;
+	border: none;
+}
+input[type=range].layer-transparency-slider+.thumb {
+	display: none;
+}
+.map-modal-legend-image {
+	margin-top: 1rem;
+}
+.map-search-container.row {
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+input[type=text].map-search-input {
+	height: 20px;
+	line-height: 20px;
+}
+.map-side-menu.side-nav {
+	min-width: 550px;
+	z-index: 1001;
+}
+.collapsible-body p.map-polygon-entry {
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 
