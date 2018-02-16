@@ -15,36 +15,6 @@
         integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
         crossorigin=""/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.3.0/MarkerCluster.css">
-<script type="text/javascript">
-<%
-    from lokp.config.profile import get_current_profile_extent
-    from lokp.config.customization import getOverviewKeys
-    from lokp.views.filter import getFilterValuesForKey
-    from lokp.views.map import getMapSymbolKeys
-    from lokp.views.form import form_geomtaggroups
-    import json
-
-    aKeys, shKeys = getOverviewKeys(request)
-    extent = json.dumps(get_current_profile_extent(request))
-
-%>
-    var profilePolygon = ${extent | n};
-    var aKeys = ${json.dumps(aKeys) | n};
-    var shKeys = ${json.dumps(shKeys) | n};
-
-    ## JS Translation
-    var tForDeals = '${_("Deal")}';
-    var tForInvestor = '${_("Investor")}';
-    var tForInvestors = '${_("Investors")}';
-    var tForLegend = '${_("Legend")}';
-    var tForLegendforcontextlayer = '${_("Legend for context layer")}';
-    var tForLoading = '${_("Loading ...")}';
-    var tForLoadingdetails = '${_("Loading the details ...")}';
-    var tForMoredeals = '${_(" more deals ...")}';
-    var tForNodealselected = '${_("No deal selected.")}';
-    var tForSelecteddeals = '${_("Selected Deals")}';
-
-</script>
 </%def>
 
 ## Content
@@ -201,7 +171,7 @@
     ## Placeholder for map modal
   </div>
   <div class="modal-footer">
-    <a href="!#" class="modal-action modal-close waves-effect waves-green btn-flat">${_('Close')}</a>
+    <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">${_('Close')}</a>
   </div>
 </div>
 
@@ -218,7 +188,6 @@
 <script src='https://unpkg.com/leaflet.gridlayer.googlemutant@latest/Leaflet.GoogleMutant.js'></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.3.0/leaflet.markercluster.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.6/chroma.min.js"></script>
-## <script type="text/javascript" src="${request.route_url('context_layers')}"></script>
 <script type="text/javascript" src="${request.route_url('map_variables')}"></script>
 <script src="${request.static_url('lokp:static/js/maps2/base.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lokp:static/js/maps2/main.js')}" type="text/javascript"></script>
