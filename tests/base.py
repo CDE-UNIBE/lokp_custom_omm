@@ -12,8 +12,8 @@ from selenium import webdriver
 from sqlalchemy import engine_from_config
 from webtest import http
 
-from .pages import Page, LogoutPage, LoginEndpoint, CreateActivityEndpoint, \
-    Endpoint
+from .pages.pages import Page, LogoutPage
+from .pages.api import LoginEndpoint, CreateActivityEndpoint, Endpoint
 from lokp import main
 from lokp.models import Base, DBSession, User, Group, Profile
 from lokp.scripts.initialize_db import add_sql_triggers, add_initial_values

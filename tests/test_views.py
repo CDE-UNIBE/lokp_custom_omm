@@ -1,6 +1,7 @@
 import pytest
 
-from .pages import MapPage, LandingPage, CreateActivityPage, DetailActivityPage
+from .pages.pages import MapPage, LandingPage, CreateActivityPage, \
+    DetailActivityPage
 from .base import FunctionalTestCase
 
 
