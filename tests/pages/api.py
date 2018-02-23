@@ -42,3 +42,31 @@ class CreateActivityEndpoint(Endpoint):
         assert create_request.status_code == 201
         assert create_request.json().get('created') is True
         return create_request.json()['data'][0]['id']
+
+
+class ListActivityEndpoint(Endpoint):
+    route_name = 'activities_read_many'
+    route_kwargs = {'output': 'json'}
+
+    @staticmethod
+    def add_url_params(url: str, profile: str=None, order_by: str=None) -> str:
+        """
+        Add URL parameters such as filter and order to the endpoint url.
+        """
+        url_params = []
+        if profile:
+            url_params.append(f'_PROFILE_={profile}')
+        if order_by:
+            url_params.append(f'order_by={order_by}')
+        if url_params:
+            return f'{url}?{"&".join(url_params)}'
+        else:
+            return url
+
+
+class CreateStakeholderEndpoint(CreateActivityEndpoint):
+    route_name = 'stakeholders_create'
+
+
+class ListStakeholderEndpoint(ListActivityEndpoint):
+    route_name = 'stakeholders_read_many'
