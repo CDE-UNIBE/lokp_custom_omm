@@ -1,6 +1,7 @@
 import pytest
 
-from .pages import MapPage, LandingPage, CreateActivityPage, DetailActivityPage
+from .pages.pages import MapPage, LandingPage, CreateActivityPage, \
+    DetailActivityPage
 from .base import FunctionalTestCase
 
 
@@ -78,8 +79,9 @@ class ViewTests(FunctionalTestCase):
         # Test that pending activities can be seen and edited only by editors
         # who created it, moderators and admins. It can only be reviewed by
         # moderators and admins.
-        activity_identifier = self.create_activity(
-            user=self.user_editor1, changeset=self.activity_changeset('simple'))
+        activity_identifier = self.create_item(
+            item_type='activity', user=self.user_editor1,
+            changeset=self.activity_changeset('simple'))
 
         detail_page = DetailActivityPage(self.driver)
         detail_page.route_kwargs.update({'uid': activity_identifier})
