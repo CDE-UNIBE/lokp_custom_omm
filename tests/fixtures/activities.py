@@ -9,11 +9,11 @@ def activity_changeset(request):
     Mark your test to use this fixture:
         @pytest.mark.usefixtures('activity_changeset')
     and within the test, get one of the changesets as follows:
-        self.activity_changeset('<name>')
+        self.activity_changeset('<name>', [*args, **kwargs])
     """
-    def get_changeset(r, changeset):
+    def get_changeset(r, changeset, *args, **kwargs):
         try:
-            return getattr(ActivityChangesets, changeset)()
+            return getattr(ActivityChangesets, changeset)(*args, **kwargs)
         except AttributeError:
             raise Exception(
                 'ActivityChangeset has no fixture called "{}"'.format(
@@ -25,15 +25,15 @@ def activity_changeset(request):
 class ActivityChangesets:
 
     @staticmethod
-    def simple():
+    def simple(intention='Agriculture'):
         """
         A simple Activity in Myanmar without Involvements.
 
-        Spatial Accuracy: better than 100m
-        Country: Myanmar
-        Intention of Investment: Agriculture
-        Remark (Intention of Investment): Remark about the intention
-        Implementation status: In operation
+        Spatial Accuracy:                   better than 100m
+        Country:                            Myanmar
+        Intention of Investment:            <intention> (default: Agriculture)
+        Remark (Intention of Investment):   Remark about the intention
+        Implementation status:              In operation
         """
         return {
             "activities": [
@@ -72,13 +72,13 @@ class ActivityChangesets:
                             "tags": [
                                 {
                                     "key": "Intention of Investment",
-                                    "value": "Agriculture",
+                                    "value": intention,
                                     "op": "add"
                                 }
                             ],
                             "main_tag": {
                                 "key": "Intention of Investment",
-                                "value": "Agriculture"
+                                "value": intention
                             }
                         },
                         {

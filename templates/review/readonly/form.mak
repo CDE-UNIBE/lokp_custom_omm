@@ -1,11 +1,26 @@
 <%
     isStakeholder = 'itemType' in cstruct and cstruct['itemType'] == 'stakeholders'
     geomChanged = cstruct['geomchange'] if 'geomchange' in cstruct else False
-    
+
     from pyramid.security import ACLAllowed
     from pyramid.security import has_permission
     isModerator = isinstance(has_permission('moderate', request.context, request), ACLAllowed)
+
+    ## TODO: workaround use placeholder geometry | dirctly access code from python?
+
+    print('VARIABLE GEOMETRY', geometry);
+
+##     # load geometry
+##     import colander
+## ##     import pdb; pdb.set_trace()
+##     print('CSTRUCT') # cstruct form customMapMapping only contains geometry! ## TODO: get parameters from cstruct
+##     print(cstruct)
+##     #geometry = None if cstruct['geometry'] == colander.null else cstruct['geometry']
+
+
 %>
+
+<link rel="stylesheet" href="${request.static_url('lokp:static/css/leaflet.css')}">
 
 % if not isStakeholder:
 ## Map container
@@ -104,6 +119,28 @@
         </div>
     </li>
 </ul>
+
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=3&key=${str(request.registry.settings.get('lokp.google_maps_api_key'))}&libraries=places"></script>
+<script src="${request.static_url('lokp:static/js/maps/compare.js')}" type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/lib/leaflet/leaflet.js')}" type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/lib/leaflet/leaflet.markercluster.js')}"
+        type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/lib/leaflet/Leaflet.GoogleMutant.js')}"
+        type="text/javascript"></script>
+<script src="/app/view/map_variables.js" type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/lib/chroma/chroma.min.js')}" type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/js/maps2/base.js')}" type="text/javascript"></script>
+
+    ## TODO: load dependencies over new widget
+<script>
+    $('document').ready(function(){
+         console.log('geometry in compare', ${geometry | n})
+         var geometry = ${geometry | n};
+         console.log('form.mak');
+         createReviewMap('googleMapNotFull', geometry);
+    });
+</script>
+
 % endif
 
 % for child in field:

@@ -2,3 +2,4 @@
 
 import pytest
 from .fixtures.activities import *
+from .fixtures.stakeholders import *

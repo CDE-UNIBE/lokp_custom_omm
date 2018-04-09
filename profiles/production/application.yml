@@ -4,6 +4,7 @@ application:
     type: Polygon
     coordinates: [[[-180, -84],[180, -84],[180, 84],[-180, 84],[-180, -84]]]
   name: "Land Matrix Knowledge Platform global edition"
+  default_profile: "myanmar"
   layers:
   - name: "Accessibility"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
