@@ -124,10 +124,10 @@ ${editToolbar('top')}
                data-tooltip="${_('Map Options')}" data-activates="slide-out-map-options-mapDetailsPage">
                 <i class="material-icons">map</i>
             </a>
-            <a class="btn-floating tooltipped btn-large button-collapse" data-position="top"
-               data-tooltip="${_('Add a Filter')}" data-activates="slide-out-filter-mapDetailsPage">
-                <i class="material-icons" style="margin-right: 15px;" data-position="top">filter_list</i>
-            </a>
+##             <a class="btn-floating tooltipped btn-large button-collapse" data-position="top"
+##                data-tooltip="${_('Add a Filter')}" data-activates="slide-out-filter-mapDetailsPage">
+##                 <i class="material-icons" style="margin-right: 15px;" data-position="top">filter_list</i>
+##             </a>
 
         </div>
 
