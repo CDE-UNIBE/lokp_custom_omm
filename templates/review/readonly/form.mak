@@ -222,6 +222,8 @@
 <script src="/app/view/map_variables.js" type="text/javascript"></script>
 <script src="${request.static_url('lokp:static/lib/chroma/chroma.min.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lokp:static/js/maps2/base.js')}" type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/lib/jquery.cookie/jquery.cookie.min.js')}"
+            type="text/javascript"></script>
 
     ## TODO: load dependencies over new widget
 <script>
@@ -229,7 +231,7 @@
          console.log('geometry in compare', ${geometry | n})
          var geometry = ${geometry | n};
          console.log('form.mak');
-         createReviewMap('googleMapNotFull', {pointsVisible: false, pointsCluster: true, readonly: true}, geometry);
+         createReviewMap('googleMapNotFull', {pointsVisible: false, pointsCluster: true}, geometry);
     });
 </script>
 

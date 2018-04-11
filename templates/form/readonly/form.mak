@@ -24,6 +24,10 @@
         form_id = 'activityform'
 %>
 
+## include google maps api key
+<script type="text/javascript"
+            src="//maps.google.com/maps/api/js?v=3&amp;key=${str(request.registry.settings.get('lokp.google_maps_api_key'))}&libraries=places"></script>
+
 % if statusId != '2':
     <div class="row">
         <div class="col s12 alert alert-info card-panel accent-background-color white-text">
