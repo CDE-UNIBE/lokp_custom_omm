@@ -100,7 +100,7 @@ ${editToolbar('top')}
 % if not isStakeholder and not empty:
     ## Map container
 
-    <div id="mapDetailsPage" style="height: 400px;"> ## variable title is passed by config/form.py/getMapWidget
+    <div id="mapDetailsPage" style="height: 400px;">
         ## Loading indicator
 
         <div class="preloader-wrapper big active map-loader" data-map-id="mapDetailsPage">
