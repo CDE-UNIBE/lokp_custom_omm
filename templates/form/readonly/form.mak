@@ -26,7 +26,7 @@
 
 ## include google maps api key
 <script type="text/javascript"
-            src="//maps.google.com/maps/api/js?v=3&amp;key=${str(request.registry.settings.get('lokp.google_maps_api_key'))}&libraries=places"></script>
+            src="//maps.google.com/maps/api/js?v=3&key=${str(request.registry.settings.get('lokp.google_maps_api_key'))}&libraries=places"></script>
 
 % if statusId != '2':
     <div class="row">
@@ -117,7 +117,7 @@ ${editToolbar('top')}
             </div>
         </div>
 
-        ## create buttons Map options and filter. 
+        ## create buttons Map options and filter.
 
         <div class="map-floating-buttons" id="map-floating-buttons-mapDetailsPage">
         <span class="range-field tooltipped" data-position="top" data-tooltip="${_('Transparency of context layers')}">
@@ -159,7 +159,7 @@ ${editToolbar('top')}
                 </div>
             </div></%doc>
     </div>
-    
+
     ## Map Menu (code is rendered within a slider once the button 'Map options' is clicked)
 
     <div id="slide-out-map-options-mapDetailsPage" class="side-nav map-side-menu">

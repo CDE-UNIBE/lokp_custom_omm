@@ -11,10 +11,8 @@
 <%def name="title()">${_('Map View')}</%def>
 
 <%def name="head_tags()">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
-          integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-          crossorigin=""/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.3.0/MarkerCluster.css">
+    <link rel="stylesheet" href="${request.static_url('lokp:static/lib/leaflet/leaflet.css')}"/>
+    <link rel="stylesheet" href="${request.static_url('lokp:static/lib/leaflet/MarkerCluster.css')}">
 </%def>
 
 ## Content
@@ -208,13 +206,10 @@
 <%def name="bottom_tags()">
     <script type="text/javascript"
             src="//maps.google.com/maps/api/js?v=3&amp;key=${str(request.registry.settings.get('lokp.google_maps_api_key'))}&libraries=places"></script>
-    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
-            integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
-            crossorigin=""></script>
-    <script src='https://unpkg.com/leaflet.gridlayer.googlemutant@latest/Leaflet.GoogleMutant.js'></script>
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.3.0/leaflet.markercluster.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.6/chroma.min.js"></script>
+    <script src="${request.static_url('lokp:static/lib/leaflet/leaflet.js')}"></script>
+    <script src="${request.static_url('lokp:static/lib/leaflet/Leaflet.GoogleMutant.js')}"></script>
+    <script src="${request.static_url('lokp:static/lib/leaflet/leaflet.markercluster.js')}"></script>
+    <script type="text/javascript" src="${request.static_url('lokp:static/lib/chroma/chroma.min.js')}"></script>
     <script type="text/javascript" src="${request.route_url('map_variables')}"></script>
     <script src="${request.static_url('lokp:static/js/maps2/base.js')}" type="text/javascript"></script>
     <script src="${request.static_url('lokp:static/js/maps2/main.js')}" type="text/javascript"></script>
