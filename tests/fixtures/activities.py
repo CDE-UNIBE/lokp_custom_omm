@@ -13,7 +13,7 @@ def activity_changeset(request):
     """
     def get_changeset(r, changeset, *args, **kwargs):
         try:
-            return getattr(ActivityChangesets, changeset)(*args, **kwargs)
+            return getattr(ActivityChangesets(), changeset)(*args, **kwargs)
         except AttributeError:
             raise Exception(
                 'ActivityChangeset has no fixture called "{}"'.format(
@@ -118,3 +118,48 @@ class ActivityChangesets:
                 }
             ]
         }
+
+    def linked(self, stakeholders: list):
+        # Basically the simple activity (see above) with links to the
+        # stakeholders specified
+        activity = self.simple()
+        role_mapping = {
+            'primary': '6',
+        }
+        linked_stakeholders = []
+        for identifier, role in stakeholders:
+            linked_stakeholders.append({
+                "id": identifier,
+                "version": 1,
+                "role": role_mapping[role],
+                "op": "add"
+            })
+        activity['activities'][0]['stakeholders'] = linked_stakeholders
+        return activity
+
+    def polygon(self):
+        # The simple activity (see above) with a rectangular polygon for
+        # "Intended area"
+        activity = self.simple()
+        activity['activities'][0]['taggroups'].append({
+            "op": "add",
+            "tags": [
+                {
+                    "key": "Intended area (ha)",
+                    "value": 123.0,
+                    "op": "add"
+                }, {
+                    "key": "map",
+                    "value": {
+                        "geometry": "{\"type\":\"Polygon\",\"coordinates\":[[[95.935567,21.930944],[95.935567,20.90821],[97.0337,20.90821],[97.0337,21.930944],[95.935567,21.930944]]]}"
+                    },
+                    "op": "add"
+                }
+            ],
+            "main_tag": {
+                "key": "Intended area (ha)",
+                "value": 123.0
+            },
+            "geometry": "{\"type\":\"Polygon\",\"coordinates\":[[[95.935567,21.930944],[95.935567,20.90821],[97.0337,20.90821],[97.0337,21.930944],[95.935567,21.930944]]]}"
+        })
+        return activity

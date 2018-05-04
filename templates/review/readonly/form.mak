@@ -8,7 +8,7 @@
 
     ## TODO: workaround use placeholder geometry | dirctly access code from python?
 
-    print('VARIABLE GEOMETRY', geometry);
+##     print('VARIABLE GEOMETRY', geometry);
 
 ##     # load geometry
 ##     import colander
@@ -228,9 +228,9 @@
     ## TODO: load dependencies over new widget
 <script>
     $('document').ready(function(){
-         console.log('geometry in compare', ${geometry | n})
+         ##  console.log('geometry in compare', ${geometry | n})
          var geometry = ${geometry | n};
-         console.log('form.mak');
+         ##  console.log('form.mak');
          createReviewMap('googleMapNotFull', {pointsVisible: false, pointsCluster: true}, geometry);
     });
 </script>

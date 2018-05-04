@@ -35,6 +35,7 @@ STATUS_MAP = {
     'edited': 6,
 }
 
+
 def initialize_db(engine, settings):
     """
     Initialize the database structure (create triggers and tables)
