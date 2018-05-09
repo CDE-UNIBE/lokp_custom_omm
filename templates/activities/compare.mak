@@ -149,7 +149,7 @@
 </%def>
 
 <%def name="bottom_tags()">
-    <%include file="lokp:templates/map/mapform.mak" args="readonly=True, compare=True" />
+##     <%include file="lokp:templates/map/mapform.mak" args="readonly=True, compare=True" />
     <script>
         
         var identifier = '${identifier}';

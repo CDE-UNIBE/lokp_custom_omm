@@ -6,6 +6,11 @@
     _ = request.translate
 %>
 
+## load google map api
+<script type="text/javascript"
+        src="//maps.googleapis.com/maps/api/js?v=3&key=${str(request.registry.settings.get('lokp.google_maps_api_key'))}&libraries=places"></script>
+
+
 <h3>${_('Deal Editor')}</h3>
 
 % if new_form is True:

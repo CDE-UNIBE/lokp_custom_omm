@@ -2,6 +2,8 @@
 
 <%def name="title()">${_('Deal Details')} ${shortuid}</%def>
 
+<link rel="stylesheet" href="${request.static_url('lokp:static/css/leaflet.css')}">
+
 <%def name="head_tags()">
     <link rel="stylesheet" href="/custom/css/details.css"></link>
 </%def>

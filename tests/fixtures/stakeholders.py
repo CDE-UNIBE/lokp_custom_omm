@@ -51,12 +51,12 @@ class StakeholderChangesets:
                             "op": "add"
                         }, {
                             "main_tag": {
-                                "value": "Myanmar",
+                                "value": "China",
                                 "key": "Country of origin"
                             },
                             "tags": [
                                 {
-                                    "value": "Myanmar",
+                                    "value": "China",
                                     "key": "Country of origin",
                                     "op": "add"
                                 }
