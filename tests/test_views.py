@@ -276,7 +276,7 @@ class ViewTests(FunctionalTestCase):
 
         # She draws a new polygon
         create_page.fill_textfield('Intended area (ha)', '123')
-        create_page.draw_polygon(map_id='map1')
+        create_page.draw_polygon(map_index='2')
 
         # She submits the form
         create_page.click_submit_button_success()

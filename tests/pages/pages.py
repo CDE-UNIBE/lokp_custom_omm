@@ -99,7 +99,7 @@ class CreateActivityPage(FormPageMixin):
 
     FORM_ID = 'activityform'
 
-    LOC_FIELD_MAP = (By.XPATH, '//div[@id="map11"]')
+    LOC_FIELD_MAP = (By.XPATH, '(//div[contains(@class, "map-div")])[1]')
     LOC_BUTTON_SUBMIT = (By.ID, 'activityformsubmit')
     LOC_LINK_DETAILS = (By.XPATH, '//a[text()="View the Deal."]')
     LOC_BUTTON_CREATE_PRIMARY_INVESTOR = (
@@ -128,11 +128,12 @@ class CreateActivityPage(FormPageMixin):
         self.get_el(draw_locator).click()
         self.get_el(self.LOC_FIELD_MAP).click()
 
-    def draw_polygon(self, map_id='map1'):
+    def draw_polygon(self, map_index='2'):
+        map_xpath = f'(//div[contains(@class, "map-div")])[{map_index}]'
         draw_locator = self.driver.find_element_by_xpath(
-            f'//div[@id="{map_id}"]//a[@class="leaflet-draw-draw-polygon"]')
+            f'{map_xpath}//a[@class="leaflet-draw-draw-polygon"]')
         draw_locator.click()
-        map = self.driver.find_element_by_xpath(f'//div[@id="{map_id}"]')
+        map = self.driver.find_element_by_xpath(map_xpath)
         map_height = map.size['height']
         map_width = map.size['width']
         rectangle_size = 50
