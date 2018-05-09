@@ -329,7 +329,14 @@ ${editToolbar('bottom')}
 
 <script>
     $('document').ready(function () {
-        createFormMap("mapDetailsPage", {pointsVisible: false, pointsCluster: true, readonly: true})
-    });
+        createMap("mapDetailsPage", {
+            pointsVisible: false,
+            pointsCluster: true,
+            readonly: true,
+            dbLocationGeometry: geometry, // geometry and deal areas are passed from the server to js in mapform.mak
+            dbDealAreas: dealAreas
+        })
+});
+
 
 </script>
