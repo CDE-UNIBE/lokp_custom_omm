@@ -128,7 +128,7 @@ class CreateActivityPage(FormPageMixin):
         self.get_el(draw_locator).click()
         self.get_el(self.LOC_FIELD_MAP).click()
 
-    def draw_polygon(self, map_index='2'):
+    def draw_polygon(self, map_index='2', size=50, offset=(0,0)):
         map_xpath = f'(//div[contains(@class, "map-div")])[{map_index}]'
         draw_locator = self.driver.find_element_by_xpath(
             f'{map_xpath}//a[@class="leaflet-draw-draw-polygon"]')
@@ -136,14 +136,13 @@ class CreateActivityPage(FormPageMixin):
         map = self.driver.find_element_by_xpath(map_xpath)
         map_height = map.size['height']
         map_width = map.size['width']
-        rectangle_size = 50
         action = ActionChains(self.driver)
         for coords in [
-            (map_width/2, map_height/2),
-            (map_width/2, map_height/2+rectangle_size),
-            (map_width/2+rectangle_size, map_height/2+rectangle_size),
-            (map_width/2+rectangle_size, map_height/2),
-            (map_width/2, map_height/2)]:
+            (map_width/2+offset[0], map_height/2+offset[1]),
+            (map_width/2+offset[0], map_height/2+size+offset[1]),
+            (map_width/2+size+offset[0], map_height/2+size+offset[1]),
+            (map_width/2+size+offset[0], map_height/2+offset[1]),
+            (map_width/2+offset[0], map_height/2+offset[1])]:
             action.move_to_element_with_offset(map, *coords)
             action.click()
             action.pause(0.1)

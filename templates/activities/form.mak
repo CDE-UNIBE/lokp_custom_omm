@@ -83,6 +83,11 @@
             deform.load();
         });
 
+        if (window.Dropzone) {
+            // We want to programatically create Dropzone upload fields
+            // ourselves.
+            Dropzone.autoDiscover = false;
+        }
 
     </script>
 </%def>
