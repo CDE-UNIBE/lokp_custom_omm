@@ -5,6 +5,7 @@ import transaction
 import sys
 
 from collections import namedtuple
+from geoalchemy2.shape import to_shape
 from pyramid import testing
 from pyramid.paster import get_appsettings
 from pyvirtualdisplay import Display
@@ -17,7 +18,7 @@ from .pages.api import LoginEndpoint, CreateActivityEndpoint, Endpoint, \
     CreateStakeholderEndpoint
 from lokp import main
 from lokp.models import Base, DBSession, User, Group, Profile, Activity, \
-    Stakeholder
+    Stakeholder, A_Tag_Group, A_Tag, A_Key
 from lokp.scripts.initialize_db import add_sql_triggers, add_initial_values
 
 
@@ -169,6 +170,29 @@ class BaseTestCase(unittest.TestCase):
         self.create_user(
             'moderator', 'moderator_password', ['editors', 'moderators'])
         self.user_moderator = UserTuple('moderator', 'moderator_password')
+
+    def get_taggroup_geometry(
+            self, key: str, identifier: str=None, version: int=None) -> dict:
+        with transaction.manager:
+            # If identifier and version are not provided, it is assumed that
+            # there is only one Activity in the DB. Use this.
+            if identifier is None and version is None:
+                activity = DBSession.query(Activity).one()
+                identifier = activity.activity_identifier
+                version = activity.version
+            taggroup = DBSession.query(A_Tag_Group)\
+                .join(Activity)\
+                .join(A_Tag, A_Tag_Group.fk_a_tag==A_Tag.id)\
+                .join(A_Key)\
+                .filter(
+                    Activity.identifier == identifier,
+                    Activity.version == version,
+                    A_Key.key == key
+                )\
+                .one()
+            if taggroup.geometry is None:
+                return {}
+            return to_shape(taggroup.geometry).__geo_interface__
 
     def create_user(self, username: str, password: str, groups: list):
         with transaction.manager:

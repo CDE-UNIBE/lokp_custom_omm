@@ -93,31 +93,16 @@ class FormPageMixin(BasePage):
         self.get_el(self.LOC_BUTTON_SUBMIT).click()
 
 
-class CreateActivityPage(FormPageMixin):
-    route_name = 'activities_read_many'
-    route_kwargs = {'output': 'form'}
+class ActivityFormMixin(FormPageMixin):
 
     FORM_ID = 'activityform'
 
+    XPATH_MAP = '(//div[contains(@class, "map-div")])[{map_index}]'
     LOC_FIELD_MAP = (By.XPATH, '(//div[contains(@class, "map-div")])[1]')
     LOC_BUTTON_SUBMIT = (By.ID, 'activityformsubmit')
     LOC_LINK_DETAILS = (By.XPATH, '//a[text()="View the Deal."]')
     LOC_BUTTON_CREATE_PRIMARY_INVESTOR = (
         By.NAME, 'createinvolvement_primaryinvestor')
-
-    def create_activity(self, submit=True):
-        """
-        Create an activity and open the details page.
-        """
-        self.set_map_point()
-        self.select_dropdown_value('Spatial Accuracy', value='better than 100m')
-        self.select_dropdown_value('Country', value='Myanmar')
-        self.select_checkbox_values('Intention of Investment', ['Agriculture'])
-        self.fill_textfield(
-            'Remark (Intention of Investment)', 'Remark about the intention')
-        self.select_dropdown_value('Implementation status', 'In operation')
-        if submit is True:
-            self.click_submit_button_success()
 
     def set_map_point(self):
         # Activate draw mode first
@@ -129,7 +114,7 @@ class CreateActivityPage(FormPageMixin):
         self.get_el(self.LOC_FIELD_MAP).click()
 
     def draw_polygon(self, map_index='2', size=50, offset=(0,0)):
-        map_xpath = f'(//div[contains(@class, "map-div")])[{map_index}]'
+        map_xpath = self.XPATH_MAP.format(map_index=map_index)
         draw_locator = self.driver.find_element_by_xpath(
             f'{map_xpath}//a[@class="leaflet-draw-draw-polygon"]')
         draw_locator.click()
@@ -147,6 +132,15 @@ class CreateActivityPage(FormPageMixin):
             action.click()
             action.pause(0.1)
         action.perform()
+
+    def remove_map_features(self, map_index='2'):
+        map_xpath = self.XPATH_MAP.format(map_index=map_index)
+        delete_button = self.driver.find_element_by_xpath(
+            f'{map_xpath}//a[@class="leaflet-draw-edit-remove"]')
+        delete_button.click()
+        delete_all_button = self.driver.find_element_by_xpath(
+            f'{map_xpath}//a[text()="Clear All"]')
+        delete_all_button.click()
 
     def click_submit_button_success(self):
         # Checks for success and redirects to details page
@@ -168,6 +162,30 @@ class CreateActivityPage(FormPageMixin):
 
     def click_create_primary_investor(self):
         self.get_el(self.LOC_BUTTON_CREATE_PRIMARY_INVESTOR).click()
+
+
+class CreateActivityPage(ActivityFormMixin):
+    route_name = 'activities_read_many'
+    route_kwargs = {'output': 'form'}
+
+    def create_activity(self, submit=True):
+        """
+        Create an activity and open the details page.
+        """
+        self.set_map_point()
+        self.select_dropdown_value('Spatial Accuracy', value='better than 100m')
+        self.select_dropdown_value('Country', value='Myanmar')
+        self.select_checkbox_values('Intention of Investment', ['Agriculture'])
+        self.fill_textfield(
+            'Remark (Intention of Investment)', 'Remark about the intention')
+        self.select_dropdown_value('Implementation status', 'In operation')
+        if submit is True:
+            self.click_submit_button_success()
+
+
+class EditActivityPage(ActivityFormMixin):
+    route_name = 'activities_read_one'
+    route_kwargs = {'output': 'form', 'uid': None}
 
 
 class CreateStakeholderPage(FormPageMixin):

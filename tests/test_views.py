@@ -1,11 +1,7 @@
 import pytest
-import transaction
-from geoalchemy2.shape import to_shape
 
-from lokp import DBSession
-from lokp.models import A_Tag_Group
 from .pages.pages import MapPage, LandingPage, CreateActivityPage, \
-    DetailActivityPage
+    DetailActivityPage, EditActivityPage
 from .base import FunctionalTestCase
 
 
@@ -260,6 +256,9 @@ class ViewTests(FunctionalTestCase):
         detail_page.has_attribute('Implementation status', 'In operation')
         detail_page.has_attribute('Intended area (ha)', '123.0')
 
+        geom = self.get_taggroup_geometry(key='Intended area (ha)')
+        assert geom == {}
+
     def test_create_activity_with_polygon(self):
         # Test that a new activity can be created with a polygon
 
@@ -296,6 +295,10 @@ class ViewTests(FunctionalTestCase):
         detail_page.has_attribute('Remark', 'Remark about the intention')
         detail_page.has_attribute('Implementation status', 'In operation')
 
+        # Check in the DB that a geometry was created
+        geom = self.get_taggroup_geometry(key='Intended area (ha)')
+        assert geom != {}
+
     def test_create_activity_with_multipolygon(self):
         # Test that a new activity can be created with multi polygons.
 
@@ -323,14 +326,43 @@ class ViewTests(FunctionalTestCase):
         create_page.click_submit_button_success()
 
         # Check geometries in the database
-        with transaction.manager:
-            geom_taggroups = DBSession.query(A_Tag_Group).filter(
-                A_Tag_Group.geometry != None).all()
-            assert len(geom_taggroups) == 1
-            tg = geom_taggroups[0]
-            geojson_obj = to_shape(tg.geometry).__geo_interface__
-            assert geojson_obj['type'] == 'MultiPolygon'
-            assert len(geojson_obj['coordinates']) == 2
+        geom = self.get_taggroup_geometry(key='Intended area (ha)')
+        assert geom['type'] == 'MultiPolygon'
+        assert len(geom['coordinates']) == 2
+
+    @pytest.mark.usefixtures('activity_changeset')
+    def test_edit_activity_remove_polygon(self):
+        # Test that activities can be edited (by removing the geometry)
+        activity_identifier = self.create_item(
+            item_type='activity', user=self.user_editor1,
+            changeset=self.activity_changeset('polygon'))
+
+        detail_page = DetailActivityPage(self.driver)
+        detail_page.route_kwargs.update({'uid': activity_identifier})
+
+        # Alice logs in
+        map_page = MapPage(self.driver)
+        self.get_page(map_page)
+        map_page.do_login(user=self.user_editor1)
+
+        geom_1 = self.get_taggroup_geometry(
+            identifier=activity_identifier, version=1, key='Intended area (ha)')
+
+        # She opens the detail page
+        self.get_page(detail_page)
+
+        detail_page = DetailActivityPage(self.driver)
+        detail_page.click_edit_button()
+
+        edit_page = EditActivityPage(self.driver)
+        edit_page.remove_map_features()
+        edit_page.click_submit_button_success()
+
+        geom_2 = self.get_taggroup_geometry(
+            identifier=activity_identifier, version=2, key='Intended area (ha)')
+
+        assert geom_1 != geom_2
+        assert geom_2 == {}
 
     @pytest.mark.usefixtures('activity_changeset')
     def test_edit_activity_with_polygon_no_change(self):
@@ -361,6 +393,9 @@ class ViewTests(FunctionalTestCase):
         detail_page.has_attribute('Remark', 'Remark about the intention')
         detail_page.has_attribute('Implementation status', 'In operation')
 
+        geom_1 = self.get_taggroup_geometry(
+            identifier=activity_identifier, version=1, key='Intended area (ha)')
+
         # She clicks the edit button
         detail_page.click_edit_button()
 
@@ -377,6 +412,10 @@ class ViewTests(FunctionalTestCase):
             'Intention of Investment', 'Agriculture', is_checkbox=True)
         detail_page.has_attribute('Remark', 'Remark about the intention')
         detail_page.has_attribute('Implementation status', 'In operation')
+
+        geom_2 = self.get_taggroup_geometry(
+            identifier=activity_identifier, version=2, key='Intended area (ha)')
+        assert geom_1 == geom_2
 
     @pytest.mark.usefixtures('activity_changeset')
     def test_pending_activity(self):
