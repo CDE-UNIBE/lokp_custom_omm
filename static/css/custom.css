@@ -3031,6 +3031,12 @@ input[type=text].map-search-input {
 	padding-top: 0;
 	padding-bottom: 0;
 }
+input[type="checkbox"].leaflet-control-layers-selector {
+    width: auto;
+    position: inherit;
+    left: 0;
+    opacity: 1;
+}
 
 
 .dark-primary-color    { background: #616161; }
