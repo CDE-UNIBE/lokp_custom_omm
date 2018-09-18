@@ -28,10 +28,6 @@
 
 <%def name="bottom_tags()">
     <script type="text/javascript">
-        if (deform) {
-            deform.load();
-        }
-
         $(document).ready(function () {
             $('#menu-affix').affix();
             /*
@@ -54,6 +50,10 @@
                 resizeFn();
                 $(window).resize(resizeFn);
             });
+
+            if (window.deform) {
+              deform.load();
+            }
         });
     </script>
 </%def>
