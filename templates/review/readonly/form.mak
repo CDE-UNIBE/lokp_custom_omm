@@ -213,6 +213,7 @@
 
 
 <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=3&key=${str(request.registry.settings.get('lokp.google_maps_api_key'))}&libraries=places"></script>
+<script src="${request.static_url('lokp:static/js/maps/form.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lokp:static/js/maps/compare.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lokp:static/lib/leaflet/leaflet.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lokp:static/lib/leaflet/leaflet.markercluster.js')}"
@@ -228,10 +229,8 @@
     ## TODO: load dependencies over new widget
 <script>
     $('document').ready(function(){
-         ##  console.log('geometry in compare', ${geometry | n})
          var geometry = ${geometry | n};
-         ##  console.log('form.mak');
-         createReviewMap('googleMapNotFull', {pointsVisible: false, pointsCluster: true}, geometry);
+         createMap('googleMapNotFull', {pointsVisible: false, pointsCluster: true, review: true}, geometry);
     });
 </script>
 
