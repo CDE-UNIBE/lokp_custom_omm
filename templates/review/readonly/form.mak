@@ -222,7 +222,7 @@
         type="text/javascript"></script>
 <script src="/app/view/map_variables.js" type="text/javascript"></script>
 <script src="${request.static_url('lokp:static/lib/chroma/chroma.min.js')}" type="text/javascript"></script>
-<script src="${request.static_url('lokp:static/js/maps2/base.js')}" type="text/javascript"></script>
+<script src="${request.static_url('lokp:static/js/maps/base.js')}" type="text/javascript"></script>
 <script src="${request.static_url('lokp:static/lib/jquery.cookie/jquery.cookie.min.js')}"
             type="text/javascript"></script>
 

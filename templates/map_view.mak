@@ -211,8 +211,8 @@
     <script src="${request.static_url('lokp:static/lib/leaflet/leaflet.markercluster.js')}"></script>
     <script type="text/javascript" src="${request.static_url('lokp:static/lib/chroma/chroma.min.js')}"></script>
     <script type="text/javascript" src="${request.route_url('map_variables')}"></script>
-    <script src="${request.static_url('lokp:static/js/maps2/base.js')}" type="text/javascript"></script>
-    <script src="${request.static_url('lokp:static/js/maps2/main.js')}" type="text/javascript"></script>
+    <script src="${request.static_url('lokp:static/js/maps/base.js')}" type="text/javascript"></script>
+    <script src="${request.static_url('lokp:static/js/maps/main.js')}" type="text/javascript"></script>
     <script src="${request.static_url('lokp:static/js/filters.js')}" type="text/javascript"></script>
     <script src="${request.static_url('lokp:static/lib/jquery.cookie/jquery.cookie.min.js')}"
             type="text/javascript"></script>
