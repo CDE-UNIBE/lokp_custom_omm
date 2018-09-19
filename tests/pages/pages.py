@@ -66,9 +66,8 @@ class FormPageMixin(BasePage):
         dropdown_value.click()
         # Hide dropdown container, otherwise it may overlap elements to be
         # clicked in a next step
-        dropdown_container = self.driver.find_element_by_xpath(
-            f'//form[@id="{self.FORM_ID}"]//select[@name="{key}"]/../ul')
-        self.set_style(dropdown_container, 'display', '"none"')
+        self.wait_for_invisibility(
+            (By.XPATH, f'//form[@id="{self.FORM_ID}"]//select[@name="{key}"]/../ul'))
 
     def select_checkbox_values(self, key: str, values: list):
         for value in values:
@@ -233,15 +232,15 @@ class DetailActivityPage(BasePage):
             raise NotImplementedError()
 
     def has_attribute(self, key: str, value: str, is_checkbox: bool=False):
+        key_el_xpath = f'//h5[contains(@class, "dealview_item_titel") and ' \
+                       f'text()="{key}"]'
         if is_checkbox is False:
             self.driver.find_element_by_xpath(
-                f'//h5[contains(@class, "dealview_item_titel") and '
-                f'text()="{key}"]/../../div[@class="dealview_item_attribute" '
+                f'{key_el_xpath}/../../div[@class="dealview_item_attribute" '
                 f'and contains(text(), "{value}")]')
         else:
             self.driver.find_element_by_xpath(
-                f'//h5[contains(@class, "dealview_item_titel") and '
-                f'text()="{key}"]/../../div[@class="dealview_item_attribute"]'
+                f'{key_el_xpath}/../../div[@class="dealview_item_attribute"]'
                 f'/p[contains(text(), "{value}")]')
 
     def has_investor(self, investor_type: str, name: str, country: str):

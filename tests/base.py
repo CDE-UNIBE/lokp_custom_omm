@@ -7,7 +7,7 @@ import sys
 from collections import namedtuple
 from geoalchemy2.shape import to_shape
 from pyramid import testing
-from pyramid.paster import get_appsettings
+from pyramid.paster import get_appsettings, setup_logging
 from pyvirtualdisplay import Display
 from selenium import webdriver
 from sqlalchemy import engine_from_config
@@ -71,6 +71,9 @@ class BaseTestCase(unittest.TestCase):
 
     def setUp(self):
         self.config = testing.setUp()
+
+        # Prevent logging of all debug information
+        setup_logging('testing.ini')
 
         # Prepare application
         self.settings = get_appsettings('testing.ini')
@@ -240,10 +243,21 @@ class FunctionalTestCase(BaseTestCase):
         self.create_test_users()
 
     def tearDown(self):
+        # self.save_failed_screenshots()
         self.driver.quit()
         if '-pop' not in sys.argv[1:]:
             self.display.stop()
         super().tearDown()
+
+    def save_failed_screenshots(self):
+        if self._outcome.errors:
+            path = os.path.join(
+                os.path.dirname(os.path.realpath(__file__)),
+                'failed_screenshots')
+            if not os.path.exists(path):
+                os.makedirs(path)
+            file = os.path.join(path, f'failed_{self.id()}.png')
+            self.driver.save_screenshot(file)
 
     def get_page(self, page: Page):
         """

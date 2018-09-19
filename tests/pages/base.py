@@ -33,6 +33,10 @@ class Page:
     def wait_for_visibility(self, element: WebElement):
         WebDriverWait(self.driver, 20).until(EC.visibility_of(element))
 
+    def wait_for_invisibility(self, *locator):
+        WebDriverWait(self.driver, 20).until(
+            EC.invisibility_of_element_located(*locator))
+
     def set_style(self, element: WebElement, prop: str, value: str):
         self.driver.execute_script(
             f"arguments[0].style.{prop} = {value};", element)
