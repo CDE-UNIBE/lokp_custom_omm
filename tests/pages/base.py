@@ -27,6 +27,13 @@ class Page:
         """
         return self.driver.find_elements(*locator)
 
+    @staticmethod
+    def format_locator(locator: tuple, **kwargs) -> tuple:
+        return (
+            locator[0],
+            locator[1].format(**kwargs),
+        )
+
     def scroll_to(self, element: WebElement):
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
 
@@ -62,6 +69,8 @@ class BasePage(Page):
     LOC_MENU_LOGIN = (
         By.XPATH,
         '//div[@class="nav-wrapper"]//a[text()[contains(.,"Login")]]')
+    LOC_MENU_LIST = (By.XPATH, '//nav//a/span[contains(text(), "List")]')
+    LOC_MENU_MAP = (By.XPATH, '//nav//a/span[contains(text(), "Map")]')
 
     def is_logged_in(self) -> bool:
         """
@@ -96,3 +105,9 @@ class BasePage(Page):
 
     def is_not_found(self):
         return self.driver.title == '404 Not Found'
+
+    def click_menu_list(self):
+        self.get_el(self.LOC_MENU_LIST).click()
+
+    def click_menu_map(self):
+        self.get_el(self.LOC_MENU_MAP).click()

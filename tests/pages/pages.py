@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 
 from ..pages.base import Page, BasePage
@@ -19,6 +21,16 @@ class LandingPage(Page):
 class MapPage(BasePage):
     route_name = 'map_view'
 
+    LOC_BUTTON_ZOOM_IN = (By.XPATH, '//a[@class="leaflet-control-zoom-in"]')
+
+    def zoom_in(self):
+        self.get_el(self.LOC_BUTTON_ZOOM_IN).click()
+        # Wait for the zoom animation to finish. This is especially important
+        # when zooming multiple times. Just waiting for half a second is not
+        # very nice, but a lot faster than detecting the disappearance of the
+        # zoom animation.
+        time.sleep(0.5)
+
 
 class LoginPage(BasePage):
     route_name = 'login'
@@ -37,6 +49,31 @@ class LoginPage(BasePage):
 
 class LogoutPage(Page):
     route_name = 'logout'
+
+
+class ListPage(BasePage):
+    route_name = 'grid_view'
+
+    LOC_TABLE_ROW_ID = (
+        By.XPATH, '//table[@id="itemgrid"]/tbody/tr[{index_1}]/td/a[contains('
+                  '@href, "{identifier}")]')
+    LOC_BUTTON_FILTER_PROFILE = (
+        By.XPATH, '//a[contains(@href, "bbox=profile")]')
+
+    def check_entries(self, expected: list):
+        for i, entry in enumerate(expected):
+            self.check_entry(index_1=i+1, expected=entry)
+
+    def check_entry(self, index_1: int, expected: dict):
+        if 'identifier' in expected:
+            self.get_el(self.format_locator(
+                self.LOC_TABLE_ROW_ID,
+                index_1=index_1,
+                identifier=expected['identifier']
+            ))
+
+    def click_filter_by_profile(self):
+        self.get_el(self.LOC_BUTTON_FILTER_PROFILE).click()
 
 
 class FormPageMixin(BasePage):

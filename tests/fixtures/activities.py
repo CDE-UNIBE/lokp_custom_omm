@@ -25,7 +25,7 @@ def activity_changeset(request):
 class ActivityChangesets:
 
     @staticmethod
-    def simple(intention='Agriculture'):
+    def simple(intention='Agriculture', coordinates=None):
         """
         A simple Activity in Myanmar without Involvements.
 
@@ -35,6 +35,8 @@ class ActivityChangesets:
         Remark (Intention of Investment):   Remark about the intention
         Implementation status:              In operation
         """
+        if not coordinates:
+            coordinates = [96.64902734375207, 19.33434978562127]
         return {
             "activities": [
                 {
@@ -112,7 +114,7 @@ class ActivityChangesets:
                     ],
                     "geometry": {
                         "type": "Point",
-                        "coordinates": [96.64902734375207, 19.33434978562127]
+                        "coordinates": coordinates
                     },
                     "version": 1
                 }
