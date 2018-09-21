@@ -25,93 +25,112 @@ def activity_changeset(request):
 class ActivityChangesets:
 
     @staticmethod
-    def simple(intention='Agriculture', coordinates=None):
+    def simple(intention='Agriculture', coordinates=None, intended_area=None):
         """
         A simple Activity in Myanmar without Involvements.
 
+        [coordinates]:                      default: ~ center of Myanmar
         Spatial Accuracy:                   better than 100m
         Country:                            Myanmar
         Intention of Investment:            <intention> (default: Agriculture)
         Remark (Intention of Investment):   Remark about the intention
         Implementation status:              In operation
+        Intended area:                      - (empty by default)
         """
         if not coordinates:
             coordinates = [96.64902734375207, 19.33434978562127]
+        taggroups = [
+            {
+                "op": "add",
+                "tags": [
+                    {
+                        "key": "Spatial Accuracy",
+                        "value": "better than 100m",
+                        "op": "add"
+                    }
+                ],
+                "main_tag": {
+                    "key": "Spatial Accuracy",
+                    "value": "better than 100m"
+                }
+            },
+            {
+                "op": "add",
+                "tags": [
+                    {
+                        "key": "Country",
+                        "value": "Myanmar",
+                        "op": "add"
+                    }
+                ],
+                "main_tag": {
+                    "key": "Country",
+                    "value": "Myanmar"
+                }
+            },
+            {
+                "op": "add",
+                "tags": [
+                    {
+                        "key": "Intention of Investment",
+                        "value": intention,
+                        "op": "add"
+                    }
+                ],
+                "main_tag": {
+                    "key": "Intention of Investment",
+                    "value": intention
+                }
+            },
+            {
+                "op": "add",
+                "tags": [
+                    {
+                        "key": "Remark (Intention of Investment)",
+                        "value": "Remark about the intention",
+                        "op": "add"
+                    }
+                ],
+                "main_tag": {
+                    "key": "Remark (Intention of Investment)",
+                    "value": "Remark about the intention"
+                }
+            },
+            {
+                "op": "add",
+                "tags": [
+                    {
+                        "key": "Implementation status",
+                        "value": "In operation",
+                        "op": "add"
+                    }
+                ],
+                "main_tag": {
+                    "key": "Implementation status",
+                    "value": "In operation"
+                }
+            }
+        ]
+        if intended_area:
+            taggroups.append({
+                "op": "add",
+                "tags": [
+                    {
+                        "key": "Intended area (ha)",
+                        "value": intended_area,
+                        "op": "add"
+                    }
+                ],
+                "main_tag": {
+                    "key": "Intended area (ha)",
+                    "value": intended_area
+                }
+            })
+
         return {
             "activities": [
                 {
-                    "taggroups": [
-                        {
-                            "op": "add",
-                            "tags": [
-                                {
-                                    "key": "Spatial Accuracy",
-                                    "value": "better than 100m",
-                                    "op": "add"
-                                }
-                            ],
-                            "main_tag": {
-                                "key": "Spatial Accuracy",
-                                "value": "better than 100m"
-                            }
-                        },
-                        {
-                            "op": "add",
-                            "tags": [
-                                {
-                                    "key": "Country",
-                                    "value": "Myanmar",
-                                    "op": "add"
-                                }
-                            ],
-                            "main_tag": {
-                                "key": "Country",
-                                "value": "Myanmar"
-                            }
-                        },
-                        {
-                            "op": "add",
-                            "tags": [
-                                {
-                                    "key": "Intention of Investment",
-                                    "value": intention,
-                                    "op": "add"
-                                }
-                            ],
-                            "main_tag": {
-                                "key": "Intention of Investment",
-                                "value": intention
-                            }
-                        },
-                        {
-                            "op": "add",
-                            "tags": [
-                                {
-                                    "key": "Remark (Intention of Investment)",
-                                    "value": "Remark about the intention",
-                                    "op": "add"
-                                }
-                            ],
-                            "main_tag": {
-                                "key": "Remark (Intention of Investment)",
-                                "value": "Remark about the intention"
-                            }
-                        },
-                        {
-                            "op": "add",
-                            "tags": [
-                                {
-                                    "key": "Implementation status",
-                                    "value": "In operation",
-                                    "op": "add"
-                                }
-                            ],
-                            "main_tag": {
-                                "key": "Implementation status",
-                                "value": "In operation"
-                            }
-                        }
-                    ],
+                    "taggroups": taggroups,
                     "geometry": {
                         "type": "Point",
                         "coordinates": coordinates

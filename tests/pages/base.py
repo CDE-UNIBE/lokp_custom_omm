@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
@@ -111,3 +113,41 @@ class BasePage(Page):
 
     def click_menu_map(self):
         self.get_el(self.LOC_MENU_MAP).click()
+
+    def add_filter(
+            self, key: str, value: str, operator: str=None,
+            is_text: bool=False):
+        self.get_el((By.XPATH, '//a[@data-activates="slide-out-filter"]')).click()
+        self.get_el((By.XPATH, '//ul[@id="slide-out-filter"]//div[contains(@class, "js-add-new-filter")]')).click()
+
+        # Key
+        self.get_el((By.ID, 'new-filter-key')).click()
+        key_xpath = '//ul[@id="dropdown_categories"]'
+        self.wait_for_visibility(self.get_el((By.XPATH, key_xpath)))
+        self.get_el((By.XPATH, f'{key_xpath}/li/a[text()="{key}"]')).click()
+        self.wait_for_invisibility((By.XPATH, key_xpath))
+
+        # Operator
+        if operator:
+            self.get_el((By.ID, 'new-filter-operator-display')).click()
+            operator_xpath = '//ul[@id="new-filter-operator-dropdown"]'
+            time.sleep(0.5)
+            # self.wait_for_visibility(self.get_el((By.XPATH, operator_xpath)))
+            self.get_el((By.XPATH, f'{operator_xpath}/li/a[text()="{operator}"]')).click()
+            self.wait_for_invisibility((By.XPATH, operator_xpath))
+
+        # Wait for the values to be populated
+        time.sleep(0.5)
+
+        # Value
+        if is_text:
+            self.get_el((By.ID, 'new-filter-value-internal')).send_keys(value)
+        else:
+            self.get_el((By.ID, 'new-filter-value-dd')).click()
+            value_xpath = '//ul[@id="dropdown3"]'
+            self.wait_for_visibility(self.get_el((By.XPATH, value_xpath)))
+            self.get_el((By.XPATH, f'{value_xpath}/li/a[text()="{value}"]')).click()
+            self.wait_for_invisibility((By.XPATH, value_xpath))
+
+        # Submit
+        self.get_el((By.ID, 'js-submit-new-filter')).click()

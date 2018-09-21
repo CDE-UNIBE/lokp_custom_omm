@@ -43,7 +43,7 @@
 
     <!-- New Filter -->
     <li>
-        <div class="collapsible-header"><i class="material-icons">playlist_add</i>${_('New Filter')}</div>
+        <div class="collapsible-header js-add-new-filter"><i class="material-icons">playlist_add</i>${_('New Filter')}</div>
         <div class="collapsible-body">
             <div class="control-group new-filter" style="padding-left: 50px; padding-top: 30px;">
                 <div class="controls">
@@ -78,7 +78,7 @@
                         <!-- will be replaced -->
                         <input id="new-filter-value-internal"  placeholder="${_('Value')}" type="text" style="height: 20px; line-height: 20px;">
                     </div></br>
-                    <a class="waves-effect waves-light btn" onClick="javascript:addNewFilter();" style="width: 80%;">Add<i class="material-icons right">add</i></a>
+                    <a class="waves-effect waves-light btn" id="js-submit-new-filter" onClick="javascript:addNewFilter();" style="width: 80%;">Add<i class="material-icons right">add</i></a>
                 </div>
             </div>
         </div>
