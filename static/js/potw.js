@@ -79,10 +79,8 @@ function getPotwArchive(entry, active) {
 }
 
 function setMapPosition(lat, lon, zoom, contextlayer) {
-    var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
-    var toProjection = new OpenLayers.Projection("EPSG:900913");
-    var position = new OpenLayers.LonLat(lon, lat).transform(fromProjection, toProjection);
-    map.setCenter(position, zoom);
+    var map = window.lokp_maps['main-map-id'].map;
+    map.setView([lat, lon], zoom);
     if (contextlayer) {
         var input = $('input[value="' + contextlayer + '"]');
         if (!input.is(':checked')) {

@@ -411,13 +411,16 @@ if 'lokp.use_piwik_analytics' in request.registry.settings:
             $(window).on( 'resize', function () {
                 setTimeout(function(){
                 if ($('#bottom-tab1').length > 0) {
-                    document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
-                    document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width()-20) + "px";
-                    document.getElementById("img-weekpicture").style.height = "auto";
-                    if (document.getElementById("img-weekpicture").clientHeight > (getPotwTextHeight())) {
-                        document.getElementById("img-weekpicture").style.height = String(getPotwTextHeight()) + "px";
-                        document.getElementById("img-weekpicture").style.width = "auto";
+                    var picofweek = document.getElementById("img-weekpicture");
+                    if (picofweek) {
+                        picofweek.style.width = String($('#window-right-bottom').width()-20) + "px";
+                        picofweek.style.height = "auto";
+                        if (picofweek.clientHeight > (getPotwTextHeight())) {
+                            picofweek.style.height = String(getPotwTextHeight()) + "px";
+                            picofweek.style.width = "auto";
+                        }
                     }
+                    document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
                     if ($(window).width() > 982) {
                         document.getElementById("window-right-top").style.marginTop = "0px";
                         document.getElementById("main-map-id").style.width = "66.7%";

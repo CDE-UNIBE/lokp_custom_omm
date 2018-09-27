@@ -45,10 +45,6 @@
         var identifier = '${uid}';
         var version = ${version};
 
-        if (deform) {
-            deform.load();
-        }
-
         $(document).ready(function () {
             $('.collapsible').collapsible();
 
@@ -80,9 +76,17 @@
             });
 
             Materialize.updateTextFields();
-            deform.load();
+
+            if (window.deform) {
+                deform.load();
+            }
         });
 
+        if (window.Dropzone) {
+            // We want to programatically create Dropzone upload fields
+            // ourselves.
+            Dropzone.autoDiscover = false;
+        }
 
     </script>
 </%def>

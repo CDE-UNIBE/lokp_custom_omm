@@ -5,8 +5,9 @@ import transaction
 import sys
 
 from collections import namedtuple
+from geoalchemy2.shape import to_shape
 from pyramid import testing
-from pyramid.paster import get_appsettings
+from pyramid.paster import get_appsettings, setup_logging
 from pyvirtualdisplay import Display
 from selenium import webdriver
 from sqlalchemy import engine_from_config
@@ -17,7 +18,7 @@ from .pages.api import LoginEndpoint, CreateActivityEndpoint, Endpoint, \
     CreateStakeholderEndpoint
 from lokp import main
 from lokp.models import Base, DBSession, User, Group, Profile, Activity, \
-    Stakeholder
+    Stakeholder, A_Tag_Group, A_Tag, A_Key
 from lokp.scripts.initialize_db import add_sql_triggers, add_initial_values
 
 
@@ -70,6 +71,9 @@ class BaseTestCase(unittest.TestCase):
 
     def setUp(self):
         self.config = testing.setUp()
+
+        # Prevent logging of all debug information
+        setup_logging('testing.ini')
 
         # Prepare application
         self.settings = get_appsettings('testing.ini')
@@ -170,6 +174,29 @@ class BaseTestCase(unittest.TestCase):
             'moderator', 'moderator_password', ['editors', 'moderators'])
         self.user_moderator = UserTuple('moderator', 'moderator_password')
 
+    def get_taggroup_geometry(
+            self, key: str, identifier: str=None, version: int=None) -> dict:
+        with transaction.manager:
+            # If identifier and version are not provided, it is assumed that
+            # there is only one Activity in the DB. Use this.
+            if identifier is None and version is None:
+                activity = DBSession.query(Activity).one()
+                identifier = activity.activity_identifier
+                version = activity.version
+            taggroup = DBSession.query(A_Tag_Group)\
+                .join(Activity)\
+                .join(A_Tag, A_Tag_Group.fk_a_tag==A_Tag.id)\
+                .join(A_Key)\
+                .filter(
+                    Activity.identifier == identifier,
+                    Activity.version == version,
+                    A_Key.key == key
+                )\
+                .one()
+            if taggroup.geometry is None:
+                return {}
+            return to_shape(taggroup.geometry).__geo_interface__
+
     def create_user(self, username: str, password: str, groups: list):
         with transaction.manager:
             user = User(
@@ -216,10 +243,21 @@ class FunctionalTestCase(BaseTestCase):
         self.create_test_users()
 
     def tearDown(self):
+        # self.save_failed_screenshots()
         self.driver.quit()
         if '-pop' not in sys.argv[1:]:
             self.display.stop()
         super().tearDown()
+
+    def save_failed_screenshots(self):
+        if self._outcome.errors:
+            path = os.path.join(
+                os.path.dirname(os.path.realpath(__file__)),
+                'failed_screenshots')
+            if not os.path.exists(path):
+                os.makedirs(path)
+            file = os.path.join(path, f'failed_{self.id()}.png')
+            self.driver.save_screenshot(file)
 
     def get_page(self, page: Page):
         """

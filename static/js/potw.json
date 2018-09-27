@@ -24,7 +24,7 @@
       "title": "Large-scale deforestation in Sagaing Region and Shant State border area.",
       "subtitle": "Click on the picture to jump to the location on the map. <br/> Click <a href='https://earthengine.google.com/timelapse/#v=24.13227,96.57336,9.722,latLng&t=1.10' target='_blank'> here </a> to watch the land conversion in a 30 year timelapse.",
       "description": "Any comments and information about this land conversion are welcome.",
-      "contextlayer": "Global Forest Change Loss Year 2001-2016 (Hansen et al.)",
+      "contextlayer": "Global Forest Loss (2015/2016 highlight)",
       "latitude": "24.1411272",
       "longitude": "96.5203299",
       "zoomlevel": "11",
