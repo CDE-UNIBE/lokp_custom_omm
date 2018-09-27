@@ -13,12 +13,20 @@ Usage:
 
 ENVIRONMENTS = {
     'dev': {
-         'source_path': '/srv/webapps/mmlokp-dev/lokp',
+        'source_path': '/srv/webapps/mmlokp-dev/lokp',
         'customization_path': '/srv/webapps/mmlokp-dev/lokp/lokp/customization'
                               '/omm',
         'virtualenv_path': '/srv/webapps/mmlokp-dev/virtualenv/bin/activate',
         'touch_file': '/etc/uwsgi-emperor/vassals/mmlokpdev.ini',
         'git_branch': 'develop',
+    },
+    'live': {
+        'source_path': '/srv/webapps/mmlokp-live/lokp',
+        'customization_path': '/srv/webapps/mmlokp-live/lokp/lokp/customization'
+                              '/omm',
+        'virtualenv_path': '/srv/webapps/mmlokp-live/liveenv/bin/activate',
+        'touch_file': '/etc/uwsgi-emperor/vassals/mmlokplive.ini',
+        'git_branch': 'master',
     }
 }
 
