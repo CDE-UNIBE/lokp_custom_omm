@@ -1,19 +1,19 @@
 <%
-from lmkp.utils import handle_query_string
-from lmkp.views.translation import get_languages
+from lokp.utils.views import handle_query_string
+from lokp.views.translation import get_languages
 languages = get_languages()
 selectedlanguage = languages[0]
 for l in languages:
     if locale == l[0]:
         selectedlanguage = l
 mode = None
-if 'lmkp.mode' in request.registry.settings:
-    if str(request.registry.settings['lmkp.mode']).lower() == 'demo':
+if 'lokp.mode' in request.registry.settings:
+    if str(request.registry.settings['lokp.mode']).lower() == 'demo':
         mode = 'demo'
 
 use_piwik_analytics = False
-if 'lmkp.use_piwik_analytics' in request.registry.settings:
-    if str(request.registry.settings['lmkp.use_piwik_analytics']).lower() == "true":
+if 'lokp.use_piwik_analytics' in request.registry.settings:
+    if str(request.registry.settings['lokp.use_piwik_analytics']).lower() == "true":
         use_piwik_analytics = True
 %>
 

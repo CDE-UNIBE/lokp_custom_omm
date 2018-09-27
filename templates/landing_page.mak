@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/omm/templates/base_no_menu.mak" />
+<%inherit file="lokp:customization/omm/templates/base_no_menu.mak" />
 
 <%def name="head_tags()">
 
@@ -6,7 +6,7 @@
 
 <%def name="body()">
 <%
-from lmkp.views.translation import get_profiles
+from lokp.views.translation import get_profiles
 profiles = sorted(get_profiles(), key=lambda profile: profile[0])
 %>
 

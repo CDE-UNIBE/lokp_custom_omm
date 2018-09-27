@@ -1,6 +1,6 @@
 <%def name="height()">500</%def>
 
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_("Deal stacked bar charts")}</%def>
 
@@ -41,8 +41,8 @@
 </div>
 
 <%def name="bottom_tags()">
-  <script src="${request.static_url('lmkp:static/lib/d3/d3.v3.min.js')}" type="text/javascript"></script>
-  <script src="${request.static_url('lmkp:static/lib/d3/colorbrewer.v1.min.js')}"></script>
+  <script src="${request.static_url('lokp:static/lib/d3/d3.min.js')}" type="text/javascript"></script>
+  <script src="${request.static_url('lokp:static/lib/colorbrewer/colorbrewer.min.js')}"></script>
   <script type="text/javascript">
 
     var group_activities_by = "${_('Group deals by:')}";
@@ -99,6 +99,6 @@
       });
     });
   </script>
-  <script src="${request.static_url('lmkp:static/v2/charts/stackedbarchart.js')}" type="text/javascript"></script>
+  <script src="${request.static_url('lokp:static/js/charts/stackedbarchart.js')}" type="text/javascript"></script>
 
 </%def>

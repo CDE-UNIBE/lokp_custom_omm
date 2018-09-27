@@ -2,7 +2,7 @@
     errorMsg = error if error else None
 %>
 
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Version Compare')}</%def>
 
@@ -149,7 +149,7 @@
 </%def>
 
 <%def name="bottom_tags()">
-    <%include file="lmkp:templates/map/mapform.mak" args="readonly=True, compare=True" />
+##     <%include file="lokp:templates/map/mapform.mak" args="readonly=True, compare=True" />
     <script>
         
         var identifier = '${identifier}';

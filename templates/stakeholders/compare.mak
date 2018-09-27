@@ -2,7 +2,7 @@
     errorMsg = error if error else None
 %>
 
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Version Compare')}</%def>
 

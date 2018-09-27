@@ -3,7 +3,7 @@ LOKP Customization for the Land Observatory
 
 Please refer to the documentation found at http://lokp.rtfd.org.
 
-Clone this repository in the customization folder (lmkp/customization) of an
+Clone this repository in the customization folder (lokp/customization) of an
 instance of the Land Observatory Knowledge Platform
 (https://github.com/CDE-UNIBE/lokp).
 

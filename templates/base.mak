@@ -1,8 +1,8 @@
 <%
-from lmkp.utils import handle_query_string
-from lmkp.views.translation import get_languages
-from lmkp.views.translation import get_profiles
-from urllib import quote_plus
+from lokp.utils.views import handle_query_string
+from lokp.views.translation import get_languages
+from lokp.views.translation import get_profiles
+from urllib.parse import quote_plus
 languages = get_languages()
 selectedlanguage = languages[0]
 for l in languages:
@@ -14,13 +14,13 @@ for p in profiles:
    if profile == p[0]:
        selectedprofile = p
 mode = None
-if 'lmkp.mode' in request.registry.settings:
-    if str(request.registry.settings['lmkp.mode']).lower() == 'demo':
+if 'lokp.mode' in request.registry.settings:
+    if str(request.registry.settings['lokp.mode']).lower() == 'demo':
         mode = 'demo'
 
 use_piwik_analytics = False
-if 'lmkp.use_piwik_analytics' in request.registry.settings:
-    if str(request.registry.settings['lmkp.use_piwik_analytics']).lower() == "true":
+if 'lokp.use_piwik_analytics' in request.registry.settings:
+    if str(request.registry.settings['lokp.use_piwik_analytics']).lower() == "true":
         use_piwik_analytics = True
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -136,7 +136,6 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
                                                 _('List')
                                             ], [
                                                 [
-                                                    request.route_url('charts_view'),
                                                     request.route_url('charts_overview')
                                                 ],
                                                 'insert_chart',
@@ -354,7 +353,7 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
         <script type="text/javascript" src="/custom/js/vendor/bootstrap.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/materialize.min.js"></script>
         <script type="text/javascript" src="/custom/js/vendor/typeahead.js"></script>
-        <script type="text/javascript" src="${request.static_url('lmkp:static/v2/main.js')}"></script>
+        <script type="text/javascript" src="${request.static_url('lokp:static/js/main.js')}"></script>
 
         % if use_piwik_analytics==True:
         <!-- Piwik -->
@@ -396,11 +395,9 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
 
             function whenPageLoaded() {
                 $(".button-collapse").sideNav();
-                $(".preloader-wrapper").hide();
                 $('.modal-trigger').leanModal();
                 initializeDropdown();
-                if ($('#floating-buttons').length > 0) {
-                    document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
+                if ($('#bottom-tab1').length > 0) {
                     document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
                     document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width()-20) + "px";
                     document.getElementById("img-weekpicture").style.height = "auto";
@@ -413,27 +410,29 @@ if 'lmkp.use_piwik_analytics' in request.registry.settings:
             }
             $(window).on( 'resize', function () {
                 setTimeout(function(){
-                if ($('#floating-buttons').length > 0) {
-                    document.getElementById("floating-buttons").style.marginTop = String($('#googleMapFull').height()-$('#floating-buttons').height()-15) + "px";
-                    document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
-                    document.getElementById("img-weekpicture").style.width = String($('#window-right-bottom').width()-20) + "px";
-                    document.getElementById("img-weekpicture").style.height = "auto";
-                    if (document.getElementById("img-weekpicture").clientHeight > (getPotwTextHeight())) {
-                        document.getElementById("img-weekpicture").style.height = String(getPotwTextHeight()) + "px";
-                        document.getElementById("img-weekpicture").style.width = "auto";
+                if ($('#bottom-tab1').length > 0) {
+                    var picofweek = document.getElementById("img-weekpicture");
+                    if (picofweek) {
+                        picofweek.style.width = String($('#window-right-bottom').width()-20) + "px";
+                        picofweek.style.height = "auto";
+                        if (picofweek.clientHeight > (getPotwTextHeight())) {
+                            picofweek.style.height = String(getPotwTextHeight()) + "px";
+                            picofweek.style.width = "auto";
+                        }
                     }
+                    document.getElementById("bottom-tab1").style.height = String($('#window-right-bottom').height()-50) + "px";
                     if ($(window).width() > 982) {
                         document.getElementById("window-right-top").style.marginTop = "0px";
-                        document.getElementById("googleMapFull").style.width = "66.7%";
-                        document.getElementById("content").style.height = String(Math.max($('#googleMapFull').height(),$('#window_right').height())) + "px";
+                        document.getElementById("main-map-id").style.width = "66.7%";
+                        document.getElementById("content").style.height = String(Math.max($('#main-map-id').height(),$('#window_right').height())) + "px";
                         $('#window_right').height(
-                                $('#googleMapFull').height()
+                                $('#main-map-id').height()
                         );
                     }
                     else {
                         document.getElementById("window-right-top").style.marginTop = "25px";
-                        document.getElementById("googleMapFull").style.width = "100%";
-                        document.getElementById("content").style.height = String($('#googleMapFull').height() + $('#window_right').height()) + "px";
+                        document.getElementById("main-map-id").style.width = "100%";
+                        document.getElementById("content").style.height = String($('#main-map-id').height() + $('#window_right').height()) + "px";
                     }
                 }
                 },250);

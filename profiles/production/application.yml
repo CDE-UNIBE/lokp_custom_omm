@@ -4,124 +4,55 @@ application:
     type: Polygon
     coordinates: [[[-180, -84],[180, -84],[180, 84],[-180, 84],[-180, -84]]]
   name: "Land Matrix Knowledge Platform global edition"
+  default_profile: "myanmar"
   layers:
   - name: "Accessibility"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
-    wms_options:
-    - epsg: 900913
-    - format: "image/jpeg"
-    - layers: "accessability"
-    - transparent: true
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
-    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    epsg: 900913
+    layers: "accessability"
+    abstract: "<p>Estimated travel time to the nearest city of 50,000 or more people in year 2000.</p><p>Global Environment Monitoring Unit - Joint Research Centre of the European Commission, Ispra Italy. Available at <a href=\"http://bioval.jrc.ec.europa.eu/products/gam/\">http://bioval.jrc.ec.europa.eu/products/gam/</a></p>"
   - name: "Population Density 2008"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
-    wms_options:
-    - epsg: 900913
-    - format: "image/jpeg"
-    - layers: "lspop_2008"
-    - transparent: true
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
-    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    epsg: 900913
+    layers: "lspop_2008"
+    abstract: ""
   - name: "Global Land Cover 2009"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
-    wms_options:
-    - epsg: 900913
-    - format: "image/jpeg"
-    - layers: "globcover_2009"
-    - transparent: true
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
-    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    epsg: 900913
+    layers: "globcover_2009"
+    abstract: "<p>Global Vegetation Cover Map (GlobeCover) by ESA 2010 and UCLouvain, reclassified by CDE 2011</p>"
   - name: "Global Cropland"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
-    wms_options:
-    - epsg: 900913
-    - format: "image/jpeg"
-    - layers: "gl_cropland"
-    - transparent: true
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
-    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    epsg: 900913
+    layers: "gl_cropland"
+    abstract: "<p>Global Agricultural Lands: Croplands, 2000. Data distributed by the NASA Socioeconomic Data and Applications Center (SEDAC)</p>"
   - name: "Global Pasture Land"
     url: "https://sdi.cde.unibe.ch/geoserver/lo/wms"
-    wms_options:
-    - epsg: 900913
-    - format: "image/jpeg"
-    - layers: "gl_pasture"
-    - transparent: true
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
-    - maxExtent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    epsg: 900913
+    layers: "gl_pasture"
+    abstract: "<p>Global Agricultural Lands Pastures, 2000. Data distributed by the NASA Socioeconomic Data and Applications Center (SEDAC)</p>"
   - name: "Global Forest Loss"
     url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/hansen_lossyear_gfc2016_aytp/MapServer/WMSServer"
-    wms_options:
-    - epsg: 102100
-    - format: "image/jpeg"
-    - layers: "0"
-    - transparent: true
-    - abstract: "<p>Results from time-series analysis of Landsat images characterizing forest extent and change.</p><p>Trees are defined as vegetation taller than 5m in height and are expressed as a percentage per output grid cell as ‘2000 Percent Tree Cover’. ‘Forest Cover Loss’ is defined as a stand-replacement disturbance, or a change from a forest to non-forest state, during the period 2000–2016. ‘Forest Cover Gain’ is defined as the inverse of loss, or a non-forest to forest change entirely within the period 2000–2012. ‘Forest Loss Year’ is a disaggregation of total ‘Forest Loss’ to annual time scales.</p><p>Source: <a href='http://science.sciencemag.org/content/342/6160/850' target='_blank'>Hansen et al. 2013</a></p>"
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
+    epsg: 102100
+    layers: "0"
+    abstract: "<p>Results from time-series analysis of Landsat images characterizing forest extent and change.</p><p>Trees are defined as vegetation taller than 5m in height and are expressed as a percentage per output grid cell as ‘2000 Percent Tree Cover’. ‘Forest Cover Loss’ is defined as a stand-replacement disturbance, or a change from a forest to non-forest state, during the period 2000–2016. ‘Forest Cover Gain’ is defined as the inverse of loss, or a non-forest to forest change entirely within the period 2000–2012. ‘Forest Loss Year’ is a disaggregation of total ‘Forest Loss’ to annual time scales.</p><p>Source: <a href='http://science.sciencemag.org/content/342/6160/850' target='_blank'>Hansen et al. 2013</a></p>"
   - name: "Global Forest Loss (2015/2016 highlight)"
     url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/hansen_lossyear_gfc2016_tp/MapServer/WMSServer"
-    wms_options:
-    - epsg: 102100
-    - format: "image/jpeg"
-    - layers: "0"
-    - transparent: true
-    - abstract: "<p>Results from time-series analysis of Landsat images characterizing forest extent and change.</p><p>Trees are defined as vegetation taller than 5m in height and are expressed as a percentage per output grid cell as ‘2000 Percent Tree Cover’. ‘Forest Cover Loss’ is defined as a stand-replacement disturbance, or a change from a forest to non-forest state, during the period 2000-2016. ‘Forest Cover Gain’ is defined as the inverse of loss, or a non-forest to forest change entirely within the period 2000–2012. ‘Forest Loss Year’ is a disaggregation of total ‘Forest Loss’ to annual time scales.</p><p>Source: <a href='http://science.sciencemag.org/content/342/6160/850' target='_blank'>Hansen et al. 2013</a></p>"
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
+    epsg: 102100
+    layers: "0"
+    abstract: "<p>Results from time-series analysis of Landsat images characterizing forest extent and change.</p><p>Trees are defined as vegetation taller than 5m in height and are expressed as a percentage per output grid cell as ‘2000 Percent Tree Cover’. ‘Forest Cover Loss’ is defined as a stand-replacement disturbance, or a change from a forest to non-forest state, during the period 2000-2016. ‘Forest Cover Gain’ is defined as the inverse of loss, or a non-forest to forest change entirely within the period 2000–2012. ‘Forest Loss Year’ is a disaggregation of total ‘Forest Loss’ to annual time scales.</p><p>Source: <a href='http://science.sciencemag.org/content/342/6160/850' target='_blank'>Hansen et al. 2013</a></p>"
   - name: "Myanmar 2002-2014 Forest Cover Change"
     url: "https://gis2.onemapmyanmar.info/gis2/services/ommapplications/ecodev_fcc_2002_2014_mm/MapServer/WMSServer"
-    wms_options:
-    - epsg: 102100
-    - format: "image/jpeg"
-    - layers: "0"
-    - transparent: true
-    - abstract: "<p>A Landsat-based classification of Myanmar’s forest cover with a focus on changes in intact forest between 2002 and 2014.</p><p>Source: <a href='http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176364' target='_blank'>Bhagwat et al. 2015</a></p>"
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
+    epsg: 102100
+    layers: "0"
+    abstract: "<p>A Landsat-based classification of Myanmar’s forest cover with a focus on changes in intact forest between 2002 and 2014.</p><p>Source: <a href='http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176364' target='_blank'>Bhagwat et al. 2015</a></p>"
   - name: "Possible Mining Areas"
     url: "https://gis2.onemapmyanmar.info/gis2/services/Connette_mining/MapServer/WMSServer"
-    wms_options:
-    - epsg: 102100
-    - format: "image/jpeg"
-    - layers: "0"
-    - transparent: true
-    - abstract: "<p>This is a dataset of possible mining areas in Myanmar that was digitized from a systematic search of high-resolution imagery available on Google Earth and Bing Aerial. Digitizing took place in late 2015 and early 2016 with the most recent imagery available (usually 2014 or 2015). A field in the attribute table called 'Certainty' indicates the how confident we were that the digitized polygon is a mine, rather than some other type of ground disturbance.</p><p>Source: <a href='http://www.mdpi.com/2072-4292/8/11/912/htm' target='_blank'>Connette et al. 2016</a></p>"
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
+    epsg: 102100
+    layers: "0"
+    abstract: "<p>This is a dataset of possible mining areas in Myanmar that was digitized from a systematic search of high-resolution imagery available on Google Earth and Bing Aerial. Digitizing took place in late 2015 and early 2016 with the most recent imagery available (usually 2014 or 2015). A field in the attribute table called 'Certainty' indicates the how confident we were that the digitized polygon is a mine, rather than some other type of ground disturbance.</p><p>Source: <a href='http://www.mdpi.com/2072-4292/8/11/912/htm' target='_blank'>Connette et al. 2016</a></p>"
   - name: "Existing and planned hydropower dams"
     url: "https://gis2.onemapmyanmar.info/gis2/services/Hydro_dams2/MapServer/WMSServer"
-    wms_options:
-    - epsg: 102100
-    - format: "image/jpeg"
-    - layers: "0"
-    - transparent: true
-    - abstract: "<p>This dataset shows locations of existing, planned and suspended hydropower dam projects. The Layer shows the 2017 project status. The Layer was downloaded on carto.com and edited. </p><p>Source: <a href='https://bethwalker22.carto.com/viz/dc6f5b28-03ad-11e7-98bb-0e05a8b3e3d7/public_map' target='_blank'> carto.com </a></p>"
-    ol_options:
-    - visibility: false
-    - isBaseLayer: false
-    - sphericalMercator: true
+    epsg: 102100
+    layers: "0"
+    abstract: "<p>This dataset shows locations of existing, planned and suspended hydropower dam projects. The Layer shows the 2017 project status. The Layer was downloaded on carto.com and edited. </p><p>Source: <a href='https://bethwalker22.carto.com/viz/dc6f5b28-03ad-11e7-98bb-0e05a8b3e3d7/public_map' target='_blank'> carto.com </a></p>"

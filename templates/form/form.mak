@@ -7,7 +7,7 @@
 
     from mako.template import Template
     from pyramid.path import AssetResolver
-    lmkpAssetResolver = AssetResolver('lmkp')
+    lokpAssetResolver = AssetResolver('lokp')
 
     if cstruct['itemType'] == 'stakeholders':
         # Stakeholders
@@ -20,7 +20,7 @@
         # Activities
         templateName = 'form_activity.mak'
 
-    resolver = lmkpAssetResolver.resolve('customization/omm/templates/form/%s' % templateName)
+    resolver = lokpAssetResolver.resolve('customization/omm/templates/form/%s' % templateName)
     template = Template(filename=resolver.abspath())
 %>
 

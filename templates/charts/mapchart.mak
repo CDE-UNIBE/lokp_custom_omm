@@ -1,4 +1,4 @@
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_("Investor Map")}</%def>
 
@@ -59,10 +59,10 @@
 </div>
 
 <%def name="bottom_tags()">
-  <script src="${request.static_url('lmkp:static/lib/d3/d3.v3.min.js')}"></script>
-  <script src="${request.static_url('lmkp:static/lib/d3/colorbrewer.v1.min.js')}"></script>
-  <script src="${request.static_url('lmkp:static/lib/d3/topojson.v1.min.js')}"></script>
-  <script src="${request.static_url('lmkp:static/v2/charts/mapchart.js')}" type="text/javascript"></script>
+  <script src="${request.static_url('lokp:static/lib/d3/d3.min.js')}"></script>
+  <script src="${request.static_url('lokp:static/lib/colorbrewer/colorbrewer.min.js')}"></script>
+  <script src="${request.static_url('lokp:static/lib/topojson/topojson.min.js')}"></script>
+  <script src="${request.static_url('lokp:static/js/charts/mapchart.js')}" type="text/javascript"></script>
   <script type="text/javascript">
 
     var attributeNames = [
@@ -80,7 +80,7 @@
       }
     };
     var data_url = '${request.route_url("evaluation")}';
-    var map_url = '${request.static_url("lmkp:static/v2/charts/world.topo.json")}';
+    var map_url = '${request.static_url("lokp:static/js/charts/world.topo.json")}';
 
     drawMap();
     loadMapData();

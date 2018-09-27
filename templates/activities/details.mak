@@ -1,6 +1,8 @@
-<%inherit file="lmkp:customization/omm/templates/base.mak" />
+<%inherit file="lokp:customization/omm/templates/base.mak" />
 
 <%def name="title()">${_('Deal Details')} ${shortuid}</%def>
+
+<link rel="stylesheet" href="${request.static_url('lokp:static/css/leaflet.css')}">
 
 <%def name="head_tags()">
     <link rel="stylesheet" href="/custom/css/details.css"></link>
@@ -25,7 +27,7 @@
     var identifier = '${uid}';
     var version = ${version};
 </script>
-<%include file="lmkp:templates/map/mapform.mak" args="readonly=True" />
+<%include file="lokp:templates/map/mapform.mak" args="readonly=True" />
 % if site_key is not None:
 <script type="text/javascript" class="juvia">
     (function() {
