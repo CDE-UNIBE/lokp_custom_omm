@@ -160,3 +160,10 @@ ul.chartNav li.active a:hover {
 #profile-selector, .btn-country-selector {
   text-transform: uppercase;
 }
+
+.checkbox-in-alert {
+    margin-top: 1rem;
+}
+.checkbox-in-alert label {
+    color: white;
+}

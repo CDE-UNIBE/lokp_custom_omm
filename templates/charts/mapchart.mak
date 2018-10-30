@@ -14,6 +14,17 @@
         <i class="material-icons">arrow_back</i>Back
       </a>
 
+    <div class="alert alert-info card-panel accent-background-color">
+      <p class="white-text">
+        <i class="icon-exclamation-sign white-text"></i>&nbsp;
+        As the primary investor of deals in the Myanmar Land Reporting must be a company registered in Myanmar, the number of investors from Myanmar exceeds all other countries.
+      </p>
+      <p class="checkbox-in-alert">
+        <input type="checkbox" id="cb-exclude-myanmar" class="filled-in" />
+        <label for="cb-exclude-myanmar">Exclude investors from Myanmar</label>
+      </p>
+    </div>
+
     <div class="row-fluid visible-phone">
       <h4 class="chart-title">${_('Investor Map')}</h4>
     </div>
@@ -57,7 +68,12 @@
       }
     };
 
-    var responseData;
+    var cbExcludeMyanmar = $('#cb-exclude-myanmar');
+    var excludeMyanmarData = cbExcludeMyanmar.is(':checked');
+    cbExcludeMyanmar.click(function(e) {
+      excludeMyanmarData = e.target.checked;
+      prepareData();
+    });
 
     $.ajax({
       type: 'POST',
@@ -70,9 +86,7 @@
         }
         $('#loadingRow').hide();
 
-        responseData = data;
-
-        var areaData = data.data.map(function(d) {
+        chartData = data.data.map(function(d) {
           var name = d.group.value.value;
           var val = d.values[0].value;
           var code = countryMapping[name];
@@ -81,15 +95,25 @@
             "value": val,
             "name": name
           }
-        }).filter(function(d) {
-          // Keep only those entries with ID (= code found in mapping)
-          return d.id && d.id !== 'MM';
-        }).sort(function(a, b) {
-            return (a.value > b.value) ? -1 : ((b.value > a.value) ? 1 : 0);
         });
-        createChartMap(areaData);
-        initContent(areaData, attributeName);
+
+        prepareData();
       }
     });
+
+    function prepareData() {
+      var data = chartData.filter(function(d) {
+        // Keep only those entries with ID (= code found in mapping)
+        if (excludeMyanmarData) {
+          return d.id && d.id !== 'MM';
+        } else {
+          return d.id;
+        }
+      }).sort(function(a, b) {
+        return (a.value > b.value) ? -1 : ((b.value > a.value) ? 1 : 0);
+      });
+      createChartMap(data);
+      initContent(data, attributeName);
+    }
   </script>
 </%def>
