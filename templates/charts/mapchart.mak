@@ -14,44 +14,24 @@
         <i class="material-icons">arrow_back</i>Back
       </a>
 
-
-
-    <div class="row-fluid chart-top-menu">
-      % if len(profiles) > 0:
-        <div class="pull-right">
-          <div class="map-profile-select">${_("Profile")}:</div>
-             <a id="group-by-dropdown-title" class='dropdown-button btn right' href='#' data-toggle="dropdown" href='#' data-activates='profile-selector'>${profile}</a>
-            <ul class="dropdown-content" id="profile-selector">
-              % for p in profiles:
-                <li><a href="javascript:void(0);" data-profile="${p[1]}">${p[0]}</a></li>
-              % endfor
-            </ul>
-          </div>
-        </div>
-      % endif
-    </div>
-
-
-
     <div class="row-fluid visible-phone">
-      <h2 class="chart-title"><!-- Placeholder --></h2>
+      <h4 class="chart-title">${_('Investor Map')}</h4>
     </div>
     <div id="map" class="row-fluid">
       <div id="loading-div">
         <div id="graphLoading" style="height: 200px;"></div>
       </div>
     </div>
-    <div class="row-fluid">
-      <div class="span6 hidden-phone">
+    <div class="row">
+      <div class="col s6">
         <div id="country-details"></div>
-        <div id="helptext" class="hide">
-          <h2 class="chart-title"></h2>
+        <div id="helptext">
           <p>${_('The map shows the country of origin of Investors involved in Deals from the selected profile.')}</p>
           <p>${_('The colors represent the number of Investors from a certain country. The darker the color, the more Investors.')}</p>
           <p>${_('Move your mouse over a country in the list or on the map to show the details.')}</p>
         </div>
       </div>
-      <div class="span6">
+      <div class="col s6">
         <ul id="countries-list"><!-- Placeholder --></ul>
       </div>
     </div>
@@ -59,15 +39,12 @@
 </div>
 
 <%def name="bottom_tags()">
-  <script src="${request.static_url('lokp:static/lib/d3/d3.min.js')}"></script>
-  <script src="${request.static_url('lokp:static/lib/colorbrewer/colorbrewer.min.js')}"></script>
-  <script src="${request.static_url('lokp:static/lib/topojson/topojson.min.js')}"></script>
-  <script src="${request.static_url('lokp:static/js/charts/mapchart.js')}" type="text/javascript"></script>
+  <script src="//www.amcharts.com/lib/3/ammap.js"></script>
+  <script src="//www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+  <script src="${request.static_url('lokp:static/js/charts/mapchart_amcharts.js')}" type="text/javascript"></script>
   <script type="text/javascript">
 
-    var attributeNames = [
-      "${_('Investors')}"
-    ];
+    var attributeName = "${_('Investors')}";
     var chartData = {
       'item': 'Stakeholder',
       'attributes': {
@@ -79,15 +56,40 @@
         'keys': [['Country of origin']]
       }
     };
-    var data_url = '${request.route_url("evaluation")}';
-    var map_url = '${request.static_url("lokp:static/js/charts/world.topo.json")}';
 
-    drawMap();
-    loadMapData();
+    var responseData;
 
-    $('#profile-selector>li>a').click(function() {
-      $('.btn-country-selector').text($(this).text());
-      changeProfile($(this).data('profile'));
+    $.ajax({
+      type: 'POST',
+      url: '${request.route_url("evaluation")}',
+      data: JSON.stringify(chartData),
+      dataType: 'json',
+      success: function(data) {
+        if (!data['success']) {
+          return console.warn(data['msg']);
+        }
+        $('#loadingRow').hide();
+
+        responseData = data;
+
+        var areaData = data.data.map(function(d) {
+          var name = d.group.value.value;
+          var val = d.values[0].value;
+          var code = countryMapping[name];
+          return {
+            "id": code,
+            "value": val,
+            "name": name
+          }
+        }).filter(function(d) {
+          // Keep only those entries with ID (= code found in mapping)
+          return d.id && d.id !== 'MM';
+        }).sort(function(a, b) {
+            return (a.value > b.value) ? -1 : ((b.value > a.value) ? 1 : 0);
+        });
+        createChartMap(areaData);
+        initContent(areaData, attributeName);
+      }
     });
   </script>
 </%def>
