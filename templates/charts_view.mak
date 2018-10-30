@@ -28,19 +28,19 @@
               </a>
 
 
-              <a href="${request.route_url('charts', type='stackedbars', params=())}">
-                  <div class="col s12 m6">
-                      <div class="card hoverable">
-                        <div class="card-image">
-                         <img alt="${_('Deal stacked bar charts')}" src="/custom/img/charts/implementationstatus.jpg">
-                          <span class="card-title">${_('Deal stacked bar charts')}</span>
-                        </div>
-                        <div class="card-action">
-                          <a class="text-accent-color" href="${request.route_url('charts', type='stackedbars', params=())}">${_('Deal stacked bar charts')}</a>
-                        </div>
-                      </div>
-                  </div>
-              </a>
+##               <a href="${request.route_url('charts', type='stackedbars', params=())}">
+##                   <div class="col s12 m6">
+##                       <div class="card hoverable">
+##                         <div class="card-image">
+##                          <img alt="${_('Deal stacked bar charts')}" src="/custom/img/charts/implementationstatus.jpg">
+##                           <span class="card-title">${_('Deal stacked bar charts')}</span>
+##                         </div>
+##                         <div class="card-action">
+##                           <a class="text-accent-color" href="${request.route_url('charts', type='stackedbars', params=())}">${_('Deal stacked bar charts')}</a>
+##                         </div>
+##                       </div>
+##                   </div>
+##               </a>
 
               <a href="${request.route_url('charts', type='bars', params=(u'sh',))}">
                   <div class="col s12 m6">

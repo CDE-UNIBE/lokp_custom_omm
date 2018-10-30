@@ -11,43 +11,42 @@
 <div class="container">
   <div class="content no-border">
 
-    <!-- zurückbutton -->
-      <a class="btn-floating btn-large waves-effect waves-light btn btn-back" href="${request.route_url('charts_overview')}">
-        <i class="material-icons">arrow_back</i>Back
-      </a>
+    <!-- Back button -->
+    <a class="btn-floating btn-large waves-effect waves-light btn btn-back" href="${request.route_url('charts_overview')}">
+      <i class="material-icons">arrow_back</i>Back
+    </a>
 
-    <!--Dropdownliste -->
+    <!-- Dropdown list -->
     <div class="row">
-       <h4 id="group-by-title"><!-- Placeholder --></h4>
-        <a id="group-by-dropdown-title" class='dropdown-button btn right' href='#' data-toggle="dropdown" href='#' data-activates='group-by-pills'></a>
-        <ul class="dropdown-content nav nav-pills chartNav" id="group-by-pills">
-            <!-- Placeholder -->
-        </ul>
-      </div>
+      <a id="group-dropdown-title" class='dropdown-button btn right' href='#' data-toggle="dropdown" href='#' data-activates='group-dropdown'><!-- Placeholder --></a>
+      <ul class="dropdown-content nav nav-pills chartNav" id="group-dropdown"><!-- Placeholder --></ul>
+    </div>
 
-    <!--Graph-->
-    <div id="loadingRow" class="row-fluid">
-      <div class="span12">
+    <!-- Graph -->
+    <div id="loadingRow" class="row">
+      <div class="col s12">
         <div id="graphLoading" style="height: ${height()}px;"></div>
       </div>
     </div>
-    <div id="chart" class="row-fluid"><!-- Placeholder --></div>
+    <div id="container" class="row-fluid"><!-- Placeholder --></div>
 
-    <!--Graphoptions-->
-    <div class="row" id="graphoptions">
-      <div class="btn-group" data-toggle="buttons-radio" id="attribute-buttons"><!-- Placeholder --></div>
-      <a id="sortDesc" class="right btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Sort data descending')}">
-        <i class="icon-sort-by-attributes-alt"></i>
-      </a>
-      <a id="sortAsc" class="right btn-floating btn-large waves-effect waves-light accent-background-color gridview_button tooltipped" data-position="top" data-delay="50" data-tooltip="${_('Sort data ascending')}">
-        <i class="icon-sort-by-attributes"></i>
-      </a>
+    <!-- Graph options (not shown as there is only 1 attribute) -->
+    <div class="row hide" id="graphoptions">
+      <div id="attribute-buttons"><!-- Placeholder --></div>
+    </div>
+
+    <div class="alert alert-info card-panel accent-background-color">
+      <p class="white-text">
+        <i class="icon-exclamation-sign white-text"></i>&nbsp;
+        As the primary investor of deals in the Myanmar Land Reporting must be a company registered in Myanmar, the number of investors from Myanmar exceeds all other countries.
+      </p>
     </div>
   </div>
 </div>
 
 <%def name="bottom_tags()">
-  <script src="${request.static_url('lokp:static/lib/d3/d3.min.js')}" type="text/javascript"></script>
+  <script src="//code.highcharts.com/highcharts.src.js"></script>
+  <script src="${request.static_url('lokp:static/js/charts/barchart_highcharts.js')}" type="text/javascript"></script>
   <script type="text/javascript">
 
     var group_activities_by = "${_('Group investors by:')}";
@@ -64,43 +63,30 @@
       }
     };
     var attribute_names = [
-      "${_('Investors')}",
+      "${_('Investors')}"
     ];
 
     var group_key = "${attr}";
     chart_data['group_by'] = chart_data['translate']['keys'][group_key];
 
-    d3.xhr('${request.route_url("evaluation")}')
-      .header("Content-Type", "application/json")
-      .post(
-        JSON.stringify(chart_data),
-        function(err, rawData){
-          var data = JSON.parse(rawData.responseText);
-          if (!data['success']) {
-            return console.warn(data['msg']);
-          }
-          $('#loadingRow').hide();
-          updateContent(data);
-          visualize(data.data);
-        }
-      );
+    var responseData;
 
-    /**
-     * Initialize all bootstrap tooltips.
-     * https://github.com/twitter/bootstrap/issues/5687#issuecomment-14917403
-     */
-    $(function () {
-      // Tooltips for buttons are placed at the top
-      $("button[data-toggle='tooltip']").tooltip({
-        container: 'body'
-      });
-      // Tooltips for links are place at the bottom
-      $("a[data-toggle='tooltip']").tooltip({
-        container: 'body',
-        placement: 'bottom'
-      });
+    $.ajax({
+      type: 'POST',
+      url: '${request.route_url("evaluation")}',
+      data: JSON.stringify(chart_data),
+      dataType: 'json',
+      success: function(data) {
+        if (!data['success']) {
+          return console.warn(data['msg']);
+        }
+        $('#loadingRow').hide();
+
+        responseData = data;
+        
+        initContent(attribute_names);
+        prepareChartData(0);
+      }
     });
   </script>
-  <script src="${request.static_url('lokp:static/js/charts/barchart.js')}" type="text/javascript"></script>
-
 </%def>
