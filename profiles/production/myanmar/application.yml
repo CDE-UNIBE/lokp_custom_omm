@@ -45,7 +45,7 @@ application:
     layers: "0"
     abstract: "<p>A Landsat-based classification of Myanmar’s forest cover with a focus on changes in intact forest between 2002 and 2014.</p><p>Source: <a href='http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176364' target='_blank'>Bhagwat et al. 2015</a></p>"
   - name: "Possible Mining Areas"
-    url: "https://gis2.onemapmyanmar.info/gis2/services/Connette_mining/MapServer/WMSServer"
+    url: "https://gis2.onemapmyanmar.info/gis2//services/ommapplications/connette_mining_myanmar_2016/MapServer/WMSServer"
     epsg: 102100
     layers: "0"
     abstract: "<p>This is a dataset of possible mining areas in Myanmar that was digitized from a systematic search of high-resolution imagery available on Google Earth and Bing Aerial. Digitizing took place in late 2015 and early 2016 with the most recent imagery available (usually 2014 or 2015). A field in the attribute table called 'Certainty' indicates the how confident we were that the digitized polygon is a mine, rather than some other type of ground disturbance.</p><p>Source: <a href='http://www.mdpi.com/2072-4292/8/11/912/htm' target='_blank'>Connette et al. 2016</a></p>"
